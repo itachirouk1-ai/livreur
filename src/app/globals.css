@@ -134,7 +134,7 @@
 
 @layer utilities {
   .animate-marquee {
-    animation: marquee 8s linear infinite;
+    animation: marquee 5s linear infinite;
   }
 }
 
@@ -151,7 +151,7 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 8s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
 .marquee-track:hover {

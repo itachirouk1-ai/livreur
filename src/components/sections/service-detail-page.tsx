@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CategoriesSection } from "@/components/sections/categoriesSection";
+import { AnimatedJoinButton } from "@/components/ui/animated-join-button";
 
 interface ServiceCategory {
   name: string;
@@ -30,6 +31,7 @@ interface ServiceDetailPageProps {
   heroImageUrl?: string;
   title: string;
   titleColor: string;
+  accentGradient?: string;
   description: string;
   deliveryTime: string;
   features: ServiceFeature[];
@@ -37,11 +39,76 @@ interface ServiceDetailPageProps {
   vendors: ServiceVendor[];
 }
 
+function getAccentTextClass(accentTextClass?: string) {
+  if (accentTextClass?.includes("red")) {
+    return "text-red-600 dark:text-red-400";
+  }
+
+  if (accentTextClass?.includes("emerald") || accentTextClass?.includes("green")) {
+    return "text-emerald-600 dark:text-emerald-400";
+  }
+
+  if (accentTextClass?.includes("blue") || accentTextClass?.includes("sky") || accentTextClass?.includes("cyan")) {
+    return "text-blue-600 dark:text-blue-400";
+  }
+
+  if (accentTextClass?.includes("pink")) {
+    return "text-pink-600 dark:text-pink-400";
+  }
+
+  if (accentTextClass?.includes("purple") || accentTextClass?.includes("fuchsia")) {
+    return "text-purple-600 dark:text-purple-400";
+  }
+
+  if (accentTextClass?.includes("amber") || accentTextClass?.includes("yellow")) {
+    return "text-amber-600 dark:text-amber-400";
+  }
+
+  if (accentTextClass?.includes("indigo")) {
+    return "text-indigo-600 dark:text-indigo-400";
+  }
+
+  return "text-slate-700 dark:text-slate-200";
+}
+
+function getAccentBadgeClass(accentTextClass?: string) {
+  if (accentTextClass?.includes("red")) {
+    return "bg-red-500";
+  }
+
+  if (accentTextClass?.includes("emerald") || accentTextClass?.includes("green")) {
+    return "bg-emerald-500";
+  }
+
+  if (accentTextClass?.includes("blue") || accentTextClass?.includes("sky") || accentTextClass?.includes("cyan")) {
+    return "bg-blue-500";
+  }
+
+  if (accentTextClass?.includes("pink")) {
+    return "bg-pink-500";
+  }
+
+  if (accentTextClass?.includes("purple") || accentTextClass?.includes("fuchsia")) {
+    return "bg-purple-500";
+  }
+
+  if (accentTextClass?.includes("amber") || accentTextClass?.includes("yellow")) {
+    return "bg-amber-500";
+  }
+
+  if (accentTextClass?.includes("indigo")) {
+    return "bg-indigo-500";
+  }
+
+  return "bg-slate-500";
+}
+
 export function ServiceDetailPageComponent({
   slug,
   heroImageUrl,
   title,
   titleColor,
+  accentGradient,
   description,
   deliveryTime,
   features,
@@ -56,6 +123,12 @@ export function ServiceDetailPageComponent({
     logoEmoji: vendor.logo,
   }));
 
+  const uniqueBrandItems = Array.from(
+    new Map(brandItems.map((brand) => [brand.id, brand])).values()
+  );
+  const accentTextClass = getAccentTextClass(titleColor);
+  const accentBadgeClass = getAccentBadgeClass(titleColor);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -67,42 +140,48 @@ export function ServiceDetailPageComponent({
           className="mx-auto max-w-7xl"
         >
           {/* Hero Content */}
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div>
-              <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.03em] ${titleColor}`}>
-                {title}
-              </h1>
-              <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg text-slate-600 dark:text-slate-300">
-                {description}
-              </p>
-            </div>
-
-            {/* Hero Image Container */}
+          <div className="relative">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-64 sm:h-80 lg:h-96 rounded-[32px] bg-gradient-to-br from-orange-200 via-amber-100 to-orange-100 dark:from-orange-900/30 dark:via-amber-900/30 dark:to-orange-900/30 flex items-center justify-center"
+              className={`relative h-64 overflow-hidden rounded-[32px] border border-white/60 bg-gradient-to-br ${accentGradient ?? "from-orange-200 via-amber-100 to-orange-100 dark:from-orange-900/30 dark:via-amber-900/30 dark:to-orange-900/30"} shadow-[0_20px_80px_-30px_rgba(15,23,42,0.3)] sm:h-80 lg:h-[28rem]`}
             >
-            {heroImageUrl ? (
-              <img
-                src={heroImageUrl}
-                alt={title}
-                className="object-cover w-full h-full rounded-[32px]"
-              />
-            ) : (
-              <div className="text-9xl sm:text-[120px] lg:text-[140px]">🍔</div>
-            )}
+              {heroImageUrl ? (
+                <img
+                  src={heroImageUrl}
+                  alt={title}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center text-9xl sm:text-[120px] lg:text-[140px]">
+                  🍔
+                </div>
+              )}
 
-              {/* Delivery Time Badge */}
-              <div className="absolute bottom-6 right-6 flex items-center gap-2 rounded-full bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white">
-                  ⏱
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/35 to-transparent" />
+
+              <div className="absolute inset-0 z-10 flex items-start justify-center px-6 py-8 text-center sm:px-10 lg:justify-start lg:pl-12 lg:text-left">
+                <div className="max-w-2xl pt-2 sm:pt-4 lg:pt-6">
+                  <h1 className="text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl xl:text-6xl">
+                    {title}
+                  </h1>
                 </div>
-                <div>
-                  <p className="text-xs text-slate-500">Livraison en</p>
-                  <p className="font-bold text-red-600">{deliveryTime}</p>
+              </div>
+
+              <div className="absolute bottom-6 right-6 z-20 flex items-center gap-3">
+                {/* Delivery Time Badge */}
+                <div className="flex items-center gap-2 rounded-full bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur">
+                  <div className={`flex h-8 w-8 items-center justify-center rounded-full ${accentBadgeClass} text-sm font-bold text-white`}>
+                    ⏱
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500">Livraison en</p>
+                    <p className={`font-bold ${accentTextClass}`}>{deliveryTime}</p>
+                  </div>
                 </div>
+
+                <AnimatedJoinButton label="WHATSAPP" />
               </div>
             </motion.div>
           </div>
@@ -110,7 +189,11 @@ export function ServiceDetailPageComponent({
       </section>
 
       {/* Categories + Brand logos */}
-      <CategoriesSection categories={categories} brands={brandItems} />
+      <CategoriesSection
+        categories={categories}
+        brands={uniqueBrandItems}
+        accentTextClass={titleColor}
+      />
 
       {/* Vendors Section */}
       {vendors.length > 0 && (
@@ -127,7 +210,7 @@ export function ServiceDetailPageComponent({
           <div className="space-y-6">
             {vendors.map((vendor, index) => (
               <motion.div
-                key={vendor.id}
+                key={`${vendor.id}-${index}`}
                 initial={{ y: 24, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -149,7 +232,7 @@ export function ServiceDetailPageComponent({
                     <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white">
                       {vendor.name}
                     </h3>
-                    <p className="text-orange-600 font-semibold text-sm sm:text-base mt-1">
+                    <p className={`${accentTextClass} font-semibold text-sm sm:text-base mt-1`}>
                       {vendor.brand}
                     </p>
                     <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-3">

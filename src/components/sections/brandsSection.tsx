@@ -45,10 +45,10 @@ export function BrandsSection({ brands, heading = "Top brands", description = "D
             <motion.div
               key={`${brand.id}-${index}`}
               whileHover={{ scale: 1.03 }}
-              className="flex-shrink-0 w-28 sm:w-32"
+              className="flex-shrink-0 w-auto sm:w-32"
             >
               <article className="rounded-[24px] text-center transition duration-00 hover:-translate-y-0.5 hover:shadow-lg">
-                <div className="mx-auto h-20 w-20 overflow-hidden rounded-3xl p-3">
+                <div className=" h-15 w-15 overflow-hidden rounded-3xl py-1">
                   <img
                     src={brand.logoUrl}
                     alt={brand.logoAlt}

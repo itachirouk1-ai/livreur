@@ -50,6 +50,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           heroImageUrl={heroImageUrl}
           title={service.title}
           titleColor={service.titleColor}
+          accentGradient={service.bgGradient}
           description={service.description}
           deliveryTime={service.deliveryTime}
           features={service.features}
