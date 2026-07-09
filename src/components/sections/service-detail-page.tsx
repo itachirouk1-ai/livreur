@@ -57,9 +57,9 @@ export function ServiceDetailPageComponent({
   }));
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.16),_transparent_32%),linear-gradient(135deg,_#fffaf5_0%,_#fff8f0_50%,_#fef3e8_100%)] text-slate-900 transition-colors duration-500 dark:bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.22),_transparent_38%),linear-gradient(135deg,_#111111_0%,_#171717_45%,_#1f1a17_100%)] dark:text-slate-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="px-4 pt-6 sm:px-6 lg:px-8 lg:pt-12">
+      <section className="px-1 pt-1 sm:px-6 lg:px-8 lg:pt-12">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
