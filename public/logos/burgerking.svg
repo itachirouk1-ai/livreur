@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="burgerkingTitle">
+  <title id="burgerkingTitle">Burger King brand logo</title>
+  <rect width="120" height="120" rx="24" fill="#FFA412" />
+  <ellipse cx="60" cy="58" rx="44" ry="30" fill="#E31B23" />
+  <ellipse cx="60" cy="58" rx="38" ry="24" fill="#FFDF00" />
+  <text x="60" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7C1114">BK</text>
+</svg>

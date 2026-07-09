@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="mcdonaldsTitle">
+  <title id="mcdonaldsTitle">McDonald's brand logo</title>
+  <rect width="120" height="120" rx="24" fill="#DA291C" />
+  <path d="M30 80c0-20 12-40 30-40s30 20 30 40" fill="#FFC72C" />
+  <path d="M30 80c0-17 8-29 20-29s20 12 20 29" fill="#DA291C" />
+  <path d="M40 80c0-12 5-23 10-23s10 11 10 23" fill="#FFC72C" />
+</svg>
