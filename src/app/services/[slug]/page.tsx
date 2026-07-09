@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   return (
     <>
       <Header />
-      <main className="px-4 pb-16 pt-6 sm:pb-20 sm:pt-8 md:px-6 lg:px-8 lg:pt-12">
+      <main className="px-1 pb-16 pt-6 sm:pb-20 sm:pt-8 md:px-6 lg:px-8 lg:pt-12">
         <ServiceDetailPageComponent
           slug={service.slug}
           heroImageUrl={heroImageUrl}
