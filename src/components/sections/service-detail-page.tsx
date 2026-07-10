@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { CategoriesSection } from "@/components/sections/categoriesSection";
 import { AnimatedCallButton } from "@/components/ui/AnimatedCallButton";
 import { AnimatedJoinButton } from "@/components/ui/animated-join-button";
+import { getVendorSlug } from "@/lib/services-data";
 
 interface ServiceCategory {
   name: string;
@@ -20,6 +21,7 @@ interface ServiceFeature {
 
 interface ServiceVendor {
   id: string;
+  slug?: string;
   name: string;
   brand: string;
   logo: string;
@@ -165,9 +167,9 @@ export function ServiceDetailPageComponent({
 
               <div className="absolute inset-0 z-10 flex items-start justify-center px-6 text-center sm:px-10 lg:justify-start lg:pl-12 lg:text-left">
                 <div className="max-w-2xl pt-2 sm:pt-4 lg:pt-6">
-                  <h1 className="text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl xl:text-6xl">
-                    {title}
-                  </h1>
+                      <h1 className={`text-3xl font-bold tracking-[-0.03em] ${accentTextClass} sm:text-4xl lg:text-5xl xl:text-6xl`}>
+                        {title}
+                      </h1>
                 </div>
               </div>
 
@@ -200,15 +202,17 @@ export function ServiceDetailPageComponent({
           </div>
 
           <div className="space-y-6">
-            {vendors.map((vendor, index) => (
-              <motion.div
-                key={`${vendor.id}-${index}`}
-                initial={{ y: 24, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="flex gap-4 sm:gap-6 pb-6 border-b border-slate-200 dark:border-slate-800 last:border-0"
-              >
+            {vendors.map((vendor, index) => {
+              const vendorSlug = getVendorSlug(vendor);
+              return (
+                <motion.div
+                  key={`${vendorSlug}-${index}`}
+                  initial={{ y: 24, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  className="flex gap-4 sm:gap-6 pb-6 border-b border-slate-200 dark:border-slate-800 last:border-0"
+                >
                 {/* Logo */}
                 <div className="h-24 w-24 sm:h-28 sm:w-28 flex-shrink-0 rounded-[20px] overflow-hidden shadow-lg bg-white">
                   <img
@@ -221,7 +225,7 @@ export function ServiceDetailPageComponent({
                 {/* Content */}
                 <div className="flex-1 flex flex-col justify-between">
                   <Link
-                    href={`/services/${slug}/vendors/${vendor.id}`}
+                    href={`/${slug}/${vendorSlug}`}
                     className="group block rounded-[28px] border border-slate-200/80 bg-white/90 p-4 transition hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700/80 dark:bg-slate-950/70 dark:hover:border-slate-500"
                   >
                     <div>
@@ -252,7 +256,8 @@ export function ServiceDetailPageComponent({
                   </Button>
                 </div>
               </motion.div>
-            ))}
+                )
+            })}
           </div>
         </section>
       )}

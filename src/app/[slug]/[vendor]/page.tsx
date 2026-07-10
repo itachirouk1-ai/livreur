@@ -5,10 +5,10 @@ import { Header } from "@/components/sections/header";
 import { getAllServiceVendorParams, getServiceBySlug, getVendorByServiceAndId } from "@/lib/services-data";
 
 interface VendorPageProps {
-  params: {
+  params: Promise<{
     slug: string;
     vendor: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -19,10 +19,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: VendorPageProps) {
-  const service = getServiceBySlug(params.slug);
-  const vendor = getVendorByServiceAndId(params.slug, params.vendor);
+  const { slug, vendor } = await params;
+  const service = getServiceBySlug(slug);
+  const vendorData = getVendorByServiceAndId(slug, vendor);
 
-  if (!service || !vendor) {
+  if (!service || !vendorData) {
     return {
       title: "Vendeur non trouvé",
       description: "Page de vendeur introuvable.",
@@ -30,16 +31,17 @@ export async function generateMetadata({ params }: VendorPageProps) {
   }
 
   return {
-    title: `${vendor.brand} | ${service.title}`,
-    description: vendor.description,
+    title: `${vendorData.brand} | ${service.title}`,
+    description: vendorData.description,
   };
 }
 
-export default function VendorPage({ params }: VendorPageProps) {
-  const service = getServiceBySlug(params.slug);
-  const vendor = getVendorByServiceAndId(params.slug, params.vendor);
+export default async function VendorPage({ params }: VendorPageProps) {
+  const { slug, vendor } = await params;
+  const service = getServiceBySlug(slug);
+  const vendorData = getVendorByServiceAndId(slug, vendor);
 
-  if (!service || !vendor) {
+  if (!service || !vendorData) {
     notFound();
   }
 
@@ -51,24 +53,24 @@ export default function VendorPage({ params }: VendorPageProps) {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                <Link href={`/services/${service.slug}`} className="font-semibold text-primary hover:text-primary/90">
+                <Link href={`/${service.slug}`} className="font-semibold text-primary hover:text-primary/90">
                   Retour au service {service.title}
                 </Link>
               </p>
               <h1 className="text-3xl font-bold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-4xl">
-                {vendor.brand}
+                {vendorData.brand}
               </h1>
               <p className="mt-3 max-w-3xl text-base text-slate-600 dark:text-slate-300">
-                {vendor.description}
+                {vendorData.description}
               </p>
             </div>
             <div className="flex items-center gap-4 rounded-3xl bg-slate-50 p-4 shadow-sm dark:bg-slate-900 sm:p-5">
               <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-white shadow-md dark:bg-slate-800">
-                <span className="text-4xl">{vendor.logo}</span>
+                <span className="text-4xl">{vendorData.logo}</span>
               </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Vendor</p>
-                <p className="text-lg font-semibold text-slate-900 dark:text-white">{vendor.name}</p>
+                <p className="text-lg font-semibold text-slate-900 dark:text-white">{vendorData.name}</p>
               </div>
             </div>
           </div>
@@ -77,17 +79,17 @@ export default function VendorPage({ params }: VendorPageProps) {
             <div className="space-y-6 rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-lg dark:border-slate-800/80 dark:bg-slate-950/70">
               <div className="flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-100 text-3xl dark:bg-slate-900">
-                  {vendor.logo}
+                  {vendorData.logo}
                 </div>
                 <div>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Marque</p>
-                  <p className="text-xl font-semibold text-slate-900 dark:text-white">{vendor.brand}</p>
+                  <p className="text-xl font-semibold text-slate-900 dark:text-white">{vendorData.brand}</p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-slate-900 dark:text-white">À propos</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{vendor.description}</p>
+                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{vendorData.description}</p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -106,18 +108,18 @@ export default function VendorPage({ params }: VendorPageProps) {
               <div className="space-y-4">
                 <div className="rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-900">
                   <img
-                    src={vendor.logoUrl ?? `https://picsum.photos/seed/${vendor.id}/640/420`}
-                    alt={vendor.logoAlt ?? vendor.brand}
+                    src={vendorData.logoUrl ?? `https://picsum.photos/seed/${vendorData.id}/640/420`}
+                    alt={vendorData.logoAlt ?? vendorData.brand}
                     className="h-72 w-full object-cover"
                   />
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">Détails du vendeur</p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">
-                    ID: <span className="font-medium text-slate-900 dark:text-white">{vendor.id}</span>
+                    ID: <span className="font-medium text-slate-900 dark:text-white">{vendorData.id}</span>
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">
-                    Nom interne: <span className="font-medium text-slate-900 dark:text-white">{vendor.name}</span>
+                    Nom interne: <span className="font-medium text-slate-900 dark:text-white">{vendorData.name}</span>
                   </p>
                 </div>
               </div>

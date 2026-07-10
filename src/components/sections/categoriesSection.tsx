@@ -100,7 +100,7 @@ function Card({
       whileHover={{ scale: 1.05 }}
       className="flex-shrink-0 w-20 py-2 sm:w-24"
     >
-      <div className={`flex h-28 flex-col items-center justify-center rounded-[24px] border text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+      <div className={`flex h-28 flex-col items-center justify-center rounded-[24px]  text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
         <div className="text-3xl sm:text-4xl">{category.emoji}</div>
 
         <p className={`mt-2 text-sm font-semibold ${accentClasses.textClass}`}>
@@ -123,7 +123,7 @@ function BrandCard({
       whileHover={{ scale: 1.03 }}
       className="flex-shrink-0 w-auto sm:w-32"
     >
-      <article className={`flex h-28 flex-col items-center justify-center rounded-[24px] border px-3 py-4 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+      <article className={`flex h-28 flex-col items-center justify-center rounded-[24px] px-3 py-4 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.softClass}`}>
         <div className="mx-auto flex h-14 w-14 items-center justify-center overflow-hidden rounded-3xl bg-white shadow-inner sm:h-16 sm:w-16">
           {brand.logoUrl ? (
             <img

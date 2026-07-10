@@ -5,6 +5,7 @@ export interface ServiceCategory {
 
 export interface ServiceVendor {
   id: string;
+  slug?: string;
   name: string;
   brand: string;
   logo: string;
@@ -144,55 +145,6 @@ export const servicesData: Record<string, ServiceDetail> = {
       { name: "Hygiène", emoji: "🧼" },
     ],
     vendors: [
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
-      {
-        id: "pharmacy1",
-        name: "Pharmacie Centrale Marrakech",
-        brand: "Pharmacie Centrale",
-        logo: "⚕️",
-        description: "Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.",
-      },
       {
         id: "pharmacy1",
         name: "Pharmacie Centrale Marrakech",
@@ -533,6 +485,15 @@ export const servicesData: Record<string, ServiceDetail> = {
   },
 };
 
+export function getVendorSlug(vendor: ServiceVendor) {
+  if (vendor.slug) return vendor.slug;
+  if (vendor.id) return vendor.id;
+  return vendor.brand
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export function getServiceBySlug(slug: string): ServiceDetail | null {
   return servicesData[slug] || null;
 }
@@ -544,11 +505,21 @@ export function getAllServiceSlugs(): string[] {
 export function getVendorByServiceAndId(serviceSlug: string, vendorId: string) {
   const service = getServiceBySlug(serviceSlug);
   if (!service) return null;
-  return service.vendors.find((vendor) => vendor.id === vendorId) || null;
+  return (
+    service.vendors.find(
+      (vendor) => vendor.id === vendorId || getVendorSlug(vendor) === vendorId
+    ) || null
+  );
 }
 
 export function getAllServiceVendorParams() {
-  return Object.values(servicesData).flatMap((service) =>
-    service.vendors.map((vendor) => ({ serviceSlug: service.slug, vendorId: vendor.id }))
-  );
+  return Object.values(servicesData).flatMap((service) => {
+    const uniqueVendors = Array.from(
+      new Map(service.vendors.map((vendor) => [getVendorSlug(vendor), vendor])).values()
+    );
+    return uniqueVendors.map((vendor) => ({
+      serviceSlug: service.slug,
+      vendorId: getVendorSlug(vendor),
+    }));
+  });
 }
