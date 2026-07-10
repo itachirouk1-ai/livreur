@@ -6,7 +6,7 @@ interface AnimatedJoinButtonProps {
   onClick?: () => void;
 }
 
-export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoinButtonProps) {
+export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinButtonProps) {
   return (
     <div className="wrapper">
       <button className="button" type="button" onClick={onClick}>
@@ -16,8 +16,8 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           <div className="content">
             <div className="icon" aria-hidden="true">
               <span className="btn-label">{label}</span>
-              <svg viewBox="0 0 24 24" className="whatsapp-icon" fill="currentColor">
-                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 2.1.55 4.14 1.58 5.93L2 22l4.32-1.13c1.74.95 3.72 1.45 5.72 1.45 5.46 0 9.91-4.45 9.91-9.9S17.5 2 12.04 2Zm0 17.78c-1.78 0-3.51-.47-5.01-1.35l-.36-.21-2.56.67.68-2.49-.23-.36c-.98-1.55-1.49-3.35-1.49-5.2 0-4.5 3.67-8.17 8.17-8.17s8.17 3.67 8.17 8.17-3.67 8.17-8.17 8.17Zm4.47-6.13c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.41-.54-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2.01s.86 2.33.98 2.49c.12.16 1.69 2.58 4.1 3.61.57.25 1.02.4 1.37.51.57.18 1.09.16 1.5.1.46-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+              <svg viewBox="0 0 24 24" className="phone-icon" fill="currentColor">
+                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.02L6.6 10.8Z" />
               </svg>
             </div>
           </div>
@@ -34,11 +34,11 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
 
         .button {
           --white: #f7fff9;
-          --green-100: #d8f8e0;
-          --green-200: #9be4a9;
-          --green-300: #43c45f;
-          --green-400: #25a53f;
-          --green-500: #167a2f;
+          --blue-100: #dceeff;
+          --blue-200: #a9d2ff;
+          --blue-300: #4a95ff;
+          --blue-400: #2567d9;
+          --blue-500: #1749a8;
           --radius: 18px;
 
           border-radius: var(--radius);
@@ -75,20 +75,20 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           position: absolute;
           inset: 0;
           border-radius: calc(var(--radius) * 1.1);
-          background: var(--green-500);
+          background: var(--blue-500);
         }
 
         .bg::before {
           filter: blur(5px);
           transition: all 0.3s ease;
           box-shadow:
-            -7px 6px 0 0 rgb(22 122 47 / 40%),
-            -14px 12px 0 0 rgb(22 122 47 / 30%),
-            -21px 18px 4px 0 rgb(22 122 47 / 25%),
-            -28px 24px 8px 0 rgb(22 122 47 / 15%),
-            -35px 30px 12px 0 rgb(22 122 47 / 12%),
-            -42px 36px 16px 0 rgb(22 122 47 / 8%),
-            -56px 42px 20px 0 rgb(22 122 47 / 5%);
+            -7px 6px 0 0 rgb(23 73 168 / 40%),
+            -14px 12px 0 0 rgb(23 73 168 / 30%),
+            -21px 18px 4px 0 rgb(23 73 168 / 25%),
+            -28px 24px 8px 0 rgb(23 73 168 / 15%),
+            -35px 30px 12px 0 rgb(23 73 168 / 12%),
+            -42px 36px 16px 0 rgb(23 73 168 / 8%),
+            -56px 42px 20px 0 rgb(23 73 168 / 5%);
         }
 
         .wrap {
@@ -97,7 +97,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           height: 100%;
           transform: translate(6px, -6px);
           padding: 3px;
-          background: linear-gradient(to bottom, var(--green-100) 0%, var(--green-400) 100%);
+          background: linear-gradient(to bottom, var(--blue-100) 0%, var(--blue-400) 100%);
           position: relative;
           transition: all 0.3s ease;
         }
@@ -135,9 +135,9 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           border-radius: calc(var(--radius) * 0.85);
           font-weight: 600;
           transition: all 0.3s ease;
-          background: linear-gradient(to bottom, var(--green-300) 0%, var(--green-400) 100%);
+          background: linear-gradient(to bottom, var(--blue-300) 0%, var(--blue-400) 100%);
           box-shadow:
-            inset -2px 12px 11px -5px var(--green-200),
+            inset -2px 12px 11px -5px var(--blue-200),
             inset 1px -3px 11px 0px rgb(0 0 0 / 35%);
         }
 
@@ -151,7 +151,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           bottom: 35%;
           opacity: 0.7;
           margin: auto;
-          background: linear-gradient(to bottom, transparent, var(--green-400));
+          background: linear-gradient(to bottom, transparent, var(--blue-400));
           filter: brightness(1.3) blur(5px);
         }
 
@@ -172,11 +172,11 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           line-height: 1;
           letter-spacing: 1px;
           color: var(--white);
-          text-shadow: -1px 1px 2px var(--green-500);
+          text-shadow: -1px 1px 2px var(--blue-500);
           transition: transform 0.2s ease, color 0.2s ease;
         }
 
-        .whatsapp-icon {
+        .phone-icon {
           width: clamp(20px, 3vw, 30px);
           height: clamp(20px, 3vw, 30px);
           color: var(--white);
@@ -194,9 +194,9 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
 
         .button:hover .content {
           box-shadow:
-            inset -2px 12px 11px -5px var(--green-200),
+            inset -2px 12px 11px -5px var(--blue-200),
             inset 1px -3px 11px 0px rgb(0 0 0 / 35%),
-            0 0 18px rgba(67, 196, 95, 0.24);
+            0 0 18px rgba(37, 103, 217, 0.24);
         }
 
         .button:hover .btn-label {
@@ -204,7 +204,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           color: #fefefe;
         }
 
-        .button:hover .whatsapp-icon {
+        .button:hover .phone-icon {
           transform: scale(1.08);
         }
 
@@ -243,7 +243,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
             letter-spacing: 0.5px;
           }
 
-          .whatsapp-icon {
+          .phone-icon {
             width: 20px;
             height: 20px;
           }
@@ -264,4 +264,4 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
   );
 }
 
-export default AnimatedJoinButton;
+export default AnimatedCallButton;

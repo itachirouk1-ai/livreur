@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CategoriesSection } from "@/components/sections/categoriesSection";
+import { AnimatedCallButton } from "@/components/ui/AnimatedCallButton";
 import { AnimatedJoinButton } from "@/components/ui/animated-join-button";
 
 interface ServiceCategory {
@@ -161,7 +162,7 @@ export function ServiceDetailPageComponent({
 
               <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/35 to-transparent" />
 
-              <div className="absolute inset-0 z-10 flex items-start justify-center px-6 py-8 text-center sm:px-10 lg:justify-start lg:pl-12 lg:text-left">
+              <div className="absolute inset-0 z-10 flex items-start justify-center px-6 text-center sm:px-10 lg:justify-start lg:pl-12 lg:text-left">
                 <div className="max-w-2xl pt-2 sm:pt-4 lg:pt-6">
                   <h1 className="text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl lg:text-5xl xl:text-6xl">
                     {title}
@@ -169,19 +170,9 @@ export function ServiceDetailPageComponent({
                 </div>
               </div>
 
-              <div className="absolute bottom-6 right-6 z-20 flex items-center gap-3">
-                {/* Delivery Time Badge */}
-                <div className="flex items-center gap-2 rounded-full bg-white/90 px-4 py-2.5 shadow-lg backdrop-blur">
-                  <div className={`flex h-8 w-8 items-center justify-center rounded-full ${accentBadgeClass} text-sm font-bold text-white`}>
-                    ⏱
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500">Livraison en</p>
-                    <p className={`font-bold ${accentTextClass}`}>{deliveryTime}</p>
-                  </div>
-                </div>
-
-                <AnimatedJoinButton label="WHATSAPP" />
+              <div className="absolute bottom-3 left-2 right-2 z-20 flex flex-col gap-2 sm:bottom-6 sm:left-3 sm:right-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:bottom-6 lg:left-6 lg:right-6 lg:gap-3">
+                <AnimatedCallButton label="Appeler" />
+                <AnimatedJoinButton label="WhatsApp" />
               </div>
             </motion.div>
           </div>
