@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CategoriesSection } from "@/components/sections/categoriesSection";
@@ -219,17 +220,27 @@ export function ServiceDetailPageComponent({
 
                 {/* Content */}
                 <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white">
-                      {vendor.name}
-                    </h3>
-                    <p className={`${accentTextClass} font-semibold text-sm sm:text-base mt-1`}>
-                      {vendor.brand}
-                    </p>
-                    <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
-                      {vendor.description}
-                    </p>
-                  </div>
+                  <Link
+                    href={`/services/${slug}/vendors/${vendor.id}`}
+                    className="group block rounded-[28px] border border-slate-200/80 bg-white/90 p-4 transition hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700/80 dark:bg-slate-950/70 dark:hover:border-slate-500"
+                  >
+                    <div>
+                      <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white">
+                        {vendor.name}
+                      </h3>
+                      <p className={`${accentTextClass} font-semibold text-sm sm:text-base mt-1`}>
+                        {vendor.brand}
+                      </p>
+                      <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
+                        {vendor.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
+                      <span>Voir la page du vendeur</span>
+                      <span aria-hidden="true">→</span>
+                    </div>
+                  </Link>
                 </div>
 
                 {/* WhatsApp Button */}

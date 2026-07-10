@@ -540,3 +540,15 @@ export function getServiceBySlug(slug: string): ServiceDetail | null {
 export function getAllServiceSlugs(): string[] {
   return Object.keys(servicesData);
 }
+
+export function getVendorByServiceAndId(serviceSlug: string, vendorId: string) {
+  const service = getServiceBySlug(serviceSlug);
+  if (!service) return null;
+  return service.vendors.find((vendor) => vendor.id === vendorId) || null;
+}
+
+export function getAllServiceVendorParams() {
+  return Object.values(servicesData).flatMap((service) =>
+    service.vendors.map((vendor) => ({ serviceSlug: service.slug, vendorId: vendor.id }))
+  );
+}
