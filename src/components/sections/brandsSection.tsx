@@ -45,21 +45,21 @@ export function BrandsSection({ brands, heading = "Top brands", description = "D
             <motion.div
               key={`${brand.id}-${index}`}
               whileHover={{ scale: 1.03 }}
-              className="flex-shrink-0 w-auto sm:w-32"
+              className="flex-shrink-0 w-auto sm:w-28"
             >
-              <article className="rounded-[24px] text-center transition duration-00 hover:-translate-y-0.5 hover:shadow-lg">
-                <div className=" h-15 w-15 overflow-hidden rounded-3xl py-1">
+              <article className="rounded-[20px] text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+                <div className="h-10 w-10 overflow-hidden rounded-2xl py-1 sm:h-12 sm:w-12">
                   <img
                     src={brand.logoUrl}
                     alt={brand.logoAlt}
                     loading="lazy"
                     decoding="async"
-                    width={80}
-                    height={80}
+                    width={48}
+                    height={48}
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <p className="mt-3 text-xs font-semibold text-slate-900 dark:text-white">
+                <p className="mt-2 text-[0.65rem] font-semibold text-slate-900 dark:text-white">
                   {brand.name}
                 </p>
               </article>

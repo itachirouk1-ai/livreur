@@ -18,7 +18,7 @@ const services = [
 ];
 
 const restaurants = [
-  { name: "McDonald's", description: "Fast-food classique avec burgers savoureux et frites croustillantes. Profitez de nos menus spéciaux et livraison rapide.", badge: "Populaire" },
+  { name: "McDonald's", description: "Fast-food classique avec burgers savoureux et frites croustillantes. Profitez de nos menus spéciaux et livraison rapide.", badge: "Populaire " },
   { name: "KFC", description: "Poulet frit délicieux avec assaisonnement emblématique. Combos variés et portions généreuses livrées directement à votre porte.", badge: "Favori" },
   { name: "Burger King", description: "Burgers grillés à la flamme avec garnitures premium. Whopper emblématique et accompagnements classiques pour une satisfaction garantie." },
 ];

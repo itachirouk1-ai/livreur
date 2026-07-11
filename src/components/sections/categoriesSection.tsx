@@ -98,12 +98,12 @@ function Card({
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="flex-shrink-0 w-20 py-2 sm:w-24"
+      className="flex-shrink-0 w-16 py-2 sm:w-20"
     >
-      <div className={`flex h-28 flex-col items-center justify-center rounded-[24px]  text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
-        <div className="text-3xl sm:text-4xl">{category.emoji}</div>
+      <div className={`flex h-20 flex-col items-center justify-center rounded-[20px] text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+        <div className="text-2xl sm:text-3xl">{category.emoji}</div>
 
-        <p className={`mt-2 text-sm font-semibold ${accentClasses.textClass}`}>
+        <p className={`mt-1 text-[0.7rem] font-semibold ${accentClasses.textClass}`}>
           {category.name}
         </p>
       </div>
@@ -121,10 +121,10 @@ function BrandCard({
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
-      className="flex-shrink-0 w-auto sm:w-32"
+      className="flex-shrink-0 w-auto sm:w-28"
     >
-      <article className={`flex h-28 flex-col items-center justify-center rounded-[24px] px-3 py-4 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.softClass}`}>
-        <div className="mx-auto flex h-14 w-14 items-center justify-center overflow-hidden rounded-3xl bg-white shadow-inner sm:h-16 sm:w-16">
+      <article className={`flex h-24 flex-col items-center justify-center rounded-[20px] px-3 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.softClass}`}>
+        <div className="mx-auto flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-inner sm:h-12 sm:w-12">
           {brand.logoUrl ? (
             <img
               src={brand.logoUrl}
@@ -134,12 +134,12 @@ function BrandCard({
               className="h-full w-full object-contain"
             />
           ) : (
-            <span className="text-2xl">
+            <span className="text-lg sm:text-xl">
               {brand.logoEmoji || brand.name.charAt(0)}
             </span>
           )}
         </div>
-        <p className={`mt-2 text-xs font-semibold ${accentClasses.textClass}`}>
+        <p className={`mt-1 text-[0.65rem] font-semibold ${accentClasses.textClass}`}>
           {brand.name}
         </p>
       </article>

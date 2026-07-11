@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ALLO DELIVERER KECH | Premium Delivery in Marrakech",
-  description: "Premium delivery service in Marrakech for restaurants, pharmacies, supermarkets, flowers, and more.",
+  title: "ALLO DELIVERER MARRAKECH | Livraison premium à Marrakech",
+  description: "Service de livraison premium à Marrakech pour les restaurants, pharmacies, supermarchés, fleurs et plus encore.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}

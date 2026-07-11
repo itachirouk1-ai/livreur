@@ -1,10 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
+import { siteContent } from "@/lib/site-content";
+import { useLocalePreference } from "@/lib/use-locale";
 import { DarkLightModeToggle } from "./darklightmode";
 
 export function Header() {
+  const locale = useLocalePreference();
+  const copy = siteContent[locale];
+
   return (
     <header className="sticky top-0 z-40 pt-1 sm:px-3 lg:px-4">
       <motion.nav
@@ -21,14 +27,16 @@ export function Header() {
             <Menu className="h-5 w-5" />
           </button>
           <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-amber-500 text-sm font-semibold text-white shadow-lg shadow-orange-200">
-              A
-            </div>
+            <Image
+              src="/logos/applogo.png"
+              alt="Allo Deliverer Kech logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"
+              priority
+            />
             <div className="hidden sm:block">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">
-                ALLO DELIVERER KECH
-              </p>
-              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">Premium delivery</p>
+              <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">{copy.brandName}</p>
             </div>
           </div>
         </div>

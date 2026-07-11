@@ -107,6 +107,46 @@ function getAccentBadgeClass(accentTextClass?: string) {
   return "bg-slate-500";
 }
 
+function getVendorSectionCopy(slug?: string) {
+  const copyBySlug: Record<string, { heading: string; description: string }> = {
+    restaurants: {
+      heading: "Populaire   Restaurants",
+      description:
+        "Nous livrons vos plats préférés de n'importe quel restaurant de Marrakech directement à votre domicile !",
+    },
+    pharmacies: {
+      heading: "Les Meilleures Pharmacies",
+      description:
+        "Nous livrons vos médicaments et produits de santé directement chez vous, rapidement et en toute confidentialité !",
+    },
+    supermarkets: {
+      heading: "Populaire   Supermarchés",
+      description:
+        "Nous livrons vos courses préférées de n'importe quel supermarché de Marrakech directement à votre domicile !",
+    },
+    flowers: {
+      heading: "Les Meilleures Fleurs",
+      description:
+        "Nous livrons vos bouquets et fleurs préférés directement chez vous pour toutes les occasions !",
+    },
+    cosmetics: {
+      heading: "Les Meilleures Marques Beauté",
+      description:
+        "Nous livrons vos produits de beauté préférés directement chez vous, rapidement et en toute confiance !",
+    },
+    shopping: {
+      heading: "Populaire   Boutiques",
+      description:
+        "Nous livrons vos achats préférés directement chez vous, à Marrakech, en quelques minutes !",
+    },
+  };
+
+  return copyBySlug[slug ?? ""] ?? {
+    heading: "Populaire   Services",
+    description: "Nous livrons vos produits préférés directement chez vous, rapidement et facilement !",
+  };
+}
+
 export function ServiceDetailPageComponent({
   slug,
   heroImageUrl,
@@ -132,6 +172,7 @@ export function ServiceDetailPageComponent({
   );
   const accentTextClass = getAccentTextClass(titleColor);
   const accentBadgeClass = getAccentBadgeClass(titleColor);
+  const vendorSectionCopy = getVendorSectionCopy(slug);
 
   return (
     <div className="min-h-screen">
@@ -191,13 +232,13 @@ export function ServiceDetailPageComponent({
 
       {/* Vendors Section */}
       {vendors.length > 0 && (
-        <section className="mx-auto mt-16 sm:mt-24 max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+        <section className="mx-auto mt-3 sm:mt-5 max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
           <div className="mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
-              Les Meilleurs Restaurants
+            <h2 className={`${accentTextClass} text-2xl sm:text-3xl font-bold mb-2`}>
+              {vendorSectionCopy.heading}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
-              Nous livrons vos plats préférés de n&apos;importe quel restaurant de Marrakech directement à votre domicile !
+              {vendorSectionCopy.description}
             </p>
           </div>
 

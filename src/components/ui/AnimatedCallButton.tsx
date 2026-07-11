@@ -131,6 +131,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           z-index: 1;
           position: relative;
           height: 100%;
+          width: 100%;
           gap: 16px;
           border-radius: calc(var(--radius) * 0.85);
           font-weight: 600;
@@ -160,13 +161,17 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           z-index: 10;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           gap: 10px;
+          width: 100%;
+          padding: 0 12px;
         }
 
         .btn-label {
           display: inline-flex;
           align-items: center;
+          justify-content: center;
+          flex: 1;
           font-size: clamp(1.05rem, 2.4vw, 1.45rem);
           font-weight: 700;
           line-height: 1;
@@ -226,10 +231,16 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
         }
 
         @media (max-width: 640px) {
-          .button {
+          .wrapper {
             width: 100%;
+            justify-content: center;
+          }
+
+          .button {
+            width: 60%;
             min-width: 0;
             height: 54px;
+            margin: 0 auto;
             transform: rotate(353deg) skewX(4deg) scale(0.95);
           }
 
@@ -238,14 +249,19 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
             padding: 0 10px;
           }
 
+          .icon {
+            font-size: clamp(1.15rem, 5vw, 2rem);
+          }
+
           .btn-label {
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            font-size: clamp(0.95rem, 4.8vw, 1.9rem);
+            letter-spacing: 1px;
+            letter-spacing:4px
           }
 
           .phone-icon {
-            width: 20px;
-            height: 20px;
+            width: 1em;
+            height: 1em;
           }
         }
 
@@ -256,7 +272,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           }
 
           .btn-label {
-            font-size: 0.9rem;
+            font-size: clamp(0.85rem, 5vw, 1rem);
           }
         }
       `}</style>
