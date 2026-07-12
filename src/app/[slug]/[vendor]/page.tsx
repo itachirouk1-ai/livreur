@@ -1,8 +1,13 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
+import Link from 'next/link';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
-import { Header } from "@/components/sections/header";
-import { getAllServiceVendorParams, getServiceBySlug, getVendorByServiceAndId } from "@/lib/services-data";
+import { Header } from '@/components/sections/header';
+import {
+  getAllServiceVendorParams,
+  getServiceBySlug,
+  getVendorByServiceAndId,
+} from '@/lib/services-data';
 
 interface VendorPageProps {
   params: Promise<{
@@ -25,8 +30,8 @@ export async function generateMetadata({ params }: VendorPageProps) {
 
   if (!service || !vendorData) {
     return {
-      title: "Vendeur non trouvé",
-      description: "Page de vendeur introuvable.",
+      title: 'Vendeur non trouvé',
+      description: 'Page de vendeur introuvable.',
     };
   }
 
@@ -53,7 +58,10 @@ export default async function VendorPage({ params }: VendorPageProps) {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                <Link href={`/${service.slug}`} className="font-semibold text-primary hover:text-primary/90">
+                <Link
+                  href={`/${service.slug}`}
+                  className="font-semibold text-primary hover:text-primary/90"
+                >
                   Retour au service {service.title}
                 </Link>
               </p>
@@ -69,8 +77,12 @@ export default async function VendorPage({ params }: VendorPageProps) {
                 <span className="text-4xl">{vendorData.logo}</span>
               </div>
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Vendor</p>
-                <p className="text-lg font-semibold text-slate-900 dark:text-white">{vendorData.name}</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+                  Vendor
+                </p>
+                <p className="text-lg font-semibold text-slate-900 dark:text-white">
+                  {vendorData.name}
+                </p>
               </div>
             </div>
           </div>
@@ -83,43 +95,64 @@ export default async function VendorPage({ params }: VendorPageProps) {
                 </div>
                 <div>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Marque</p>
-                  <p className="text-xl font-semibold text-slate-900 dark:text-white">{vendorData.brand}</p>
+                  <p className="text-xl font-semibold text-slate-900 dark:text-white">
+                    {vendorData.brand}
+                  </p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-slate-900 dark:text-white">À propos</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{vendorData.description}</p>
+                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                  {vendorData.description}
+                </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl bg-slate-50 p-5 dark:bg-slate-900">
                   <p className="text-sm text-slate-500 dark:text-slate-400">Service</p>
-                  <p className="mt-2 font-semibold text-slate-900 dark:text-white">{service.title}</p>
+                  <p className="mt-2 font-semibold text-slate-900 dark:text-white">
+                    {service.title}
+                  </p>
                 </div>
                 <div className="rounded-3xl bg-slate-50 p-5 dark:bg-slate-900">
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Temps de livraison estimé</p>
-                  <p className="mt-2 font-semibold text-slate-900 dark:text-white">{service.deliveryTime}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">
+                    Temps de livraison estimé
+                  </p>
+                  <p className="mt-2 font-semibold text-slate-900 dark:text-white">
+                    {service.deliveryTime}
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="rounded-[32px] border border-slate-200/80 bg-white p-6 shadow-lg dark:border-slate-800/80 dark:bg-slate-950/70">
               <div className="space-y-4">
-                <div className="rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-900">
-                  <img
-                    src={vendorData.logoUrl ?? `https://picsum.photos/seed/${vendorData.id}/640/420`}
+                <div className="rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-900 relative h-72">
+                  <Image
+                    src={
+                      vendorData.logoUrl ?? `https://picsum.photos/seed/${vendorData.id}/640/420`
+                    }
                     alt={vendorData.logoAlt ?? vendorData.brand}
-                    className="h-72 w-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="space-y-2">
-                  <p className="text-sm uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">Détails du vendeur</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">
-                    ID: <span className="font-medium text-slate-900 dark:text-white">{vendorData.id}</span>
+                  <p className="text-sm uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                    Détails du vendeur
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">
-                    Nom interne: <span className="font-medium text-slate-900 dark:text-white">{vendorData.name}</span>
+                    ID:{' '}
+                    <span className="font-medium text-slate-900 dark:text-white">
+                      {vendorData.id}
+                    </span>
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                    Nom interne:{' '}
+                    <span className="font-medium text-slate-900 dark:text-white">
+                      {vendorData.name}
+                    </span>
                   </p>
                 </div>
               </div>

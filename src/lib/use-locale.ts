@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { getLocaleFromQuery, type Locale } from "@/lib/site-content";
+import { getLocaleFromQuery, type Locale } from '@/lib/site-content';
 
 export function useLocalePreference() {
-  const [locale, setLocale] = useState<Locale>("fr");
+  const [locale, setLocale] = useState<Locale>('fr');
 
   useEffect(() => {
     const syncLocale = () => {
@@ -15,12 +15,12 @@ export function useLocalePreference() {
     };
 
     syncLocale();
-    window.addEventListener("popstate", syncLocale);
-    window.addEventListener("hashchange", syncLocale);
+    window.addEventListener('popstate', syncLocale);
+    window.addEventListener('hashchange', syncLocale);
 
     return () => {
-      window.removeEventListener("popstate", syncLocale);
-      window.removeEventListener("hashchange", syncLocale);
+      window.removeEventListener('popstate', syncLocale);
+      window.removeEventListener('hashchange', syncLocale);
     };
   }, []);
 

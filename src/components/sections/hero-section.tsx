@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { Sparkles, ShieldCheck, Clock3 } from "lucide-react";
-import Link from "next/link";
-import { AnimatedCallButton } from "@/components/ui/AnimatedCallButton";
-import { AnimatedJoinButton } from "@/components/ui/animated-join-button";
-import { Button } from "@/components/ui/button";
-import { contactLinks, siteContent, withLocaleHref } from "@/lib/site-content";
-import { useLocalePreference } from "@/lib/use-locale";
+import { motion } from 'framer-motion';
+import { Sparkles, ShieldCheck, Clock3 } from 'lucide-react';
+import Link from 'next/link';
+import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
+import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
+import { Button } from '@/components/ui/button';
+import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
+import { useLocalePreference } from '@/lib/use-locale';
 
 export function HeroSection() {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
 
   const handleWhatsApp = () => {
-    window.open(contactLinks.whatsapp, "_blank", "noopener,noreferrer");
+    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
 
   const handleCall = () => {
@@ -34,16 +34,22 @@ export function HeroSection() {
           {copy.heroBadge}
         </div>
         <h1 className="text-3xl font-semibold leading-[1.05] tracking-[-0.03em] text-slate-950 sm:text-5xl lg:text-7xl dark:text-white">
-          {copy.heroTitleLine1} <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">{copy.heroTitleLine2}</span>
+          {copy.heroTitleLine1}{' '}
+          <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">
+            {copy.heroTitleLine2}
+          </span>
         </h1>
         <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-slate-600 sm:text-xl dark:text-slate-300">
           {copy.heroDescription}
         </p>
         <div className="mt-6 sm:mt-8 flex flex-col gap-2 sm:gap-3 sm:flex-row">
           <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
-          <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
-          <Link href={withLocaleHref("/#services", locale)}>
-            <Button variant="outline" className="h-11 sm:h-13 rounded-full border border-slate-300/80 bg-white/80 px-6 sm:px-8 text-sm sm:text-base font-semibold text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200">
+          <AnimatedJoinButton label={copy.WhatsApp} onClick={handleWhatsApp} />
+          <Link href={withLocaleHref('/#services', locale)}>
+            <Button
+              variant="outline"
+              className="h-11 sm:h-13 rounded-full border border-slate-300/80 bg-white/80 px-6 sm:px-8 text-sm sm:text-base font-semibold text-slate-700 shadow-sm hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200"
+            >
               {copy.exploreServices}
             </Button>
           </Link>

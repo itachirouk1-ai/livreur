@@ -1,7 +1,7 @@
-import { getServiceBySlug, getAllServiceSlugs } from "@/lib/services-data";
-import { ServiceDetailPageComponent } from "@/components/sections/service-detail-page";
-import { Header } from "@/components/sections/header";
-import { notFound } from "next/navigation";
+import { getServiceBySlug, getAllServiceSlugs } from '@/lib/services-data';
+import { ServiceDetailPageComponent } from '@/components/sections/service-detail-page';
+import { Header } from '@/components/sections/header';
+import { notFound } from 'next/navigation';
 
 interface ServicePageProps {
   params: Promise<{
@@ -10,7 +10,7 @@ interface ServicePageProps {
 }
 
 export async function generateStaticParams() {
-  return getAllServiceSlugs().map((slug) => ({
+  return getAllServiceSlugs().map(slug => ({
     slug,
   }));
 }
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: ServicePageProps) {
 
   if (!service) {
     return {
-      title: "Service not found",
+      title: 'Service not found',
     };
   }
 

@@ -1,26 +1,94 @@
-"use client";
+'use client';
 
-import { Header } from "@/components/sections/header";
-import { HeroSection } from "@/components/sections/hero-section";
-import { ServicesSection } from "@/components/sections/services-section";
-import { RestaurantsSection } from "@/components/sections/restaurants-section";
+import { Header } from '@/components/sections/header';
+import { HeroSection } from '@/components/sections/hero-section';
+import { ServicesSection } from '@/components/sections/services-section';
+import { RestaurantsSection } from '@/components/sections/restaurants-section';
 
 const services = [
-  { slug: "restaurants", title: "Restaurants", emoji: "🍔", bgGradient: "from-orange-400 via-orange-500 to-red-600", highlight: true },
-  { slug: "pharmacies", title: "Pharmacies", emoji: "💊", bgGradient: "from-emerald-400 via-green-500 to-teal-600", highlight: true },
-  { slug: "supermarkets", title: "Supermarkets", emoji: "🛒", bgGradient: "from-blue-400 via-cyan-500 to-sky-600", highlight: false },
-  { slug: "flowers", title: "Flowers", emoji: "🌸", bgGradient: "from-pink-400 via-rose-500 to-red-600", highlight: false },
-  { slug: "cosmetics", title: "Cosmetics", emoji: "💄", bgGradient: "from-violet-400 via-purple-500 to-fuchsia-600", highlight: false },
-  { slug: "shopping", title: "Shopping", emoji: "🛍", bgGradient: "from-amber-400 via-orange-500 to-yellow-600", highlight: false },
-  { slug: "parcel-delivery", title: "Parcel Delivery", emoji: "📦", bgGradient: "from-slate-400 via-zinc-500 to-gray-600", highlight: false },
-  { slug: "documents", title: "Documents", emoji: "📄", bgGradient: "from-indigo-400 via-blue-500 to-cyan-600", highlight: false },
-  { slug: "bakery", title: "Bakery", emoji: "🥖", bgGradient: "from-yellow-400 via-amber-500 to-orange-600", highlight: false },
+  {
+    slug: 'restaurants',
+    title: 'Restaurants',
+    emoji: '🍔',
+    bgGradient: 'from-orange-400 via-orange-500 to-red-600',
+    highlight: true,
+  },
+  {
+    slug: 'pharmacies',
+    title: 'Pharmacies',
+    emoji: '💊',
+    bgGradient: 'from-emerald-400 via-green-500 to-teal-600',
+    highlight: true,
+  },
+  {
+    slug: 'supermarkets',
+    title: 'Supermarkets',
+    emoji: '🛒',
+    bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
+    highlight: false,
+  },
+  {
+    slug: 'flowers',
+    title: 'Flowers',
+    emoji: '🌸',
+    bgGradient: 'from-pink-400 via-rose-500 to-red-600',
+    highlight: false,
+  },
+  {
+    slug: 'cosmetics',
+    title: 'Cosmetics',
+    emoji: '💄',
+    bgGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
+    highlight: false,
+  },
+  {
+    slug: 'shopping',
+    title: 'Shopping',
+    emoji: '🛍',
+    bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
+    highlight: false,
+  },
+  {
+    slug: 'parcel-delivery',
+    title: 'Parcel Delivery',
+    emoji: '📦',
+    bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
+    highlight: false,
+  },
+  {
+    slug: 'documents',
+    title: 'Documents',
+    emoji: '📄',
+    bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
+    highlight: false,
+  },
+  {
+    slug: 'bakery',
+    title: 'Bakery',
+    emoji: '🥖',
+    bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',
+    highlight: false,
+  },
 ];
 
 const restaurants = [
-  { name: "McDonald's", description: "Fast-food classique avec burgers savoureux et frites croustillantes. Profitez de nos menus spéciaux et livraison rapide.", badge: "Populaire " },
-  { name: "KFC", description: "Poulet frit délicieux avec assaisonnement emblématique. Combos variés et portions généreuses livrées directement à votre porte.", badge: "Favori" },
-  { name: "Burger King", description: "Burgers grillés à la flamme avec garnitures premium. Whopper emblématique et accompagnements classiques pour une satisfaction garantie." },
+  {
+    name: "McDonald's",
+    description:
+      'Fast-food classique avec burgers savoureux et frites croustillantes. Profitez de nos menus spéciaux et livraison rapide.',
+    badge: 'Populaire ',
+  },
+  {
+    name: 'KFC',
+    description:
+      'Poulet frit délicieux avec assaisonnement emblématique. Combos variés et portions généreuses livrées directement à votre porte.',
+    badge: 'Favori',
+  },
+  {
+    name: 'Burger King',
+    description:
+      'Burgers grillés à la flamme avec garnitures premium. Whopper emblématique et accompagnements classiques pour une satisfaction garantie.',
+  },
 ];
 
 export default function Home() {

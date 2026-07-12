@@ -1,11 +1,11 @@
-"use client"
-import { useTheme } from "@/components/ui/theme-provider"
-import styles from "./darklightmode.module.css"
-import LanguageToggle from "./languagetoggle"
+'use client';
+import { useTheme } from '@/components/ui/theme-provider';
+import styles from './darklightmode.module.css';
+import LanguageToggle from './languagetoggle';
 
 export function DarkLightModeToggle() {
-  const { resolvedTheme, setTheme } = useTheme()
-  const isDark = resolvedTheme === "dark"
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
 
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -16,7 +16,7 @@ export function DarkLightModeToggle() {
           <input
             type="checkbox"
             checked={isDark}
-            onChange={(event) => setTheme(event.target.checked ? "dark" : "light")}
+            onChange={event => setTheme(event.target.checked ? 'dark' : 'light')}
             aria-label="Toggle color mode"
           />
           <div className={styles.track}>
@@ -35,6 +35,5 @@ export function DarkLightModeToggle() {
         </label>
       </div>
     </div>
-  )
+  );
 }
-;

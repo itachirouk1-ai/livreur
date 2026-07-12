@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export interface BrandLogoItem {
   id: string;
@@ -16,7 +17,11 @@ interface BrandsSectionProps {
   description?: string;
 }
 
-export function BrandsSection({ brands, heading = "Top brands", description = "Discover leading brands for this service." }: BrandsSectionProps) {
+export function BrandsSection({
+  brands,
+  heading = 'Top brands',
+  description = 'Discover leading brands for this service.',
+}: BrandsSectionProps) {
   const loopedBrands = [...brands, ...brands];
 
   if (brands.length === 0) {
@@ -49,7 +54,7 @@ export function BrandsSection({ brands, heading = "Top brands", description = "D
             >
               <article className="rounded-[20px] text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg">
                 <div className="h-10 w-10 overflow-hidden rounded-2xl py-1 sm:h-12 sm:w-12">
-                  <img
+                  <Image
                     src={brand.logoUrl}
                     alt={brand.logoAlt}
                     loading="lazy"

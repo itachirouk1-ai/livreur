@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 interface AnimatedJoinButtonProps {
   label?: string;
   onClick?: () => void;
 }
 
-export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoinButtonProps) {
+export function AnimatedJoinButton({ label = 'WhatsApp', onClick }: AnimatedJoinButtonProps) {
   return (
     <div className="wrapper">
       <button className="button" type="button" onClick={onClick}>
@@ -54,7 +54,9 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           min-width: 0;
           height: clamp(58px, 8vw, 80px);
           transform: rotate(353deg) skewX(4deg);
-          transition: transform 0.2s ease, filter 0.2s ease;
+          transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
           padding: 0;
         }
 
@@ -71,7 +73,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
 
         .bg::before,
         .bg::after {
-          content: "";
+          content: '';
           position: absolute;
           inset: 0;
           border-radius: calc(var(--radius) * 1.1);
@@ -113,7 +115,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
         }
 
         .outline::before {
-          content: "";
+          content: '';
           position: absolute;
           inset: 2px;
           width: 120px;
@@ -143,7 +145,7 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
         }
 
         .content::before {
-          content: "";
+          content: '';
           inset: 0;
           position: absolute;
           z-index: 10;
@@ -178,7 +180,9 @@ export function AnimatedJoinButton({ label = "WhatsApp", onClick }: AnimatedJoin
           letter-spacing: 4px;
           color: var(--white);
           text-shadow: -1px 1px 2px var(--green-500);
-          transition: transform 0.2s ease, color 0.2s ease;
+          transition:
+            transform 0.2s ease,
+            color 0.2s ease;
         }
 
         .whatsapp-icon {

@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 interface AnimatedJoinButtonProps {
   label?: string;
   onClick?: () => void;
 }
 
-export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinButtonProps) {
+export function AnimatedCallButton({ label = 'Appeler', onClick }: AnimatedJoinButtonProps) {
   return (
     <div className="wrapper">
       <button className="button" type="button" onClick={onClick}>
@@ -54,7 +54,9 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           min-width: 0;
           height: clamp(58px, 8vw, 80px);
           transform: rotate(353deg) skewX(4deg);
-          transition: transform 0.2s ease, filter 0.2s ease;
+          transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
           padding: 0;
         }
 
@@ -71,7 +73,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
 
         .bg::before,
         .bg::after {
-          content: "";
+          content: '';
           position: absolute;
           inset: 0;
           border-radius: calc(var(--radius) * 1.1);
@@ -113,7 +115,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
         }
 
         .outline::before {
-          content: "";
+          content: '';
           position: absolute;
           inset: 2px;
           width: 120px;
@@ -143,7 +145,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
         }
 
         .content::before {
-          content: "";
+          content: '';
           inset: 0;
           position: absolute;
           z-index: 10;
@@ -178,7 +180,9 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           letter-spacing: 1px;
           color: var(--white);
           text-shadow: -1px 1px 2px var(--blue-500);
-          transition: transform 0.2s ease, color 0.2s ease;
+          transition:
+            transform 0.2s ease,
+            color 0.2s ease;
         }
 
         .phone-icon {
@@ -256,7 +260,7 @@ export function AnimatedCallButton({ label = "Appeler", onClick }: AnimatedJoinB
           .btn-label {
             font-size: clamp(0.95rem, 4.8vw, 1.9rem);
             letter-spacing: 1px;
-            letter-spacing:4px
+            letter-spacing: 4px;
           }
 
           .phone-icon {

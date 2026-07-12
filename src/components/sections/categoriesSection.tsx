@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface ServiceCategory {
   name: string;
@@ -19,49 +20,38 @@ interface CategoriesSectionProps {
   categories: ServiceCategory[];
   brands?: BrandLogoItem[];
   accentTextClass?: string;
-  accentGradient?: string;
 }
 
-export function CategoriesSection({
-  categories,
-  brands,
-  accentTextClass,
-  accentGradient,
-}: CategoriesSectionProps) {
+export function CategoriesSection({ categories, brands, accentTextClass }: CategoriesSectionProps) {
   const accentClasses = getAccentClasses(accentTextClass);
   const uniqueBrands = (brands ?? []).filter(
-    (brand, index, allBrands) =>
-      allBrands.findIndex((item) => item.id === brand.id) === index
+    (brand, index, allBrands) => allBrands.findIndex(item => item.id === brand.id) === index,
   );
 
   return (
     <section className="mx-auto max-w-7xl px-1 mt-1">
-      <div className={`relative overflow-hidden rounded-[32px] w-full py-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+      <div
+        className={`relative overflow-hidden rounded-[32px] w-full py-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}
+      >
         <div className="marquee-track">
           <div className="marquee-group">
-            {categories.map((category) => (
-              <Card
-                key={`1-${category.name}`}
-                category={category}
-                accentClasses={accentClasses}
-              />
+            {categories.map(category => (
+              <Card key={`1-${category.name}`} category={category} accentClasses={accentClasses} />
             ))}
           </div>
 
           <div className="marquee-group">
-            {categories.map((category) => (
-              <Card
-                key={`2-${category.name}`}
-                category={category}
-                accentClasses={accentClasses}
-              />
+            {categories.map(category => (
+              <Card key={`2-${category.name}`} category={category} accentClasses={accentClasses} />
             ))}
           </div>
         </div>
       </div>
 
       {uniqueBrands.length > 0 ? (
-        <div className={`overflow-hidden rounded-[32px] mt-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+        <div
+          className={`overflow-hidden rounded-[32px] mt-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}
+        >
           <div className="marquee-track">
             <div className="marquee-group">
               {uniqueBrands.map((brand, index) => (
@@ -96,11 +86,10 @@ function Card({
   accentClasses: ReturnType<typeof getAccentClasses>;
 }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="flex-shrink-0 w-16 py-2 sm:w-20"
-    >
-      <div className={`flex h-20 flex-col items-center justify-center rounded-[20px] text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}>
+    <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 w-16 py-2 sm:w-20">
+      <div
+        className={`flex h-20 flex-col items-center justify-center rounded-[20px] text-center transition-all hover:shadow-lg ${accentClasses.borderClass} ${accentClasses.softClass}`}
+      >
         <div className="text-2xl sm:text-3xl">{category.emoji}</div>
 
         <p className={`mt-1 text-[0.7rem] font-semibold ${accentClasses.textClass}`}>
@@ -119,24 +108,21 @@ function BrandCard({
   accentClasses: ReturnType<typeof getAccentClasses>;
 }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.03 }}
-      className="flex-shrink-0 w-auto sm:w-28"
-    >
-      <article className={`flex h-24 flex-col items-center justify-center rounded-[20px] px-3 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.softClass}`}>
+    <motion.div whileHover={{ scale: 1.03 }} className="flex-shrink-0 w-auto sm:w-28">
+      <article
+        className={`flex h-24 flex-col items-center justify-center rounded-[20px] px-3 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:shadow-lg ${accentClasses.softClass}`}
+      >
         <div className="mx-auto flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-inner sm:h-12 sm:w-12">
           {brand.logoUrl ? (
-            <img
+            <Image
               src={brand.logoUrl}
               alt={brand.logoAlt || brand.name}
-              loading="lazy"
-              decoding="async"
+              width={48}
+              height={48}
               className="h-full w-full object-contain"
             />
           ) : (
-            <span className="text-lg sm:text-xl">
-              {brand.logoEmoji || brand.name.charAt(0)}
-            </span>
+            <span className="text-lg sm:text-xl">{brand.logoEmoji || brand.name.charAt(0)}</span>
           )}
         </div>
         <p className={`mt-1 text-[0.65rem] font-semibold ${accentClasses.textClass}`}>
@@ -148,65 +134,69 @@ function BrandCard({
 }
 
 function getAccentClasses(accentTextClass?: string) {
-  if (accentTextClass?.includes("red")) {
+  if (accentTextClass?.includes('red')) {
     return {
-      textClass: "text-red-600 dark:text-red-400",
-      borderClass: "border-red-200/80 dark:border-red-800/50",
-      softClass: "bg-red-50/80 dark:bg-red-950/20",
+      textClass: 'text-red-600 dark:text-red-400',
+      borderClass: 'border-red-200/80 dark:border-red-800/50',
+      softClass: 'bg-red-50/80 dark:bg-red-950/20',
     };
   }
 
-  if (accentTextClass?.includes("emerald") || accentTextClass?.includes("green")) {
+  if (accentTextClass?.includes('emerald') || accentTextClass?.includes('green')) {
     return {
-      textClass: "text-emerald-600 dark:text-emerald-400",
-      borderClass: "border-emerald-200/80 dark:border-emerald-800/50",
-      softClass: "bg-emerald-50/80 dark:bg-emerald-950/20",
+      textClass: 'text-emerald-600 dark:text-emerald-400',
+      borderClass: 'border-emerald-200/80 dark:border-emerald-800/50',
+      softClass: 'bg-emerald-50/80 dark:bg-emerald-950/20',
     };
   }
 
-  if (accentTextClass?.includes("blue") || accentTextClass?.includes("sky") || accentTextClass?.includes("cyan")) {
+  if (
+    accentTextClass?.includes('blue') ||
+    accentTextClass?.includes('sky') ||
+    accentTextClass?.includes('cyan')
+  ) {
     return {
-      textClass: "text-blue-600 dark:text-blue-400",
-      borderClass: "border-blue-200/80 dark:border-blue-800/50",
-      softClass: "bg-blue-50/80 dark:bg-blue-950/20",
+      textClass: 'text-blue-600 dark:text-blue-400',
+      borderClass: 'border-blue-200/80 dark:border-blue-800/50',
+      softClass: 'bg-blue-50/80 dark:bg-blue-950/20',
     };
   }
 
-  if (accentTextClass?.includes("pink")) {
+  if (accentTextClass?.includes('pink')) {
     return {
-      textClass: "text-pink-600 dark:text-pink-400",
-      borderClass: "border-pink-200/80 dark:border-pink-800/50",
-      softClass: "bg-pink-50/80 dark:bg-pink-950/20",
+      textClass: 'text-pink-600 dark:text-pink-400',
+      borderClass: 'border-pink-200/80 dark:border-pink-800/50',
+      softClass: 'bg-pink-50/80 dark:bg-pink-950/20',
     };
   }
 
-  if (accentTextClass?.includes("purple") || accentTextClass?.includes("fuchsia")) {
+  if (accentTextClass?.includes('purple') || accentTextClass?.includes('fuchsia')) {
     return {
-      textClass: "text-purple-600 dark:text-purple-400",
-      borderClass: "border-purple-200/80 dark:border-purple-800/50",
-      softClass: "bg-purple-50/80 dark:bg-purple-950/20",
+      textClass: 'text-purple-600 dark:text-purple-400',
+      borderClass: 'border-purple-200/80 dark:border-purple-800/50',
+      softClass: 'bg-purple-50/80 dark:bg-purple-950/20',
     };
   }
 
-  if (accentTextClass?.includes("amber") || accentTextClass?.includes("yellow")) {
+  if (accentTextClass?.includes('amber') || accentTextClass?.includes('yellow')) {
     return {
-      textClass: "text-amber-600 dark:text-amber-400",
-      borderClass: "border-amber-200/80 dark:border-amber-800/50",
-      softClass: "bg-amber-50/80 dark:bg-amber-950/20",
+      textClass: 'text-amber-600 dark:text-amber-400',
+      borderClass: 'border-amber-200/80 dark:border-amber-800/50',
+      softClass: 'bg-amber-50/80 dark:bg-amber-950/20',
     };
   }
 
-  if (accentTextClass?.includes("indigo")) {
+  if (accentTextClass?.includes('indigo')) {
     return {
-      textClass: "text-indigo-600 dark:text-indigo-400",
-      borderClass: "border-indigo-200/80 dark:border-indigo-800/50",
-      softClass: "bg-indigo-50/80 dark:bg-indigo-950/20",
+      textClass: 'text-indigo-600 dark:text-indigo-400',
+      borderClass: 'border-indigo-200/80 dark:border-indigo-800/50',
+      softClass: 'bg-indigo-50/80 dark:bg-indigo-950/20',
     };
   }
 
   return {
-    textClass: "text-slate-700 dark:text-slate-200",
-    borderClass: "border-slate-200/80 dark:border-slate-700/60",
-    softClass: "bg-slate-50/80 dark:bg-slate-900/50",
+    textClass: 'text-slate-700 dark:text-slate-200',
+    borderClass: 'border-slate-200/80 dark:border-slate-700/60',
+    softClass: 'bg-slate-50/80 dark:bg-slate-900/50',
   };
 }
