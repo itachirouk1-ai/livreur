@@ -1,30 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { connection } from 'next/server';
 
 import { Header } from '@/components/sections/header';
-import {
-  getAllServiceVendorParams,
-  getServiceBySlug,
-  getVendorByServiceAndId,
-} from '@/lib/services-data';
+import { getServiceBySlug, getVendorByServiceAndId } from '@/lib/services-data';
+import { getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
 
 interface VendorPageProps {
   params: Promise<{
     slug: string;
     vendor: string;
   }>;
+  searchParams: Promise<{
+    lang?: string;
+  }>;
 }
 
-export async function generateStaticParams() {
-  return getAllServiceVendorParams().map(({ serviceSlug, vendorId }) => ({
-    slug: serviceSlug,
-    vendor: vendorId,
-  }));
-}
-
-export async function generateMetadata({ params }: VendorPageProps) {
+export async function generateMetadata({ params, searchParams }: VendorPageProps) {
+  await connection();
   const { slug, vendor } = await params;
+  await searchParams;
   const service = getServiceBySlug(slug);
   const vendorData = getVendorByServiceAndId(slug, vendor);
 
@@ -38,11 +34,21 @@ export async function generateMetadata({ params }: VendorPageProps) {
   return {
     title: `${vendorData.brand} | ${service.title}`,
     description: vendorData.description,
+    alternates: {
+      canonical: `/${slug}/${vendor}`,
+      languages: {
+        fr: `/${slug}/${vendor}`,
+        en: `/${slug}/${vendor}?lang=en`,
+      },
+    },
   };
 }
 
-export default async function VendorPage({ params }: VendorPageProps) {
+export default async function VendorPage({ params, searchParams }: VendorPageProps) {
+  await connection();
   const { slug, vendor } = await params;
+  const locale: Locale = getLocaleFromQuery((await searchParams).lang);
+  const copy = siteContent[locale];
   const service = getServiceBySlug(slug);
   const vendorData = getVendorByServiceAndId(slug, vendor);
 
@@ -62,7 +68,7 @@ export default async function VendorPage({ params }: VendorPageProps) {
                   href={`/${service.slug}`}
                   className="font-semibold text-primary hover:text-primary/90"
                 >
-                  Retour au service {service.title}
+                  {copy.backToService} {service.title}
                 </Link>
               </p>
               <h1 className="text-3xl font-bold tracking-[-0.03em] text-slate-900 dark:text-white sm:text-4xl">
@@ -78,7 +84,7 @@ export default async function VendorPage({ params }: VendorPageProps) {
               </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-                  Vendor
+                  {copy.vendorBadge}
                 </p>
                 <p className="text-lg font-semibold text-slate-900 dark:text-white">
                   {vendorData.name}
@@ -94,7 +100,7 @@ export default async function VendorPage({ params }: VendorPageProps) {
                   {vendorData.logo}
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Marque</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{copy.vendorBrand}</p>
                   <p className="text-xl font-semibold text-slate-900 dark:text-white">
                     {vendorData.brand}
                   </p>
@@ -102,7 +108,9 @@ export default async function VendorPage({ params }: VendorPageProps) {
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-slate-900 dark:text-white">À propos</h2>
+                <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+                  {copy.aboutLabel}
+                </h2>
                 <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                   {vendorData.description}
                 </p>
@@ -110,14 +118,14 @@ export default async function VendorPage({ params }: VendorPageProps) {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-3xl bg-slate-50 p-5 dark:bg-slate-900">
-                  <p className="text-sm text-slate-500 dark:text-slate-400">Service</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{copy.serviceLabel}</p>
                   <p className="mt-2 font-semibold text-slate-900 dark:text-white">
                     {service.title}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-slate-50 p-5 dark:bg-slate-900">
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    Temps de livraison estimé
+                    {copy.estimatedDeliveryTime}
                   </p>
                   <p className="mt-2 font-semibold text-slate-900 dark:text-white">
                     {service.deliveryTime}
@@ -140,7 +148,7 @@ export default async function VendorPage({ params }: VendorPageProps) {
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
-                    Détails du vendeur
+                    {copy.vendorDetails}
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">
                     ID:{' '}
@@ -149,7 +157,7 @@ export default async function VendorPage({ params }: VendorPageProps) {
                     </span>
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-300">
-                    Nom interne:{' '}
+                    {copy.vendorInternalName}:{' '}
                     <span className="font-medium text-slate-900 dark:text-white">
                       {vendorData.name}
                     </span>

@@ -8,6 +8,7 @@ import { CategoriesSection } from '@/components/sections/categoriesSection';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { getVendorSlug } from '@/lib/services-data';
+import { siteContent, type Locale } from '@/lib/site-content';
 
 interface ServiceCategory {
   name: string;
@@ -32,6 +33,7 @@ interface ServiceVendor {
 }
 
 interface ServiceDetailPageProps {
+  locale?: Locale;
   slug?: string;
   heroImageUrl?: string;
   title: string;
@@ -80,42 +82,87 @@ function getAccentTextClass(accentTextClass?: string) {
   return 'text-slate-700 dark:text-slate-200';
 }
 
-function getVendorSectionCopy(slug?: string) {
-  const copyBySlug: Record<string, { heading: string; description: string }> = {
+function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
+  const copyBySlug: Record<
+    string,
+    { fr: { heading: string; description: string }; en: { heading: string; description: string } }
+  > = {
     restaurants: {
-      heading: 'Populaire   Restaurants',
-      description:
-        "Nous livrons vos plats préférés de n'importe quel restaurant de Marrakech directement à votre domicile !",
+      fr: {
+        heading: 'Populaire   Restaurants',
+        description:
+          "Nous livrons vos plats préférés de n'importe quel restaurant de Marrakech directement à votre domicile !",
+      },
+      en: {
+        heading: 'Popular   Restaurants',
+        description:
+          'We deliver your favorite meals from any restaurant in Marrakech straight to your doorstep!',
+      },
     },
     pharmacies: {
-      heading: 'Les Meilleures Pharmacies',
-      description:
-        'Nous livrons vos médicaments et produits de santé directement chez vous, rapidement et en toute confidentialité !',
+      fr: {
+        heading: 'Les Meilleures Pharmacies',
+        description:
+          'Nous livrons vos médicaments et produits de santé directement chez vous, rapidement et en toute confidentialité !',
+      },
+      en: {
+        heading: 'Top Pharmacies',
+        description:
+          'We deliver your medicines and health products straight to your door, fast and discreet!',
+      },
     },
     supermarkets: {
-      heading: 'Populaire   Supermarchés',
-      description:
-        "Nous livrons vos courses préférées de n'importe quel supermarché de Marrakech directement à votre domicile !",
+      fr: {
+        heading: 'Populaire   Supermarchés',
+        description:
+          "Nous livrons vos courses préférées de n'importe quel supermarché de Marrakech directement à votre domicile !",
+      },
+      en: {
+        heading: 'Popular   Supermarkets',
+        description:
+          'We deliver your favorite groceries from any supermarket in Marrakech straight to your doorstep!',
+      },
     },
     flowers: {
-      heading: 'Les Meilleures Fleurs',
-      description:
-        'Nous livrons vos bouquets et fleurs préférés directement chez vous pour toutes les occasions !',
+      fr: {
+        heading: 'Les Meilleures Fleurs',
+        description:
+          'Nous livrons vos bouquets et fleurs préférés directement chez vous pour toutes les occasions !',
+      },
+      en: {
+        heading: 'Top Flowers',
+        description:
+          'We deliver your favorite bouquets and flowers straight to you for every occasion!',
+      },
     },
     cosmetics: {
-      heading: 'Les Meilleures Marques Beauté',
-      description:
-        'Nous livrons vos produits de beauté préférés directement chez vous, rapidement et en toute confiance !',
+      fr: {
+        heading: 'Les Meilleures Marques Beauté',
+        description:
+          'Nous livrons vos produits de beauté préférés directement chez vous, rapidement et en toute confiance !',
+      },
+      en: {
+        heading: 'Top Beauty Brands',
+        description:
+          'We deliver your favorite beauty products straight to you, fast and with confidence!',
+      },
     },
     shopping: {
-      heading: 'Populaire   Boutiques',
-      description:
-        'Nous livrons vos achats préférés directement chez vous, à Marrakech, en quelques minutes !',
+      fr: {
+        heading: 'Populaire   Boutiques',
+        description:
+          'Nous livrons vos achats préférés directement chez vous, à Marrakech, en quelques minutes !',
+      },
+      en: {
+        heading: 'Popular   Shops',
+        description:
+          'We deliver your favorite shopping straight to you in Marrakech in just a few minutes!',
+      },
     },
   };
 
   return (
-    copyBySlug[slug ?? ''] ?? {
+    copyBySlug[slug ?? '']?.[locale] ?? {
       heading: 'Populaire   Services',
       description:
         'Nous livrons vos produits préférés directement chez vous, rapidement et facilement !',
@@ -124,6 +171,7 @@ function getVendorSectionCopy(slug?: string) {
 }
 
 export function ServiceDetailPageComponent({
+  locale = 'fr',
   slug,
   heroImageUrl,
   title,
@@ -132,6 +180,7 @@ export function ServiceDetailPageComponent({
   categories,
   vendors,
 }: ServiceDetailPageProps) {
+  const copy = siteContent[locale];
   const brandItems = vendors.map(vendor => ({
     id: vendor.id,
     name: vendor.brand,
@@ -142,7 +191,7 @@ export function ServiceDetailPageComponent({
 
   const uniqueBrandItems = Array.from(new Map(brandItems.map(brand => [brand.id, brand])).values());
   const accentTextClass = getAccentTextClass(titleColor);
-  const vendorSectionCopy = getVendorSectionCopy(slug);
+  const vendorSectionCopy = getVendorSectionCopy(slug, locale);
 
   return (
     <div className="min-h-screen">
@@ -183,8 +232,8 @@ export function ServiceDetailPageComponent({
               </div>
 
               <div className="absolute bottom-3 left-2 right-2 z-20 flex flex-col gap-2 sm:bottom-6 sm:left-3 sm:right-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:bottom-6 lg:left-6 lg:right-6 lg:gap-3">
-                <AnimatedCallButton label="Appeler" />
-                <AnimatedJoinButton label="WhatsApp" />
+                <AnimatedCallButton label={copy.callNow} />
+                <AnimatedJoinButton label={copy.orderOnWhatsApp} />
               </div>
             </motion.div>
           </div>
@@ -251,7 +300,7 @@ export function ServiceDetailPageComponent({
                       </div>
 
                       <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
-                        <span>Voir la page du vendeur</span>
+                        <span>{copy.seeVendorPage}</span>
                         <span aria-hidden="true">→</span>
                       </div>
                     </Link>

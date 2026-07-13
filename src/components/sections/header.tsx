@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
@@ -44,7 +45,9 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <DarkLightModeToggle />
+          <Suspense fallback={<div className="h-11 w-[145px]" />}>
+            <DarkLightModeToggle />
+          </Suspense>
         </div>
       </motion.nav>
     </header>

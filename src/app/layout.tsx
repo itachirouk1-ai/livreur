@@ -1,7 +1,10 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ui/theme-provider';
+import { LocaleProvider } from '@/lib/use-locale';
+import { siteUrl } from '@/lib/site-content';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -14,9 +17,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'ALLO DELIVERER MARRAKECH | Livraison premium à Marrakech',
   description:
     'Service de livraison premium à Marrakech pour les restaurants, pharmacies, supermarchés, fleurs et plus encore.',
+  alternates: {
+    languages: {
+      fr: '/',
+      en: '/?lang=en',
+    },
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +42,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Suspense fallback={null}>
+            <LocaleProvider>{children}</LocaleProvider>
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );

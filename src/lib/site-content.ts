@@ -1,5 +1,7 @@
 export type Locale = 'fr' | 'en';
 
+export const siteUrl = 'https://allodelivererkech.com';
+
 export const siteContent: Record<
   Locale,
   {

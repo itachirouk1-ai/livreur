@@ -44,7 +44,7 @@ export function HeroSection() {
         </p>
         <div className="mt-6 sm:mt-8 flex flex-col gap-2 sm:gap-3 sm:flex-row">
           <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
-          <AnimatedJoinButton label={copy.WhatsApp} onClick={handleWhatsApp} />
+          <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
           <Link href={withLocaleHref('/#services', locale)}>
             <Button
               variant="outline"
