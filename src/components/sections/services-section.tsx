@@ -73,13 +73,6 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                     <h3 className="mt-4 sm:mt-6 text-xl sm:text-3xl font-bold text-white drop-shadow-lg">
                       {service.title}
                     </h3>
-
-                    {service.highlight && (
-                      <div className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1.5 text-sm font-semibold text-orange-600 shadow-lg backdrop-blur">
-                        <Sparkles className="h-4 w-4" />
-                        {copy.popularBadge}
-                      </div>
-                    )}
                   </div>
                 </motion.article>
               </motion.div>

@@ -1,15 +1,18 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { contactLinks, siteContent } from '@/lib/site-content';
+import { Sparkles, ArrowRight } from 'lucide-react';
+import { siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 
 interface Restaurant {
   name: string;
   description: string;
   badge?: string;
+  emoji?: string;
+  href?: string;
+  accent?: string;
 }
 
 interface RestaurantsSectionProps {
@@ -19,10 +22,6 @@ interface RestaurantsSectionProps {
 export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
-
-  const handleWhatsApp = () => {
-    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-  };
 
   return (
     <section className="mx-auto mt-20 sm:mt-32 max-w-7xl px-2 sm:px-0">
@@ -36,7 +35,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.03em] text-slate-950 dark:text-white">
-              {copy.popularBadge}{' '}
+              
               <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 {copy.restaurantsHeading}
               </span>
@@ -46,19 +45,13 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
             </p>
           </div>
           <div className="hidden sm:block">
-            <Button
-              onClick={handleWhatsApp}
-              className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-full bg-gradient-to-r from-green-500 via-emerald-500 to-teal-600 px-6 sm:px-8 text-sm sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] hover:shadow-[0_16px_36px_rgba(16,185,129,0.45)] transition-all hover:scale-[1.04]"
+            <Link
+              href={withLocaleHref('/#services', locale)}
+              className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 px-6 sm:px-8 text-sm sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(249,115,22,0.3)] transition-all hover:scale-[1.04]"
             >
-              <svg
-                className="h-5 w-5 fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.946-2.504 2.292-2.504 3.964 0 1.744.822 3.357 2.322 4.521l-.333 2.332 2.532-1.313c1.24.657 2.305 1.059 2.715 1.059.033 0 .066 0 .098 0 5.338 0 9.516-4.226 9.516-9.45 0-2.409-.906-4.869-2.562-6.603-1.656-1.735-3.935-2.908-6.784-2.908z" />
-              </svg>
-              {copy.orderOnWhatsApp}
-            </Button>
+              {copy.exploreServices}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </motion.div>
@@ -71,47 +64,38 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
-            className="group flex flex-col h-full"
+            className="group flex h-full flex-col"
           >
-            <div className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] flex-1 shadow-[0_16px_40px_rgba(15,23,42,0.12)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-amber-400 to-red-500 opacity-80" />
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
+            <Link href={withLocaleHref(restaurant.href ?? '/#services', locale)} className="flex h-full flex-col">
+              <div className="relative flex-1 overflow-hidden rounded-[24px] shadow-[0_16px_40px_rgba(15,23,42,0.12)] transition-all duration-300 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:rounded-[28px]">
+                <div className={`absolute inset-0 bg-gradient-to-br ${restaurant.accent ?? 'from-orange-400 via-amber-400 to-red-500'} opacity-80`} />
+                <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
 
-              <div className="relative h-64 sm:h-72 flex items-center justify-center text-6xl sm:text-7xl">
-                🍽️
-              </div>
-
-              {restaurant.badge && (
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1 rounded-full bg-white/95 px-3 py-1.5 text-xs sm:text-sm font-bold text-orange-600 shadow-lg backdrop-blur">
-                  <Sparkles className="h-4 w-4" />
-                  {restaurant.badge}
+                <div className="relative flex h-64 items-center justify-center text-6xl sm:h-72 sm:text-7xl">
+                  {restaurant.emoji ?? '🏪'}
                 </div>
-              )}
-            </div>
 
-            <div className="mt-4 flex-1 flex flex-col">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-950 dark:text-white">
-                {restaurant.name}
-              </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed flex-1">
-                {restaurant.description}
-              </p>
-              <div className="mt-4">
-                <Button
-                  onClick={handleWhatsApp}
-                  className="w-full h-11 sm:h-12 rounded-full bg-gradient-to-r from-green-500 via-emerald-500 to-teal-600 px-4 sm:px-6 text-sm sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] hover:shadow-[0_16px_36px_rgba(16,185,129,0.45)] transition-all hover:scale-[1.02]"
-                >
-                  <svg
-                    className="mr-2 h-4 w-4 sm:h-5 sm:w-5 fill-current inline"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.946-2.504 2.292-2.504 3.964 0 1.744.822 3.357 2.322 4.521l-.333 2.332 2.532-1.313c1.24.657 2.305 1.059 2.715 1.059.033 0 .066 0 .098 0 5.338 0 9.516-4.226 9.516-9.45 0-2.409-.906-4.869-2.562-6.603-1.656-1.735-3.935-2.908-6.784-2.908z" />
-                  </svg>
-                  {copy.orderNow}
-                </Button>
+                {restaurant.badge && (
+                  <div className="absolute left-4 top-4 inline-flex items-center gap-1 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-orange-600 shadow-lg backdrop-blur sm:text-sm">
+                    <Sparkles className="h-4 w-4" />
+                    {restaurant.badge}
+                  </div>
+                )}
               </div>
-            </div>
+
+              <div className="mt-4 flex flex-1 flex-col">
+                <h3 className="text-xl font-bold text-slate-950 dark:text-white sm:text-2xl">
+                  {restaurant.name}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
+                  {restaurant.description}
+                </p>
+                <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
+                  <span>{copy.seeVendorPage}</span>
+                  <span aria-hidden="true">→</span>
+                </div>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>

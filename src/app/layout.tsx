@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
-import { siteUrl } from '@/lib/site-content';
+import { siteContent, siteUrl, type Locale } from '@/lib/site-content';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,9 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'ALLO DELIVERER MARRAKECH | Livraison premium à Marrakech',
-  description:
-    'Service de livraison premium à Marrakech pour les restaurants, pharmacies, supermarchés, fleurs et plus encore.',
+  title: siteContent.fr.homeMetaTitle,
+  description: siteContent.fr.homeMetaDescription,
   alternates: {
     languages: {
       fr: '/',

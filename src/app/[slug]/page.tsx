@@ -4,7 +4,7 @@ import { Header } from '@/components/sections/header';
 import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 
-import { getLocaleFromQuery, type Locale } from '@/lib/site-content';
+import { getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
 
 interface ServicePageProps {
   params: Promise<{
@@ -27,13 +27,16 @@ export async function generateMetadata({ params, searchParams }: ServicePageProp
 
   if (!service) {
     return {
-      title: 'Service not found',
+      title: locale === 'en' ? 'Service not found' : 'Service introuvable',
+      description: locale === 'en' ? 'The requested service could not be found.' : 'Le service demandé est introuvable.',
     };
   }
 
+  const copy = siteContent[locale];
+
   return {
-    title: `${service.title} | ALLO DELIVERER KECH`,
-    description: service.description,
+    title: `${service.title} | ${copy.serviceMetaTitle}`,
+    description: service.description || copy.serviceMetaDescription,
     alternates: {
       canonical: `/${slug}`,
       languages: {

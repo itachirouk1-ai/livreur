@@ -24,16 +24,20 @@ export async function generateMetadata({ params, searchParams }: VendorPageProps
   const service = getServiceBySlug(slug);
   const vendorData = getVendorByServiceAndId(slug, vendor);
 
+  const locale = (await searchParams).lang?.toLowerCase() === 'en' ? 'en' : 'fr';
+
   if (!service || !vendorData) {
     return {
-      title: 'Vendeur non trouvé',
-      description: 'Page de vendeur introuvable.',
+      title: locale === 'en' ? 'Vendor not found' : 'Vendeur non trouvé',
+      description: locale === 'en' ? 'The requested vendor page could not be found.' : 'Page de vendeur introuvable.',
     };
   }
 
+  const copy = siteContent[locale];
+
   return {
     title: `${vendorData.brand} | ${service.title}`,
-    description: vendorData.description,
+    description: vendorData.description || copy.vendorMetaDescription,
     alternates: {
       canonical: `/${slug}/${vendor}`,
       languages: {

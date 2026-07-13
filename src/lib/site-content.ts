@@ -8,7 +8,7 @@ export const siteContent: Record<
     brandName: string;
     heroBadge: string;
     heroTitleLine1: string;
-    heroTitleLine2: string;
+    
     heroDescription: string;
     callNow: string;
     orderOnWhatsApp: string;
@@ -18,7 +18,7 @@ export const siteContent: Record<
     servicesHeadingLine1: string;
     servicesHeadingLine2: string;
     servicesSubtitle: string;
-    popularBadge: string;
+    
     orderNow: string;
     restaurantsHeading: string;
     restaurantsDescription: string;
@@ -32,29 +32,38 @@ export const siteContent: Record<
     vendorInternalName: string;
     vendorBadge: string;
     returnToService: string;
+    homeMetaTitle: string;
+    homeMetaDescription: string;
+    serviceMetaTitle: string;
+    serviceMetaDescription: string;
+    vendorMetaTitle: string;
+    vendorMetaDescription: string;
+    menuLabel: string;
+    languageLabel: string;
+    english: string;
+    french: string;
   }
 > = {
   fr: {
     brandName: 'ALLO DELIVERER MARRAKECH',
     heroBadge: 'Disponible 24/7',
-    heroTitleLine1: 'Livraison à',
-    heroTitleLine2: 'Marrakech',
+    heroTitleLine1: 'Livraison Rapide à Marrakech',
     heroDescription:
-      'Vos restaurants, pharmacies, supermarchés, fleurs et bien plus encore livrés rapidement partout à Marrakech.',
+      'Restaurants, pharmacies, supermarchés, fleurs, documents et bien plus. Commandez facilement par téléphone ou WhatsApp et profitez d\'une livraison rapide partout à Marrakech 7j/7."',
     callNow: 'Appeler',
-    orderOnWhatsApp: 'Commander sur WhatsApp',
+    orderOnWhatsApp: 'WhatsApp',
     exploreServices: 'Explorer les services',
     trustedRiders: 'Coursiers de confiance',
     fastDelivery: 'Livraison rapide',
     servicesHeadingLine1: 'Nous Livrons',
     servicesHeadingLine2: 'Tout Partout',
     servicesSubtitle: 'Marrakech : chacun à votre domicile !',
-    popularBadge: 'Populaire',
+    
     orderNow: 'Commander maintenant',
-    restaurantsHeading: 'Restaurants',
+    restaurantsHeading: 'Boutiques populaires',
     restaurantsDescription:
-      "Nous livrons vos plats préférés de n'importe quel restaurant directement à votre domicile !",
-    seeVendorPage: 'Voir la page du vendeur',
+      'Découvrez les boutiques et services les plus demandés à Marrakech, de la fleuristerie au marché local en passant par les pharmacies.',
+    seeVendorPage: 'Voir la page',
     backToService: 'Retour au service',
     serviceLabel: 'Service',
     estimatedDeliveryTime: 'Temps de livraison estimé',
@@ -64,28 +73,40 @@ export const siteContent: Record<
     vendorInternalName: 'Nom interne',
     vendorBadge: 'Vendeur',
     returnToService: 'Retour au service',
+    homeMetaTitle: 'Allo Deliverer Marrakech | Livraison rapide à Marrakech',
+    homeMetaDescription:
+      'Livraison rapide à Marrakech pour restaurants, pharmacies, supermarchés, fleurs et plus encore.',
+    serviceMetaTitle: 'Services de livraison à Marrakech | Allo Deliverer',
+    serviceMetaDescription:
+      'Découvrez nos services de livraison à Marrakech, rapides, fiables et disponibles 24/7.',
+    vendorMetaTitle: 'Vendeurs de livraison à Marrakech | Allo Deliverer',
+    vendorMetaDescription: 'Consultez les vendeurs partenaires et commandez en quelques clics.',
+    menuLabel: 'Ouvrir le menu principal',
+    languageLabel: 'Changer la langue',
+    english: 'English',
+    french: 'Français',
   },
   en: {
     brandName: 'ALLO DELIVERER MARRAKECH',
     heroBadge: 'Available 24/7',
-    heroTitleLine1: 'Delivery in',
-    heroTitleLine2: 'Marrakech',
+    heroTitleLine1: 'Fast Delivery in Marrakech',
+    
     heroDescription:
-      'Your favorite restaurants, pharmacies, supermarkets, flowers, and much more, delivered quickly across Marrakech.',
+      'Restaurants, pharmacies, supermarchés, fleurs, documents et bien plus. Commandez facilement par téléphone ou WhatsApp et profitez d\'une livraison rapide partout à Marrakech, 7j/7.',
     callNow: 'Call now',
-    orderOnWhatsApp: 'Order on WhatsApp',
+    orderOnWhatsApp: 'WhatsApp',
     exploreServices: 'Explore services',
     trustedRiders: 'Trusted riders',
     fastDelivery: 'Fast delivery',
     servicesHeadingLine1: 'We Deliver',
     servicesHeadingLine2: 'Everywhere',
     servicesSubtitle: 'Marrakech: your doorstep, covered.',
-    popularBadge: 'Popular',
+    
     orderNow: 'Order now',
-    restaurantsHeading: 'Restaurants',
+    restaurantsHeading: 'Popular stores',
     restaurantsDescription:
-      'We deliver your favorite meals from any restaurant straight to your doorstep.',
-    seeVendorPage: 'View vendor page',
+      'Discover the most requested shops and services in Marrakech, from flower boutiques to local markets and pharmacies.',
+    seeVendorPage: 'View page',
     backToService: 'Back to service',
     serviceLabel: 'Service',
     estimatedDeliveryTime: 'Estimated delivery time',
@@ -95,6 +116,18 @@ export const siteContent: Record<
     vendorInternalName: 'Internal name',
     vendorBadge: 'Vendor',
     returnToService: 'Back to service',
+    homeMetaTitle: 'Allo Deliverer Marrakech | Fast delivery in Marrakech',
+    homeMetaDescription:
+      'Fast delivery in Marrakech for restaurants, pharmacies, supermarkets, flowers and much more.',
+    serviceMetaTitle: 'Delivery services in Marrakech | Allo Deliverer',
+    serviceMetaDescription:
+      'Discover our fast, reliable and 24/7 delivery services in Marrakech.',
+    vendorMetaTitle: 'Delivery vendors in Marrakech | Allo Deliverer',
+    vendorMetaDescription: 'Browse our partner vendors and place your order in a few clicks.',
+    menuLabel: 'Open main menu',
+    languageLabel: 'Change language',
+    english: 'English',
+    french: 'Français',
   },
 };
 
@@ -113,13 +146,22 @@ export function getLocaleFromSearchParams(searchParams?: URLSearchParams | null)
 }
 
 export function withLocaleHref(path: string, locale: Locale) {
-  if (!path) {
-    return `?lang=${locale}`;
+  if (!path || path === '/') {
+    return locale === 'en' ? '/?lang=en' : '/';
   }
+
+  const [pathnameAndQuery, hash = ''] = path.split('#');
+  const [pathName, existingQuery = ''] = pathnameAndQuery.split('?');
+  const params = new URLSearchParams(existingQuery);
 
   if (locale === 'en') {
-    return `${path}${path.includes('?') ? '&' : '?'}lang=en`;
+    params.set('lang', 'en');
+  } else {
+    params.delete('lang');
   }
 
-  return path;
+  const query = params.toString();
+  const finalPath = query ? `${pathName}?${query}` : pathName;
+
+  return hash ? `${finalPath}#${hash}` : finalPath;
 }

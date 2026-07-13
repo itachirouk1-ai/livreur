@@ -89,9 +89,9 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
   > = {
     restaurants: {
       fr: {
-        heading: 'Populaire   Restaurants',
+        heading: 'Restaurants populaires',
         description:
-          "Nous livrons vos plats préférés de n'importe quel restaurant de Marrakech directement à votre domicile !",
+          'Nous livrons vos plats préférés de n’importe quel restaurant de Marrakech directement à votre domicile !',
       },
       en: {
         heading: 'Popular   Restaurants',
@@ -101,7 +101,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     pharmacies: {
       fr: {
-        heading: 'Les Meilleures Pharmacies',
+        heading: 'Les meilleures pharmacies',
         description:
           'Nous livrons vos médicaments et produits de santé directement chez vous, rapidement et en toute confidentialité !',
       },
@@ -113,9 +113,9 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     supermarkets: {
       fr: {
-        heading: 'Populaire   Supermarchés',
+        heading: 'Supermarchés populaires',
         description:
-          "Nous livrons vos courses préférées de n'importe quel supermarché de Marrakech directement à votre domicile !",
+          'Nous livrons vos courses préférées de n’importe quel supermarché de Marrakech directement à votre domicile !',
       },
       en: {
         heading: 'Popular   Supermarkets',
@@ -125,7 +125,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     flowers: {
       fr: {
-        heading: 'Les Meilleures Fleurs',
+        heading: 'Les meilleures fleurs',
         description:
           'Nous livrons vos bouquets et fleurs préférés directement chez vous pour toutes les occasions !',
       },
@@ -137,7 +137,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     cosmetics: {
       fr: {
-        heading: 'Les Meilleures Marques Beauté',
+        heading: 'Les meilleures marques beauté',
         description:
           'Nous livrons vos produits de beauté préférés directement chez vous, rapidement et en toute confiance !',
       },
@@ -149,7 +149,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     shopping: {
       fr: {
-        heading: 'Populaire   Boutiques',
+        heading: 'Boutiques populaires',
         description:
           'Nous livrons vos achats préférés directement chez vous, à Marrakech, en quelques minutes !',
       },
@@ -163,7 +163,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
 
   return (
     copyBySlug[slug ?? '']?.[locale] ?? {
-      heading: 'Populaire   Services',
+      heading: 'Services populaires',
       description:
         'Nous livrons vos produits préférés directement chez vous, rapidement et facilement !',
     }

@@ -22,7 +22,7 @@ export function Header() {
       >
         <div className="flex items-center gap-3">
           <button
-            aria-label="Open main menu"
+            aria-label={copy.menuLabel}
             className="flex h-11 w-11 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white dark:bg-slate-900/80 dark:text-slate-200"
           >
             <Menu className="h-5 w-5" />

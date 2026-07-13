@@ -34,10 +34,8 @@ export function HeroSection() {
           {copy.heroBadge}
         </div>
         <h1 className="text-3xl font-semibold leading-[1.05] tracking-[-0.03em] text-slate-950 sm:text-5xl lg:text-7xl dark:text-white">
-          {copy.heroTitleLine1}{' '}
-          <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">
-            {copy.heroTitleLine2}
-          </span>
+          {copy.heroTitleLine1}
+          
         </h1>
         <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-slate-600 sm:text-xl dark:text-slate-300">
           {copy.heroDescription}
