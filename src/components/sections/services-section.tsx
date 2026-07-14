@@ -28,7 +28,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   return (
-    <section id="services" className="mx-auto mt-20 sm:mt-32 max-w-7xl px-2 sm:px-0">
+    <section id="services" className="mx-auto mt-2 sm:mt-2 max-w-7xl px-2 sm:px-0">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

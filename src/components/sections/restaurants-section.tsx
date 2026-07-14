@@ -24,7 +24,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
   const copy = siteContent[locale];
 
   return (
-    <section className="mx-auto mt-20 sm:mt-32 max-w-7xl px-2 sm:px-0">
+    <section className="mx-auto mt-5 sm:mt-10 max-w-7xl px-2 sm:px-0">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

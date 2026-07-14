@@ -18,7 +18,7 @@ export function Header() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto flex w-full flex-wrap items-center justify-between gap-3 px-3 py-2 max-w-7xl rounded-[28px] border border-white/70 bg-white/70 shadow-[0_20px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/70 sm:flex-nowrap sm:px-6"
+        className="mx-auto flex w-full flex-wrap items-center justify-between gap-3 px-3 max-w-7xl rounded-[28px] border border-white/70 bg-white/70 shadow-[0_20px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/70 sm:flex-nowrap sm:px-6"
       >
         <div className="flex items-center gap-3">
           <button
