@@ -34,7 +34,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
       >
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.03em] text-slate-950 dark:text-white">
+            <h2 className=" text-center sm:text-left text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.03em] text-slate-950 dark:text-white">
               
               <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 {copy.restaurantsHeading}

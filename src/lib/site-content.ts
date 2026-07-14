@@ -15,7 +15,7 @@ export const siteContent: Record<
     exploreServices: string;
     trustedRiders: string;
     fastDelivery: string;
-    servicesHeadingLine1: string;
+    
     servicesHeadingLine2: string;
     servicesSubtitle: string;
     
@@ -45,18 +45,17 @@ export const siteContent: Record<
   }
 > = {
   fr: {
-    brandName: 'ALLO DELIVERER MARRAKECH',
+    brandName: 'ALLO LIVREUR MARRAKECH',
     heroBadge: 'Disponible 24/7',
     heroTitleLine1: 'Livraison Rapide à Marrakech',
     heroDescription:
-      'Restaurants, pharmacies, supermarchés, fleurs, documents et bien plus. Commandez facilement par téléphone ou WhatsApp et profitez d\'une livraison rapide partout à Marrakech 7j/7."',
+      'Restaurants, pharmacies, supermarchés, fleurs, documents et bien plus. Commandez facilement par téléphone ou WhatsApp et profitez d\'une livraison rapide partout à Marrakech 7j/7.',
     callNow: 'Appeler',
     orderOnWhatsApp: 'WhatsApp',
     exploreServices: 'Explorer les services',
     trustedRiders: 'Coursiers de confiance',
     fastDelivery: 'Livraison rapide',
-    servicesHeadingLine1: 'Nous Livrons',
-    servicesHeadingLine2: 'Tout Partout',
+    servicesHeadingLine2: 'Nous Livrons Tout Partout',
     servicesSubtitle: 'Marrakech : chacun à votre domicile !',
     
     orderNow: 'Commander maintenant',
@@ -73,7 +72,7 @@ export const siteContent: Record<
     vendorInternalName: 'Nom interne',
     vendorBadge: 'Vendeur',
     returnToService: 'Retour au service',
-    homeMetaTitle: 'Allo Deliverer Marrakech | Livraison rapide à Marrakech',
+    homeMetaTitle: 'Allo Livreur Marrakech | Livraison rapide à Marrakech',
     homeMetaDescription:
       'Livraison rapide à Marrakech pour restaurants, pharmacies, supermarchés, fleurs et plus encore.',
     serviceMetaTitle: 'Services de livraison à Marrakech | Allo Deliverer',
@@ -92,14 +91,13 @@ export const siteContent: Record<
     heroTitleLine1: 'Fast Delivery in Marrakech',
     
     heroDescription:
-      'Restaurants, pharmacies, supermarchés, fleurs, documents et bien plus. Commandez facilement par téléphone ou WhatsApp et profitez d\'une livraison rapide partout à Marrakech, 7j/7.',
+      'Restaurants, pharmacies, supermarkets, flowers, documents and more. Order easily by phone or WhatsApp and enjoy fast delivery across Marrakech, 7 days a week.',
     callNow: 'Call now',
     orderOnWhatsApp: 'WhatsApp',
     exploreServices: 'Explore services',
     trustedRiders: 'Trusted riders',
     fastDelivery: 'Fast delivery',
-    servicesHeadingLine1: 'We Deliver',
-    servicesHeadingLine2: 'Everywhere',
+    servicesHeadingLine2: 'We Deliver Everywhere',
     servicesSubtitle: 'Marrakech: your doorstep, covered.',
     
     orderNow: 'Order now',

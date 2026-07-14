@@ -37,7 +37,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
         className="mb-12 sm:mb-16 text-center"
       >
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[-0.03em] text-slate-950 dark:text-white">
-          {copy.servicesHeadingLine1} <br />
+          
           <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">
             {copy.servicesHeadingLine2}
           </span>

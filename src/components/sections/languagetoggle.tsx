@@ -46,7 +46,7 @@ export default function LanguageToggle() {
           <button
             type="button"
             aria-label={copy.languageLabel}
-            className="hidden md:flex h-11 min-w-[145px] items-center justify-between rounded-xl border border-slate-300 bg-white px-4 text-sm font-medium text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+            className="flex h-9 min-w-[120px] items-center justify-between rounded-xl border border-slate-300 bg-white px-3 text-xs font-medium text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800 sm:h-11 sm:min-w-[145px] sm:px-4 sm:text-sm"
           >
             <div className="flex items-center gap-2">
               <Image
