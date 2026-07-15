@@ -1042,7 +1042,7 @@ vendors: [
     id: 'paul',
     name: 'livraison paul marrakech',
     brand: 'PAUL',
-    logo: '🥐',
+    logo: '🥐 ',
     logoUrl: '/logos/bakery/livraison marrakech a domicile paul.jfif',
     logoAlt: 'PAUL brand logo',
     description:
