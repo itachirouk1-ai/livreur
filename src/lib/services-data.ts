@@ -922,7 +922,68 @@ export const servicesData: Record<string, ServiceDetail> = {
   { name: 'Dossiers', emoji: '📁' },
   { name: 'Livraison express', emoji: '⚡' },
     ],
-    vendors: [],
+    vendors: [
+  {
+    id: 'impression-marrakech',
+    name: 'impression marrakech',
+    brand: 'Impression Marrakech',
+    logo: '🖨️',
+    logoUrl: '/logos/documents/livraison marrakech a domicile FAV_ICON_ALPHA.png',
+    logoAlt: 'Impression Marrakech',
+    description:
+      "Service d'impression couleur et noir et blanc à Marrakech pour tous vos documents personnels et professionnels avec livraison rapide.",
+  },
+  {
+    id: 'photocopie-marrakech',
+    name: 'photocopie marrakech',
+    brand: 'Photocopie Marrakech',
+    logo: '📄',
+    logoUrl: '/logos/documents/livraison marrakech a domicile photocopie marrakech.png',
+    logoAlt: 'Photocopie Marrakech',
+    description:
+      "Photocopies A4, A3, couleur et noir et blanc avec un service rapide et une livraison à domicile à Marrakech.",
+  },
+  {
+    id: 'scan-documents-marrakech',
+    name: 'scan de documents marrakech',
+    brand: 'Scan de Documents Marrakech',
+    logo: '📠',
+    logoUrl: '/logos/documents/livraison marrakech a domicile Impression noir et blanc Marrakech.png',
+    logoAlt: 'Scan de Documents Marrakech',
+    description:
+      "Numérisation de documents, contrats, dossiers administratifs et papiers importants avec une qualité professionnelle.",
+  },
+  {
+    id: 'reliure-marrakech',
+    name: 'reliure marrakech',
+    brand: 'Reliure Marrakech',
+    logo: '📚',
+    logoUrl: '/logos/documents/livraison marrakech a domicile impression-marrakech.png',
+    logoAlt: 'Reliure Marrakech',
+    description:
+      "Reliure de mémoires, rapports, thèses, dossiers administratifs et documents professionnels avec livraison rapide.",
+  },
+  {
+    id: 'plastification-marrakech',
+    name: 'plastification marrakech',
+    brand: 'Plastification Marrakech',
+    logo: '🪪',
+    logoUrl: '/logos/documents/livraison marrakech a domicile papeterie-chatr.jfif',
+    logoAlt: 'Plastification Marrakech',
+    description:
+      "Service de plastification de cartes, certificats, documents administratifs et supports professionnels à Marrakech.",
+  },
+  {
+    id: 'impression-a4-a3-marrakech',
+    name: 'impression a4 a3 marrakech',
+    brand: 'Impression A4 / A3 Marrakech',
+    logo: '📑',
+    logoUrl: '/logos/documents/livraison marrakech a domicile print-house.png',
+    logoAlt: 'Impression A4 A3 Marrakech',
+    description:
+      "Impression professionnelle en format A4 et A3 pour affiches, plans, présentations, flyers et documents administratifs.",
+  },
+],
     bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
   },
   bakery: {
@@ -966,7 +1027,68 @@ export const servicesData: Record<string, ServiceDetail> = {
   { name: 'Jus frais', emoji: '🧃' },
   { name: 'Petit-déjeuner', emoji: '🍳' },
     ],
-    vendors: [],
+vendors: [
+  {
+    id: 'amoud',
+    name: 'livraison amoud marrakech',
+    brand: 'Amoud',
+    logo: '🥖',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile amoud.jfif',
+    logoAlt: 'Amoud brand logo',
+    description:
+      "Amoud est une boulangerie et pâtisserie renommée proposant des pains artisanaux, viennoiseries, pâtisseries marocaines et françaises avec livraison rapide à Marrakech.",
+  },
+  {
+    id: 'paul',
+    name: 'livraison paul marrakech',
+    brand: 'PAUL',
+    logo: '🥐',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile paul.jfif',
+    logoAlt: 'PAUL brand logo',
+    description:
+      "PAUL est une célèbre boulangerie française proposant pains frais, croissants, sandwiches, pâtisseries et desserts livrés rapidement à Marrakech.",
+  },
+  {
+    id: 'patisserie-amandine',
+    name: 'livraison patisserie amandine marrakech',
+    brand: 'Pâtisserie Amandine',
+    logo: '🍰',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-amandine.jpg',
+    logoAlt: 'Pâtisserie Amandine brand logo',
+    description:
+      "Pâtisserie Amandine propose des gâteaux artisanaux, viennoiseries, pâtisseries fines et pains de qualité avec livraison à domicile à Marrakech.",
+  },
+  {
+    id: 'gontran-cherrier',
+    name: 'livraison gontran cherrier marrakech',
+    brand: 'Gontran Cherrier',
+    logo: '🥨',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile gontran-cherrier.png',
+    logoAlt: 'Gontran Cherrier brand logo',
+    description:
+      "Gontran Cherrier est reconnu pour ses pains artisanaux, viennoiseries françaises et créations gourmandes préparées chaque jour.",
+  },
+  {
+    id: 'patisserie-des-princes',
+    name: 'livraison patisserie des princes marrakech',
+    brand: 'Pâtisserie des Princes',
+    logo: '🧁',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-des-princes.png',
+    logoAlt: 'Pâtisserie des Princes brand logo',
+    description:
+      "Pâtisserie des Princes est une référence à Marrakech pour les pâtisseries marocaines, cornes de gazelle, gâteaux et douceurs traditionnelles.",
+  },
+  {
+    id: 'charif',
+    name: 'livraison boulangerie charif marrakech',
+    brand: 'Boulangerie Charif',
+    logo: '🍞',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile charif.jfif',
+    logoAlt: 'Boulangerie Charif brand logo',
+    description:
+      "Boulangerie Charif prépare chaque jour des pains frais, viennoiseries, pâtisseries et sandwiches avec livraison rapide à Marrakech.",
+  },
+],
     bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',
   },
 };
