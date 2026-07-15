@@ -57,8 +57,6 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
     notFound();
   }
 
-  const heroImageUrl = `https://picsum.photos/seed/${service.slug}/1200/800`;
-
   return (
     <>
       <Header />
@@ -66,7 +64,6 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
         <ServiceDetailPageComponent
           locale={locale}
           slug={service.slug}
-          heroImageUrl={heroImageUrl}
           title={service.title}
           titleColor={service.titleColor}
           accentGradient={service.bgGradient}

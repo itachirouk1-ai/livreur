@@ -228,205 +228,85 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     vendors: [
  {
-  id: 'pharmacy1',
+  id: 'Pharmacie-Centrale-Marrakech',
   name: 'Pharmacie Centrale Marrakech',
   brand: 'Pharmacie Centrale',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Centrale brand logo",
   logo: '⚕️',
   description:
     'Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.',
 },
 {
-  id: 'pharmacy2',
+  id: 'Pharmacie-Carre-Eden',
   name: 'Pharmacie Carré Eden',
   brand: 'Carré Eden',
   logo: '🩺',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Carré Eden brand logo",
   description:
     'Pharmacie moderne proposant médicaments, parapharmacie et conseils professionnels.',
 },
 {
-  id: 'pharmacy3',
+  id: 'Pharmacie-Gueliz',
   name: 'Pharmacie Guéliz',
   brand: 'Pharmacie Guéliz',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Guéliz brand logo",
   description:
     'Une pharmacie reconnue avec une large sélection de produits de santé.',
 },
 {
-  id: 'pharmacy4',
+  id: 'Pharmacie-Majorelle',
   name: 'Pharmacie Majorelle',
   brand: 'Pharmacie Majorelle',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Majorelle brand logo",
   description:
     'Large choix de médicaments, dermocosmétiques et produits de bien-être.',
 },
 {
-  id: 'pharmacy5',
+  id: 'Pharmacie-Victor-Hugo',
   name: 'Pharmacie Victor Hugo',
   brand: 'Pharmacie Victor Hugo',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Victor Hugo brand logo",
   description:
     'Des soins pharmaceutiques de qualité et un accompagnement personnalisé.',
 },
 {
-  id: 'pharmacy6',
+  id: 'Pharmacie-Hivernage',
   name: 'Pharmacie Hivernage',
   brand: 'Pharmacie Hivernage',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Hivernage brand logo",
   description:
     'Produits de santé, médicaments et conseils pharmaceutiques.',
 },
 {
-  id: 'pharmacy7',
+  id: 'Pharmacie-Targa',
   name: 'Pharmacie Targa',
   brand: 'Pharmacie Targa',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Targa brand logo",
   description:
     'Une pharmacie complète pour toute la famille.',
 },
 {
-  id: 'pharmacy8',
+  id: 'Pharmacie-Menara',
   name: 'Pharmacie Ménara',
   brand: 'Pharmacie Ménara',
   logo: '⚕️',
+  logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
+  logoAlt: "Pharmacie Ménara brand logo",
   description:
     'Votre partenaire santé avec une sélection de produits pharmaceutiques.',
 },
-{
-  id: 'pharmacy9',
-  name: 'Parapharmacie Centrale Marrakech',
-  brand: 'Parapharmacie Centrale',
-  logo: '🧴',
-  description:
-    'Découvrez une large gamme de soins et de dermocosmétiques.',
-},
-{
-  id: 'pharmacy10',
-  name: 'Parapharmacie Carré Eden',
-  brand: 'Carré Eden',
-  logo: '🧴',
-  description:
-    'Produits de beauté, soins du visage et hygiène.',
-},
-{
-  id: 'pharmacy11',
-  name: 'Parapharmacie Guéliz',
-  brand: 'Parapharmacie Guéliz',
-  logo: '🧴',
-  description:
-    'Spécialiste des soins de la peau et produits naturels.',
-},
-{
-  id: 'pharmacy12',
-  name: 'Parapharmacie Nourel',
-  brand: 'Nourel',
-  logo: '🧴',
-  description:
-    'Produits premium de parapharmacie, beauté et bien-être.',
-},
-  {
-    id: 'pharmacy2',
-    name: 'Pharmacie Carré Eden',
-    brand: 'Carré Eden',
-    logo: '🩺',
-    description:
-      'Pharmacie moderne située à Guéliz avec médicaments, parapharmacie et conseils professionnels.',
-  },
-  {
-    id: 'pharmacy4',
-    name: 'Pharmacie Majorelle',
-    brand: 'Pharmacie Majorelle',
-    logo: '🏥',
-    description:
-      'Large choix de médicaments, dermocosmétiques et produits de bien-être.',
-  },
-   {
-    id: 'pharmacy3',
-    name: 'Pharmacie Guéliz',
-    brand: 'Pharmacie Guéliz',
-    logo: '⚕️',
-    description:
-      'Une pharmacie reconnue proposant médicaments, vitamines et produits de santé.',
-  },
-  {
-    id: 'pharmacy5',
-    name: 'Pharmacie Victor Hugo',
-    brand: 'Pharmacie Victor Hugo',
-    logo: '💉',
-    description:
-      'Des soins pharmaceutiques de qualité avec un accompagnement personnalisé.',
-  },
-  {
-    id: 'pharmacy6',
-    name: 'Pharmacie Hivernage',
-    brand: 'Pharmacie Hivernage',
-    logo: '🧬',
-    description:
-      'Produits de santé, médicaments et conseils pharmaceutiques au cœur de Marrakech.',
-  },
-  {
-    id: 'pharmacy7',
-    name: 'Pharmacie Targa',
-    brand: 'Pharmacie Targa',
-    logo: '🩹',
-    description:
-      'Une pharmacie complète pour toute la famille avec un service rapide.',
-  },
-  {
-    id: 'pharmacy8',
-    name: 'Pharmacie Ménara',
-    brand: 'Pharmacie Ménara',
-    logo: '🦷',
-    description:
-      'Votre partenaire santé avec une sélection de produits pharmaceutiques et de soins.',
-  },
-   {
-    id: 'pharmacy10',
-    name: 'Parapharmacie Carré Eden',
-    brand: 'Carré Eden',
-    logo: '⚕️',
-    description:
-      'Produits de beauté, soins du visage, hygiène et bien-être pour toute la famille.',
-  },
-  {
-    id: 'pharmacy9',
-    name: 'Parapharmacie Centrale Marrakech',
-    brand: 'Parapharmacie Centrale',
-    logo: '💊',
-    description:
-      'Découvrez une large gamme de soins, dermocosmétiques et compléments alimentaires.',
-  },
-  {
-    id: 'pharmacy12',
-    name: 'Parapharmacie Nourel',
-    brand: 'Nourel',
-    logo: '⚕️',
-    description:
-      'Produits premium de parapharmacie, beauté, nutrition et bien-être.',
-  },
-  {
-    id: 'pharmacy14',
-    name: 'Pharmacie Bab Doukkala',
-    brand: 'Bab Doukkala',
-    logo: '👁️',
-    description:
-      'Pharmacie de proximité offrant médicaments, matériel médical et conseils santé.',
-  },
-   {
-    id: 'pharmacy11',
-    name: 'Parapharmacie Guéliz',
-    brand: 'Parapharmacie Guéliz',
-    logo: '⚕️',
-    description:
-      'Spécialiste en soins de la peau, vitamines et produits naturels.',
-  },
-  {
-    id: 'pharmacy15',
-    name: 'Pharmacie Sidi Ghanem',
-    brand: 'Sidi Ghanem',
-    logo: '🩹',
-    description:
-      'Votre pharmacie locale avec un large choix de produits pharmaceutiques.',
-  },
 ],
     bgGradient: 'from-emerald-400 via-green-500 to-teal-600',
   },
@@ -878,7 +758,68 @@ export const servicesData: Record<string, ServiceDetail> = {
   { name: 'Livraison le jour même', emoji: '🕒' },
   { name: 'Express', emoji: '⚡' },
     ],
-    vendors: [],
+    vendors: [
+  {
+    id: 'amana',
+    name: 'livraison amana marrakech',
+    brand: 'Amana',
+    logo: '📦',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile  amana-messagerie.png',
+    logoAlt: 'Amana brand logo',
+    description:
+      "Amana est l'un des principaux services de livraison et d'expédition de colis au Maroc, avec une couverture nationale et des délais rapides.",
+  },
+  {
+    id: 'chronopost',
+    name: 'livraison chronopost marrakech',
+    brand: 'Chronopost',
+    logo: '🚚',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile chronopost.webp',
+    logoAlt: 'Chronopost brand logo',
+    description:
+      "Chronopost propose des services d'expédition express de colis et de documents au Maroc et à l'international.",
+  },
+  {
+    id: 'dhl',
+    name: 'livraison dhl marrakech',
+    brand: 'DHL Express',
+    logo: '✈️',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile dhl.jfif',
+    logoAlt: 'DHL Express brand logo',
+    description:
+      "DHL Express est spécialisé dans la livraison rapide de colis et de documents vers des destinations nationales et internationales.",
+  },
+  {
+    id: 'fedex',
+    name: 'livraison fedex marrakech',
+    brand: 'FedEx',
+    logo: '📮',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile fedex.png',
+    logoAlt: 'FedEx brand logo',
+    description:
+      "FedEx assure des services de livraison express de colis, documents et marchandises dans le monde entier.",
+  },
+  {
+    id: 'ups',
+    name: 'livraison ups marrakech',
+    brand: 'UPS',
+    logo: '📫',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile ups marrakech.png',
+    logoAlt: 'UPS brand logo',
+    description:
+      "UPS propose des solutions fiables d'expédition et de livraison de colis pour les particuliers et les entreprises.",
+  },
+  {
+    id: 'aramex',
+    name: 'livraison aramex marrakech',
+    brand: 'Aramex',
+    logo: '🚛',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile aramex marrakech.png',
+    logoAlt: 'Aramex brand logo',
+    description:
+      "Aramex fournit des services de livraison express, de logistique et d'expédition de colis au Maroc et à l'international.",
+  },
+],
     bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
   },
   documents: {

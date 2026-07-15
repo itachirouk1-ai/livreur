@@ -196,12 +196,12 @@ export function ServiceDetailPageComponent({
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="px-1 pt-1 sm:px-6 lg:px-8 lg:pt-12">
+      <section className="px-1 pt-1 sm:px-6 lg:px-8 lg:pt-12 flex flex-col">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-7xl"
+          className="mx-auto max-w-7xl "
         >
           {/* Hero Content */}
           <div className="relative">
@@ -224,7 +224,7 @@ export function ServiceDetailPageComponent({
               <div className="absolute inset-0 z-10 flex items-start justify-center px-6 text-center sm:px-10 lg:justify-start lg:pl-12 lg:text-left">
                 <div className="max-w-2xl pt-2 sm:pt-4 lg:pt-6">
                   <h1
-                    className={`text-3xl font-bold tracking-[-0.03em] ${accentTextClass} sm:text-4xl lg:text-5xl xl:text-6xl`}
+                    className={`text-3xl text-white font-bold tracking-[-0.03em] sm:text-4xl lg:text-5xl xl:text-6xl`}
                   >
                     {title}
                   </h1>
@@ -269,24 +269,22 @@ export function ServiceDetailPageComponent({
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="flex gap-4 sm:gap-6 pb-6 border-b border-slate-200 dark:border-slate-800 last:border-0"
+                  className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-2 sm:p-6 bg-white rounded-[20px] border border-slate-200/80 dark:border-slate-800/60 shadow-md"
                 >
                   {/* Logo */}
-                  <div className="h-24 w-24 sm:h-28 sm:w-28 flex-shrink-0 rounded-[20px] overflow-hidden shadow-lg bg-white relative">
+                  <div className=" w-full h-40 w-24 sm:h-28 sm:w-28 flex-shrink-0 rounded-[20px] overflow-hidden shadow-lg bg-white relative">
                     <Image
-                      src={`https://picsum.photos/seed/${vendor.id}/320/320`}
-                      alt={vendor.name}
+                      src={vendor.logoUrl ?? '/logos/applogo.png'}
+                      alt={vendor.logoAlt ?? vendor.name}
                       fill
+                      sizes="(max-width: 640px) 96px, (max-width: 1024px) 112px, 128px"
                       className="object-cover"
                     />
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 flex flex-col justify-between">
-                    <Link
-                      href={`/${slug}/${vendorSlug}`}
-                      className="group block rounded-[28px] border border-slate-200/80 bg-white/90 p-4 transition hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700/80 dark:bg-slate-950/70 dark:hover:border-slate-500"
-                    >
+                    <Link href={`/${slug}/${vendorSlug}`} className="group block flex-1 p-0 transition">
                       <div>
                         <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white">
                           {vendor.name}
@@ -307,15 +305,16 @@ export function ServiceDetailPageComponent({
                   </div>
 
                   {/* WhatsApp Button */}
-                  <div className="flex-shrink-0 flex items-center">
-                    <Button className="h-12 w-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg p-0 flex items-center justify-center">
+                  <div className="w-full sm:w-auto sm:flex-shrink-0 sm:ml-4 sm:order-none order-last">
+                    <Button className="h-12 w-full sm:w-44 rounded-lg bg-green-500 hover:bg-green-600 text-white shadow-lg p-0 flex items-center justify-center gap-2 px-4">
                       <svg
-                        className="h-6 w-6 fill-current"
+                        className="h-5 w-5 fill-current"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.946-2.504 2.292-2.504 3.964 0 1.744.822 3.357 2.322 4.521l-.333 2.332 2.532-1.313c1.24.657 2.305 1.059 2.715 1.059.033 0 .066 0 .098 0 5.338 0 9.516-4.226 9.516-9.45 0-2.409-.906-4.869-2.562-6.603-1.656-1.735-3.935-2.908-6.784-2.908z" />
                       </svg>
+                      <span className="text-sm font-semibold">WhatsApp</span>
                     </Button>
                   </div>
                 </motion.div>

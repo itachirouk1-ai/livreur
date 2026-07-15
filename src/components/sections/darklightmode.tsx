@@ -10,7 +10,6 @@ export function DarkLightModeToggle() {
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-3">
       <LanguageToggle />
-
       <div className={styles.wrapper}>
         <label className={styles.sparkSwitch} aria-label="Toggle color mode">
           <input

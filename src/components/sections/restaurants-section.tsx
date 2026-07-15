@@ -85,7 +85,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
 
               <div className="mt-4 flex flex-1 flex-col">
                 <h3 className="text-xl font-bold text-slate-950 dark:text-white sm:text-2xl">
-                  {restaurant.name}
+                 {restaurant.name}
                 </h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
                   {restaurant.description}
