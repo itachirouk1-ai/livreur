@@ -31,7 +31,7 @@ export function CategoriesSection({ categories, brands, accentTextClass }: Categ
   return (
     <section className="mx-auto max-w-7xl px-1 mt-1">
       <div
-        className={`relative overflow-hidden rounded-[32px] w-full py-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}
+        className={`relative w-full overflow-hidden rounded-[32px] w-full py-1 border ${accentClasses.borderClass} ${accentClasses.softClass}`}
       >
         <div className="marquee-track">
           <div className="marquee-group">

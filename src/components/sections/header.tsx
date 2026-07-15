@@ -7,6 +7,7 @@ import { Menu } from 'lucide-react';
 import { siteContent } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import { DarkLightModeToggle } from './darklightmode';
+import Link from 'next/link';
 
 export function Header() {
   const locale = useLocalePreference();
@@ -28,6 +29,7 @@ export function Header() {
             <Menu className="h-5 w-5" />
           </button>
           <div className="flex items-center gap-2">
+            <Link href="/" >
             <Image
               src="/logos/applogo.png"
               alt="Allo Deliverer Kech logo"
@@ -36,6 +38,7 @@ export function Header() {
               className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"
               priority
             />
+            </Link>
             <div className="hidden sm:block">
               <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
                 {copy.brandName}

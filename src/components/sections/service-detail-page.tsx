@@ -201,7 +201,7 @@ export function ServiceDetailPageComponent({
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-7xl "
+          className="w-full max-w-7xl mx-auto"
         >
           {/* Hero Content */}
           <div className="relative">

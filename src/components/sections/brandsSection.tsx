@@ -29,8 +29,8 @@ export function BrandsSection({
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-4 mt-12 sm:mt-20">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <section className=" mx-auto max-w-7xl px-4 mt-12 sm:mt-20">
+      <div className="flex  w-full flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.36em] text-orange-500 font-semibold">
             {heading}
