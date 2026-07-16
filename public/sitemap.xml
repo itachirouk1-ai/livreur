@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home Page -->
+  <url>
+    <loc>https://allodelivererkech.com/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/" />
+  </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://allodelivererkech.com/restaurants</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/restaurants?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/restaurants" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/pharmacies</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/pharmacies?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/pharmacies" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/supermarkets</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/supermarkets?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/supermarkets" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/flowers</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/flowers?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/flowers" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/cosmetics</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/cosmetics?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/cosmetics" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/shopping</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/shopping?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/shopping" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/parcel-delivery</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/parcel-delivery?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/parcel-delivery" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/documents</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/documents?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/documents" />
+  </url>
+
+  <url>
+    <loc>https://allodelivererkech.com/bakery</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://allodelivererkech.com/bakery?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://allodelivererkech.com/bakery" />
+  </url>
+</urlset>

@@ -42,31 +42,26 @@ export default function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        render={
-          <button
-            type="button"
-            aria-label={copy.languageLabel}
-            className="flex h-9 min-w-[120px] items-center justify-between rounded-xl border border-slate-300 bg-white px-3 text-xs font-medium text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800 sm:h-11 sm:min-w-[145px] sm:px-4 sm:text-sm"
-          >
-            <div className="flex items-center gap-2">
-              <Image
-                src={
-                  locale === 'fr'
-                    ? '/logos/vecteezy_france-flag-round-icon-french-flag-circle_69019068.png'
-                    : '/logos/vecteezy_united-kingdom-flag-round-icon-uk-flag-circle_68202952.png'
-                }
-                alt={locale === 'fr' ? copy.french : copy.english}
-                width={20}
-                height={20}
-                className="h-5 w-5 rounded-full object-cover"
-                priority
-              />
-              <span>{locale === 'fr' ? copy.french : copy.english}</span>
-            </div>
-            <ChevronDown className="ml-3 h-4 w-4 opacity-60" />
-          </button>
-        }
-      />
+        aria-label={copy.languageLabel}
+        className="flex h-9 min-w-[120px] items-center justify-between rounded-xl border border-slate-300 bg-white px-3 text-xs font-medium text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800 sm:h-11 sm:min-w-[145px] sm:px-4 sm:text-sm"
+      >
+        <div className="flex items-center gap-2">
+          <Image
+            src={
+              locale === 'fr'
+                ? '/logos/vecteezy_france-flag-round-icon-french-flag-circle_69019068.png'
+                : '/logos/vecteezy_united-kingdom-flag-round-icon-uk-flag-circle_68202952.png'
+            }
+            alt={locale === 'fr' ? copy.french : copy.english}
+            width={20}
+            height={20}
+            className="h-5 w-5 rounded-full object-cover"
+            priority
+          />
+          <span>{locale === 'fr' ? copy.french : copy.english}</span>
+        </div>
+        <ChevronDown className="ml-3 h-4 w-4 opacity-60" />
+      </DropdownMenuTrigger>
 
       <DropdownMenuContent
         align="end"

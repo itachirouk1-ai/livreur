@@ -5,9 +5,62 @@ import { HeroSection } from '@/components/sections/hero-section';
 import { ServicesSection } from '@/components/sections/services-section';
 import { RestaurantsSection } from '@/components/sections/restaurants-section';
 import { siteContent } from '@/lib/site-content';
+import { getAllServiceSlugs, getServiceBySlug, getVendorSlug } from '@/lib/services-data';
 
 
 export default function Home() {
+  // Helper function to shuffle array
+  const shuffle = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Get random vendors from all services
+  const getRandomFeaturedStores = () => {
+    const allVendors: Array<{
+      name: string;
+      description: string;
+      slug: string;
+      serviceSlug: string;
+      emoji: string;
+      brand: string;
+      bgGradient: string;
+    }> = [];
+
+    // Collect all vendors from all services
+    getAllServiceSlugs().forEach(serviceSlug => {
+      const service = getServiceBySlug(serviceSlug);
+      if (service) {
+        service.vendors.forEach(vendor => {
+          allVendors.push({
+            name: vendor.name,
+            description: vendor.description,
+            slug: getVendorSlug(vendor),
+            serviceSlug: serviceSlug,
+            emoji: vendor.logo || '🏪',
+            brand: vendor.brand,
+            bgGradient: service.bgGradient,
+          });
+        });
+      }
+    });
+
+    // Shuffle and get random 3 vendors
+    const shuffled = shuffle(allVendors);
+    return shuffled.slice(0, 3).map(vendor => ({
+      name: vendor.brand,
+      description: vendor.description,
+      badge: vendor.name.length > 30 ? vendor.name.substring(0, 27) + '...' : vendor.name,
+      emoji: vendor.emoji,
+      href: `/${vendor.serviceSlug}/${vendor.slug}`,
+      accent: vendor.bgGradient,
+    }));
+  };
+
   const services = [
     {
       slug: 'restaurants',
@@ -74,41 +127,13 @@ export default function Home() {
     },
   ];
 
-  const featuredStores = [
-    {
-      name: 'Bloom & Co.',
-      description:
-        'Boutique de fleurs premium avec bouquets élégants et livraison rapide pour anniversaires, mariages et événements.',
-      badge: 'Fleuriste préféré',
-      emoji: '🌸',
-      href: '/flowers',
-      accent: 'from-pink-400 via-rose-500 to-red-600',
-    },
-    {
-      name: 'Marrakech Market',
-      description:
-        'Marché local incontournable pour épicerie, produits frais et courses quotidiennes livrées à votre porte.',
-      badge: 'Marché populaire',
-      emoji: '🛒',
-      href: '/supermarkets',
-      accent: 'from-blue-400 via-cyan-500 to-sky-600',
-    },
-    {
-      name: 'City Pharmacy',
-      description:
-        'Pharmacie de confiance pour médicaments, soins et produits de santé livrés discrètement et rapidement.',
-      badge: 'Pharmacie fiable',
-      emoji: '💊',
-      href: '/pharmacies',
-      accent: 'from-emerald-400 via-green-500 to-teal-600',
-    },
-  ];
+  const featuredStores = getRandomFeaturedStores();
 
   return (
-    <div className="min-h-screen bg-white ,linear-gradient(135deg,_#fffaf5_0%,_#fff8f0_50%,_#fef3e8_100%)] text-slate-900 transition-colors duration-500 dark:bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.22),_transparent_38%),linear-gradient(135deg,_#0f1219_0%,_#000000_45%,_#000000_100%)] dark:text-slate-50">
+    <div className="min-h-screen bg-white text-slate-900 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-50">
       <Header />
 
-      <main className=" pb-2 pt-1 sm:pb-1 sm:pt-1 md:px-1 lg:px-1 lg:pt-1">
+      <main className="pb-2 pt-1 sm:pb-1 sm:pt-1 md:px-1 lg:px-1 lg:pt-1">
         <HeroSection />
         <ServicesSection services={services} />
         <RestaurantsSection restaurants={featuredStores} />

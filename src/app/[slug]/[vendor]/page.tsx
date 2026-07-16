@@ -5,21 +5,11 @@ import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 
 import { Header } from '@/components/sections/header';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { getServiceBySlug, getVendorByServiceAndId } from '@/lib/services-data';
 import { contactLinks, getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
-import AnimatedCallButton from '@/components/ui/AnimatedCallButton';
-import AnimatedJoinButton from '@/components/ui/animated-join-button';
-
-
-
-
-  const handleWhatsApp = () => {
-    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleCall = () => {
-    window.location.href = contactLinks.phone;
-  };
+import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
+import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 
 interface VendorPageProps {
   params: Promise<{
@@ -77,8 +67,21 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
   return (
     <>
       <Header />
+      <Breadcrumb
+        items={[
+          {
+            label: service.title,
+            href: `/${slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
+          },
+          {
+            label: vendorData.brand,
+            href: `/${slug}/${vendor}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
+          },
+        ]}
+        showBack={true}
+      />
       <main className="px-3 pb-1 pt-1 sm:px-3 lg:px-3 lg:pt-3">
-          <section className="grid gap-1 lg:grid-cols-[1fr_320px]">
+          <section className="grid gap-1">
             <div className="mx-auto max-w-6xl space-y-8 w-full ">
                 <div >
                   <div className="flex items-center rounded-3xl bg-slate-50 p-2 shadow-sm dark:bg-slate-900 sm:p-2">
@@ -101,6 +104,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                     alt={vendorData.logoAlt ?? vendorData.brand}
                     fill
                     className="object-cover"
+                    
                   />
                  <div className="absolute bottom-3 left-2 right-2 z-20 flex flex-col gap-2 sm:bottom-6 sm:left-3 sm:right-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:bottom-6 lg:left-6 lg:right-6 lg:gap-3">
                                 <AnimatedCallButton label={copy.callNow} />

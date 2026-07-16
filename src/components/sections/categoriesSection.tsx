@@ -118,8 +118,7 @@ function BrandCard({
               src={brand.logoUrl}
               alt={brand.logoAlt || brand.name}
               width={48}
-              height={48}
-              className="h-full w-full object-contain"
+              height={48}              loading="eager"              className="h-full w-full object-contain"
             />
           ) : (
             <span className="text-lg sm:text-xl">{brand.logoEmoji || brand.name.charAt(0)}</span>

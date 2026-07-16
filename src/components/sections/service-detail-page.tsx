@@ -212,7 +212,7 @@ export function ServiceDetailPageComponent({
               className={`relative h-64 overflow-hidden rounded-[32px] border border-white/60 bg-gradient-to-br ${accentGradient ?? 'from-orange-200 via-amber-100 to-orange-100 dark:from-orange-900/30 dark:via-amber-900/30 dark:to-orange-900/30'} shadow-[0_20px_80px_-30px_rgba(15,23,42,0.3)] sm:h-80 lg:h-[28rem]`}
             >
               {heroImageUrl ? (
-                <Image src={heroImageUrl} alt={title} fill className="h-full w-full object-cover" />
+                <Image src={heroImageUrl} alt={title} fill loading="eager" className="h-full w-full object-cover" />
               ) : (
                 <div className="flex h-full items-center justify-center text-9xl sm:text-[120px] lg:text-[140px]">
                   🍔
@@ -277,6 +277,7 @@ export function ServiceDetailPageComponent({
                       src={vendor.logoUrl ?? '/logos/applogo.png'}
                       alt={vendor.logoAlt ?? vendor.name}
                       fill
+                      loading="eager"
                       sizes="(max-width: 640px) 96px, (max-width: 1024px) 112px, 128px"
                       className="object-cover"
                     />

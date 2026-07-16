@@ -1,6 +1,7 @@
 import { getServiceBySlug } from '@/lib/services-data';
 import { ServiceDetailPageComponent } from '@/components/sections/service-detail-page';
 import { Header } from '@/components/sections/header';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 
@@ -60,6 +61,15 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
   return (
     <>
       <Header />
+      <Breadcrumb
+        items={[
+          {
+            label: service.title,
+            href: `/${slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
+          },
+        ]}
+        showBack={true}
+      />
       <main className="px-1 pb-1 sm:pb-20 md:px-6 lg:px-8 lg:pt-12">
         <ServiceDetailPageComponent
           locale={locale}
