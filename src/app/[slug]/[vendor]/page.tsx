@@ -132,7 +132,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                 <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
                   {copy.aboutLabel}
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                <p className="whitespace-pre-line mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                   {vendorData.description}
                 </p>
               </div>

@@ -196,7 +196,7 @@ export function ServiceDetailPageComponent({
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="px-1 pt-1 sm:px-6 lg:px-8 lg:pt-12 flex flex-col">
+      <section className="px-1 pt-1 sm:px-6 lg:px-2 lg:pt-2 flex flex-col">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

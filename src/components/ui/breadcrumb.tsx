@@ -36,13 +36,18 @@ export function Breadcrumb({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4',
+        'mx-auto  flex items-center justify-center max-w-7xl py-2 sm:py-2',
         className,
       )}
       aria-label="Breadcrumb"
     >
-      <div className="flex items-center gap-2 flex-wrap">
-        {/* Back Button */}
+        <div className="flex items-center gap-2">
+       
+
+        {/* Breadcrumb Items */}
+        <div className="flex items-center gap-1">
+          {/* Home Link */}
+           {/* Back Button */}
         {showBack && (
           <button
             onClick={handleBack}
@@ -53,10 +58,6 @@ export function Breadcrumb({
             <span className="hidden sm:inline">Back</span>
           </button>
         )}
-
-        {/* Breadcrumb Items */}
-        <div className="flex items-center gap-1 flex-wrap">
-          {/* Home Link */}
           <Link
             href={`/${locale !== 'fr' ? `?lang=${locale}` : ''}`}
             className="flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
@@ -64,7 +65,6 @@ export function Breadcrumb({
             <Home className="h-4 w-4" />
             <span className="text-sm font-medium">Home</span>
           </Link>
-
           {/* Breadcrumb separators and items */}
           {items.map((item, index) => (
             <div key={item.href} className="flex items-center gap-1">

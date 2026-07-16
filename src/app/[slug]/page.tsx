@@ -60,7 +60,8 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
 
   return (
     <>
-      <Header />
+      <div>
+        <Header />
       <Breadcrumb
         items={[
           {
@@ -70,7 +71,8 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
         ]}
         showBack={true}
       />
-      <main className="px-1 pb-1 sm:pb-20 md:px-6 lg:px-8 lg:pt-12">
+      </div>
+      <main className="px-1 pb-1 sm:pb-10 md:px-2 lg:px-2 lg:pt-1">
         <ServiceDetailPageComponent
           locale={locale}
           slug={service.slug}

@@ -84,13 +84,54 @@ export const servicesData: Record<string, ServiceDetail> = {
     vendors: [
       {
         id: 'mcdonalds',
-        name: 'livraison mcdonald_s-marrakech',
+        name: 'livraison mcdonalds marrakech',
         brand: "McDonald's",
         logo: '🍟',
         logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.png",
         logoAlt: "McDonald's brand logo",
-        description:
-          "McDonald's est une option pratique pour satisfaire vos envies de fast-food. Savourez les classiques comme les Big Mac, les frites et les Happy Meals, livrés directement à votre domicile. Que vous soyez à la recherche d'une option rapide pour la pause du midi, d'une collation en fin de soirée d'un repas familier pour toute la famille, McDonald's à cela chose chose pour tout le monde et rend facile à utiliser. Commandez maintenant et découvrez le goût emblématique de McDonald's sans quitter le confort de votre foyer.",
+   description: `🍟 Livraison McDonald's Marrakech à domicile 24h/7j
+Vous recherchez une livraison McDonald's à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison McDonald's à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant McDonald's de votre choix et nous la livrons rapidement, chaude et fraîche, à votre domicile, votre bureau, votre hôtel ou votre riad.
+Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika ou dans la Médina, notre équipe assure une livraison McDo rapide dans tous les quartiers de Marrakech.
+🍔 Commandez tous vos produits McDonald's préférés
+🍔 Big Mac
+🥩 Big Tasty
+🍗 McChicken
+🧀 Double Cheeseburger
+🐟 Filet-O-Fish
+🍗 Chicken McNuggets
+🎁 Happy Meal
+🍟 Frites
+🥔 Potatoes
+🍦 McFlurry
+🍨 Sundae
+🍰 Desserts
+🥤 Boissons
+🚀 Livraison McDonald's rapide partout à Marrakech
+Notre service est disponible 24h/24 et 7j/7 afin de répondre à toutes vos envies. Nous assurons une livraison rapide, sécurisée et professionnelle pour tous vos repas McDonald's.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Repas livré chaud et frais
+✅ Service professionnel
+
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+📲 Commandez dès maintenant votre McDonald's avec Allo Livreur Kech et profitez d'une livraison rapide à domicile partout à Marrakech.`,
       },
       {
         id: 'kfc',
@@ -99,9 +140,50 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🍗',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.png',
         logoAlt: 'KFC brand logo',
-        description:
-          "KFC est la pour vous livrer son bon poulet frit à s'en lécher les doigts, directement sur la pas de votre porte. Choisissez parmi des seaux, des combos ou des morceaux individuels, tous dotés de l'enrobage croustillant emblématique de KFC et d'un poulet tendre et juteux. N'oubliez pas d'ajouter vos accompagnements préférés comme la purée de pommes de terre, la salade de chou ou les frites pour compléter votre repas. Que vous ayez envie d'une expérience classique de poulet frit Kentucky ou d'un festin familial satisfaisant, KFC offre des options délicieuses pour tous les goûts. Commandez maintenant et profitez des célèbres saveurs du Colonel sans quitter votre maison à Marrakech.",
-      },
+       description: `🍗 Livraison KFC Marrakech à domicile 24h/7j
+Vous recherchez une livraison KFC à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison KFC à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant KFC de votre choix et nous la livrons rapidement, chaude, croustillante et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
+Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison KFC rapide dans tous les quartiers de Marrakech.
+🍗 Commandez tous vos produits KFC préférés
+🍗 Bucket de Poulet
+🍗 Hot Wings
+🍗 Tenders
+🍔 Zinger Burger
+🍔 Colonel Burger
+🌯 Twister
+🍟 Frites
+🧀 Cheese Fries
+🥗 Salades
+🥤 Boissons
+🍦 Glaces
+🍰 Desserts
+🥤 Menus & Combos
+🚀 Livraison KFC rapide partout à Marrakech
+Notre service de livraison KFC Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de poulet frit. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et croustillante. Que vous souhaitiez un repas en famille, un déjeuner au bureau, un dîner entre amis ou une envie gourmande en soirée, Allo Livreur Kech est votre partenaire de confiance pour la livraison KFC à domicile à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Poulet livré chaud et croustillant
+✅ Service professionnel
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+📲 Commandez dès maintenant votre KFC avec Allo Livreur Kech et profitez d'une livraison KFC rapide à domicile partout à Marrakech. Savourez vos Buckets, Zinger Burgers, Hot Wings, Tenders, Twisters, frites et desserts préférés sans quitter votre maison grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`}
+      ,
       {
         id: 'burgerking',
         name: 'livraison burger king marrakech',
@@ -109,19 +191,106 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '👑',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile  burger king.png',
         logoAlt: 'Burger King brand logo',
-        description:
-          'Burger King vous propose des plats grillés à la flamme, livrés frais et chauds à votre domicile. Savourez leur Whopper emblématique, explorez leur variété de burgers grillés à la flamme comme le',
-      },
+       description: `👑 Livraison Burger King Marrakech à domicile 24h/7j
+Vous recherchez une livraison Burger King à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Burger King à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Burger King de votre choix et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel ou votre riad.
+Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison Burger King rapide dans tous les quartiers de Marrakech.
+🍔 Commandez tous vos produits Burger King préférés
+👑 Whopper
+🧀 Double Whopper
+🍗 Chicken Royale
+🥓 Steakhouse
+🌶️ Spicy Chicken
+🧀 Cheeseburger
+🍔 Hamburger
+🍟 Frites
+🧅 Onion Rings
+🥗 Salades
+🥤 Boissons
+🍦 Desserts
+🥤 Menus & Combos
+🚀 Livraison Burger King rapide partout à Marrakech
+Notre service de livraison Burger King Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de burgers grillés à la flamme. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et fraîche. Que vous souhaitiez un déjeuner, un dîner, un repas entre amis ou un menu en famille, Allo Livreur Kech est votre partenaire de confiance pour la livraison Burger King à domicile à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Burgers livrés chauds et savoureux
+✅ Service professionnel
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 Mhamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+📲 Commandez dès maintenant votre Burger King avec Allo Livreur Kech et profitez d'une livraison Burger King rapide à domicile partout à Marrakech. Savourez vos Whoppers, Chicken Royale, Steakhouse, Onion Rings, frites et desserts préférés sans quitter votre maison grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,}
+,
       {
         id: 'dominos',
-        name: 'livraison Domino\'s marrakech',
+        name: 'livraison Domino\'s Pizza marrakech',
         brand: "Domino's",
         logo: '🍕',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile  Domino\'s.png',
         logoAlt: "Domino's brand logo",
-        description:
-          'Domino\'s propose une large sélection de pizzas personnalisables, des classiques aux créations gourmandes, livrées chaudes directement à votre porte.',
-      },
+        description: `🍕 Livraison Domino's Pizza Marrakech à domicile 24h/7j
+Vous recherchez une livraison Domino's Pizza à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Domino's Pizza à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Domino's Pizza de votre choix et nous la livrons rapidement, chaude, croustillante et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
+Commandez les célèbres pizzas Domino's, les Chicken Wings, le Garlic Bread, les desserts, les boissons et toutes les spécialités de la carte Domino's sans quitter votre maison. Que vous soyez seul, en famille ou entre amis, Domino's Pizza propose un large choix de pizzas classiques, gourmandes, spéciales, végétariennes et personnalisables pour satisfaire toutes les envies.
+Notre service de livraison Domino's Marrakech dessert tous les quartiers de la ville : Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf, Médina et bien d'autres. Votre commande est livrée rapidement à votre domicile, votre bureau, votre hôtel ou votre riad avec un service professionnel et sécurisé.
+🍕 Commandez toutes vos spécialités Domino's Pizza préférées
+🍕 Pepperoni
+🧀 Margherita
+🍗 Chicken BBQ
+🥩 Extravaganza
+🌶️ Spicy Pizza
+🧀 4 Fromages
+🥬 Veggie Pizza
+🍗 Chicken Wings
+🧄 Garlic Bread
+🥗 Salades
+🥤 Boissons
+🍪 Cookies
+🍰 Desserts
+🥤 Menus & Offres
+🚀 Livraison Domino's Pizza rapide partout à Marrakech
+Notre service de livraison Domino's Pizza Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de pizza. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et croustillante. Que vous souhaitiez une pizza pour le déjeuner, le dîner, une soirée entre amis, un repas en famille ou une commande tard le soir, Allo Livreur Kech est votre partenaire de confiance pour la livraison Domino's Pizza à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Pizzas livrées chaudes et croustillantes
+✅ Service professionnel
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service rapide et sécurisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+⭐ Pourquoi commander Domino's Pizza avec Allo Livreur Kech ?
+Grâce à Allo Livreur Kech, commander Domino's Pizza à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement au restaurant Domino's Pizza afin de garantir la fraîcheur, la qualité et le goût authentique de chaque pizza. Que vous ayez envie d'une Pepperoni, d'une Margherita, d'une Chicken BBQ, d'une 4 Fromages, d'une Veggie Pizza ou d'une Extravaganza, notre équipe assure une livraison rapide partout à Marrakech. Nous livrons également vos Chicken Wings, Garlic Bread, Cookies, desserts et boissons directement chez vous, au bureau, dans votre hôtel ou votre riad.
+📲 Commandez dès maintenant votre Domino's Pizza avec Allo Livreur Kech et profitez d'une livraison Domino's Pizza rapide à domicile partout à Marrakech. Savourez vos pizzas préférées, vos Chicken Wings, votre Garlic Bread, vos desserts et vos boissons grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,
+},
       {
         id: 'papa-johns',
         name: 'livraison papa johns marrakech',
@@ -129,9 +298,55 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🍕',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile  papa johns.png',
         logoAlt: 'Papa John\'s brand logo',
-        description:
-          'Papa John\'s vous apporte des pizzas artisanales préparées avec des ingrédients frais et une pâte moelleuse, pour un repas rapide et savoureux.',
-      },
+        description: `🍕 Livraison Papa John\'s Marrakech à domicile 24h/7j
+Vous recherchez une livraison Papa John\'s à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Papa John\'s à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Papa John\'s de votre choix et nous la livrons rapidement, chaude, savoureuse et prête à être dégustée, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Papa John\'s rapide dans tous les quartiers de Marrakech.
+🍕 Commandez toutes vos pizzas Papa John\'s préférées
+🍕 Pepperoni Pizza
+🧀 Four Cheese Pizza
+🥩 Meat Feast
+🍗 BBQ Chicken Pizza
+🌶️ Spicy Chicken Pizza
+🍄 Veggie Pizza
+🥓 Super Papa\'s
+🍕 Margherita
+🥖 Garlic Bread
+🧀 Cheese Sticks
+🍗 Chicken Wings
+🥗 Salades
+🍟 Frites
+🥤 Boissons
+🍰 Desserts
+🍨 Glaces
+👨‍👩‍👧 Menus Familiaux
+🚀 Livraison Papa John\'s rapide partout à Marrakech
+Notre service de livraison Papa John\'s Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de pizza. Chaque commande est récupérée directement auprès du restaurant Papa John\'s afin de garantir une pizza chaude, une pâte moelleuse, des ingrédients frais et un fromage fondant. Que vous souhaitiez une pizza pour un déjeuner, un dîner, une soirée entre amis, un repas en famille, un anniversaire ou un match de football, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison Papa John\'s rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Pizzas livrées chaudes et fraîches
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service professionnel et sécurisé
+✅ Temps de livraison optimisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Palmeraie
+📍 Médina
+📍 Semlalia
+📍 Victor Hugo
+📍 Amerchich
+📍 Hay Charaf
+📲 Commandez dès maintenant votre Papa John\'s avec Allo Livreur Kech et profitez d'une livraison Papa John\'s rapide à domicile partout à Marrakech. Que vous recherchiez une livraison Papa John\'s Marrakech, une livraison pizza Marrakech, une pizza à domicile, un livreur pizza ou une livraison rapide de pizzas à Marrakech, notre équipe est disponible 24h/24 et 7j/7 pour vous livrer vos pizzas préférées directement chez vous, chaudes, fraîches et prêtes à être dégustées.`,},
       {
         id: 'tacos-de-lyon',
         name: 'livraison tacos de lyon marrakech',
@@ -139,9 +354,51 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🌮',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile  tacos de lyon.png',
         logoAlt: 'Tacos de Lyon brand logo',
-        description:
-          'Tacos de Lyon offre des tacos généreux et savoureux, garnis de viandes, de sauces et de fromages fondants, livrés directement à votre domicile.',
-      },
+        description: `🌮 Livraison Tacos de Lyon Marrakech à domicile 24h/7j
+Vous recherchez une livraison Tacos de Lyon à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Tacos de Lyon à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Tacos de Lyon de votre choix et nous la livrons rapidement, chaude et généreusement garnie, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Tacos de Lyon rapide dans tous les quartiers de Marrakech.
+🌮 Commandez tous vos Tacos de Lyon préférés
+🌮 French Tacos
+🥩 Tacos Bœuf
+🍗 Tacos Poulet
+🌭 Tacos Merguez
+🥓 Tacos Mixte
+🧀 Sauce Fromagère
+🍟 Frites
+🥓 Nuggets
+🧀 Mozzarella Sticks
+🥗 Salades
+🥤 Boissons
+🍰 Desserts
+🥤 Menus & Formules
+🚀 Livraison Tacos de Lyon rapide partout à Marrakech
+Notre service de livraison Tacos de Lyon Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de tacos français. Chaque commande est récupérée directement auprès du restaurant afin de garantir des tortillas chaudes, une viande savoureuse, du fromage fondant et des ingrédients toujours frais. Que vous souhaitiez un déjeuner rapide, un dîner, un repas entre amis, une soirée en famille ou une envie gourmande tard dans la nuit, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison Tacos de Lyon rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Tacos livrés chauds et généreux
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service professionnel et sécurisé
+✅ Temps de livraison optimisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Palmeraie
+📍 Médina
+📍 Semlalia
+📍 Victor Hugo
+📍 Amerchich
+📍 Hay Charaf
+📲 Commandez dès maintenant votre Tacos de Lyon avec Allo Livreur Kech et profitez d'une livraison Tacos de Lyon rapide à domicile partout à Marrakech. Que vous recherchiez une livraison tacos Marrakech, une livraison Tacos de Lyon Marrakech, une livraison French Tacos, une livraison fast-food Marrakech ou une livraison à domicile disponible 24h/24, notre équipe est prête à vous livrer vos tacos, frites, boissons et menus préférés directement chez vous, rapidement et toujours bien chauds.`,},
       {
         id: 'crusty',
         name: 'livraison crusty marrakech',
@@ -149,9 +406,54 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🥖',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.png',
         logoAlt: 'Crusty brand logo',
-        description:
-          'Crusty propose des sandwichs et plats chauds préparés avec du pain croustillant et des ingrédients de qualité, pour une livraison gourmande et rapide.',
-      },
+       description: `🥪 Livraison Crusty Marrakech à domicile 24h/7j
+Vous recherchez une livraison Crusty à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Crusty à domicile partout à Marrakech. Nous récupérons votre commande directement chez Crusty et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel ou votre riad.
+Crusty est l'adresse idéale pour les amateurs de sandwichs gourmands, burgers artisanaux, paninis, wraps, tacos, salades fraîches et menus généreux. Préparés avec du pain croustillant, des ingrédients frais, des viandes de qualité, des sauces maison et des légumes soigneusement sélectionnés, les repas Crusty séduisent tous les gourmands à Marrakech.
+Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison Crusty rapide dans tous les quartiers de Marrakech.
+🥪 Commandez tous vos produits Crusty préférés
+🍔 Burgers Artisanaux
+🥪 Sandwichs Gourmands
+🌯 Wraps
+🥙 Paninis
+🌮 Tacos
+🍗 Chicken Crispy
+🥩 Sandwichs Steak
+🧀 Burgers au Fromage
+🍟 Frites
+🥗 Salades
+🥤 Boissons
+🍰 Desserts
+🥤 Menus & Formules
+🚀 Livraison Crusty rapide partout à Marrakech
+Notre service de livraison Crusty Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et prête à être dégustée. Que vous souhaitiez un déjeuner, un dîner, un repas entre amis ou une pause gourmande, Allo Livreur Kech est votre partenaire de confiance pour la livraison Crusty à domicile à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Repas livrés chauds et savoureux
+✅ Service professionnel
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service rapide et sécurisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+⭐ Pourquoi commander Crusty avec Allo Livreur Kech ?
+Grâce à Allo Livreur Kech, commander Crusty à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement chez Crusty afin de préserver toute la qualité, la fraîcheur et le goût de vos sandwichs, burgers et menus préférés. Que vous ayez envie d'un burger artisanal, d'un sandwich gourmand, d'un wrap, d'un panini ou d'un tacos généreux, nous assurons une livraison rapide partout à Marrakech.
+📲 Commandez dès maintenant votre Crusty avec Allo Livreur Kech et profitez d'une livraison Crusty rapide à domicile partout à Marrakech. Savourez vos burgers artisanaux, sandwichs, wraps, paninis, tacos, frites et desserts préférés grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,
+},
       {
         id: 'otacos',
         name: 'livraison o\'tacos marrakech',
@@ -159,9 +461,55 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🌮',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile o\'tacos.png',
         logoAlt: "O'Tacos brand logo",
-        description:
-          'O\'Tacos livre des tacos et menus généreux, avec des sauces savoureuses et des accompagnements variés, pour une expérience de street food conviviale.',
-      },
+       description: `🌮 Livraison O'Tacos Marrakech à domicile 24h/7j
+Vous recherchez une livraison O'Tacos à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison O'Tacos à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant O'Tacos de votre choix et nous la livrons rapidement, chaude et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
+O'Tacos est la référence du célèbre French Tacos avec ses tortillas généreusement garnies de viandes savoureuses, de fromage fondant, de la célèbre sauce fromagère O'Tacos et d'un large choix d'ingrédients. Que vous souhaitiez composer votre propre tacos ou choisir une recette signature, Allo Livreur Kech vous permet de profiter de toute la carte O'Tacos sans quitter votre domicile.
+Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison O'Tacos rapide dans tous les quartiers de Marrakech.
+🌮 Commandez tous vos produits O'Tacos préférés
+🌮 French Tacos
+🥩 Tacos Steak
+🍗 Tacos Poulet
+🌶️ Tacos Spicy
+🧀 Sauce Fromagère
+🍟 Frites
+🍗 Nuggets
+🧅 Onion Rings
+🥗 Salades
+🥤 Boissons
+🍰 Desserts
+🍪 Cookies
+🥤 Menus & Formules
+🚀 Livraison O'Tacos rapide partout à Marrakech
+Notre service de livraison O'Tacos Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de tacos. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude, généreuse et pleine de saveurs. Que ce soit pour un déjeuner, un dîner, un repas entre amis, une soirée ou une envie gourmande tard dans la nuit, Allo Livreur Kech est votre partenaire de confiance pour la livraison O'Tacos à domicile à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Tacos livrés chauds et savoureux
+✅ Service professionnel
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service rapide et sécurisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Palmeraie
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Médina
+📍 Semlalia
+📍 Hay Charaf
+⭐ Pourquoi commander O'Tacos avec Allo Livreur Kech ?
+Grâce à Allo Livreur Kech, commander O'Tacos à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement au restaurant afin de préserver la qualité, la fraîcheur et le goût authentique de votre French Tacos. Que vous choisissiez un tacos au poulet, au steak, plusieurs viandes, avec la célèbre sauce fromagère, des frites, des nuggets ou un menu complet, notre équipe assure une livraison rapide partout à Marrakech. Nous livrons également vos boissons, desserts et menus O'Tacos directement chez vous, à votre bureau, dans votre hôtel ou votre riad.
+Notre objectif est de vous offrir la meilleure expérience de livraison O'Tacos Marrakech avec un service rapide, professionnel et disponible tous les jours. Plus besoin de vous déplacer ou d'attendre longtemps, il suffit de nous envoyer votre commande via WhatsApp et notre livreur s'occupe du reste. Nous assurons la livraison O'Tacos dans tous les quartiers de Marrakech avec un suivi rapide et un service de qualité.
+📲 Commandez dès maintenant votre O'Tacos avec Allo Livreur Kech et profitez d'une livraison O'Tacos rapide à domicile partout à Marrakech. Savourez vos French Tacos, frites, nuggets, desserts et boissons préférés grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,}
+,
       {
         id: 'pizza-hut',
         name: 'livraison pizza hut marrakech',
@@ -169,9 +517,58 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🍕',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile pizza hut.png',
         logoAlt: 'Pizza Hut brand logo',
-        description:
-          'Pizza Hut propose des pizzas classiques et gourmandes, avec des combinaisons de saveurs et des bords moelleux, livrées directement chez vous.',
-      },
+       description: `🍕 Livraison Pizza Hut Marrakech à domicile 24h/7j
+Vous recherchez une livraison Pizza Hut à Marrakech ou une livraison pizza à domicile rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison pizza Marrakech disponible 24h/24 et 7j/7. Nous récupérons votre commande directement chez Pizza Hut Marrakech et nous vous livrons vos pizzas préférées rapidement, chaudes, croustillantes et prêtes à être dégustées. Que ce soit pour un déjeuner, un dîner, une soirée entre amis, un repas en famille, une fête d'anniversaire, un match de football ou une envie de pizza tard le soir, notre équipe assure une livraison rapide partout à Marrakech. Plus besoin de vous déplacer ou d'attendre longtemps, il vous suffit de commander et notre livreur s'occupe du reste. Nous livrons votre commande à votre domicile, votre appartement, votre villa, votre bureau, votre hôtel, votre riad ou tout autre lieu de votre choix. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, Allo Livreur Kech assure une livraison pizza rapide dans tous les quartiers de Marrakech.
+🍕 Commandez toutes vos pizzas Pizza Hut préférées
+🍕 Pepperoni Lovers
+🧀 Quatre Fromages
+🥩 Meat Lovers
+🍗 Chicken Supreme
+🌶️ Spicy Chicken
+🥓 BBQ Chicken
+🍕 Super Supreme
+🧀 Cheese Lovers
+🍄 Pizza Végétarienne
+🥖 Garlic Bread
+🍗 Chicken Wings
+🧀 Mozzarella Sticks
+🥗 Salades
+🍟 Frites
+🥤 Boissons
+🍰 Desserts
+🍨 Glaces
+👨‍👩‍👧 Menus Familiaux
+🚀 Livraison Pizza Hut rapide partout à Marrakech
+Notre service de livraison Pizza Hut Marrakech est disponible tous les jours, 24h/24 et 7j/7, afin de satisfaire toutes vos envies de pizza. Chaque commande est récupérée directement auprès du restaurant Pizza Hut pour garantir une qualité optimale, une pizza chaude, un fromage fondant et une pâte toujours croustillante. Nous assurons une livraison rapide, professionnelle et sécurisée afin que vous puissiez profiter de votre repas sans attendre. Que vous commandiez une pizza individuelle, une pizza familiale, plusieurs pizzas pour une soirée ou un menu complet avec boissons et desserts, notre équipe veille à ce que votre commande arrive dans les meilleures conditions. Nous assurons également la livraison de pizzas pour les entreprises, les hôtels, les riads, les bureaux, les appartements, les résidences, les maisons d'hôtes et tous les établissements situés à Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison Pizza Hut rapide
+✅ Livraison pizza Marrakech 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Pizzas livrées chaudes et croustillantes
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service professionnel et sécurisé
+✅ Temps de livraison optimisé
+✅ Disponible tous les jours de la semaine
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Palmeraie
+📍 Médina
+📍 Semlalia
+📍 Victor Hugo
+📍 Amerchich
+📍 Hay Charaf
+📲 Commandez dès maintenant votre Pizza Hut avec Allo Livreur Kech et profitez d'une livraison pizza à domicile rapide partout à Marrakech. Que vous recherchiez une livraison Pizza Hut Marrakech, une livraison pizza Marrakech, une pizza à domicile, un livreur pizza ou une livraison rapide de pizzas à Marrakech, notre équipe est disponible 24h/24 et 7j/7 pour vous apporter vos pizzas préférées directement chez vous, chaudes, fraîches et prêtes à être dégustées.`,}
+,
       {
         id: 'quick',
         name: 'livraison quick marrakech',
@@ -179,9 +576,52 @@ export const servicesData: Record<string, ServiceDetail> = {
         logo: '🍔',
         logoUrl: '/logos/restaurant/livraison marrakech a domicile quick.png',
         logoAlt: 'Quick brand logo',
-        description:
-          'Quick est une option de fast-food rapide et savoureuse, avec des burgers, frites et menus complets pour un repas facile à commander.',
-      },
+        description: `🍔 Livraison Quick Marrakech à domicile 24h/7j
+Vous recherchez une livraison Quick à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Quick à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Quick de votre choix et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Quick rapide dans tous les quartiers de Marrakech.
+🍔 Commandez tous vos produits Quick préférés
+🍔 Giant
+🍔 Long Chicken
+🍔 Quick'N Toast
+🍗 Chicken Wings
+🍗 Chicken Box
+🌯 Wraps
+🍟 Frites
+🧀 Cheese Fries
+🥗 Salades
+🥤 Boissons
+🍦 Glaces
+🍰 Desserts
+🥤 Menus & Combos
+🚀 Livraison Quick rapide partout à Marrakech
+Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de burgers et de restauration rapide. Chaque commande est récupérée directement auprès du restaurant Quick afin de garantir des burgers chauds, des frites croustillantes et des produits toujours frais. Que vous souhaitiez un déjeuner rapide, un dîner en famille, un repas entre collègues, une soirée entre amis ou une envie de fast-food tard dans la nuit, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
+❤️ Pourquoi choisir Allo Livreur Kech ?
+✅ Livraison Quick rapide
+✅ Disponible 24h/24 et 7j/7
+✅ Commande simple via WhatsApp
+✅ Livraison dans tous les quartiers de Marrakech
+✅ Burgers livrés chauds et frais
+✅ Livraison à domicile, au bureau, à l'hôtel et au riad
+✅ Service professionnel et sécurisé
+✅ Temps de livraison optimisé
+📍 Zones desservies
+📍 Guéliz
+📍 Hivernage
+📍 Agdal
+📍 Massira
+📍 M'hamid
+📍 Daoudiate
+📍 Targa
+📍 Sidi Ghanem
+📍 Route de Casablanca
+📍 Route de l'Ourika
+📍 Palmeraie
+📍 Médina
+📍 Semlalia
+📍 Victor Hugo
+📍 Amerchich
+📍 Hay Charaf
+📲 Commandez dès maintenant votre Quick avec Allo Livreur Kech et profitez d'une livraison Quick rapide à domicile partout à Marrakech. Que vous recherchiez une livraison Quick Marrakech, une livraison burger Marrakech, une livraison fast-food Marrakech ou une livraison à domicile disponible 24h/24, notre équipe est prête à vous livrer vos burgers, sandwiches, wraps, frites et desserts préférés directement chez vous, rapidement et toujours chauds.`,
+},
     ],
     bgGradient: 'from-orange-400 via-orange-500 to-red-600',
   },

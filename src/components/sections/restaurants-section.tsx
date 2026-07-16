@@ -1,4 +1,4 @@
-'use client';
+
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -22,7 +22,7 @@ interface RestaurantsSectionProps {
 export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
-
+  
   return (
     <section className="mx-auto mt-5 sm:mt-10 max-w-7xl px-2 sm:px-0">
       <motion.div
