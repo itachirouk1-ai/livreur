@@ -46,6 +46,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     titleColor: 'text-red-600',
     description: 'Vos plats préférés livrés rapidement chez vous à Marrakech.',
     deliveryTime: '30-60 min',
+    
     heroImage: '🍔',
     features: [
       {

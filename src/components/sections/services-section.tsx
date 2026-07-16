@@ -1,4 +1,4 @@
-'use client';
+
 
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
@@ -6,13 +6,15 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
+import Image from 'next/image';
 
 interface Service {
-  slug: string;
+   slug: string;
   title: string;
   emoji: string;
   bgGradient: string;
   highlight: boolean;
+  image: string;
 }
 
 interface ServicesSectionProps {
@@ -59,22 +61,34 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                 className="flex flex-col cursor-pointer group"
               >
                 <motion.article
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative flex-1 overflow-hidden rounded-[28px] sm:rounded-[32px] shadow-[0_24px_54px_rgba(15,23,42,0.14)] transition-all duration-300 hover:shadow-[0_32px_64px_rgba(249,115,22,0.18)]"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient}`} />
+  whileHover={{ y: -8, scale: 1.02 }}
+  className="group relative flex-1 overflow-hidden rounded-[28px] sm:rounded-[32px] shadow-[0_24px_54px_rgba(15,23,42,0.14)] transition-all duration-300 hover:shadow-[0_32px_64px_rgba(249,115,22,0.18)]"
+>
+  {/* Background Image */}
+  <Image
+    src={service.image}
+    alt={service.title}
+    fill
+    className="object-cover transition-transform duration-700 group-hover:scale-110"
+  />
 
-                  <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/35" />
 
-                  <div className="relative flex h-56 sm:h-72 flex-col items-center justify-center p-6 sm:p-8 text-center">
-                    <div className="text-5xl sm:text-7xl transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6">
-                      {service.emoji}
-                    </div>
-                    <h3 className="mt-4 sm:mt-6 text-xl sm:text-3xl font-bold text-white drop-shadow-lg">
-                      {service.title}
-                    </h3>
-                  </div>
-                </motion.article>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+
+  {/* Content */}
+  <div className="relative flex h-56 sm:h-72 flex-col items-center justify-center p-6 sm:p-8 text-center">
+    <div className="text-5xl sm:text-7xl transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6">
+      {service.emoji}
+    </div>
+
+    <h3 className="mt-4 sm:mt-6 text-xl sm:text-3xl font-bold text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+      {service.title}
+    </h3>
+  </div>
+</motion.article>
               </motion.div>
             </Link>
 

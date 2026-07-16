@@ -61,71 +61,80 @@ export default function Home() {
     }));
   };
 
-  const services = [
-    {
-      slug: 'restaurants',
-      title: 'Restaurants',
-      emoji: '🍔',
-      bgGradient: 'from-orange-400 via-orange-500 to-red-600',
-      highlight: true,
-    },
-    {
-      slug: 'pharmacies',
-      title: 'Pharmacies',
-      emoji: '💊',
-      bgGradient: 'from-emerald-400 via-green-500 to-teal-600',
-      highlight: true,
-    },
-    {
-      slug: 'supermarkets',
-      title: 'Supermarkets',
-      emoji: '🛒',
-      bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
-      highlight: false,
-    },
-    {
-      slug: 'flowers',
-      title: 'Flowers',
-      emoji: '🌸',
-      bgGradient: 'from-pink-400 via-rose-500 to-red-600',
-      highlight: false,
-    },
-    {
-      slug: 'cosmetics',
-      title: 'Cosmetics',
-      emoji: '💄',
-      bgGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
-      highlight: false,
-    },
-    {
-      slug: 'shopping',
-      title: 'Shopping',
-      emoji: '🛍',
-      bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
-      highlight: false,
-    },
-    {
-      slug: 'parcel-delivery',
-      title: 'Parcel Delivery',
-      emoji: '📦',
-      bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
-      highlight: false,
-    },
-    {
-      slug: 'documents',
-      title: 'Documents',
-      emoji: '📄',
-      bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
-      highlight: false,
-    },
-    {
-      slug: 'bakery',
-      title: 'Bakery',
-      emoji: '🥖',
-      bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',
-      highlight: false,
-    },
-  ];
+ const services = [
+  {
+    slug: 'restaurants',
+    title: 'Restaurants',
+    emoji: '🍔',
+    image: "/logos/restaurants-marrakech-livraison-adomicile.png",
+    bgGradient: 'from-orange-400 via-orange-500 to-red-600',
+    highlight: true,
+  },
+  {
+    slug: 'pharmacies',
+    title: 'Pharmacies',
+    emoji: '💊',
+    image: '/logos/pharmacie-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-emerald-400 via-green-500 to-teal-600',
+    highlight: true,
+  },
+  {
+    slug: 'supermarkets',
+    title: 'Supermarkets',
+    emoji: '🛒',
+    image: '/logos/supermarkets-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
+    highlight: false,
+  },
+  {
+    slug: 'flowers',
+    title: 'Flowers',
+    emoji: '🌸',
+    image: '/logos/flowers-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-pink-400 via-rose-500 to-red-600',
+    highlight: false,
+  },
+  {
+    slug: 'cosmetics',
+    title: 'Cosmetics',
+    emoji: '💄',
+    image: '/logos/cosmetique-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
+    highlight: false,
+  },
+  {
+    slug: 'shopping',
+    title: 'Shopping',
+    emoji: '🛍️',
+    image: '/logos/shopping-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
+    highlight: false,
+  },
+  {
+    slug: 'parcel-delivery',
+    title: 'Parcel Delivery',
+    emoji: '📦',
+    image: '/logos/colis-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
+    highlight: false,
+  },
+  {
+    slug: 'documents',
+    title: 'Documents',
+    emoji: '📄',
+    image:'/logos/documents-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
+    highlight: false,
+  },
+  {
+    slug: 'bakery',
+    title: 'Bakery',
+    emoji: '🥖',
+    image: '/logos/bakery-marrakech-livraison-adomicile.png',
+    bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',
+    highlight: false,
+  },
+];
 
   const featuredStores = getRandomFeaturedStores();
 

@@ -51,7 +51,7 @@ export function Breadcrumb({
         {showBack && (
           <button
             onClick={handleBack}
-            className="flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 text-sm"
+            className="flex items-center gap-1 px-1 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 text-sm"
             aria-label="Go back"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -60,7 +60,7 @@ export function Breadcrumb({
         )}
           <Link
             href={`/${locale !== 'fr' ? `?lang=${locale}` : ''}`}
-            className="flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
+            className="flex items-center gap-1 px-1 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
           >
             <Home className="h-4 w-4" />
             <span className="text-sm font-medium">Home</span>
@@ -70,13 +70,13 @@ export function Breadcrumb({
             <div key={item.href} className="flex items-center gap-1">
               <ChevronRight className="h-4 w-4 text-slate-400 dark:text-slate-600" />
               {index === items.length - 1 ? (
-                <span className="px-2 py-1 text-sm font-semibold text-slate-900 dark:text-white truncate max-w-xs sm:max-w-none">
+                <span className="px-1 py-1 text-sm font-semibold text-slate-900 dark:text-white truncate max-w-xs sm:max-w-none">
                   {item.label}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 text-sm font-medium truncate max-w-xs sm:max-w-none"
+                  className=" text-sm py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 text-xm truncate max-w-xs sm:max-w-none"
                 >
                   {item.label}
                 </Link>

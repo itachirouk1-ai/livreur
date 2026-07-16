@@ -1,5 +1,5 @@
 
-
+"use client"
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
@@ -87,10 +87,17 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
                 <h3 className="text-xl font-bold text-slate-950 dark:text-white sm:text-2xl">
                  {restaurant.name}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
-                  {restaurant.description}
-                </p>
-                <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
+      <p
+  style={{
+    display: "-webkit-box",
+    WebkitLineClamp: 3,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+  }}
+  className="mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base"
+>
+  {restaurant.description}
+</p>           <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
                   <span>{copy.seeVendorPage}</span>
                   <span aria-hidden="true">→</span>
                 </div>

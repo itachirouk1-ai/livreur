@@ -23,7 +23,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[80vh] sm:h-[80vh] overflow-hidden border-b-2 border-b-orange-500 border-t-2 border-t-orange-500 w-full">
+    <section className="relative w-full h-[70vh] sm:h-[80vh] overflow-hidden border-b-2 border-b-orange-500 border-t-2 border-t-orange-500 w-full">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full ">
         <video

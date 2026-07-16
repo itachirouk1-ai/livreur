@@ -215,7 +215,7 @@ export function ServiceDetailPageComponent({
                 <Image src={heroImageUrl} alt={title} fill loading="eager" className="h-full w-full object-cover" />
               ) : (
                 <div className="flex h-full items-center justify-center text-9xl sm:text-[120px] lg:text-[140px]">
-                  🍔
+                  
                 </div>
               )}
 
