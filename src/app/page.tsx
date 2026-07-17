@@ -6,6 +6,7 @@ import { ServicesSection } from '@/components/sections/services-section';
 import { RestaurantsSection } from '@/components/sections/restaurants-section';
 import { siteContent } from '@/lib/site-content';
 import { getAllServiceSlugs, getServiceBySlug, getVendorSlug } from '@/lib/services-data';
+import DeliveryZonesSection from '@/components/ui/DeliveryZonesSection';
 
 
 export default function Home() {
@@ -146,6 +147,7 @@ export default function Home() {
       <main className="pb-2 pt-1 sm:pb-1 sm:pt-1 md:px-1 lg:px-1 lg:pt-1">
         <HeroSection />
         <ServicesSection services={services} />
+        <DeliveryZonesSection />
         <RestaurantsSection restaurants={featuredStores} />
       </main>
     </div>

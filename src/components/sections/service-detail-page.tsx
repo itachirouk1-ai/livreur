@@ -8,7 +8,8 @@ import { CategoriesSection } from '@/components/sections/categoriesSection';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { getVendorSlug } from '@/lib/services-data';
-import { siteContent, type Locale } from '@/lib/site-content';
+import { contactLinks, siteContent, type Locale } from '@/lib/site-content';
+import { Icon } from '@iconify/react';
 // lib/service-hero-images.ts
 
 
@@ -193,7 +194,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
     },
     shopping: {
       fr: {
-        heading: 'Boutiques populaires',
+        heading: 'populaires Boutiques',
         description:
           'Nous livrons vos achats préférés directement chez vous, à Marrakech, en quelques minutes !',
       },
@@ -242,6 +243,9 @@ export function ServiceDetailPageComponent({
   const uniqueBrandItems = Array.from(new Map(brandItems.map(brand => [brand.id, brand])).values());
   const accentTextClass = getAccentTextClass(titleColor);
   const vendorSectionCopy = getVendorSectionCopy(slug, locale);
+ const handleWhatsApp = () => {
+    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="min-h-screen">
@@ -333,6 +337,7 @@ export function ServiceDetailPageComponent({
                       src={vendor.logoUrl ?? '/logos/applogo.png'}
                       alt={vendor.logoAlt ?? vendor.name}
                       fill
+                      
                       loading="eager"
                       sizes="(max-width: 640px) 96px, (max-width: 1024px) 112px, 128px"
                       className="object-cover"
@@ -363,16 +368,20 @@ export function ServiceDetailPageComponent({
 
                   {/* WhatsApp Button */}
                   <div className="w-full sm:w-auto sm:flex-shrink-0 sm:ml-4 sm:order-none order-last">
-                    <Button className="h-12 w-full sm:w-44 rounded-lg bg-green-500 hover:bg-green-600 text-white shadow-lg p-0 flex items-center justify-center gap-2 px-4">
-                      <svg
-                        className="h-5 w-5 fill-current"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.946-2.504 2.292-2.504 3.964 0 1.744.822 3.357 2.322 4.521l-.333 2.332 2.532-1.313c1.24.657 2.305 1.059 2.715 1.059.033 0 .066 0 .098 0 5.338 0 9.516-4.226 9.516-9.45 0-2.409-.906-4.869-2.562-6.603-1.656-1.735-3.935-2.908-6.784-2.908z" />
-                      </svg>
-                      <span className="text-sm font-semibold">WhatsApp</span>
-                    </Button>
+                    <Button
+                                  onClick={handleWhatsApp}
+                                  className="mt-0 w-full h-11 sm:h-12
+                                   rounded-full
+                                  bg-gradient-to-r from-red-900 via-red-500 to-pink-900 px-4 sm:px-6 text-2xl sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] hover:shadow-[0_16px_36px_rgba(16,185,129,0.45)] 
+                                  transition-all hover:scale-[1.02]"
+                                >
+                                  <Icon
+                                  
+                                    icon="logos:whatsapp-icon"
+                                    className="mr-2 h-8 w-8 size-auto"
+                                  />
+                                  {copy.orderOnWhatsApp}
+                                </Button>
                   </div>
                 </motion.div>
               );

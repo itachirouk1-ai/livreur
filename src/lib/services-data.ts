@@ -88,7 +88,7 @@ export const servicesData: Record<string, ServiceDetail> = {
         name: 'livraison mcdonalds marrakech',
         brand: "McDonald's",
         logo: '🍟',
-        logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.png",
+        logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.jfif",
         logoAlt: "McDonald's brand logo",
    description: `🍟 Livraison McDonald's Marrakech à domicile 24h/7j
 Vous recherchez une livraison McDonald's à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison McDonald's à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant McDonald's de votre choix et nous la livrons rapidement, chaude et fraîche, à votre domicile, votre bureau, votre hôtel ou votre riad.
@@ -405,7 +405,7 @@ Notre service de livraison Tacos de Lyon Marrakech est disponible 24h/24 et 7j/7
         name: 'livraison crusty marrakech',
         brand: 'Crusty',
         logo: '🥖',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.png',
+        logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.jfif',
         logoAlt: 'Crusty brand logo',
        description: `🥪 Livraison Crusty Marrakech à domicile 24h/7j
 Vous recherchez une livraison Crusty à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Crusty à domicile partout à Marrakech. Nous récupérons votre commande directement chez Crusty et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel ou votre riad.
@@ -1110,7 +1110,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
         name: 'Livraison Carré Eden Shopping Center Marrakech',
         brand: 'Carré Eden Shopping Center',
         logo: '🛍️',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER (Guéliz).webp',
+        logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER .png',
         logoAlt: 'Carré Eden Shopping Center brand logo',
         description:
           'Un centre commercial incontournable à Guéliz avec boutiques, mode, beauté et services variés livrés avec praticité.',

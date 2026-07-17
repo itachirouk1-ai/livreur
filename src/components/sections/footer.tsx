@@ -1,119 +1,214 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { contactLinks, siteContent } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
+import { Icon } from '@iconify/react';
+import { Button } from '../ui/button';
+import { ChevronRight, Grid2X2, House, Info, PhoneCall, PhoneCallIcon } from 'lucide-react';
+
+const footerServices = [
+  { name: "🍔 Restaurants", href: "/restaurants" },
+  { name: "💊 Pharmacies", href: "/pharmacies" },
+  { name: "🛒 Supermarkets", href: "/supermarkets" },
+  { name: "🌸 Flowers", href: "/flowers" },
+  { name: "💄 Cosmetics", href: "/cosmetics" },
+  { name: "🛍️ Shopping", href: "/shopping" },
+  { name: "📦 Parcel Delivery", href: "/parcel-delivery" },
+  { name: "📄 Documents", href: "/documents" },
+  { name: "🥖 Bakery", href: "/bakery" },
+];
 
 export function Footer() {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
 
+  // TypeScript definition solved using explicitly typed Variants object
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        type: "spring", // TypeScript is now happy since the type is tied to Variants
+        stiffness: 60, 
+        damping: 14 
+      } 
+    }
+  };
+  const handleWhatsApp = () => {
+    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <footer className="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors duration-500">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-        {/* Main footer content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {/* Brand */}
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+    <footer className="relative mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+      {/* Premium Top Glow Line Accent */}
+      <div className="absolute top-0 left-1/2 w-full -translate-x-1/2 h-[1px] bg-gradient-to-r from-transparent via-orange-500/30 to-transparent shadow-[0_0_15px_rgba(249,115,22,0.15)]"></div>
+
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 relative z-10">
+        {/* Main footer content with staggered motion animation */}
+             {/* Brand */}
+          <motion.div variants={itemVariants}>
+            <h3 className="text-xl text-center font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 mb-2">
               {copy.brandName}
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               {copy.heroDescription}
             </p>
-          </div>
+          </motion.div>
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-10 mb-12"
+        >
+     
+            
+          {/* Services */}
+          <motion.div variants={itemVariants}>
+      <h4 className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent mb-3 text-center text-2xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text">
+  {locale === "fr" ? "Nos Services" : "Our Services"}
+</h4>
+            <div className="grid grid-cols-2 gap-3">
+              {footerServices.map((service) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="group flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:bg-orange-50 hover:text-orange-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-orange-500/40 dark:hover:bg-orange-500/10 dark:hover:text-orange-400 shadow-sm hover:shadow"
+                >
+                  <span className="text-base transition-transform duration-300 group-hover:scale-110">
+                    {service.name.split(" ")[0]}
+                  </span>
 
-          {/* Info Links */}
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-4">
-              {locale === 'fr' ? 'Informations' : 'Information'}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
-                >
-                  {locale === 'fr' ? 'Accueil' : 'Home'}
+                  <span className="truncate font-medium">
+                    {service.name.substring(service.name.indexOf(" ") + 1)}
+                  </span>
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
-                >
-                  {locale === 'fr' ? 'Services' : 'Services'}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
-                >
-                  {locale === 'fr' ? 'À propos' : 'About'}
-                </Link>
-              </li>
-            </ul>
-          </div>
+              ))}
+            </div>
+          </motion.div>
+
+        
 
           {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-4">
-              {locale === 'fr' ? 'Nous contacter' : 'Contact Us'}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href={contactLinks.phone}
-                  className="text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
-                >
-                  {locale === 'fr' ? 'Appeler' : 'Call'}: +212 6 00 00 00 00
-                </a>
-              </li>
-              <li>
-                <span className="text-slate-600 dark:text-slate-400">
-                  {locale === 'fr' ? 'Disponible 24/7' : 'Available 24/7'}
-                </span>
-              </li>
-            </ul>
-          </div>
+          <motion.div variants={itemVariants}>
+  <h4 className="mb-5 text-base font-bold text-slate-900 dark:text-white">
+    {locale === "fr" ? "Nous contacter" : "Contact Us"}
+  </h4>
+
+  <div className="space-y-3">
+    {/* Phone */}
+    <Link
+  href={contactLinks.phone}
+  className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-green-500/40"
+>
+  <div className="flex items-center gap-4">
+    
+
+
+<div className="rounded-lg bg-green-100 p-2 text-green-600 dark:bg-green-900/30 dark:text-green-400">
+  <PhoneCall className="h-4 w-4" />
+</div>
+    <div>
+      <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
+        {locale === "fr" ? "Appelez-nous" : "Call us"}
+      </p>
+
+      <p className="mt-0.5 text-base font-bold text-slate-900 dark:text-white">
+        +212 6 33 11 50 90
+      </p>
+    </div>
+  </div>
+
+  <ChevronRight className="h-5 w-5 text-slate-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-green-500" />
+</Link>
+
+    {/* WhatsApp */}
+    <a
+      href={contactLinks.whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center justify-between rounded-2xl border border-green-200 bg-green-50 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-green-900 dark:bg-green-950/20"
+    >
+      <div className="flex items-center gap-3">
+        <Icon
+                icon="logos:whatsapp-icon"
+                className="mr-2 h-8 w-8 size-auto"
+              />
+        <div>
+          <p className="text-sm text-green-700 dark:text-green-400">
+            WhatsApp
+          </p>
+
+          <p className="font-semibold text-slate-900 dark:text-white">
+            {locale === "fr"
+              ? "Réponse en quelques minutes"
+              : "Reply in a few minutes"}
+          </p>
         </div>
+      </div>
+
+      <span className="text-xl transition-transform group-hover:translate-x-1">
+        →
+      </span>
+    </a>
+
+    {/* Status */}
+    <div className="flex items-center justify-center gap-2 rounded-full border border-green-200 bg-green-50 py-3 dark:border-green-900 dark:bg-green-950/20">
+      <span className="relative flex h-3 w-3">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+        <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500" />
+      </span>
+
+      <span className="text-sm font-medium text-green-700 dark:text-green-400">
+        {locale === "fr"
+          ? "Disponible 24h/24 • 7j/7"
+          : "Available 24/7"}
+      </span>
+    </div>
+  </div>
+</motion.div>
+        </motion.div>
 
         {/* Divider */}
         <div className="border-t border-slate-200 dark:border-slate-800 pt-8">
-          {/* WhatsApp Button */}
+          {/* WhatsApp Button Wrapper */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="flex flex-col sm:flex-row items-center justify-between gap-4"
           >
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              {locale === 'fr'
-                ? '© 2024 Allo Livreur Marrakech. Tous droits réservés.'
-                : '© 2024 Allo Deliverer Marrakech. All rights reserved.'}
-            </p>
-
-            <motion.a
-              href={contactLinks.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+            <Button
+              onClick={handleWhatsApp}
+              className="mt-0 w-full h-11 sm:h-12
+               rounded-full
+              bg-gradient-to-r from-red-900 via-red-500 to-pink-900 px-4 sm:px-6 text-2xl sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(16,185,129,0.35)] hover:shadow-[0_16px_36px_rgba(16,185,129,0.45)] 
+              transition-all hover:scale-[1.02]"
             >
-              <svg
-                className="h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.536.946-2.504 2.292-2.504 3.964 0 1.744.822 3.357 2.322 4.521l-.333 2.332 2.532-1.313c1.24.657 2.305 1.059 2.715 1.059.033 0 .066 0 .098 0 5.338 0 9.516-4.226 9.516-9.45 0-2.409-.906-4.869-2.562-6.603-1.656-1.735-3.935-2.908-6.784-2.908z" />
-              </svg>
-              {locale === 'fr' ? 'Nous écrire sur WhatsApp' : 'Message us on WhatsApp'}
-            </motion.a>
+              <Icon
+                icon="logos:whatsapp-icon"
+                className="mr-2 h-8 w-8 size-auto"
+              />
+              {copy.orderOnWhatsApp}
+            </Button>
+
+                 <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+              {locale === 'fr'
+                ? '© 2026 Allo Livreur Marrakech. Tous droits réservés.'
+                : '© 2026 Allo Deliverer Marrakech. All rights reserved.'}
+            </p>
           </motion.div>
         </div>
       </div>

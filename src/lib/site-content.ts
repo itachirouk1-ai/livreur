@@ -59,7 +59,7 @@ export const siteContent: Record<
     servicesSubtitle: 'Marrakech : chacun à votre domicile !',
     
     orderNow: 'Commander maintenant',
-    restaurantsHeading: 'Boutiques populaires',
+    restaurantsHeading: 'populaires Boutiques',
     restaurantsDescription:
       'Découvrez les boutiques et services les plus demandés à Marrakech, de la fleuristerie au marché local en passant par les pharmacies.',
     seeVendorPage: 'Voir la page',
@@ -130,8 +130,8 @@ export const siteContent: Record<
 };
 
 export const contactLinks = {
-  whatsapp: 'https://wa.me/212600000000?text=Bonjour%20Allo%20Deliverer%20Kech',
-  phone: 'tel:+212600000000',
+  whatsapp: "https://wa.me/212633115090?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
+  phone: 'tel:+212633115090',
 };
 
 export function getLocaleFromQuery(queryString?: string | null): Locale {
