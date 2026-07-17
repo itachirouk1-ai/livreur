@@ -9,6 +9,50 @@ import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { getVendorSlug } from '@/lib/services-data';
 import { siteContent, type Locale } from '@/lib/site-content';
+// lib/service-hero-images.ts
+
+
+
+export const serviceHeroImages = [
+  {
+    slug: "restaurants",
+    heroImageUrl: "/logos/restaurants-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "pharmacies",
+    heroImageUrl: "/logos/pharmacie-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "supermarkets",
+    heroImageUrl: "/logos/supermarkets-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "flowers",
+    heroImageUrl: "/logos/flowers-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "cosmetics",
+    heroImageUrl: "/logos/cosmetique-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "shopping",
+    heroImageUrl: "/logos/shopping-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "parcel-delivery",
+    heroImageUrl: "/logos/colis-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "documents",
+    heroImageUrl: "/logos/documents-marrakech-livraison-adomicile.png",
+  },
+  {
+    slug: "bakery",
+    heroImageUrl: "/logos/bakery-marrakech-livraison-adomicile.png",
+  },
+];
+
+
 
 interface ServiceCategory {
   name: string;
@@ -170,6 +214,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
   );
 }
 
+
 export function ServiceDetailPageComponent({
   locale = 'fr',
   slug,
@@ -179,7 +224,11 @@ export function ServiceDetailPageComponent({
   accentGradient,
   categories,
   vendors,
+  
 }: ServiceDetailPageProps) {
+  const heroImage = serviceHeroImages.find(
+  (service) => service.slug === slug
+)?.heroImageUrl;
   const copy = siteContent[locale];
   const brandItems = vendors.map(vendor => ({
     id: vendor.id,
@@ -187,6 +236,7 @@ export function ServiceDetailPageComponent({
     logoUrl: vendor.logoUrl,
     logoAlt: vendor.logoAlt || `${vendor.brand} brand logo`,
     logoEmoji: vendor.logo,
+    
   }));
 
   const uniqueBrandItems = Array.from(new Map(brandItems.map(brand => [brand.id, brand])).values());
@@ -211,13 +261,19 @@ export function ServiceDetailPageComponent({
               transition={{ duration: 0.6, delay: 0.2 }}
               className={`relative h-64 overflow-hidden rounded-[32px] border border-white/60 bg-gradient-to-br ${accentGradient ?? 'from-orange-200 via-amber-100 to-orange-100 dark:from-orange-900/30 dark:via-amber-900/30 dark:to-orange-900/30'} shadow-[0_20px_80px_-30px_rgba(15,23,42,0.3)] sm:h-80 lg:h-[28rem]`}
             >
-              {heroImageUrl ? (
-                <Image src={heroImageUrl} alt={title} fill loading="eager" className="h-full w-full object-cover" />
-              ) : (
-                <div className="flex h-full items-center justify-center text-9xl sm:text-[120px] lg:text-[140px]">
-                  
-                </div>
-              )}
+{heroImage ? (
+  <Image
+    src={heroImage}
+    alt={title}
+    fill
+    loading="eager"
+    className="object-cover"
+  />
+) : (
+  <div className="flex h-full items-center justify-center text-9xl sm:text-[120px] lg:text-[140px]">
+    {/* fallback */}
+  </div>
+)}
 
               <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/35 to-transparent" />
 

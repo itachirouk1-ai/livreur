@@ -58,6 +58,7 @@ export default function Home() {
       emoji: vendor.emoji,
       href: `/${vendor.serviceSlug}/${vendor.slug}`,
       accent: vendor.bgGradient,
+      
     }));
   };
 
