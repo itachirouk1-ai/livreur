@@ -1,5 +1,6 @@
 'use client';
 
+
 import { Header } from '@/components/sections/header';
 import { HeroSection } from '@/components/sections/hero-section';
 import { ServicesSection } from '@/components/sections/services-section';
@@ -23,14 +24,16 @@ export default function Home() {
   // Get random vendors from all services
   const getRandomFeaturedStores = () => {
     const allVendors: Array<{
-      name: string;
-      description: string;
-      slug: string;
-      serviceSlug: string;
-      emoji: string;
-      brand: string;
-      bgGradient: string;
-    }> = [];
+  name: string;
+  description: string;
+  slug: string;
+  serviceSlug: string;
+  emoji: string;
+  brand: string;
+  bgGradient: string;
+  logoUrl?: string;
+  logoAlt?: string;
+}> = [];
 
     // Collect all vendors from all services
     getAllServiceSlugs().forEach(serviceSlug => {
@@ -38,29 +41,40 @@ export default function Home() {
       if (service) {
         service.vendors.forEach(vendor => {
           allVendors.push({
-            name: vendor.name,
-            description: vendor.description,
-            slug: getVendorSlug(vendor),
-            serviceSlug: serviceSlug,
-            emoji: vendor.logo || '🏪',
-            brand: vendor.brand,
-            bgGradient: service.bgGradient,
-          });
+  name: vendor.name,
+  description: vendor.description,
+  slug: getVendorSlug(vendor),
+  serviceSlug,
+  emoji: vendor.logo || "🏪",
+  brand: vendor.brand,
+  bgGradient: service.bgGradient,
+  logoUrl: vendor.logoUrl,
+  logoAlt: vendor.logoAlt,
+});
         });
       }
     });
 
     // Shuffle and get random 3 vendors
-    const shuffled = shuffle(allVendors);
-    return shuffled.slice(0, 3).map(vendor => ({
-      name: vendor.brand,
-      description: vendor.description,
-      badge: vendor.name.length > 30 ? vendor.name.substring(0, 27) + '...' : vendor.name,
-      emoji: vendor.emoji,
-      href: `/${vendor.serviceSlug}/${vendor.slug}`,
-      accent: vendor.bgGradient,
-      
-    }));
+   const featured = [
+  allVendors.find((v) => v.serviceSlug === "restaurants"),
+  allVendors.find((v) => v.serviceSlug === "pharmacies"),
+  allVendors.find((v) => v.serviceSlug === "supermarkets"),
+].filter(Boolean);
+
+return featured.map((vendor) => ({
+  name: vendor!.brand,
+  description: vendor!.description,
+  badge:
+    vendor!.name.length > 30
+      ? vendor!.name.substring(0, 27) + "..."
+      : vendor!.name,
+  emoji: vendor!.emoji,
+  href: `/${vendor!.serviceSlug}/${vendor!.slug}`,
+  accent: vendor!.bgGradient,
+  logoUrl: vendor!.logoUrl,
+  logoAlt: vendor!.logoAlt,
+}));
   };
 
  const services = [
@@ -137,9 +151,7 @@ export default function Home() {
     highlight: false,
   },
 ];
-
-  const featuredStores = getRandomFeaturedStores();
-
+const featuredStores = getRandomFeaturedStores();
   return (
     <div className="min-h-screen bg-white text-slate-900 transition-colors duration-500 dark:bg-slate-950 dark:text-slate-50">
       <Header />
