@@ -29,7 +29,7 @@ export const reviews = [
   {
     id: 4,
     name: "Chloé",
-    avatar: "/reviews/1.jpg",
+    avatar: "/reviews/5.jpg",
     rating: 5,
     date: "28 Mai 2026",
     review:
@@ -47,7 +47,7 @@ export const reviews = [
   {
     id: 6,
     name: "Camillia",
-    avatar: "./reviews/5.jpg",
+    avatar: "/reviews/3.jpg",
     rating: 5,
     date: "12 Mai 2026",
     review:

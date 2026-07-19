@@ -47,15 +47,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
               {copy.restaurantsDescription}
             </p>
           </div>
-          <div className="hidden sm:block">
-            <Link
-              href={withLocaleHref('/#services', locale)}
-              className="inline-flex h-11 sm:h-12 items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 px-6 sm:px-8 text-sm sm:text-base font-bold text-white shadow-[0_12px_30px_rgba(249,115,22,0.3)] transition-all hover:scale-[1.04]"
-            >
-              {copy.exploreServices}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+          
         </div>
       </motion.div>
 

@@ -188,7 +188,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-between gap-4"
+            className="flex flex-col items-center justify-between gap-4"
           >
             <Button
               onClick={handleWhatsApp}

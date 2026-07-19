@@ -35,13 +35,13 @@ export function ReviewCard({ review }: ReviewCardProps) {
     >
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Image
-          src={review.avatar}
-          alt={review.name}
-          width={56}
-          height={56}
-          className="h-14 w-14 rounded-full object-cover ring-2 ring-orange-500/20"
-        />
+<img
+  src={review.avatar}
+  alt={review.name}
+  width={56}
+  height={56}
+  className="rounded-full w-14 h-14 object-cover"
+/>
 
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1">
