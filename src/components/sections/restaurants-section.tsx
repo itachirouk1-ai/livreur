@@ -27,7 +27,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
   const copy = siteContent[locale];
   
   return (
-    <section className="mx-auto mt-5 sm:mt-10 max-w-7xl px-2 sm:px-0">
+    <section className="mx-auto mt-2 sm:mt-10 max-w-7xl px-2 sm:px-0">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -59,7 +59,7 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
         </div>
       </motion.div>
 
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-2">
         {restaurants.map((restaurant, index) => (
           <motion.div
             key={restaurant.name}
@@ -67,10 +67,10 @@ export function RestaurantsSection({ restaurants }: RestaurantsSectionProps) {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
-            className="group flex h-full flex-col"
+            className="group flex h-full flex-col rounded-[28px] border border-slate-200 p-2 transition-all duration-300 hover:border-orange-500 dark:border-slate-700"
           >
             <Link href={withLocaleHref(restaurant.href ?? '/#services', locale)} className="flex h-full flex-col">
-              <div className=" border border-red-1 relative flex-1 overflow-hidden rounded-[24px] shadow-[0_16px_40px_rgba(15,23,42,0.12)] transition-all duration-300 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:rounded-[28px]">
+              <div className="relative flex-1 overflow-hidden rounded-[24px] shadow-[0_16px_40px_rgba(15,23,42,0.12)] transition-all duration-300 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:rounded-[28px]">
                 <div className={`absolute inset-0 bg-gradient-to-br ${restaurant.accent ?? 'from-orange-400 via-amber-400 to-red-500'} opacity-80`} />
                 <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
 

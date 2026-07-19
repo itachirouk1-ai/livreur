@@ -8,6 +8,7 @@ import { RestaurantsSection } from '@/components/sections/restaurants-section';
 import { siteContent } from '@/lib/site-content';
 import { getAllServiceSlugs, getServiceBySlug, getVendorSlug } from '@/lib/services-data';
 import DeliveryZonesSection from '@/components/ui/DeliveryZonesSection';
+import { ReviewsSection } from '@/components/sections/reviews-section';
 
 
 export default function Home() {
@@ -161,6 +162,7 @@ const featuredStores = getRandomFeaturedStores();
         <ServicesSection services={services} />
         <DeliveryZonesSection />
         <RestaurantsSection restaurants={featuredStores} />
+        <ReviewsSection/>
       </main>
     </div>
   );
