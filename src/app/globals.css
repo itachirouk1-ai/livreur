@@ -179,3 +179,25 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+@keyframes whatsapp-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.animate-whatsapp {
+  animation: whatsapp-bounce 2s ease-in-out infinite;
+}

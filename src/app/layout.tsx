@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
 import { siteContent, siteUrl, type Locale } from '@/lib/site-content';
 import { Footer } from '@/components/sections/footer';
+import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -88,6 +89,7 @@ export default function RootLayout({
             <LocaleProvider>
               {children}
               <Footer />
+              <FloatingWhatsApp />
             </LocaleProvider>
           </Suspense>
         </ThemeProvider>
