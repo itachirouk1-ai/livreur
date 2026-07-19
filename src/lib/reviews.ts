@@ -47,7 +47,7 @@ export const reviews = [
   {
     id: 6,
     name: "Camillia",
-    avatar: "/reviews/5.jpg",
+    avatar: "./reviews/5.jpg",
     rating: 5,
     date: "12 Mai 2026",
     review:
