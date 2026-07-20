@@ -1,5 +1,3 @@
-'use client';
-
 
 import { Header } from '@/components/sections/header';
 import { HeroSection } from '@/components/sections/hero-section';
@@ -58,12 +56,21 @@ export default function Home() {
     });
 
     // Shuffle and get random 3 vendors
-   const featured = [
-  allVendors.find((v) => v.serviceSlug === "restaurants"),
-  allVendors.find((v) => v.serviceSlug === "pharmacies"),
-  allVendors.find((v) => v.serviceSlug === "supermarkets"),
-].filter(Boolean);
+const featured = shuffle(allVendors).slice(0, 3);
 
+return featured.map((vendor) => ({
+  name: vendor.brand,
+  description: vendor.description,
+  badge:
+    vendor.name.length > 30
+      ? vendor.name.substring(0, 27) + "..."
+      : vendor.name,
+  emoji: vendor.emoji,
+  href: `/${vendor.serviceSlug}/${vendor.slug}`,
+  accent: vendor.bgGradient,
+  logoUrl: vendor.logoUrl,
+  logoAlt: vendor.logoAlt,
+}));
 return featured.map((vendor) => ({
   name: vendor!.brand,
   description: vendor!.description,

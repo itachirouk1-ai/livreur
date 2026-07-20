@@ -1,3 +1,4 @@
+"use client"
 import { contactLinks, siteContent } from "@/lib/site-content";
 import AnimatedJoinButton from "../ui/animated-join-button";
 import AnimatedCallButton from "../ui/AnimatedCallButton";
@@ -42,7 +43,7 @@ export default function DeliveryMap() {
         />
       </div>
 
-    <div className="py-4 flex flex-col gap-3 sm:flex-row sm:justify-between w-full max-w-xl">
+    <div className="py-4 flex flex-col gap-3 sm:flex-row sm:justify-evenly w-full">
                 <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
                 <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
     </div>

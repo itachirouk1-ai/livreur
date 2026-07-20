@@ -14,7 +14,7 @@ interface Restaurant {
   emoji?: string;
   href?: string;
   accent?: string;
-   logoUrl?: string;
+  logoUrl?: string;
   logoAlt?: string;
 }
 
