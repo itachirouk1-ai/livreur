@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { Button } from '@/components/ui/button';
-import { DiaTextReveal } from '@/components/ui/dia-text-reveal';
+import ShinyText from '@/components/ui/ShinyText';
 import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 
@@ -50,18 +50,32 @@ export function HeroSection() {
         >
           <div className="flex flex-col gap-1 max-w-2xl mt-[-1rem]">
             <h1 className="text-4xl sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight text-white drop-shadow-lg">
-              <DiaTextReveal
-                className="text-4xl sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight"
-                colors={['#ffffff']}
-                text={copy.heroTitleLine1}
-              />
+              <ShinyText
+  text={copy.heroTitleLine1}
+  speed={2}
+  delay={1}
+  color="#ffffff"
+  shineColor="#ff000067"
+  spread={90}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false}
+/>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl leading-normal text-gray-200 font-light tracking-wide max-w-xl">
-              <DiaTextReveal
-                className="text-base sm:text-lg lg:text-xl leading-normal text-gray-200 font-light tracking-wide"
-                colors={['#ffffff']}
-                text={copy.heroDescription}
-              />
+              <ShinyText
+  text={copy.heroDescription}
+  speed={2}
+  delay={1}
+  color="#ffffff"
+  shineColor="#ff000067"
+  spread={90}
+  direction="left"
+  yoyo={false}
+  pauseOnHover={false}
+  disabled={false}
+/>
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-between w-full max-w-xl">
