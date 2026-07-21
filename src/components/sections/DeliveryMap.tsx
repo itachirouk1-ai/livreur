@@ -21,11 +21,11 @@ export default function DeliveryMap() {
     <section className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4">
       <div className="mb-2 text-center">
         <span className="inline-flex rounded-full bg-red-100 px-2 py-1 text-sm font-medium text-red-600 dark:bg-red-500/10 dark:text-red-400">
-          📍 Zone de livraison
+          {copy.deliveryMapBadge}
         </span>
 
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white md:text-4xl">
-          Livraison à domicile à Marrakech
+          {copy.deliveryMapHeading}
         </h2>
 
       

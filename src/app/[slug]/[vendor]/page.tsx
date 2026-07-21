@@ -10,6 +10,7 @@ import { getServiceBySlug, getVendorByServiceAndId } from '@/lib/services-data';
 import { contactLinks, getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
+import { buildVendorPageMetadata } from '@/lib/seo';
 
 interface VendorPageProps {
   params: Promise<{
@@ -37,19 +38,7 @@ export async function generateMetadata({ params, searchParams }: VendorPageProps
     };
   }
 
-  const copy = siteContent[locale];
-
-  return {
-    title: `${vendorData.brand} | ${service.title}`,
-    description: vendorData.description || copy.vendorMetaDescription,
-    alternates: {
-      canonical: `/${slug}/${vendor}`,
-      languages: {
-        fr: `/${slug}/${vendor}`,
-        en: `/${slug}/${vendor}?lang=en`,
-      },
-    },
-  };
+  return buildVendorPageMetadata(slug, vendor);
 }
 
 export default async function VendorPage({ params, searchParams }: VendorPageProps) {

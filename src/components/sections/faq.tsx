@@ -3,33 +3,96 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
+import { siteContent } from "@/lib/site-content";
+import { useLocalePreference } from "@/lib/use-locale";
 
-const faqs = [
+const frFaqs = [
   {
-    question: "Quels types de produits pouvez-vous livrer ?",
+    question: "Quel est le meilleur livreur Marrakech pour une livraison rapide ?",
     answer:
-      "Nous livrons des repas de restaurants, des courses de supermarché, des médicaments de pharmacie, des fleurs, des produits de beauté, des colis, des documents et bien plus encore partout à Marrakech.",
+      "Marrakech Livreur propose une livraison rapide à domicile à Marrakech pour les repas, médicaments, courses, fleurs, documents et colis, avec un service adapté aux urgences et aux commandes du quotidien.",
   },
   {
-    question: "Combien de temps prend une livraison ?",
+    question: "Livrez-vous partout à Marrakech ?",
     answer:
-      "La majorité des livraisons sont effectuées entre 20 et 45 minutes selon votre quartier, le magasin choisi et les conditions de circulation.",
+      "Oui, nous livrons dans plusieurs quartiers de Marrakech, notamment Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca et la Médina.",
+  },
+  {
+    question: "Proposez-vous une livraison 24h Marrakech ?",
+    answer:
+      "Oui, nous pouvons répondre à des besoins de livraison 24h Marrakech selon la disponibilité et le type de commande, notamment pour les besoins urgents ou les commandes tardives.",
+  },
+  {
+    question: "Vous livrez aussi des repas de restaurants ?",
+    answer:
+      "Oui, nous proposons une livraison restaurant Marrakech pour les repas de restaurants, fast-food et plats à emporter, avec une prise en charge rapide et une livraison fiable à domicile.",
+  },
+  {
+    question: "Pouvez-vous livrer des médicaments et produits de santé ?",
+    answer:
+      "Oui, nous assurons une livraison pharmacie Marrakech pour les médicaments, produits de santé et articles essentiels, avec un service rapide et discret.",
   },
   {
     question: "Comment passer une commande ?",
     answer:
       "Contactez-nous simplement par WhatsApp ou téléphone. Envoyez-nous votre commande ou le lien du restaurant, puis nous nous occupons de tout jusqu'à la livraison.",
   },
+];
+
+const enFaqs = [
   {
-    question: "Dans quelles zones de Marrakech livrez-vous ?",
+    question: "What is the best delivery service in Marrakech for fast delivery ?",
     answer:
-      "Nous livrons dans Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, Route de Casablanca et la plupart des quartiers de Marrakech.",
+      "Marrakech Livreur offers fast home delivery in Marrakech for meals, medicines, groceries, flowers, documents and parcels, with a service designed for urgent requests and everyday orders.",
+  },
+  {
+    question: "Do you deliver across Marrakech ?",
+    answer:
+      "Yes, we deliver across several neighborhoods in Marrakech, including Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, Palmeraie, the Route de Casablanca and the Medina.",
+  },
+  {
+    question: "Do you offer 24h delivery in Marrakech ?",
+    answer:
+      "Yes, we can support 24h delivery needs in Marrakech depending on availability and the type of order, especially for urgent or late requests.",
+  },
+  {
+    question: "Do you also deliver restaurant meals ?",
+    answer:
+      "Yes, we provide restaurant delivery in Marrakech for meals, fast food and takeaway orders, with fast pickup and reliable home delivery.",
+  },
+  {
+    question: "Can you deliver medicines and health products ?",
+    answer:
+      "Yes, we provide pharmacy delivery in Marrakech for medicines, health products and everyday essentials, with a fast and discreet service.",
+  },
+  {
+    question: "How do I place an order ?",
+    answer:
+      "Simply contact us by WhatsApp or phone. Send us your order or the restaurant link, and we will take care of the rest until delivery.",
   },
 ];
 
 export default function FAQSection() {
+  const locale = useLocalePreference();
+  const copy = siteContent[locale];
+  const faqs = locale === 'fr' ? frFaqs : enFaqs;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative overflow-hidden py-20 sm:py-28">
       {/* Background Blur */}
       <div className="absolute left-1/2 top-0 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-500/10 blur-3xl dark:bg-orange-500/20" />
@@ -47,7 +110,7 @@ export default function FAQSection() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-2 text-sm font-semibold text-orange-600 dark:text-orange-400">
           <HelpCircle className="h-4 w-4" />
-          Questions fréquentes
+          {copy.faqBadge}
         </div>
       </motion.div>
 
@@ -60,15 +123,14 @@ export default function FAQSection() {
         className="mx-auto mt-6 max-w-3xl text-center"
       >
         <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-          Tout ce que vous devez
+          {copy.faqHeadingLine1}
           <span className="block bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent">
-            savoir
+            {copy.faqHeadingLine2}
           </span>
         </h2>
 
         <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-          Retrouvez les réponses aux questions les plus fréquentes concernant
-          notre service de livraison à domicile à Marrakech.
+          {copy.faqDescription}
         </p>
       </motion.div>
 
@@ -139,5 +201,6 @@ export default function FAQSection() {
 
     </div>
   </section>
-);
+    </>
+  );
 }

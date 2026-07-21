@@ -1,6 +1,6 @@
 export type Locale = 'fr' | 'en';
 
-export const siteUrl = 'https://allodelivererkech.com';
+export const siteUrl = 'https://marrakechlivreur.com';
 
 export const siteContent: Record<
   Locale,
@@ -8,7 +8,6 @@ export const siteContent: Record<
     brandName: string;
     heroBadge: string;
     heroTitleLine1: string;
-    
     heroDescription: string;
     callNow: string;
     orderOnWhatsApp: string;
@@ -42,10 +41,29 @@ export const siteContent: Record<
     languageLabel: string;
     english: string;
     french: string;
+    reviewsBadge: string;
+    deliveryZonesBadge: string;
+    deliveryZonesHeading: string;
+    deliveryZonesDescription: string;
+    deliveryMapBadge: string;
+    deliveryMapHeading: string;
+    serviceDetailWhatWeOffer: string;
+    serviceDetailCoveredAreas: string;
+    serviceDetailRelatedSearches: string;
+    faqBadge: string;
+    faqHeadingLine1: string;
+    faqHeadingLine2: string;
+    faqDescription: string;
+    footerServicesTitle: string;
+    footerContactTitle: string;
+    footerCallUs: string;
+    footerReplyMinutes: string;
+    footerAvailability: string;
+    footerCopyright: string;
   }
 > = {
   fr: {
-    brandName: 'ALLO LIVREUR MARRAKECH',
+    brandName: 'MARRAKECH LIVREUR',
     heroBadge: 'Disponible 24/7',
     heroTitleLine1: 'Livraison Rapide à Marrakech',
     heroDescription:
@@ -72,21 +90,40 @@ export const siteContent: Record<
     vendorInternalName: 'Nom interne',
     vendorBadge: 'Vendeur',
     returnToService: 'Retour au service',
-    homeMetaTitle: 'Allo Livreur Marrakech | Livraison rapide à Marrakech',
+    homeMetaTitle: 'Marrakech Livreur | Livreur Marrakech 24h à domicile',
     homeMetaDescription:
-      'Livraison rapide à Marrakech pour restaurants, pharmacies, supermarchés, fleurs et plus encore.',
-    serviceMetaTitle: 'Services de livraison à Marrakech | Allo Deliverer',
+      'Livraison rapide à Marrakech pour restaurants, pharmacies, supermarchés, fleurs, documents et courses. Commandez maintenant.',
+    serviceMetaTitle: 'Services de livraison Marrakech | Marrakech Livreur',
     serviceMetaDescription:
       'Découvrez nos services de livraison à Marrakech, rapides, fiables et disponibles 24/7.',
-    vendorMetaTitle: 'Vendeurs de livraison à Marrakech | Allo Deliverer',
+    vendorMetaTitle: 'Vendeurs de livraison Marrakech | Marrakech Livreur',
     vendorMetaDescription: 'Consultez les vendeurs partenaires et commandez en quelques clics.',
     menuLabel: 'Ouvrir le menu principal',
     languageLabel: 'Changer la langue',
     english: 'English',
     french: 'Français',
+    reviewsBadge: '⭐ Avis Clients',
+    deliveryZonesBadge: 'Zones desservies',
+    deliveryZonesHeading: 'Livraison partout à Marrakech',
+    deliveryZonesDescription: 'Nous livrons rapidement dans les principaux quartiers de Marrakech.',
+    deliveryMapBadge: '📍 Zone de livraison',
+    deliveryMapHeading: 'Livraison à domicile à Marrakech',
+    serviceDetailWhatWeOffer: 'Ce que nous proposons',
+    serviceDetailCoveredAreas: 'Quartiers couverts',
+    serviceDetailRelatedSearches: 'Recherches associées',
+    faqBadge: 'Questions fréquentes',
+    faqHeadingLine1: 'Tout ce que vous devez',
+    faqHeadingLine2: 'savoir',
+    faqDescription: 'Retrouvez les réponses aux questions les plus fréquentes concernant notre service de livraison à domicile à Marrakech.',
+    footerServicesTitle: 'Nos Services',
+    footerContactTitle: 'Nous contacter',
+    footerCallUs: 'Appelez-nous',
+    footerReplyMinutes: 'Réponse en quelques minutes',
+    footerAvailability: 'Disponible 24h/24 • 7j/7',
+    footerCopyright: '© 2026 Marrakech Livreur. Tous droits réservés.',
   },
   en: {
-    brandName: 'ALLO DELIVERER MARRAKECH',
+    brandName: 'MARRAKECH LIVREUR',
     heroBadge: 'Available 24/7',
     heroTitleLine1: 'Fast Delivery in Marrakech',
     
@@ -114,18 +151,37 @@ export const siteContent: Record<
     vendorInternalName: 'Internal name',
     vendorBadge: 'Vendor',
     returnToService: 'Back to service',
-    homeMetaTitle: 'Allo Deliverer Marrakech | Fast delivery in Marrakech',
+    homeMetaTitle: 'Marrakech Livreur | Fast delivery in Marrakech',
     homeMetaDescription:
-      'Fast delivery in Marrakech for restaurants, pharmacies, supermarkets, flowers and much more.',
-    serviceMetaTitle: 'Delivery services in Marrakech | Allo Deliverer',
+      'Fast delivery in Marrakech for restaurants, pharmacies, supermarkets, flowers, documents and groceries. Order now.',
+    serviceMetaTitle: 'Delivery services in Marrakech | Marrakech Livreur',
     serviceMetaDescription:
       'Discover our fast, reliable and 24/7 delivery services in Marrakech.',
-    vendorMetaTitle: 'Delivery vendors in Marrakech | Allo Deliverer',
+    vendorMetaTitle: 'Delivery vendors in Marrakech | Marrakech Livreur',
     vendorMetaDescription: 'Browse our partner vendors and place your order in a few clicks.',
     menuLabel: 'Open main menu',
     languageLabel: 'Change language',
     english: 'English',
     french: 'Français',
+    reviewsBadge: '⭐ Customer Reviews',
+    deliveryZonesBadge: 'Delivery zones',
+    deliveryZonesHeading: 'Delivery across Marrakech',
+    deliveryZonesDescription: 'We deliver quickly across the main neighborhoods of Marrakech.',
+    deliveryMapBadge: '📍 Delivery zone',
+    deliveryMapHeading: 'Home delivery in Marrakech',
+    serviceDetailWhatWeOffer: 'What we offer',
+    serviceDetailCoveredAreas: 'Covered neighborhoods',
+    serviceDetailRelatedSearches: 'Related searches',
+    faqBadge: 'Frequently Asked Questions',
+    faqHeadingLine1: 'Everything you need to',
+    faqHeadingLine2: 'know',
+    faqDescription: 'Find answers to the most common questions about our home delivery service in Marrakech.',
+    footerServicesTitle: 'Our Services',
+    footerContactTitle: 'Contact Us',
+    footerCallUs: 'Call us',
+    footerReplyMinutes: 'Reply in a few minutes',
+    footerAvailability: 'Available 24/7',
+    footerCopyright: '© 2026 Marrakech Livreur. All rights reserved.',
   },
 };
 

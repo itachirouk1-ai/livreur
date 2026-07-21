@@ -1,3 +1,5 @@
+import type { Locale } from '@/lib/site-content';
+
 export interface ServiceCategory {
   name: string;
   emoji: string;
@@ -37,6 +39,226 @@ export interface ServiceDetail {
   categories: ServiceCategory[];
   vendors: ServiceVendor[];
   bgGradient: string;
+}
+
+export type LocalizedServiceContent = Pick<ServiceDetail, 'title' | 'description' | 'deliveryTime' | 'features' | 'categories'>;
+
+const localizedServiceOverrides: Record<string, Partial<Record<Locale, LocalizedServiceContent>>> = {
+  restaurants: {
+    en: {
+      title: 'Food Delivery',
+      description: 'Get your favorite meals delivered quickly to your doorstep in Marrakech.',
+      deliveryTime: '30-60 min',
+      features: [
+        { icon: '🚗', title: 'Wide choice of restaurants', description: 'Hundreds of partner restaurants' },
+        { icon: '👍', title: 'Hot and fresh prices', description: 'Competitive rates and guaranteed quality' },
+        { icon: '⚡', title: 'Fast delivery', description: 'Express delivery in under an hour' },
+        { icon: '🎧', title: 'Available 24/7', description: 'Order anytime day or night' },
+      ],
+      categories: [
+        { name: 'Burgers', emoji: '🍔' },
+        { name: 'Pizzas', emoji: '🍕' },
+        { name: 'Tacos', emoji: '🌮' },
+        { name: 'Sushi', emoji: '🍣' },
+        { name: 'Sandwiches', emoji: '🥪' },
+        { name: 'Chicken', emoji: '🍗' },
+        { name: 'Pasta', emoji: '🍝' },
+        { name: 'Salads', emoji: '🥗' },
+        { name: 'Desserts', emoji: '🍰' },
+        { name: 'Drinks', emoji: '🥤' },
+      ],
+    },
+  },
+  pharmacies: {
+    en: {
+      title: 'Medicine Delivery',
+      description: 'Get your medicines and health essentials delivered quickly and discreetly at home.',
+      deliveryTime: '20-40 min',
+      features: [
+        { icon: '🏥', title: 'Licensed pharmacies', description: 'Certified and approved pharmacy network' },
+        { icon: '✓', title: 'Secure delivery', description: 'Discreet packaging and secure transport' },
+        { icon: '⚡', title: 'Ultra-fast delivery', description: 'Order received in under 45 minutes' },
+        { icon: '🛡️', title: 'Privacy guaranteed', description: '100% discreet and confidential service' },
+      ],
+      categories: [
+        { name: 'Prescriptions', emoji: '📄' },
+        { name: 'Medicines', emoji: '💊' },
+        { name: 'Vitamins', emoji: '💪' },
+        { name: 'Hygiene', emoji: '🧼' },
+        { name: 'Body care', emoji: '🧴' },
+        { name: 'Baby & mom', emoji: '🍼' },
+        { name: 'First aid', emoji: '🩹' },
+        { name: 'Medical equipment', emoji: '🩺' },
+        { name: 'Face care', emoji: '🧴' },
+        { name: 'Supplements', emoji: '🌿' },
+      ],
+    },
+  },
+  supermarkets: {
+    en: {
+      title: 'Grocery Delivery',
+      description: 'Have all your everyday essentials delivered straight to your door in Marrakech.',
+      deliveryTime: '45-90 min',
+      features: [
+        { icon: '🏪', title: 'Large selection', description: 'Thousands of products available' },
+        { icon: '💰', title: 'Competitive prices', description: 'Best offers and promotions' },
+        { icon: '📦', title: 'Fast delivery', description: 'Your groceries in less than 2 hours' },
+        { icon: '🚚', title: 'Reliable delivery', description: 'Fast and quality service' },
+      ],
+      categories: [
+        { name: 'Fruits', emoji: '🍎' },
+        { name: 'Vegetables', emoji: '🥬' },
+        { name: 'Meat', emoji: '🥩' },
+        { name: 'Fish', emoji: '🐟' },
+        { name: 'Dairy', emoji: '🥛' },
+        { name: 'Bakery', emoji: '🍞' },
+        { name: 'Drinks', emoji: '🥤' },
+        { name: 'Snacks', emoji: '🍪' },
+        { name: 'Household', emoji: '🧽' },
+        { name: 'Frozen foods', emoji: '🧊' },
+      ],
+    },
+  },
+  fleurs: {
+    en: {
+      title: 'Flower Delivery',
+      description: 'The most beautiful flowers delivered straight to your home in Marrakech.',
+      deliveryTime: '30-45 min',
+      features: [
+        { icon: '🌹', title: 'Large selection', description: 'Fresh and beautiful flowers' },
+        { icon: '💐', title: 'Premium arrangements', description: 'Bouquets created by professionals' },
+        { icon: '⚡', title: 'Fast delivery', description: 'Express delivery in less than an hour' },
+        { icon: '🎀', title: 'Special gifts', description: 'Premium and personalized packaging' },
+      ],
+      categories: [
+        { name: 'Bouquets', emoji: '💐' },
+        { name: 'Roses', emoji: '🌹' },
+        { name: 'Wedding', emoji: '💍' },
+        { name: 'Birthday', emoji: '🎂' },
+        { name: 'Love', emoji: '❤️' },
+        { name: 'Party', emoji: '🎉' },
+        { name: 'Birth', emoji: '👶' },
+        { name: 'Thank you', emoji: '🙏' },
+        { name: 'Gifts', emoji: '🎁' },
+      ],
+    },
+  },
+  cosmetics: {
+    en: {
+      title: 'Cosmetics Delivery',
+      description: 'Get your beauty and care products delivered quickly to your home in Marrakech.',
+      deliveryTime: '30-60 min',
+      features: [
+        { icon: '✨', title: 'Beauty essentials', description: 'Products for skincare and beauty' },
+        { icon: '💄', title: 'Premium brands', description: 'A selection of famous beauty brands' },
+        { icon: '⚡', title: 'Fast delivery', description: 'Quick and practical service' },
+        { icon: '🛍️', title: 'Easy ordering', description: 'Simple ordering and home delivery' },
+      ],
+      categories: [
+        { name: 'Skincare', emoji: '🧴' },
+        { name: 'Makeup', emoji: '💄' },
+        { name: 'Haircare', emoji: '💇' },
+        { name: 'Fragrance', emoji: '🌸' },
+        { name: 'Wellness', emoji: '🧘' },
+        { name: 'Body care', emoji: '🫧' },
+      ],
+    },
+  },
+  shopping: {
+    en: {
+      title: 'Shopping Delivery',
+      description: 'Enjoy fast shopping delivery in Marrakech for your favorite purchases and everyday needs.',
+      deliveryTime: '30-60 min',
+      features: [
+        { icon: '🛍️', title: 'Practical purchases', description: 'Everyday products delivered home' },
+        { icon: '⚡', title: 'Fast delivery', description: 'Quick delivery across Marrakech' },
+        { icon: '💳', title: 'Easy checkout', description: 'Simple ordering and direct delivery' },
+      ],
+      categories: [
+        { name: 'Fashion', emoji: '👗' },
+        { name: 'Electronics', emoji: '📱' },
+        { name: 'Home', emoji: '🏠' },
+        { name: 'Accessories', emoji: '👜' },
+        { name: 'Gifts', emoji: '🎁' },
+      ],
+    },
+  },
+  colis: {
+    en: {
+      title: 'Parcel Delivery',
+      description: 'Fast parcel delivery service in Marrakech for small packages, documents and urgent shipments.',
+      deliveryTime: '20-45 min',
+      features: [
+        { icon: '📦', title: 'Parcel delivery', description: 'Small packages and urgent items' },
+        { icon: '🧾', title: 'Document delivery', description: 'Documents and important papers' },
+        { icon: '⚡', title: 'Fast service', description: 'Available 24/7 for urgent requests' },
+      ],
+      categories: [
+        { name: 'Parcels', emoji: '📦' },
+        { name: 'Documents', emoji: '📄' },
+        { name: 'Urgent', emoji: '🚀' },
+      ],
+    },
+  },
+  documents: {
+    en: {
+      title: 'Document Delivery',
+      description: 'Fast and reliable document delivery service in Marrakech for papers, files and sensitive mail.',
+      deliveryTime: '20-40 min',
+      features: [
+        { icon: '📄', title: 'Secure transport', description: 'Sensitive and urgent documents' },
+        { icon: '🔒', title: 'Confidential', description: 'Reliable and discreet handling' },
+        { icon: '⚡', title: 'Quick dispatch', description: 'Fast service for professionals and individuals' },
+      ],
+      categories: [
+        { name: 'Papers', emoji: '📑' },
+        { name: 'Files', emoji: '🗂️' },
+        { name: 'Urgent', emoji: '🚀' },
+      ],
+    },
+  },
+  boulangerie: {
+    en: {
+      title: 'Bakery Delivery',
+      description: 'Enjoy fresh bread, pastries and bakery products delivered quickly to your home in Marrakech.',
+      deliveryTime: '20-40 min',
+      features: [
+        { icon: '🥖', title: 'Fresh bakery', description: 'Bread and pastries delivered fresh' },
+        { icon: '⚡', title: 'Fast delivery', description: 'Quick service for small orders' },
+        { icon: '☕', title: 'Morning treats', description: 'Great for breakfast and snack breaks' },
+      ],
+      categories: [
+        { name: 'Bread', emoji: '🥖' },
+        { name: 'Pastries', emoji: '🥐' },
+        { name: 'Morning', emoji: '☀️' },
+        { name: 'Desserts', emoji: '🍰' },
+      ],
+    },
+  },
+};
+
+export function getLocalizedServiceContent(slug: string, locale: Locale): LocalizedServiceContent {
+  const service = servicesData[slug];
+
+  if (!service) {
+    return {
+      title: '',
+      description: '',
+      deliveryTime: '',
+      features: [],
+      categories: [],
+    };
+  }
+
+  const override = localizedServiceOverrides[slug]?.[locale];
+
+  return {
+    title: override?.title ?? service.title,
+    description: override?.description ?? service.description,
+    deliveryTime: override?.deliveryTime ?? service.deliveryTime,
+    features: override?.features ?? service.features,
+    categories: override?.categories ?? service.categories,
+  };
 }
 
 export const servicesData: Record<string, ServiceDetail> = {
@@ -846,8 +1068,8 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     ],
     bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
   },
-  flowers: {
-    slug: 'flowers',
+  fleurs: {
+    slug: 'fleurs',
     title: 'Livraison de FLEURS',
     titleColor: 'text-pink-600',
     description: 'Les plus belles fleurs livrées directement chez vous.',
@@ -1158,8 +1380,8 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     ],
     bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
   },
-  'parcel-delivery': {
-    slug: 'parcel-delivery',
+  colis: {
+    slug: 'colis',
     title: 'Livraison de COLIS',
     titleColor: 'text-slate-600',
     description: 'Envoyez et recevez vos colis en toute sécurité.',
@@ -1368,8 +1590,8 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
 ],
     bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
   },
-  bakery: {
-    slug: 'bakery',
+  boulangerie: {
+    slug: 'boulangerie',
     title: 'Livraison de BOULANGERIE',
     titleColor: 'text-yellow-600',
     description: 'Du pain frais et des pâtisseries livrés chaud chez vous.',

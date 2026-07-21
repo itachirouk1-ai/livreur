@@ -96,7 +96,7 @@ export function Header() {
               <Link href="/" >
               <Image
                 src="/logos/applogo.png"
-                alt="Allo Deliverer Kech logo"
+                alt="Marrakech Livreur logo"
                 width={40}
                 height={40}
                 className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"

@@ -1,4 +1,4 @@
-import { getServiceBySlug } from '@/lib/services-data';
+import { getLocalizedServiceContent, getServiceBySlug } from '@/lib/services-data';
 import { ServiceDetailPageComponent } from '@/components/sections/service-detail-page';
 import { Header } from '@/components/sections/header';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { connection } from 'next/server';
 
 import { getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
+import { buildServicePageMetadata } from '@/lib/seo';
 
 interface ServicePageProps {
   params: Promise<{
@@ -33,19 +34,7 @@ export async function generateMetadata({ params, searchParams }: ServicePageProp
     };
   }
 
-  const copy = siteContent[locale];
-
-  return {
-    title: `${service.title} | ${copy.serviceMetaTitle}`,
-    description: service.description || copy.serviceMetaDescription,
-    alternates: {
-      canonical: `/${slug}`,
-      languages: {
-        fr: `/${slug}`,
-        en: `/${slug}?lang=en`,
-      },
-    },
-  };
+  return buildServicePageMetadata(slug);
 }
 
 export default async function ServicePage({ params, searchParams }: ServicePageProps) {
@@ -58,6 +47,8 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
     notFound();
   }
 
+  const localizedService = getLocalizedServiceContent(service.slug, locale);
+
   return (
     <>
       <div>
@@ -65,7 +56,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
       <Breadcrumb
         items={[
           {
-            label: service.title,
+            label: localizedService.title || service.title,
             href: `/${slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
           },
         ]}
@@ -76,13 +67,13 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
         <ServiceDetailPageComponent
           locale={locale}
           slug={service.slug}
-          title={service.title}
+          title={localizedService.title || service.title}
           titleColor={service.titleColor}
           accentGradient={service.bgGradient}
-          description={service.description}
-          deliveryTime={service.deliveryTime}
-          features={service.features}
-          categories={service.categories}
+          description={localizedService.description || service.description}
+          deliveryTime={localizedService.deliveryTime || service.deliveryTime}
+          features={localizedService.features || service.features}
+          categories={localizedService.categories || service.categories}
           vendors={service.vendors}
         />
       </main>

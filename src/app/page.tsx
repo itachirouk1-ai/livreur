@@ -3,7 +3,7 @@ import { Header } from '@/components/sections/header';
 import { HeroSection } from '@/components/sections/hero-section';
 import { ServicesSection } from '@/components/sections/services-section';
 import { RestaurantsSection } from '@/components/sections/restaurants-section';
-import { siteContent } from '@/lib/site-content';
+import { siteContent, type Locale } from '@/lib/site-content';
 import { getAllServiceSlugs, getServiceBySlug, getVendorSlug } from '@/lib/services-data';
 import DeliveryZonesSection from '@/components/ui/DeliveryZonesSection';
 import { ReviewsSection } from '@/components/sections/reviews-section';
@@ -106,15 +106,15 @@ return featured.map((vendor) => ({
   },
   {
     slug: 'supermarkets',
-    title: 'Supermarkets',
+    title: 'Supermarchés',
     emoji: '🛒',
     image: '/logos/supermarkets-marrakech-livraison-adomicile.png',
     bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
     highlight: false,
   },
   {
-    slug: 'flowers',
-    title: 'Flowers',
+    slug: 'fleurs',
+    title: 'Fleurs',
     emoji: '🌸',
     image: '/logos/flowers-marrakech-livraison-adomicile.png',
     bgGradient: 'from-pink-400 via-rose-500 to-red-600',
@@ -122,7 +122,7 @@ return featured.map((vendor) => ({
   },
   {
     slug: 'cosmetics',
-    title: 'Cosmetics',
+    title: 'Cosmétiques',
     emoji: '💄',
     image: '/logos/cosmetique-marrakech-livraison-adomicile.png',
     bgGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
@@ -137,8 +137,8 @@ return featured.map((vendor) => ({
     highlight: false,
   },
   {
-    slug: 'parcel-delivery',
-    title: 'Parcel Delivery',
+    slug: 'colis',
+    title: 'Livraison de colis',
     emoji: '📦',
     image: '/logos/colis-marrakech-livraison-adomicile.png',
     bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
@@ -153,8 +153,8 @@ return featured.map((vendor) => ({
     highlight: false,
   },
   {
-    slug: 'bakery',
-    title: 'Bakery',
+    slug: 'boulangerie',
+    title: 'Boulangerie',
     emoji: '🥖',
     image: '/logos/bakery-marrakech-livraison-adomicile.png',
     bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',

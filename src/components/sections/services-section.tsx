@@ -25,6 +25,17 @@ interface ServicesSectionProps {
 export function ServicesSection({ services }: ServicesSectionProps) {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
+  const serviceLabels: Record<string, string> = {
+    restaurants: locale === 'fr' ? 'Restaurants' : 'Restaurants',
+    pharmacies: locale === 'fr' ? 'Pharmacies' : 'Pharmacies',
+    supermarkets: locale === 'fr' ? 'Supermarchés' : 'Supermarkets',
+    fleurs: locale === 'fr' ? 'Fleurs' : 'Flowers',
+    cosmetics: locale === 'fr' ? 'Cosmétiques' : 'Cosmetics',
+    shopping: locale === 'fr' ? 'Shopping' : 'Shopping',
+    colis: locale === 'fr' ? 'Livraison de colis' : 'Parcel Delivery',
+    documents: locale === 'fr' ? 'Documents' : 'Documents',
+    boulangerie: locale === 'fr' ? 'Boulangerie' : 'Bakery',
+  };
 
   const handleWhatsApp = () => {
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
@@ -68,7 +79,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   {/* Background Image */}
   <Image
     src={service.image}
-    alt={service.title}
+    alt={serviceLabels[service.slug] ?? service.title}
     fill
     className="object-cover transition-transform duration-700 group-hover:scale-110"
   />
@@ -86,7 +97,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
     </div>
 
     <h3 className="mt-4 sm:mt-6 text-xl sm:text-3xl font-bold text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
-      {service.title}
+      {serviceLabels[service.slug] ?? service.title}
     </h3>
   </div>
 </motion.article>

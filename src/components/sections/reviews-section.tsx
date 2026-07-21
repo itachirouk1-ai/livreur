@@ -2,9 +2,12 @@
 
 import { reviews } from "@/lib/reviews";
 import { ReviewCard } from "../ui/review-card";
-
+import { siteContent } from "@/lib/site-content";
+import { useLocalePreference } from "@/lib/use-locale";
 
 export function ReviewsSection() {
+  const locale = useLocalePreference();
+  const copy = siteContent[locale];
   const duplicatedReviews = [...reviews, ...reviews];
 
   return (
@@ -13,7 +16,7 @@ export function ReviewsSection() {
         {/* Title */}
         <div className="mx-auto mb-3 max-w-3xl text-center">
           <span className="inline-flex items-center rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
-            ⭐ Avis Clients
+            {copy.reviewsBadge}
           </span>
 
         

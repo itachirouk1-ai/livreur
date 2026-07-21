@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { CategoriesSection } from '@/components/sections/categoriesSection';
@@ -10,6 +11,7 @@ import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { getVendorSlug } from '@/lib/services-data';
 import { contactLinks, siteContent, type Locale } from '@/lib/site-content';
 import { Icon } from '@iconify/react';
+import DeliveryZonesSection from '../ui/DeliveryZonesSection';
 // lib/service-hero-images.ts
 
 
@@ -28,7 +30,7 @@ export const serviceHeroImages = [
     heroImageUrl: "/logos/supermarkets-marrakech-livraison-adomicile.png",
   },
   {
-    slug: "flowers",
+    slug: "fleurs",
     heroImageUrl: "/logos/flowers-marrakech-livraison-adomicile.png",
   },
   {
@@ -40,7 +42,7 @@ export const serviceHeroImages = [
     heroImageUrl: "/logos/shopping-marrakech-livraison-adomicile.png",
   },
   {
-    slug: "parcel-delivery",
+    slug: "colis",
     heroImageUrl: "/logos/colis-marrakech-livraison-adomicile.png",
   },
   {
@@ -48,7 +50,7 @@ export const serviceHeroImages = [
     heroImageUrl: "/logos/documents-marrakech-livraison-adomicile.png",
   },
   {
-    slug: "bakery",
+    slug: "boulangerie",
     heroImageUrl: "/logos/bakery-marrakech-livraison-adomicile.png",
   },
 ];
@@ -127,6 +129,296 @@ function getAccentTextClass(accentTextClass?: string) {
   return 'text-slate-700 dark:text-slate-200';
 }
 
+function DetailInfoSection({
+  title,
+  accentTextClass,
+  children,
+}: {
+  title: string;
+  accentTextClass: string;
+  children: ReactNode;
+}) {
+  return (
+    <div>
+      <h3 className={`text-sm font-semibold uppercase tracking-[0.2em] ${accentTextClass} dark:text-slate-400`}>
+        {title}
+      </h3>
+      <div className="mt-3">{children}</div>
+    </div>
+  );
+}
+
+function getServiceSEOContent(slug?: string, title?: string, locale: Locale = 'fr') {
+  const baseTitle = title ?? (locale === 'en' ? 'Delivery service' : 'Service de livraison');
+
+  const contentBySlug: Record<string, { fr: { heading: string; intro: string; bullets: string[]; neighborhoods: string[]; relatedSearches: string[] }; en: { heading: string; intro: string; bullets: string[]; neighborhoods: string[]; relatedSearches: string[] } }> = {
+    restaurants: {
+      fr: {
+        heading: `${baseTitle} à Marrakech`,
+        intro:
+          'Que vous recherchiez une livraison restaurant Marrakech pour un dîner rapide, un repas entre amis ou une commande tardive, notre service couvre toute la ville avec une livraison à domicile fiable et rapide.',
+        bullets: [
+          'Livraison repas depuis les restaurants les plus recherchés de Marrakech',
+          'Commande simple via WhatsApp ou téléphone',
+          'Service disponible 24h/24 pour les envies de dernière minute',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina', 'Targa', 'Sidi Ghanem'],
+        relatedSearches: [
+          'restaurant delivery marrakech',
+          'food delivery marrakech',
+          'mcdonald\'s delivery marrakech',
+          'kfc delivery marrakech',
+          'burger king marrakech delivery',
+          'pizza hut marrakech delivery',
+          'domino\'s delivery marrakech',
+        ],
+      },
+      en: {
+        heading: `${baseTitle} in Marrakech`,
+        intro:
+          'Whether you need a fast restaurant delivery in Marrakech for dinner, a meal with friends, or a late-night order, our service covers the whole city with reliable home delivery.',
+        bullets: [
+          'Meal delivery from the most popular restaurants in Marrakech',
+          'Simple ordering by WhatsApp or phone',
+          'Available 24/7 for last-minute cravings',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina', 'Targa', 'Sidi Ghanem'],
+        relatedSearches: [
+          'restaurant delivery marrakech',
+          'food delivery marrakech',
+          'mcdonald\'s delivery marrakech',
+          'kfc delivery marrakech',
+          'burger king marrakech delivery',
+          'pizza hut marrakech delivery',
+          'domino\'s delivery marrakech',
+        ],
+      },
+    },
+    pharmacies: {
+      fr: {
+        heading: `Livraison pharmacie Marrakech et produits de santé`,
+        intro:
+          'Pour une livraison pharmacie Marrakech rapide, discrète et fiable, nous accompagnons les habitants et visiteurs avec des livraisons de médicaments et produits essentiels à domicile.',
+        bullets: [
+          'Livraison de médicaments et produits de santé',
+          'Service rapide et adapté aux urgences',
+          'Disponibilité pratique pour les résidents et touristes',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Palmeraie', 'Médina', 'Daoudiate'],
+        relatedSearches: ['livraison pharmacie marrakech', 'pharmacy delivery marrakech'],
+      },
+      en: {
+        heading: `Pharmacy delivery in Marrakech and health products`,
+        intro:
+          'For fast, discreet and reliable pharmacy delivery in Marrakech, we support residents and visitors with medicine and essential product drops at home.',
+        bullets: [
+          'Delivery of medicines and health products',
+          'Fast service adapted to emergencies',
+          'Convenient availability for residents and tourists',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Palmeraie', 'Médina', 'Daoudiate'],
+        relatedSearches: ['pharmacy delivery marrakech', 'medicine delivery marrakech'],
+      },
+    },
+    supermarkets: {
+      fr: {
+        heading: `Livraison supermarché Marrakech pour vos courses`,
+        intro:
+          'Notre livraison supermarché Marrakech permet de faire ses courses du quotidien sans sortir de chez soi, avec une prise en charge rapide et un service pratique.',
+        bullets: [
+          'Courses de première nécessité et produits du quotidien',
+          'Livraison à domicile dans plusieurs quartiers de Marrakech',
+          'Idéal pour les familles, bureaux et résidences',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Route de Casablanca', 'Sidi Ghanem'],
+        relatedSearches: ['livraison supermarché marrakech', 'grocery delivery marrakech'],
+      },
+      en: {
+        heading: `Supermarket delivery in Marrakech for your groceries`,
+        intro:
+          'Our supermarket delivery service in Marrakech lets you shop for everyday essentials without leaving home, with fast pickup and a convenient service.',
+        bullets: [
+          'Essentials and everyday products delivered',
+          'Home delivery across several Marrakech neighborhoods',
+          'Perfect for families, offices and residences',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Route de Casablanca', 'Sidi Ghanem'],
+        relatedSearches: ['supermarket delivery marrakech', 'grocery delivery marrakech'],
+      },
+    },
+    flowers: {
+      fr: {
+        heading: `Livraison fleurs Marrakech pour toutes les occasions`,
+        intro:
+          'Pour une livraison fleurs Marrakech élégante et rapide, nous proposons des bouquets et fleurs à domicile pour les anniversaires, événements et moments spéciaux.',
+        bullets: [
+          'Bouquets et fleurs livrés rapidement',
+          'Service adapté aux occasions spéciales',
+          'Livraison dans les quartiers clés de Marrakech',
+        ],
+        neighborhoods: ['Hivernage', 'Guéliz', 'Agdal', 'Palmeraie', 'Médina'],
+        relatedSearches: ['livraison fleurs marrakech', 'flower delivery marrakech'],
+      },
+      en: {
+        heading: `Flower delivery in Marrakech for every occasion`,
+        intro:
+          'For elegant and quick flower delivery in Marrakech, we offer bouquets and flowers at home for birthdays, events and special moments.',
+        bullets: [
+          'Bouquets and flowers delivered quickly',
+          'Service suited to special occasions',
+          'Delivery across the key districts of Marrakech',
+        ],
+        neighborhoods: ['Hivernage', 'Guéliz', 'Agdal', 'Palmeraie', 'Médina'],
+        relatedSearches: ['flower delivery marrakech', 'bouquet delivery marrakech'],
+      },
+    },
+    cosmetics: {
+      fr: {
+        heading: `Livraison cosmétiques Marrakech et soins beauté`,
+        intro:
+          'Profitez d’une livraison cosmétiques Marrakech simple et rapide pour vos produits beauté, soins et accessoires du quotidien.',
+        bullets: [
+          'Produits de beauté et soins livrés à domicile',
+          'Service pratique pour les commandes rapides',
+          'Adapté aux résidents et visiteurs',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina'],
+        relatedSearches: ['cosmetics delivery marrakech', 'beauty delivery marrakech'],
+      },
+      en: {
+        heading: `Cosmetics delivery in Marrakech and beauty care`,
+        intro:
+          'Enjoy simple and fast cosmetics delivery in Marrakech for beauty products, care items and everyday essentials.',
+        bullets: [
+          'Beauty products and care items delivered home',
+          'Convenient service for quick orders',
+          'Suited to residents and visitors',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina'],
+        relatedSearches: ['cosmetics delivery marrakech', 'beauty delivery marrakech'],
+      },
+    },
+    shopping: {
+      fr: {
+        heading: `Livraison shopping Marrakech et achats à domicile`,
+        intro:
+          'Notre service de livraison shopping Marrakech vous aide à recevoir vos achats préférés à domicile, rapidement et sans perte de temps.',
+        bullets: [
+          'Achats pratiques pour les produits du quotidien',
+          'Livraison rapide dans plusieurs zones de Marrakech',
+          'Solution simple pour les déplacements réduits',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Daoudiate', 'Targa'],
+        relatedSearches: ['shopping delivery marrakech', 'achat à domicile marrakech'],
+      },
+      en: {
+        heading: `Shopping delivery in Marrakech and purchases at home`,
+        intro:
+          'Our shopping delivery service in Marrakech helps you receive your favorite purchases at home quickly and without hassle.',
+        bullets: [
+          'Practical purchases for everyday essentials',
+          'Fast delivery across several areas of Marrakech',
+          'A simple solution for reduced travel',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Daoudiate', 'Targa'],
+        relatedSearches: ['shopping delivery marrakech', 'home shopping marrakech'],
+      },
+    },
+    colis: {
+      fr: {
+        heading: `Livraison colis Marrakech et petits envois`,
+        intro:
+          'Pour une livraison colis Marrakech rapide, nous intervenons pour les petits paquets, documents et envois urgents à travers la ville.',
+        bullets: [
+          'Livraison de colis et petits paquets',
+          'Service adapté aux documents et envois urgents',
+          'Disponibilité pratique 24h/24',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Sidi Ghanem', 'Médina'],
+        relatedSearches: ['livraison colis marrakech', 'courier marrakech'],
+      },
+      en: {
+        heading: `Parcel delivery in Marrakech and small shipments`,
+        intro:
+          'For quick parcel delivery in Marrakech, we handle small packages, documents and urgent shipments across the city.',
+        bullets: [
+          'Delivery of parcels and small packages',
+          'Service adapted to documents and urgent shipments',
+          'Practical availability 24/7',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Sidi Ghanem', 'Médina'],
+        relatedSearches: ['parcel delivery marrakech', 'courier marrakech'],
+      },
+    },
+    documents: {
+      fr: {
+        heading: `Livraison documents Marrakech rapide`,
+        intro:
+          'Que ce soit pour des papiers, dossiers ou courriers, notre livraison documents Marrakech permet de gagner du temps avec un service à domicile fiable.',
+        bullets: [
+          'Transport de documents sensibles et urgents',
+          'Service rapide et sécurisé',
+          'Adapté aux professionnels et particuliers',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Médina', 'Route de Casablanca'],
+        relatedSearches: ['livraison documents marrakech', 'courier marrakech'],
+      },
+      en: {
+        heading: `Fast document delivery in Marrakech`,
+        intro:
+          'Whether it is papers, files or letters, our document delivery service in Marrakech helps you save time with a reliable home service.',
+        bullets: [
+          'Transport of sensitive and urgent documents',
+          'Fast and secure service',
+          'Suitable for professionals and individuals',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Médina', 'Route de Casablanca'],
+        relatedSearches: ['document delivery marrakech', 'courier marrakech'],
+      },
+    },
+    boulangerie: {
+      fr: {
+        heading: `Livraison boulangerie Marrakech et produits frais`,
+        intro:
+          'Pour une livraison boulangerie Marrakech pratique, nous livrons pain, pâtisseries et produits frais à domicile dans plusieurs quartiers de la ville.',
+        bullets: [
+          'Pain frais, pâtisseries et produits gourmands',
+          'Livraison rapide pour les petites commandes',
+          'Idéal pour les matins et pauses gourmandes',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina'],
+        relatedSearches: ['bakery delivery marrakech', 'pain livraison marrakech'],
+      },
+      en: {
+        heading: `Bakery delivery in Marrakech and fresh products`,
+        intro:
+          'For practical bakery delivery in Marrakech, we deliver bread, pastries and fresh products at home across several neighborhoods of the city.',
+        bullets: [
+          'Fresh bread, pastries and treats',
+          'Fast delivery for small orders',
+          'Ideal for mornings and sweet breaks',
+        ],
+        neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Massira', 'Médina'],
+        relatedSearches: ['bakery delivery marrakech', 'bread delivery marrakech'],
+      },
+    },
+  };
+
+  const localizedContent = contentBySlug[slug ?? '']?.[locale] ?? {
+    heading: locale === 'en' ? `${baseTitle} in Marrakech` : `${baseTitle} à Marrakech`,
+    intro: locale === 'en'
+      ? 'We offer a fast and convenient home delivery service in Marrakech for everyday needs across the city.'
+      : 'Nous proposons un service de livraison à domicile à Marrakech, rapide et pratique, pour répondre aux besoins du quotidien dans toute la ville.',
+    bullets: locale === 'en'
+      ? ['Fast home delivery', 'Service suited to residents and visitors', 'Coverage across several Marrakech neighborhoods']
+      : ['Livraison rapide à domicile', 'Service adapté aux habitants et visiteurs', 'Couverture dans plusieurs quartiers de Marrakech'],
+    neighborhoods: ['Guéliz', 'Hivernage', 'Agdal', 'Médina'],
+    relatedSearches: locale === 'en' ? ['home delivery marrakech', 'marrakech courier'] : ['livraison à domicile marrakech', 'livreur marrakech'],
+  };
+
+  return localizedContent;
+}
+
 function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
   const copyBySlug: Record<
     string,
@@ -168,7 +460,7 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
           'We deliver your favorite groceries from any supermarket in Marrakech straight to your doorstep!',
       },
     },
-    flowers: {
+    fleurs: {
       fr: {
         heading: 'Les meilleures fleurs',
         description:
@@ -243,7 +535,8 @@ export function ServiceDetailPageComponent({
   const uniqueBrandItems = Array.from(new Map(brandItems.map(brand => [brand.id, brand])).values());
   const accentTextClass = getAccentTextClass(titleColor);
   const vendorSectionCopy = getVendorSectionCopy(slug, locale);
- const handleWhatsApp = () => {
+  const seoContent = getServiceSEOContent(slug, title, locale);
+  const handleWhatsApp = () => {
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
 
@@ -307,6 +600,37 @@ export function ServiceDetailPageComponent({
         accentTextClass={titleColor}
       />
 
+      <section className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[28px] border border-slate-200/80 bg-white p-2 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/70">
+          <h2 className={`${accentTextClass} text-xl sm:text-2xl font-bold mb-3`}>
+            {seoContent.heading}
+          </h2>
+          <p className="text-sm sm:text-base leading-7 text-slate-600 dark:text-slate-300">
+            {seoContent.intro}
+          </p>
+
+          <div className="mt-2 grid gap-4 md:grid-cols-2">
+            <div>
+              <h3 className={`text-sm font-semibold uppercase tracking-[0.2em] ${accentTextClass} dark:text-slate-400`}>
+                {copy.serviceDetailWhatWeOffer}
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                {seoContent.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-2">
+                    <span className="mt-1 text-orange-500">•</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+           <DeliveryZonesSection accentClass={titleColor} />
+          </div>
+
+         
+        </div>
+      </section>
+
       {/* Vendors Section */}
       {vendors.length > 0 && (
         <section className="mx-auto mt-3 sm:mt-5 max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
@@ -348,12 +672,10 @@ export function ServiceDetailPageComponent({
                   <div className="flex-1 flex flex-col justify-between">
                     <Link href={`/${slug}/${vendorSlug}`} className="group block flex-1 p-0 transition">
                       <div>
-                        <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white">
+                        <h3 className={`font-bold text-base sm:text-lg ${accentTextClass} dark:text-white`}>
                           {vendor.name}
                         </h3>
-                        <p className={`${accentTextClass} font-semibold text-sm sm:text-base mt-1`}>
-                          {vendor.brand}
-                        </p>
+                        
                         <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
                           {vendor.description}
                         </p>

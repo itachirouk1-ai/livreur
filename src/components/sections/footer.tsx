@@ -9,15 +9,15 @@ import { Button } from '../ui/button';
 import { ChevronRight, Grid2X2, House, Info, PhoneCall, PhoneCallIcon } from 'lucide-react';
 
 const footerServices = [
-  { name: "🍔 Restaurants", href: "/restaurants" },
-  { name: "💊 Pharmacies", href: "/pharmacies" },
-  { name: "🛒 Supermarkets", href: "/supermarkets" },
-  { name: "🌸 Flowers", href: "/flowers" },
-  { name: "💄 Cosmetics", href: "/cosmetics" },
-  { name: "🛍️ Shopping", href: "/shopping" },
-  { name: "📦 Parcel Delivery", href: "/parcel-delivery" },
-  { name: "📄 Documents", href: "/documents" },
-  { name: "🥖 Bakery", href: "/bakery" },
+  { href: "/restaurants", fr: "Restaurants", en: "Restaurants" },
+  { href: "/pharmacies", fr: "Pharmacies", en: "Pharmacies" },
+  { href: "/supermarkets", fr: "Supermarchés", en: "Supermarkets" },
+  { href: "/fleurs", fr: "Fleurs", en: "Flowers" },
+  { href: "/cosmetics", fr: "Cosmétiques", en: "Cosmetics" },
+  { href: "/shopping", fr: "Shopping", en: "Shopping" },
+  { href: "/colis", fr: "Livraison de colis", en: "Parcel Delivery" },
+  { href: "/documents", fr: "Documents", en: "Documents" },
+  { href: "/boulangerie", fr: "Boulangerie", en: "Bakery" },
 ];
 
 export function Footer() {
@@ -77,7 +77,7 @@ export function Footer() {
           {/* Services */}
           <motion.div variants={itemVariants}>
       <h4 className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent mb-3 text-center text-2xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text">
-  {locale === "fr" ? "Nos Services" : "Our Services"}
+  {copy.footerServicesTitle}
 </h4>
             <div className="grid grid-cols-2 gap-3">
               {footerServices.map((service) => (
@@ -87,11 +87,11 @@ export function Footer() {
                   className="group flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:bg-orange-50 hover:text-orange-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-orange-500/40 dark:hover:bg-orange-500/10 dark:hover:text-orange-400 shadow-sm hover:shadow"
                 >
                   <span className="text-base transition-transform duration-300 group-hover:scale-110">
-                    {service.name.split(" ")[0]}
+                    {service.href === "/restaurants" ? "🍔" : service.href === "/pharmacies" ? "💊" : service.href === "/supermarkets" ? "🛒" : service.href === "/fleurs" ? "🌸" : service.href === "/cosmetics" ? "💄" : service.href === "/shopping" ? "🛍️" : service.href === "/colis" ? "📦" : service.href === "/documents" ? "📄" : "🥖"}
                   </span>
 
                   <span className="truncate font-medium">
-                    {service.name.substring(service.name.indexOf(" ") + 1)}
+                    {locale === 'fr' ? service.fr : service.en}
                   </span>
                 </Link>
               ))}
@@ -103,7 +103,7 @@ export function Footer() {
           {/* Contact */}
           <motion.div variants={itemVariants}>
   <h4 className="mb-5 text-base font-bold text-slate-900 dark:text-white">
-    {locale === "fr" ? "Nous contacter" : "Contact Us"}
+    {copy.footerContactTitle}
   </h4>
 
   <div className="space-y-3">
@@ -121,7 +121,7 @@ export function Footer() {
 </div>
     <div>
       <p className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
-        {locale === "fr" ? "Appelez-nous" : "Call us"}
+        {copy.footerCallUs}
       </p>
 
       <p className="mt-0.5 text-base font-bold text-slate-900 dark:text-white">
@@ -151,9 +151,7 @@ export function Footer() {
           </p>
 
           <p className="font-semibold text-slate-900 dark:text-white">
-            {locale === "fr"
-              ? "Réponse en quelques minutes"
-              : "Reply in a few minutes"}
+            {copy.footerReplyMinutes}
           </p>
         </div>
       </div>
@@ -171,9 +169,7 @@ export function Footer() {
       </span>
 
       <span className="text-sm font-medium text-green-700 dark:text-green-400">
-        {locale === "fr"
-          ? "Disponible 24h/24 • 7j/7"
-          : "Available 24/7"}
+        {copy.footerAvailability}
       </span>
     </div>
   </div>
@@ -205,9 +201,7 @@ export function Footer() {
             </Button>
 
                  <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-              {locale === 'fr'
-                ? '© 2026 Allo Livreur Marrakech. Tous droits réservés.'
-                : '© 2026 Allo Deliverer Marrakech. All rights reserved.'}
+              {copy.footerCopyright}
             </p>
           </motion.div>
         </div>

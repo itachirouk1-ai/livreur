@@ -4,9 +4,10 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
-import { siteContent, siteUrl, type Locale } from '@/lib/site-content';
 import { Footer } from '@/components/sections/footer';
 import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
+import { buildHomeMetadata, buildStructuredDataJson } from '@/lib/seo';
+import { siteContent, type Locale } from '@/lib/site-content';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,50 +26,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: siteContent.fr.homeMetaTitle,
-  description: siteContent.fr.homeMetaDescription,
-  keywords: 'livraison, Marrakech, restaurants, pharmacies, supermarchés, fleurs, cosmétiques',
-  authors: [{ name: 'Allo Deliverer Marrakech' }],
-  openGraph: {
-    type: 'website',
-    locale: 'fr_FR',
-    url: siteUrl,
-    title: siteContent.fr.homeMetaTitle,
-    description: siteContent.fr.homeMetaDescription,
-    siteName: 'Allo Deliverer Marrakech',
-    images: [
-      {
-        url: `${siteUrl}/logos/applogo.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Allo Deliverer Marrakech - Fast Delivery Service',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteContent.fr.homeMetaTitle,
-    description: siteContent.fr.homeMetaDescription,
-    images: [`${siteUrl}/logos/applogo.png`],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    languages: {
-      fr: '/',
-      en: '/?lang=en',
-    },
-  },
+  ...buildHomeMetadata(),
+  metadataBase: new URL('https://marrakechlivreur.com'),
+  authors: [{ name: 'Marrakech Livreur' }],
 };
 
 export default function RootLayout({
@@ -76,6 +36,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = buildStructuredDataJson();
+
   return (
     <html
       lang="fr"
@@ -93,6 +55,10 @@ export default function RootLayout({
             </LocaleProvider>
           </Suspense>
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </body>
     </html>
   );
