@@ -370,547 +370,116 @@ export const servicesData: Record<string, ServiceDetail> = {
   { name: 'Boissons', emoji: '🥤' },
     ],
     vendors: [
-      {
-        id: 'mcdonalds',
-        name: 'livraison mcdonalds marrakech',
-        brand: "McDonald's",
-        logo: '🍟',
-        logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.jfif",
-        logoAlt: "McDonald's brand logo",
-   description: `🍟 Livraison McDonald's Marrakech à domicile 24h/7j
-Vous recherchez une livraison McDonald's à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison McDonald's à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant McDonald's de votre choix et nous la livrons rapidement, chaude et fraîche, à votre domicile, votre bureau, votre hôtel ou votre riad.
-Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika ou dans la Médina, notre équipe assure une livraison McDo rapide dans tous les quartiers de Marrakech.
-🍔 Commandez tous vos produits McDonald's préférés
-🍔 Big Mac
-🥩 Big Tasty
-🍗 McChicken
-🧀 Double Cheeseburger
-🐟 Filet-O-Fish
-🍗 Chicken McNuggets
-🎁 Happy Meal
-🍟 Frites
-🥔 Potatoes
-🍦 McFlurry
-🍨 Sundae
-🍰 Desserts
-🥤 Boissons
-🚀 Livraison McDonald's rapide partout à Marrakech
-Notre service est disponible 24h/24 et 7j/7 afin de répondre à toutes vos envies. Nous assurons une livraison rapide, sécurisée et professionnelle pour tous vos repas McDonald's.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Repas livré chaud et frais
-✅ Service professionnel
+  {
+    id: 'mcdonalds',
+    name: 'livraison mcdonalds marrakech',
+    brand: "McDonald's",
+    logo: '🍟',
+    logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.jfif",
+    logoAlt: "McDonald's brand logo",
+    description:
+      "Livraison McDonald's Marrakech à domicile avec Livreur Marrakech. Commandez vos burgers, menus, frites, desserts et boissons McDonald's sans vous déplacer. Notre service récupère votre commande directement au restaurant et assure une livraison rapide chez vous, au bureau, à l'hôtel ou au riad partout à Marrakech."
+  },
 
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-📲 Commandez dès maintenant votre McDonald's avec Allo Livreur Kech et profitez d'une livraison rapide à domicile partout à Marrakech.`,
-      },
-      {
-        id: 'kfc',
-        name: 'Livraison KFC marrakech',
-        brand: 'KFC',
-        logo: '🍗',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.png',
-        logoAlt: 'KFC brand logo',
-       description: `🍗 Livraison KFC Marrakech à domicile 24h/7j
-Vous recherchez une livraison KFC à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison KFC à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant KFC de votre choix et nous la livrons rapidement, chaude, croustillante et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
-Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison KFC rapide dans tous les quartiers de Marrakech.
-🍗 Commandez tous vos produits KFC préférés
-🍗 Bucket de Poulet
-🍗 Hot Wings
-🍗 Tenders
-🍔 Zinger Burger
-🍔 Colonel Burger
-🌯 Twister
-🍟 Frites
-🧀 Cheese Fries
-🥗 Salades
-🥤 Boissons
-🍦 Glaces
-🍰 Desserts
-🥤 Menus & Combos
-🚀 Livraison KFC rapide partout à Marrakech
-Notre service de livraison KFC Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de poulet frit. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et croustillante. Que vous souhaitiez un repas en famille, un déjeuner au bureau, un dîner entre amis ou une envie gourmande en soirée, Allo Livreur Kech est votre partenaire de confiance pour la livraison KFC à domicile à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Poulet livré chaud et croustillant
-✅ Service professionnel
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-📲 Commandez dès maintenant votre KFC avec Allo Livreur Kech et profitez d'une livraison KFC rapide à domicile partout à Marrakech. Savourez vos Buckets, Zinger Burgers, Hot Wings, Tenders, Twisters, frites et desserts préférés sans quitter votre maison grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`}
-      ,
-      {
-        id: 'burgerking',
-        name: 'livraison burger king marrakech',
-        brand: 'Burger King',
-        logo: '👑',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile  burger king.png',
-        logoAlt: 'Burger King brand logo',
-       description: `👑 Livraison Burger King Marrakech à domicile 24h/7j
-Vous recherchez une livraison Burger King à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Burger King à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Burger King de votre choix et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel ou votre riad.
-Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison Burger King rapide dans tous les quartiers de Marrakech.
-🍔 Commandez tous vos produits Burger King préférés
-👑 Whopper
-🧀 Double Whopper
-🍗 Chicken Royale
-🥓 Steakhouse
-🌶️ Spicy Chicken
-🧀 Cheeseburger
-🍔 Hamburger
-🍟 Frites
-🧅 Onion Rings
-🥗 Salades
-🥤 Boissons
-🍦 Desserts
-🥤 Menus & Combos
-🚀 Livraison Burger King rapide partout à Marrakech
-Notre service de livraison Burger King Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de burgers grillés à la flamme. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et fraîche. Que vous souhaitiez un déjeuner, un dîner, un repas entre amis ou un menu en famille, Allo Livreur Kech est votre partenaire de confiance pour la livraison Burger King à domicile à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Burgers livrés chauds et savoureux
-✅ Service professionnel
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 Mhamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-📲 Commandez dès maintenant votre Burger King avec Allo Livreur Kech et profitez d'une livraison Burger King rapide à domicile partout à Marrakech. Savourez vos Whoppers, Chicken Royale, Steakhouse, Onion Rings, frites et desserts préférés sans quitter votre maison grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,}
-,
-      {
-        id: 'dominos',
-        name: 'livraison Domino\'s Pizza marrakech',
-        brand: "Domino's",
-        logo: '🍕',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile  Domino\'s.png',
-        logoAlt: "Domino's brand logo",
-        description: `🍕 Livraison Domino's Pizza Marrakech à domicile 24h/7j
-Vous recherchez une livraison Domino's Pizza à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Domino's Pizza à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Domino's Pizza de votre choix et nous la livrons rapidement, chaude, croustillante et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
-Commandez les célèbres pizzas Domino's, les Chicken Wings, le Garlic Bread, les desserts, les boissons et toutes les spécialités de la carte Domino's sans quitter votre maison. Que vous soyez seul, en famille ou entre amis, Domino's Pizza propose un large choix de pizzas classiques, gourmandes, spéciales, végétariennes et personnalisables pour satisfaire toutes les envies.
-Notre service de livraison Domino's Marrakech dessert tous les quartiers de la ville : Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf, Médina et bien d'autres. Votre commande est livrée rapidement à votre domicile, votre bureau, votre hôtel ou votre riad avec un service professionnel et sécurisé.
-🍕 Commandez toutes vos spécialités Domino's Pizza préférées
-🍕 Pepperoni
-🧀 Margherita
-🍗 Chicken BBQ
-🥩 Extravaganza
-🌶️ Spicy Pizza
-🧀 4 Fromages
-🥬 Veggie Pizza
-🍗 Chicken Wings
-🧄 Garlic Bread
-🥗 Salades
-🥤 Boissons
-🍪 Cookies
-🍰 Desserts
-🥤 Menus & Offres
-🚀 Livraison Domino's Pizza rapide partout à Marrakech
-Notre service de livraison Domino's Pizza Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de pizza. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et croustillante. Que vous souhaitiez une pizza pour le déjeuner, le dîner, une soirée entre amis, un repas en famille ou une commande tard le soir, Allo Livreur Kech est votre partenaire de confiance pour la livraison Domino's Pizza à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Pizzas livrées chaudes et croustillantes
-✅ Service professionnel
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service rapide et sécurisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-⭐ Pourquoi commander Domino's Pizza avec Allo Livreur Kech ?
-Grâce à Allo Livreur Kech, commander Domino's Pizza à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement au restaurant Domino's Pizza afin de garantir la fraîcheur, la qualité et le goût authentique de chaque pizza. Que vous ayez envie d'une Pepperoni, d'une Margherita, d'une Chicken BBQ, d'une 4 Fromages, d'une Veggie Pizza ou d'une Extravaganza, notre équipe assure une livraison rapide partout à Marrakech. Nous livrons également vos Chicken Wings, Garlic Bread, Cookies, desserts et boissons directement chez vous, au bureau, dans votre hôtel ou votre riad.
-📲 Commandez dès maintenant votre Domino's Pizza avec Allo Livreur Kech et profitez d'une livraison Domino's Pizza rapide à domicile partout à Marrakech. Savourez vos pizzas préférées, vos Chicken Wings, votre Garlic Bread, vos desserts et vos boissons grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,
-},
-      {
-        id: 'papa-johns',
-        name: 'livraison papa johns marrakech',
-        brand: 'Papa John\'s',
-        logo: '🍕',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile  papa johns.png',
-        logoAlt: 'Papa John\'s brand logo',
-        description: `🍕 Livraison Papa John\'s Marrakech à domicile 24h/7j
-Vous recherchez une livraison Papa John\'s à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Papa John\'s à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Papa John\'s de votre choix et nous la livrons rapidement, chaude, savoureuse et prête à être dégustée, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Papa John\'s rapide dans tous les quartiers de Marrakech.
-🍕 Commandez toutes vos pizzas Papa John\'s préférées
-🍕 Pepperoni Pizza
-🧀 Four Cheese Pizza
-🥩 Meat Feast
-🍗 BBQ Chicken Pizza
-🌶️ Spicy Chicken Pizza
-🍄 Veggie Pizza
-🥓 Super Papa\'s
-🍕 Margherita
-🥖 Garlic Bread
-🧀 Cheese Sticks
-🍗 Chicken Wings
-🥗 Salades
-🍟 Frites
-🥤 Boissons
-🍰 Desserts
-🍨 Glaces
-👨‍👩‍👧 Menus Familiaux
-🚀 Livraison Papa John\'s rapide partout à Marrakech
-Notre service de livraison Papa John\'s Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de pizza. Chaque commande est récupérée directement auprès du restaurant Papa John\'s afin de garantir une pizza chaude, une pâte moelleuse, des ingrédients frais et un fromage fondant. Que vous souhaitiez une pizza pour un déjeuner, un dîner, une soirée entre amis, un repas en famille, un anniversaire ou un match de football, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison Papa John\'s rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Pizzas livrées chaudes et fraîches
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service professionnel et sécurisé
-✅ Temps de livraison optimisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Palmeraie
-📍 Médina
-📍 Semlalia
-📍 Victor Hugo
-📍 Amerchich
-📍 Hay Charaf
-📲 Commandez dès maintenant votre Papa John\'s avec Allo Livreur Kech et profitez d'une livraison Papa John\'s rapide à domicile partout à Marrakech. Que vous recherchiez une livraison Papa John\'s Marrakech, une livraison pizza Marrakech, une pizza à domicile, un livreur pizza ou une livraison rapide de pizzas à Marrakech, notre équipe est disponible 24h/24 et 7j/7 pour vous livrer vos pizzas préférées directement chez vous, chaudes, fraîches et prêtes à être dégustées.`,},
-      {
-        id: 'tacos-de-lyon',
-        name: 'livraison tacos de lyon marrakech',
-        brand: 'Tacos de Lyon',
-        logo: '🌮',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile  tacos de lyon.png',
-        logoAlt: 'Tacos de Lyon brand logo',
-        description: `🌮 Livraison Tacos de Lyon Marrakech à domicile 24h/7j
-Vous recherchez une livraison Tacos de Lyon à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Tacos de Lyon à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Tacos de Lyon de votre choix et nous la livrons rapidement, chaude et généreusement garnie, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Tacos de Lyon rapide dans tous les quartiers de Marrakech.
-🌮 Commandez tous vos Tacos de Lyon préférés
-🌮 French Tacos
-🥩 Tacos Bœuf
-🍗 Tacos Poulet
-🌭 Tacos Merguez
-🥓 Tacos Mixte
-🧀 Sauce Fromagère
-🍟 Frites
-🥓 Nuggets
-🧀 Mozzarella Sticks
-🥗 Salades
-🥤 Boissons
-🍰 Desserts
-🥤 Menus & Formules
-🚀 Livraison Tacos de Lyon rapide partout à Marrakech
-Notre service de livraison Tacos de Lyon Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de tacos français. Chaque commande est récupérée directement auprès du restaurant afin de garantir des tortillas chaudes, une viande savoureuse, du fromage fondant et des ingrédients toujours frais. Que vous souhaitiez un déjeuner rapide, un dîner, un repas entre amis, une soirée en famille ou une envie gourmande tard dans la nuit, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison Tacos de Lyon rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Tacos livrés chauds et généreux
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service professionnel et sécurisé
-✅ Temps de livraison optimisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Palmeraie
-📍 Médina
-📍 Semlalia
-📍 Victor Hugo
-📍 Amerchich
-📍 Hay Charaf
-📲 Commandez dès maintenant votre Tacos de Lyon avec Allo Livreur Kech et profitez d'une livraison Tacos de Lyon rapide à domicile partout à Marrakech. Que vous recherchiez une livraison tacos Marrakech, une livraison Tacos de Lyon Marrakech, une livraison French Tacos, une livraison fast-food Marrakech ou une livraison à domicile disponible 24h/24, notre équipe est prête à vous livrer vos tacos, frites, boissons et menus préférés directement chez vous, rapidement et toujours bien chauds.`,},
-      {
-        id: 'crusty',
-        name: 'livraison crusty marrakech',
-        brand: 'Crusty',
-        logo: '🥖',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.jfif',
-        logoAlt: 'Crusty brand logo',
-       description: `🥪 Livraison Crusty Marrakech à domicile 24h/7j
-Vous recherchez une livraison Crusty à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Crusty à domicile partout à Marrakech. Nous récupérons votre commande directement chez Crusty et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel ou votre riad.
-Crusty est l'adresse idéale pour les amateurs de sandwichs gourmands, burgers artisanaux, paninis, wraps, tacos, salades fraîches et menus généreux. Préparés avec du pain croustillant, des ingrédients frais, des viandes de qualité, des sauces maison et des légumes soigneusement sélectionnés, les repas Crusty séduisent tous les gourmands à Marrakech.
-Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison Crusty rapide dans tous les quartiers de Marrakech.
-🥪 Commandez tous vos produits Crusty préférés
-🍔 Burgers Artisanaux
-🥪 Sandwichs Gourmands
-🌯 Wraps
-🥙 Paninis
-🌮 Tacos
-🍗 Chicken Crispy
-🥩 Sandwichs Steak
-🧀 Burgers au Fromage
-🍟 Frites
-🥗 Salades
-🥤 Boissons
-🍰 Desserts
-🥤 Menus & Formules
-🚀 Livraison Crusty rapide partout à Marrakech
-Notre service de livraison Crusty Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude et prête à être dégustée. Que vous souhaitiez un déjeuner, un dîner, un repas entre amis ou une pause gourmande, Allo Livreur Kech est votre partenaire de confiance pour la livraison Crusty à domicile à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Repas livrés chauds et savoureux
-✅ Service professionnel
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service rapide et sécurisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-⭐ Pourquoi commander Crusty avec Allo Livreur Kech ?
-Grâce à Allo Livreur Kech, commander Crusty à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement chez Crusty afin de préserver toute la qualité, la fraîcheur et le goût de vos sandwichs, burgers et menus préférés. Que vous ayez envie d'un burger artisanal, d'un sandwich gourmand, d'un wrap, d'un panini ou d'un tacos généreux, nous assurons une livraison rapide partout à Marrakech.
-📲 Commandez dès maintenant votre Crusty avec Allo Livreur Kech et profitez d'une livraison Crusty rapide à domicile partout à Marrakech. Savourez vos burgers artisanaux, sandwichs, wraps, paninis, tacos, frites et desserts préférés grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,
-},
-      {
-        id: 'otacos',
-        name: 'livraison o\'tacos marrakech',
-        brand: "O'Tacos",
-        logo: '🌮',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile o\'tacos.png',
-        logoAlt: "O'Tacos brand logo",
-       description: `🌮 Livraison O'Tacos Marrakech à domicile 24h/7j
-Vous recherchez une livraison O'Tacos à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison O'Tacos à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant O'Tacos de votre choix et nous la livrons rapidement, chaude et prête à être dégustée, à votre domicile, votre bureau, votre hôtel ou votre riad.
-O'Tacos est la référence du célèbre French Tacos avec ses tortillas généreusement garnies de viandes savoureuses, de fromage fondant, de la célèbre sauce fromagère O'Tacos et d'un large choix d'ingrédients. Que vous souhaitiez composer votre propre tacos ou choisir une recette signature, Allo Livreur Kech vous permet de profiter de toute la carte O'Tacos sans quitter votre domicile.
-Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Hay Charaf ou dans la Médina, notre équipe assure une livraison O'Tacos rapide dans tous les quartiers de Marrakech.
-🌮 Commandez tous vos produits O'Tacos préférés
-🌮 French Tacos
-🥩 Tacos Steak
-🍗 Tacos Poulet
-🌶️ Tacos Spicy
-🧀 Sauce Fromagère
-🍟 Frites
-🍗 Nuggets
-🧅 Onion Rings
-🥗 Salades
-🥤 Boissons
-🍰 Desserts
-🍪 Cookies
-🥤 Menus & Formules
-🚀 Livraison O'Tacos rapide partout à Marrakech
-Notre service de livraison O'Tacos Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de tacos. Nous assurons une livraison rapide, sécurisée et professionnelle afin que votre commande arrive toujours chaude, généreuse et pleine de saveurs. Que ce soit pour un déjeuner, un dîner, un repas entre amis, une soirée ou une envie gourmande tard dans la nuit, Allo Livreur Kech est votre partenaire de confiance pour la livraison O'Tacos à domicile à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Tacos livrés chauds et savoureux
-✅ Service professionnel
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service rapide et sécurisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Palmeraie
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Médina
-📍 Semlalia
-📍 Hay Charaf
-⭐ Pourquoi commander O'Tacos avec Allo Livreur Kech ?
-Grâce à Allo Livreur Kech, commander O'Tacos à Marrakech devient simple, rapide et pratique. Nous récupérons votre commande directement au restaurant afin de préserver la qualité, la fraîcheur et le goût authentique de votre French Tacos. Que vous choisissiez un tacos au poulet, au steak, plusieurs viandes, avec la célèbre sauce fromagère, des frites, des nuggets ou un menu complet, notre équipe assure une livraison rapide partout à Marrakech. Nous livrons également vos boissons, desserts et menus O'Tacos directement chez vous, à votre bureau, dans votre hôtel ou votre riad.
-Notre objectif est de vous offrir la meilleure expérience de livraison O'Tacos Marrakech avec un service rapide, professionnel et disponible tous les jours. Plus besoin de vous déplacer ou d'attendre longtemps, il suffit de nous envoyer votre commande via WhatsApp et notre livreur s'occupe du reste. Nous assurons la livraison O'Tacos dans tous les quartiers de Marrakech avec un suivi rapide et un service de qualité.
-📲 Commandez dès maintenant votre O'Tacos avec Allo Livreur Kech et profitez d'une livraison O'Tacos rapide à domicile partout à Marrakech. Savourez vos French Tacos, frites, nuggets, desserts et boissons préférés grâce à notre service de livraison disponible tous les jours, 24h/24 et 7j/7.`,}
-,
-      {
-        id: 'pizza-hut',
-        name: 'livraison pizza hut marrakech',
-        brand: 'Pizza Hut',
-        logo: '🍕',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile pizza hut.png',
-        logoAlt: 'Pizza Hut brand logo',
-       description: `🍕 Livraison Pizza Hut Marrakech à domicile 24h/7j
-Vous recherchez une livraison Pizza Hut à Marrakech ou une livraison pizza à domicile rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison pizza Marrakech disponible 24h/24 et 7j/7. Nous récupérons votre commande directement chez Pizza Hut Marrakech et nous vous livrons vos pizzas préférées rapidement, chaudes, croustillantes et prêtes à être dégustées. Que ce soit pour un déjeuner, un dîner, une soirée entre amis, un repas en famille, une fête d'anniversaire, un match de football ou une envie de pizza tard le soir, notre équipe assure une livraison rapide partout à Marrakech. Plus besoin de vous déplacer ou d'attendre longtemps, il vous suffit de commander et notre livreur s'occupe du reste. Nous livrons votre commande à votre domicile, votre appartement, votre villa, votre bureau, votre hôtel, votre riad ou tout autre lieu de votre choix. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, Allo Livreur Kech assure une livraison pizza rapide dans tous les quartiers de Marrakech.
-🍕 Commandez toutes vos pizzas Pizza Hut préférées
-🍕 Pepperoni Lovers
-🧀 Quatre Fromages
-🥩 Meat Lovers
-🍗 Chicken Supreme
-🌶️ Spicy Chicken
-🥓 BBQ Chicken
-🍕 Super Supreme
-🧀 Cheese Lovers
-🍄 Pizza Végétarienne
-🥖 Garlic Bread
-🍗 Chicken Wings
-🧀 Mozzarella Sticks
-🥗 Salades
-🍟 Frites
-🥤 Boissons
-🍰 Desserts
-🍨 Glaces
-👨‍👩‍👧 Menus Familiaux
-🚀 Livraison Pizza Hut rapide partout à Marrakech
-Notre service de livraison Pizza Hut Marrakech est disponible tous les jours, 24h/24 et 7j/7, afin de satisfaire toutes vos envies de pizza. Chaque commande est récupérée directement auprès du restaurant Pizza Hut pour garantir une qualité optimale, une pizza chaude, un fromage fondant et une pâte toujours croustillante. Nous assurons une livraison rapide, professionnelle et sécurisée afin que vous puissiez profiter de votre repas sans attendre. Que vous commandiez une pizza individuelle, une pizza familiale, plusieurs pizzas pour une soirée ou un menu complet avec boissons et desserts, notre équipe veille à ce que votre commande arrive dans les meilleures conditions. Nous assurons également la livraison de pizzas pour les entreprises, les hôtels, les riads, les bureaux, les appartements, les résidences, les maisons d'hôtes et tous les établissements situés à Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison Pizza Hut rapide
-✅ Livraison pizza Marrakech 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Pizzas livrées chaudes et croustillantes
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service professionnel et sécurisé
-✅ Temps de livraison optimisé
-✅ Disponible tous les jours de la semaine
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Palmeraie
-📍 Médina
-📍 Semlalia
-📍 Victor Hugo
-📍 Amerchich
-📍 Hay Charaf
-📲 Commandez dès maintenant votre Pizza Hut avec Allo Livreur Kech et profitez d'une livraison pizza à domicile rapide partout à Marrakech. Que vous recherchiez une livraison Pizza Hut Marrakech, une livraison pizza Marrakech, une pizza à domicile, un livreur pizza ou une livraison rapide de pizzas à Marrakech, notre équipe est disponible 24h/24 et 7j/7 pour vous apporter vos pizzas préférées directement chez vous, chaudes, fraîches et prêtes à être dégustées.`,}
-,
-      {
-        id: 'quick',
-        name: 'livraison quick marrakech',
-        brand: 'Quick',
-        logo: '🍔',
-        logoUrl: '/logos/restaurant/livraison marrakech a domicile quick.png',
-        logoAlt: 'Quick brand logo',
-        description: `🍔 Livraison Quick Marrakech à domicile 24h/7j
-Vous recherchez une livraison Quick à Marrakech rapide, fiable et disponible à toute heure ? Avec Allo Livreur Kech, profitez d'un service de livraison Quick à domicile partout à Marrakech. Nous récupérons votre commande directement dans le restaurant Quick de votre choix et nous la livrons rapidement, chaude et savoureuse, à votre domicile, votre bureau, votre hôtel, votre riad ou votre résidence. Que vous soyez à Guéliz, Hivernage, Agdal, Massira, M'hamid, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Semlalia, Victor Hugo, Amerchich, Hay Charaf ou dans la Médina, notre équipe assure une livraison Quick rapide dans tous les quartiers de Marrakech.
-🍔 Commandez tous vos produits Quick préférés
-🍔 Giant
-🍔 Long Chicken
-🍔 Quick'N Toast
-🍗 Chicken Wings
-🍗 Chicken Box
-🌯 Wraps
-🍟 Frites
-🧀 Cheese Fries
-🥗 Salades
-🥤 Boissons
-🍦 Glaces
-🍰 Desserts
-🥤 Menus & Combos
-🚀 Livraison Quick rapide partout à Marrakech
-Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de satisfaire toutes vos envies de burgers et de restauration rapide. Chaque commande est récupérée directement auprès du restaurant Quick afin de garantir des burgers chauds, des frites croustillantes et des produits toujours frais. Que vous souhaitiez un déjeuner rapide, un dîner en famille, un repas entre collègues, une soirée entre amis ou une envie de fast-food tard dans la nuit, Allo Livreur Kech assure une livraison rapide, professionnelle et sécurisée partout à Marrakech. Nous livrons également les hôtels, les riads, les bureaux, les appartements, les villas, les résidences et tous les établissements de Marrakech.
-❤️ Pourquoi choisir Allo Livreur Kech ?
-✅ Livraison Quick rapide
-✅ Disponible 24h/24 et 7j/7
-✅ Commande simple via WhatsApp
-✅ Livraison dans tous les quartiers de Marrakech
-✅ Burgers livrés chauds et frais
-✅ Livraison à domicile, au bureau, à l'hôtel et au riad
-✅ Service professionnel et sécurisé
-✅ Temps de livraison optimisé
-📍 Zones desservies
-📍 Guéliz
-📍 Hivernage
-📍 Agdal
-📍 Massira
-📍 M'hamid
-📍 Daoudiate
-📍 Targa
-📍 Sidi Ghanem
-📍 Route de Casablanca
-📍 Route de l'Ourika
-📍 Palmeraie
-📍 Médina
-📍 Semlalia
-📍 Victor Hugo
-📍 Amerchich
-📍 Hay Charaf
-📲 Commandez dès maintenant votre Quick avec Allo Livreur Kech et profitez d'une livraison Quick rapide à domicile partout à Marrakech. Que vous recherchiez une livraison Quick Marrakech, une livraison burger Marrakech, une livraison fast-food Marrakech ou une livraison à domicile disponible 24h/24, notre équipe est prête à vous livrer vos burgers, sandwiches, wraps, frites et desserts préférés directement chez vous, rapidement et toujours chauds.`,
-},
-    ],
+  {
+    id: 'kfc',
+    name: 'Livraison KFC marrakech',
+    brand: 'KFC',
+    logo: '🍗',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.png',
+    logoAlt: 'KFC brand logo',
+    description:
+      "Livraison KFC Marrakech rapide à domicile avec Livreur Marrakech. Profitez de vos buckets de poulet, Hot Wings, Tenders, Zinger Burgers et menus KFC préférés livrés directement chez vous. Nous récupérons votre commande au restaurant KFC et assurons une livraison rapide partout à Marrakech : Guéliz, Hivernage, Agdal, Massira, Médina et tous les quartiers."
+  },
+
+  {
+    id: 'burgerking',
+    name: 'livraison burger king marrakech',
+    brand: 'Burger King',
+    logo: '👑',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile  burger king.png',
+    logoAlt: 'Burger King brand logo',
+    description:
+      "Livraison Burger King Marrakech à domicile avec Livreur Marrakech. Commandez vos Whoppers, burgers, frites, menus et boissons Burger King avec une livraison rapide et fiable. Votre commande est récupérée directement au restaurant puis livrée chaude à votre domicile, bureau, hôtel ou riad partout à Marrakech."
+  },
+
+  {
+    id: 'dominos',
+    name: 'livraison Domino\'s Pizza marrakech',
+    brand: "Domino's",
+    logo: '🍕',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile  Domino\'s.png',
+    logoAlt: "Domino's brand logo",
+    description:
+      "Livraison Domino's Pizza Marrakech rapide à domicile avec Livreur Marrakech. Savourez vos pizzas Domino's, Chicken Wings, desserts et boissons livrés directement chez vous. Notre service de livraison restaurant Marrakech assure une commande chaude et rapide à domicile, au bureau, à l'hôtel ou au riad."
+  },
+
+  {
+    id: 'papa-johns',
+    name: 'livraison papa johns marrakech',
+    brand: "Papa John's",
+    logo: '🍕',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile  papa johns.png',
+    logoAlt: "Papa John's brand logo",
+    description:
+      "Livraison Papa John's Marrakech à domicile avec Livreur Marrakech. Commandez vos pizzas Pepperoni, Four Cheese, BBQ Chicken, menus familiaux et spécialités Papa John's. Nous récupérons votre commande directement au restaurant et assurons une livraison pizza rapide partout à Marrakech."
+  },
+
+  {
+    id: 'tacos-de-lyon',
+    name: 'livraison tacos de lyon marrakech',
+    brand: 'Tacos de Lyon',
+    logo: '🌮',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile  tacos de lyon.png',
+    logoAlt: 'Tacos de Lyon brand logo',
+    description:
+      "Livraison Tacos de Lyon Marrakech à domicile avec Livreur Marrakech. Profitez de vos French Tacos, tacos poulet, steak, mixte, frites et menus gourmands livrés rapidement partout à Marrakech. Service disponible pour livraison à domicile, bureau, hôtel et riad."
+  },
+
+  {
+    id: 'crusty',
+    name: 'livraison crusty marrakech',
+    brand: 'Crusty',
+    logo: '🥖',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.jfif',
+    logoAlt: 'Crusty brand logo',
+    description:
+      "Livraison Crusty Marrakech rapide avec Livreur Marrakech. Commandez vos burgers artisanaux, sandwichs, wraps, paninis, tacos et menus Crusty sans vous déplacer. Notre service assure une livraison restaurant rapide à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
+  },
+
+  {
+    id: 'otacos',
+    name: 'livraison o\'tacos marrakech',
+    brand: "O'Tacos",
+    logo: '🌮',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile o\'tacos.png',
+    logoAlt: "O'Tacos brand logo",
+    description:
+      "Livraison O'Tacos Marrakech à domicile avec Livreur Marrakech. Retrouvez vos French Tacos, tacos steak, poulet, sauce fromagère, nuggets, frites et menus O'Tacos livrés rapidement. Commandez facilement et profitez d'une livraison fast-food Marrakech partout dans la ville."
+  },
+
+  {
+    id: 'pizza-hut',
+    name: 'livraison pizza hut marrakech',
+    brand: 'Pizza Hut',
+    logo: '🍕',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile pizza hut.png',
+    logoAlt: 'Pizza Hut brand logo',
+    description:
+      "Livraison Pizza Hut Marrakech rapide à domicile avec Livreur Marrakech. Commandez vos pizzas, Chicken Wings, desserts, boissons et menus Pizza Hut préférés. Nous assurons une livraison pizza Marrakech chaude et rapide chez vous, au bureau, à l'hôtel ou au riad."
+  },
+
+  {
+    id: 'quick',
+    name: 'livraison quick marrakech',
+    brand: 'Quick',
+    logo: '🍔',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile quick.png',
+    logoAlt: 'Quick brand logo',
+    description:
+      "Livraison Quick Marrakech à domicile avec Livreur Marrakech. Profitez de vos burgers Giant, Long Chicken, wraps, frites et menus Quick livrés rapidement partout à Marrakech. Notre service de livraison fast-food vous apporte votre commande chaude directement chez vous, au bureau, à l'hôtel ou au riad."
+  },
+],
     bgGradient: 'from-orange-400 via-orange-500 to-red-600',
   },
   pharmacies: {
@@ -954,7 +523,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Soins du visage', emoji: '🧴' },
   { name: 'Compléments alimentaires', emoji: '🌿' },
     ],
-    vendors: [
+   vendors: [
  {
   id: 'Pharmacie-Centrale-Marrakech',
   name: 'Pharmacie Centrale Marrakech',
@@ -963,8 +532,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoAlt: "Pharmacie Centrale brand logo",
   logo: '⚕️',
   description:
-    'Votre pharmacie de confiance avec une large gamme de médicaments et produits de santé.',
+    "Livraison pharmacie Marrakech rapide avec Livreur Marrakech. Pharmacie Centrale propose médicaments, produits de santé, parapharmacie et soins du quotidien. Nous récupérons vos produits en pharmacie et assurons une livraison rapide à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech.",
 },
+
 {
   id: 'Pharmacie-Carre-Eden',
   name: 'Pharmacie Carré Eden',
@@ -973,8 +543,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Carré Eden brand logo",
   description:
-    'Pharmacie moderne proposant médicaments, parapharmacie et conseils professionnels.',
+    "Livraison Pharmacie Carré Eden Marrakech à domicile avec Livreur Marrakech. Retrouvez vos médicaments, produits de parapharmacie, soins beauté et produits de santé livrés rapidement partout à Marrakech. Service pratique pour particuliers, hôtels, riads et bureaux.",
 },
+
 {
   id: 'Pharmacie-Gueliz',
   name: 'Pharmacie Guéliz',
@@ -983,8 +554,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Guéliz brand logo",
   description:
-    'Une pharmacie reconnue avec une large sélection de produits de santé.',
+    "Livraison pharmacie Guéliz Marrakech avec Livreur Marrakech. Commandez vos médicaments, produits de santé, compléments, soins et articles de parapharmacie avec une livraison rapide à domicile. Nous assurons la récupération de vos achats en pharmacie dans le quartier Guéliz et partout à Marrakech.",
 },
+
 {
   id: 'Pharmacie-Majorelle',
   name: 'Pharmacie Majorelle',
@@ -993,8 +565,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Majorelle brand logo",
   description:
-    'Large choix de médicaments, dermocosmétiques et produits de bien-être.',
+    "Livraison Pharmacie Majorelle Marrakech rapide à domicile avec Livreur Marrakech. Profitez d'un service de livraison de médicaments, dermocosmétiques, produits de bien-être et parapharmacie directement chez vous, au bureau, à l'hôtel ou au riad.",
 },
+
 {
   id: 'Pharmacie-Victor-Hugo',
   name: 'Pharmacie Victor Hugo',
@@ -1003,8 +576,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Victor Hugo brand logo",
   description:
-    'Des soins pharmaceutiques de qualité et un accompagnement personnalisé.',
+    "Livraison pharmacie Victor Hugo Marrakech avec Livreur Marrakech. Nous récupérons vos médicaments, produits pharmaceutiques et articles de santé auprès de la pharmacie Victor Hugo et nous assurons une livraison rapide partout à Marrakech.",
 },
+
 {
   id: 'Pharmacie-Hivernage',
   name: 'Pharmacie Hivernage',
@@ -1013,8 +587,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Hivernage brand logo",
   description:
-    'Produits de santé, médicaments et conseils pharmaceutiques.',
+    "Livraison Pharmacie Hivernage Marrakech à domicile avec Livreur Marrakech. Service de livraison rapide pour médicaments, produits de santé, soins beauté et parapharmacie. Commandez facilement et recevez vos produits directement à votre adresse à Marrakech.",
 },
+
 {
   id: 'Pharmacie-Targa',
   name: 'Pharmacie Targa',
@@ -1023,8 +598,9 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Targa brand logo",
   description:
-    'Une pharmacie complète pour toute la famille.',
+    "Livraison Pharmacie Targa Marrakech rapide avec Livreur Marrakech. Une solution simple pour recevoir vos médicaments, produits de santé et articles de pharmacie à domicile. Nous livrons aux particuliers, familles, bureaux, hôtels et riads partout à Marrakech.",
 },
+
 {
   id: 'Pharmacie-Menara',
   name: 'Pharmacie Ménara',
@@ -1033,7 +609,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Ménara brand logo",
   description:
-    'Votre partenaire santé avec une sélection de produits pharmaceutiques.',
+    "Livraison Pharmacie Ménara Marrakech avec Livreur Marrakech. Profitez d'un service de livraison pharmacie pratique pour vos médicaments, produits pharmaceutiques, soins et articles de parapharmacie. Livraison rapide à domicile partout à Marrakech.",
 },
 ],
     bgGradient: 'from-emerald-400 via-green-500 to-teal-600',
@@ -1080,57 +656,61 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Produits surgelés', emoji: '🧊' },
     ],
     vendors: [
-      {
-        id: 'aswak-assalam',
-        name: 'Livraison Aswak Assalam Marrakech',
-        brand: 'Aswak Assalam',
-        logo: '🏪',
-        logoUrl: '/logos/supermarkets/livraison marrakech a domicile aswak-assalam.png',
-        logoAlt: 'Aswak Assalam brand logo',
-        description:
-          'Aswak Assalam vous propose une large sélection de produits du quotidien, des produits frais et des essentiels de la maison livrés rapidement à Marrakech.',
-      },
-      {
-        id: 'bim',
-        name: 'Livraison BIM Marrakech',
-        brand: 'BIM',
-        logo: '🛒',
-        logoUrl: '/logos/supermarkets/livraison marrakech a domicile bim.png',
-        logoAlt: 'BIM brand logo',
-        description:
-          'BIM offre des produits de grande consommation, des courses de proximité et des promotions régulières pour faciliter vos achats à domicile.',
-      },
-      {
-        id: 'carrefour',
-        name: 'Livraison Carrefour Marrakech',
-        brand: 'Carrefour',
-        logo: '🛍️',
-        logoUrl: '/logos/supermarkets/livraison marrakech a domicile carrefour.png',
-        logoAlt: 'Carrefour brand logo',
-        description:
-          'Carrefour met à votre disposition une grande variété de produits alimentaires et ménagers, livrés rapidement chez vous.',
-      },
-      {
-        id: 'label-vie',
-        name: 'Livraison Label Vie Marrakech',
-        brand: 'Label Vie',
-        logo: '🧺',
-        logoUrl: '/logos/supermarkets/livraison marrakech a domicile label-vie.png',
-        logoAlt: 'Label Vie brand logo',
-        description:
-          'Label Vie vous accompagne avec des produits frais, des essentiels du quotidien et une expérience de livraison pratique à Marrakech.',
-      },
-      {
-        id: 'marjane',
-        name: 'Livraison Marjane Marrakech',
-        brand: 'Marjane',
-        logo: '🏬',
-        logoUrl: '/logos/supermarkets/livraison marrakech a domicile marjane.png',
-        logoAlt: 'Marjane brand logo',
-        description:
-          'Marjane propose une sélection complète de produits alimentaires, boissons, produits d’entretien et bien plus encore, livrés chez vous.',
-      },
-    ],
+  {
+    id: 'aswak-assalam',
+    name: 'Livraison Aswak Assalam Marrakech',
+    brand: 'Aswak Assalam',
+    logo: '🏪',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile aswak-assalam.png',
+    logoAlt: 'Aswak Assalam brand logo',
+    description:
+      "Livraison Aswak Assalam Marrakech à domicile avec Livreur Marrakech. Commandez vos courses, produits alimentaires, produits frais, boissons et essentiels de la maison sans vous déplacer. Nous récupérons vos achats chez Aswak Assalam et assurons une livraison rapide partout à Marrakech, à domicile, au bureau, à l'hôtel ou au riad.",
+  },
+
+  {
+    id: 'bim',
+    name: 'Livraison BIM Marrakech',
+    brand: 'BIM',
+    logo: '🛒',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile bim.png',
+    logoAlt: 'BIM brand logo',
+    description:
+      "Livraison BIM Marrakech rapide avec Livreur Marrakech. Profitez de vos courses du quotidien, produits alimentaires, boissons, produits ménagers et promotions BIM livrés directement chez vous. Notre service de livraison supermarché Marrakech vous permet de faire vos achats facilement sans déplacement.",
+  },
+
+  {
+    id: 'carrefour',
+    name: 'Livraison Carrefour Marrakech',
+    brand: 'Carrefour',
+    logo: '🛍️',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile carrefour.png',
+    logoAlt: 'Carrefour brand logo',
+    description:
+      "Livraison Carrefour Marrakech à domicile avec Livreur Marrakech. Commandez vos produits alimentaires, fruits et légumes, boissons, produits d'entretien et articles du quotidien. Nous récupérons vos courses chez Carrefour et nous les livrons rapidement partout à Marrakech.",
+  },
+
+  {
+    id: 'label-vie',
+    name: 'Livraison Label Vie Marrakech',
+    brand: 'Label Vie',
+    logo: '🧺',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile label-vie.png',
+    logoAlt: 'Label Vie brand logo',
+    description:
+      "Livraison Label Vie Marrakech rapide avec Livreur Marrakech. Retrouvez vos courses, produits frais, alimentation, boissons et produits essentiels livrés à domicile. Service pratique pour particuliers, familles, bureaux, hôtels et riads partout à Marrakech.",
+  },
+
+  {
+    id: 'marjane',
+    name: 'Livraison Marjane Marrakech',
+    brand: 'Marjane',
+    logo: '🏬',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile marjane.png',
+    logoAlt: 'Marjane brand logo',
+    description:
+      "Livraison Marjane Marrakech à domicile avec Livreur Marrakech. Faites vos courses facilement et recevez vos produits alimentaires, boissons, produits d'hygiène, entretien maison et articles du quotidien rapidement chez vous. Notre service assure une livraison supermarché fiable partout à Marrakech.",
+  },
+],
     bgGradient: 'from-blue-400 via-cyan-500 to-sky-600',
   },
   fleurs: {
@@ -1173,56 +753,61 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Remerciement', emoji: '🙏' },
   { name: 'Cadeaux', emoji: '🎁' },
     ],
-    vendors: [
-      {
-  id: 'flower1',
-  name: 'The Bloom Room Marrakech',
-  brand: 'The Bloom Room',
-  logo: '💐',
-  description:
-    'Une fleuristerie haut de gamme proposant des bouquets élégants, des fleurs fraîches et des compositions florales pour toutes les occasions.',
-},
-{
-  id: 'flower3',
-  name: 'Jawhara Fleurs',
-  brand: 'Jawhara Fleurs',
-  logo: '🌺',
-  description:
-    'Boutique de fleurs proposant des bouquets personnalisés, des roses fraîches et des compositions florales raffinées.',
-},
-{
-  id: 'flower4',
-  name: 'Kech Flora',
-  brand: 'Kech Flora',
-  logo: '🌼',
-  description:
-    'Fleuriste reconnu offrant des fleurs fraîches, des plantes décoratives et des bouquets pour toutes les occasions.',
-},
-{
-  id: 'flower5',
-  name: 'Florajia Fleuriste',
-  brand: 'Florajia Fleuriste',
-  logo: '🌻',
-  description:
-    'Créations florales modernes, bouquets élégants et cadeaux fleuris avec un service professionnel.',
-},
-{
-  id: 'flower7',
-  name: 'Paradis of Flowers',
-  brand: 'Paradis of Flowers',
-  logo: '🌿',
-  description:
-    'Large sélection de fleurs naturelles, bouquets de luxe et compositions florales livrées rapidement.',
-},
-{
-  id: 'flower8',
-  name: 'Signature Flowers Marrakech',
-  brand: 'Signature Flowers',
-  logo: '🥀',
-  description:
-    'Fleuriste spécialisé dans les bouquets haut de gamme, les roses et les décorations florales pour tous les événements.',
-},
-    ],
+vendors: [
+  {
+    id: 'the-bloom-room-marrakech',
+    name: 'The Bloom Room Marrakech',
+    brand: 'The Bloom Room',
+    logo: '💐',
+    description:
+      "Livraison fleurs Marrakech à domicile avec Livreur Marrakech. The Bloom Room propose des bouquets élégants, fleurs fraîches, roses et compositions florales pour anniversaires, mariages, cadeaux et toutes les occasions. Nous récupérons vos fleurs chez le fleuriste et assurons une livraison rapide partout à Marrakech.",
+  },
+
+  {
+    id: 'jawhara-fleurs-marrakech',
+    name: 'Jawhara Fleurs Marrakech',
+    brand: 'Jawhara Fleurs',
+    logo: '🌺',
+    description:
+      "Livraison fleurs Marrakech avec Jawhara Fleurs et Livreur Marrakech. Découvrez des bouquets personnalisés, roses fraîches et créations florales raffinées livrées directement à domicile. Service de livraison fleurs Marrakech pour cadeaux, événements, hôtels, riads et particuliers.",
+  },
+
+  {
+    id: 'kech-flora-marrakech',
+    name: 'Kech Flora Marrakech',
+    brand: 'Kech Flora',
+    logo: '🌼',
+    description:
+      "Livraison fleurs Kech Flora Marrakech à domicile avec Livreur Marrakech. Profitez de fleurs fraîches, plantes décoratives et bouquets personnalisés pour toutes les occasions. Livraison rapide de fleurs à Marrakech pour particuliers, entreprises, hôtels et événements.",
+  },
+
+  {
+    id: 'florajia-fleuriste-marrakech',
+    name: 'Florajia Fleuriste Marrakech',
+    brand: 'Florajia Fleuriste',
+    logo: '🌻',
+    description:
+      "Livraison Florajia Fleuriste Marrakech avec Livreur Marrakech. Commandez des bouquets modernes, compositions florales élégantes et cadeaux fleuris livrés rapidement à domicile, bureau, hôtel ou riad. Un service professionnel de livraison fleurs Marrakech disponible tous les jours.",
+  },
+
+  {
+    id: 'paradis-of-flowers-marrakech',
+    name: 'Paradis of Flowers Marrakech',
+    brand: 'Paradis of Flowers',
+    logo: '🌿',
+    description:
+      "Livraison Paradis of Flowers Marrakech à domicile avec Livreur Marrakech. Retrouvez une sélection de fleurs naturelles, bouquets de luxe et compositions florales raffinées livrées rapidement partout à Marrakech. Parfait pour cadeaux, mariages, anniversaires et événements.",
+  },
+
+  {
+    id: 'signature-flowers-marrakech',
+    name: 'Signature Flowers Marrakech',
+    brand: 'Signature Flowers',
+    logo: '🥀',
+    description:
+      "Livraison Signature Flowers Marrakech avec Livreur Marrakech. Spécialiste des bouquets haut de gamme, roses, décorations florales et créations personnalisées. Livraison fleurs Marrakech rapide à domicile, hôtel, riad, bureau ou entreprise.",
+  },
+],
     bgGradient: 'from-pink-400 via-rose-500 to-red-600',
   },
   cosmetics: {
@@ -1266,88 +851,95 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Beauté Homme', emoji: '🧔' },
   { name: 'Nouveautés', emoji: '🆕' },
     ],
-    vendors: [
-      {
-        id: 'la-roche-posay',
-        name: 'livraison la roche-posay marrakech',
-        brand: 'La Roche-Posay',
-        logo: '🧴',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile la-roche-posay.png',
-        logoAlt: 'La Roche-Posay brand logo',
-        description:
-          'La Roche-Posay propose des soins dermatologiques premium adaptés à toutes les peaux sensibles, avec une formule douce et protectrice.',
-      },
-      {
-        id: 'bioderma',
-        name: 'livraison bioderma marrakech',
-        brand: 'Bioderma',
-        logo: '🧴',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile bioderma.png',
-        logoAlt: 'Bioderma brand logo',
-        description:
-          'Bioderma offre des soins visage et corps efficaces pour hydrater, apaiser et renforcer la barrière cutanée au quotidien.',
-      },
-      {
-        id: 'cerave',
-        name: 'livraison cerave marrakech',
-        brand: 'CeraVe',
-        logo: '🧴',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile cerave.png',
-        logoAlt: 'CeraVe brand logo',
-        description:
-          'CeraVe propose des produits de soin enrichis en céramides pour restaurer et maintenir lappareil hydrolipidique de la peau.',
-      },
-      {
-        id: 'kiko-milano',
-        name: 'livraison kiko milano marrakech',
-        brand: 'KIKO Milano',
-        logo: '💄',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile kiko-milano.png',
-        logoAlt: 'KIKO Milano brand logo',
-        description:
-          'KIKO Milano propose du maquillage tendance et des soins beauté à prix accessibles pour un look professionnel au quotidien.',
-      },
-      {
-        id: 'marionnaud',
-        name: 'livraison marionnaud marrakech',
-        brand: 'Marionnaud',
-        logo: '💋',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile marionnaud.png',
-        logoAlt: 'Marionnaud brand logo',
-        description:
-          'Marionnaud propose une sélection de parfums, maquillage et soins de grandes marques pour un shopping beauté complet.',
-      },
-      {
-        id: 'vichy',
-        name: 'livraison vichy marrakech',
-        brand: 'Vichy',
-        logo: '💧',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile vichy.jpg',
-        logoAlt: 'Vichy brand logo',
-        description:
-          'Vichy propose des soins dermatologiques formulés pour hydrater, fortifier et protéger les peaux fragiles.',
-      },
-      {
-        id: 'yves-rocher',
-        name: 'livraison yves rocher marrakech',
-        brand: 'Yves Rocher',
-        logo: '🌿',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile yves-rocher.png',
-        logoAlt: 'Yves Rocher brand logo',
-        description:
-          'Yves Rocher combine plantes et beauté pour des soins naturels et respectueux de la peau.',
-      },
-      {
-        id: 'flomar',
-        name: 'livraison flomar marrakech',
-        brand: 'Flomar',
-        logo: '💄',
-        logoUrl: '/logos/cosmetic/livraison marrakech a domicile flomar.jpg',
-        logoAlt: 'Flomar brand logo',
-        description:
-          'Flomar propose des produits de maquillage professionnels pour une mise en beauté simple et raffinée.',
-      },
-    ],
+   vendors: [
+  {
+    id: 'la-roche-posay',
+    name: 'livraison la roche-posay marrakech',
+    brand: 'La Roche-Posay',
+    logo: '🧴',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile la-roche-posay.png',
+    logoAlt: 'La Roche-Posay brand logo',
+    description:
+      "Livraison La Roche-Posay Marrakech à domicile avec Livreur Marrakech. Retrouvez vos soins dermatologiques, crèmes hydratantes, nettoyants visage et produits pour peaux sensibles livrés rapidement partout à Marrakech. Commandez vos produits beauté sans vous déplacer.",
+  },
+
+  {
+    id: 'bioderma',
+    name: 'livraison bioderma marrakech',
+    brand: 'Bioderma',
+    logo: '🧴',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile bioderma.png',
+    logoAlt: 'Bioderma brand logo',
+    description:
+      "Livraison Bioderma Marrakech rapide avec Livreur Marrakech. Commandez vos soins visage, eaux micellaires, crèmes hydratantes et produits dermatologiques Bioderma avec une livraison beauté à domicile partout à Marrakech.",
+  },
+
+  {
+    id: 'cerave',
+    name: 'livraison cerave marrakech',
+    brand: 'CeraVe',
+    logo: '🧴',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile cerave.png',
+    logoAlt: 'CeraVe brand logo',
+    description:
+      "Livraison CeraVe Marrakech à domicile avec Livreur Marrakech. Profitez des soins CeraVe pour visage et corps, crèmes hydratantes, nettoyants et produits enrichis en céramides livrés rapidement chez vous, au bureau, à l'hôtel ou au riad.",
+  },
+
+  {
+    id: 'kiko-milano',
+    name: 'livraison kiko milano marrakech',
+    brand: 'KIKO Milano',
+    logo: '💄',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile kiko-milano.png',
+    logoAlt: 'KIKO Milano brand logo',
+    description:
+      "Livraison KIKO Milano Marrakech avec Livreur Marrakech. Retrouvez vos produits de maquillage, rouges à lèvres, mascaras, fonds de teint et soins beauté KIKO livrés directement à domicile. Service de livraison cosmétique rapide partout à Marrakech.",
+  },
+
+  {
+    id: 'marionnaud',
+    name: 'livraison marionnaud marrakech',
+    brand: 'Marionnaud',
+    logo: '💋',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile marionnaud.png',
+    logoAlt: 'Marionnaud brand logo',
+    description:
+      "Livraison Marionnaud Marrakech à domicile avec Livreur Marrakech. Commandez vos parfums, maquillage, soins visage et produits beauté des grandes marques avec une livraison rapide partout à Marrakech.",
+  },
+
+  {
+    id: 'vichy',
+    name: 'livraison vichy marrakech',
+    brand: 'Vichy',
+    logo: '💧',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile vichy.jpg',
+    logoAlt: 'Vichy brand logo',
+    description:
+      "Livraison Vichy Marrakech rapide avec Livreur Marrakech. Découvrez les soins Vichy pour visage, corps, hydratation et protection de la peau livrés directement chez vous. Un service simple pour vos achats beauté et parapharmacie à Marrakech.",
+  },
+
+  {
+    id: 'yves-rocher',
+    name: 'livraison yves rocher marrakech',
+    brand: 'Yves Rocher',
+    logo: '🌿',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile yves-rocher.png',
+    logoAlt: 'Yves Rocher brand logo',
+    description:
+      "Livraison Yves Rocher Marrakech à domicile avec Livreur Marrakech. Commandez vos soins naturels, produits visage, corps, parfums et cosmétiques à base de plantes livrés rapidement partout à Marrakech.",
+  },
+
+  {
+    id: 'flomar',
+    name: 'livraison flomar marrakech',
+    brand: 'Flomar',
+    logo: '💄',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile flomar.jpg',
+    logoAlt: 'Flomar brand logo',
+    description:
+      "Livraison Flormar Marrakech avec Livreur Marrakech. Retrouvez vos produits maquillage, rouges à lèvres, fonds de teint, vernis et accessoires beauté livrés rapidement à domicile. Service de livraison cosmétique pratique partout à Marrakech.",
+  },
+],
     bgGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
   },
   shopping: {
@@ -1392,57 +984,57 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Promotions', emoji: '🏷️' },
     ],
     vendors: [
-      {
-        id: 'carre-eden-shopping-center',
-        name: 'Livraison Carré Eden Shopping Center Marrakech',
-        brand: 'Carré Eden Shopping Center',
-        logo: '🛍️',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER .png',
-        logoAlt: 'Carré Eden Shopping Center brand logo',
-        description:
-          'Un centre commercial incontournable à Guéliz avec boutiques, mode, beauté et services variés livrés avec praticité.',
-      },
-      {
-        id: 'center-commercial-almazar',
-        name: 'Livraison Centre Commercial Almazar Marrakech',
-        brand: 'Centre Commercial Almazar',
-        logo: '🏬',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile Centre Commercial Almazar.png',
-        logoAlt: 'Centre Commercial Almazar brand logo',
-        description:
-          'Almazar regroupe plusieurs enseignes et services pour vos achats du quotidien, livrés rapidement à domicile.',
-      },
-      {
-        id: 'm-avenue',
-        name: 'Livraison M Avenue Marrakech',
-        brand: 'M Avenue',
-        logo: '🛒',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile M Avenue (Hivernage).png',
-        logoAlt: 'M Avenue brand logo',
-        description:
-          'M Avenue propose une expérience shopping premium avec mode, beauté et accessoires dans un cadre élégant.',
-      },
-      {
-        id: 'plaza-marrakech',
-        name: 'Livraison Plaza Marrakech',
-        brand: 'Plaza Marrakech',
-        logo: '🛍️',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile Plaza Marrakech.png',
-        logoAlt: 'Plaza Marrakech brand logo',
-        description:
-          'Plaza Marrakech offre un large choix de boutiques et produits variés pour répondre à toutes vos envies shopping.',
-      },
-      {
-        id: 'manara-mall',
-        name: 'Livraison Manara Mall Marrakech',
-        brand: 'Manara Mall',
-        logo: '🏬',
-        logoUrl: '/logos/shopping/livraison marrakech a domicile manara-mall.png',
-        logoAlt: 'Manara Mall brand logo',
-        description:
-          'Manara Mall vous accompagne avec des options shopping modernes, pratiques et accessibles à Marrakech.',
-      },
-    ],
+  {
+    id: 'carre-eden-shopping-center',
+    name: 'Livraison Carré Eden Shopping Center Marrakech',
+    brand: 'Carré Eden Shopping Center',
+    logo: '🛍️',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER .png',
+    logoAlt: 'Carré Eden Shopping Center brand logo',
+    description:
+      "Livraison Carré Eden Marrakech à domicile avec un service rapide pour vos achats shopping, mode, beauté, accessoires, restaurants et boutiques du centre commercial. Livreur Marrakech récupère vos commandes à Carré Eden Guéliz et vous les livre rapidement chez vous, au bureau, à l'hôtel ou au riad partout à Marrakech."
+  },
+  {
+    id: 'center-commercial-almazar',
+    name: 'Livraison Centre Commercial Almazar Marrakech',
+    brand: 'Centre Commercial Almazar',
+    logo: '🏬',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile Centre Commercial Almazar.png',
+    logoAlt: 'Centre Commercial Almazar brand logo',
+    description:
+      "Service de livraison Centre Commercial Almazar Marrakech pour vos achats shopping, vêtements, beauté, accessoires, cadeaux et produits des boutiques du mall. Avec Livreur Marrakech, profitez d'une livraison à domicile rapide depuis Almazar vers tous les quartiers de Marrakech."
+  },
+  {
+    id: 'm-avenue',
+    name: 'Livraison M Avenue Marrakech',
+    brand: 'M Avenue',
+    logo: '🛒',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile M Avenue (Hivernage).png',
+    logoAlt: 'M Avenue brand logo',
+    description:
+      "Livraison M Avenue Marrakech à domicile pour vos achats premium dans les boutiques, restaurants, espaces beauté et commerces de l'Hivernage. Livreur Marrakech récupère vos commandes à M Avenue et assure une livraison rapide, pratique et sécurisée partout dans la ville."
+  },
+  {
+    id: 'plaza-marrakech',
+    name: 'Livraison Plaza Marrakech',
+    brand: 'Plaza Marrakech',
+    logo: '🛍️',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile Plaza Marrakech.png',
+    logoAlt: 'Plaza Marrakech brand logo',
+    description:
+      "Livraison Plaza Marrakech rapide à domicile pour vos achats shopping, mode, accessoires, produits beauté et commandes auprès des boutiques partenaires. Notre service de livraison Marrakech vous permet de recevoir vos achats facilement chez vous, au bureau ou dans votre hôtel."
+  },
+  {
+    id: 'manara-mall',
+    name: 'Livraison Manara Mall Marrakech',
+    brand: 'Manara Mall',
+    logo: '🏬',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile manara-mall.png',
+    logoAlt: 'Manara Mall brand logo',
+    description:
+      "Livraison Manara Mall Marrakech à domicile pour vos achats dans les boutiques, magasins, enseignes mode, beauté et loisirs. Livreur Marrakech assure la récupération de vos commandes au centre commercial Manara Mall et une livraison rapide dans tous les quartiers de Marrakech."
+  },
+],
     bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
   },
   colis: {
@@ -1486,7 +1078,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Livraison le jour même', emoji: '🕒' },
   { name: 'Express', emoji: '⚡' },
     ],
-    vendors: [
+   vendors: [
   {
     id: 'amana',
     name: 'livraison amana marrakech',
@@ -1495,7 +1087,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile  amana-messagerie.png',
     logoAlt: 'Amana brand logo',
     description:
-      "Amana est l'un des principaux services de livraison et d'expédition de colis au Maroc, avec une couverture nationale et des délais rapides.",
+      "Livraison Amana Marrakech à domicile pour vos colis, courriers et documents partout dans la ville. Livreur Marrakech vous accompagne pour récupérer, envoyer ou déposer vos colis avec un service rapide et fiable vers toutes les destinations au Maroc."
   },
   {
     id: 'chronopost',
@@ -1505,7 +1097,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile chronopost.webp',
     logoAlt: 'Chronopost brand logo',
     description:
-      "Chronopost propose des services d'expédition express de colis et de documents au Maroc et à l'international.",
+      "Livraison Chronopost Marrakech express pour vos colis, documents professionnels et envois urgents. Profitez d'un service de livraison rapide à Marrakech avec Livreur Marrakech pour vos expéditions nationales et internationales."
   },
   {
     id: 'dhl',
@@ -1515,7 +1107,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile dhl.jfif',
     logoAlt: 'DHL Express brand logo',
     description:
-      "DHL Express est spécialisé dans la livraison rapide de colis et de documents vers des destinations nationales et internationales.",
+      "Livraison DHL Express Marrakech à domicile pour colis, documents et expéditions internationales. Livreur Marrakech facilite vos envois avec un service rapide, sécurisé et adapté aux particuliers comme aux entreprises."
   },
   {
     id: 'fedex',
@@ -1525,7 +1117,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile fedex.png',
     logoAlt: 'FedEx brand logo',
     description:
-      "FedEx assure des services de livraison express de colis, documents et marchandises dans le monde entier.",
+      "Livraison FedEx Marrakech rapide pour vos colis, documents et marchandises. Notre service de livraison à domicile Marrakech vous aide à gérer vos expéditions avec simplicité et efficacité partout dans la ville."
   },
   {
     id: 'ups',
@@ -1535,7 +1127,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile ups marrakech.png',
     logoAlt: 'UPS brand logo',
     description:
-      "UPS propose des solutions fiables d'expédition et de livraison de colis pour les particuliers et les entreprises.",
+      "Livraison UPS Marrakech à domicile pour particuliers et professionnels. Livreur Marrakech récupère vos colis, documents et commandes afin de faciliter vos expéditions rapides au Maroc et à l'international."
   },
   {
     id: 'aramex',
@@ -1545,7 +1137,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile aramex marrakech.png',
     logoAlt: 'Aramex brand logo',
     description:
-      "Aramex fournit des services de livraison express, de logistique et d'expédition de colis au Maroc et à l'international.",
+      "Livraison Aramex Marrakech express pour colis, documents et services logistiques. Avec Livreur Marrakech, bénéficiez d'une livraison rapide à domicile pour vos envois professionnels et personnels partout à Marrakech."
   },
 ],
     bgGradient: 'from-slate-400 via-zinc-500 to-gray-600',
@@ -1591,7 +1183,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
   { name: 'Dossiers', emoji: '📁' },
   { name: 'Livraison express', emoji: '⚡' },
     ],
-    vendors: [
+   vendors: [
   {
     id: 'impression-marrakech',
     name: 'impression marrakech',
@@ -1600,7 +1192,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile FAV_ICON_ALPHA.png',
     logoAlt: 'Impression Marrakech',
     description:
-      "Service d'impression couleur et noir et blanc à Marrakech pour tous vos documents personnels et professionnels avec livraison rapide.",
+      "Service d'impression Marrakech rapide pour documents professionnels et personnels. Livreur Marrakech récupère vos impressions couleur ou noir et blanc, flyers, dossiers, affiches et supports administratifs puis assure une livraison à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
   },
   {
     id: 'photocopie-marrakech',
@@ -1610,7 +1202,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile photocopie marrakech.png',
     logoAlt: 'Photocopie Marrakech',
     description:
-      "Photocopies A4, A3, couleur et noir et blanc avec un service rapide et une livraison à domicile à Marrakech.",
+      "Service de photocopie Marrakech pour copies A4, A3, couleur et noir et blanc avec livraison rapide à domicile. Livreur Marrakech vous permet de commander vos photocopies, dossiers administratifs et documents professionnels sans vous déplacer."
   },
   {
     id: 'scan-documents-marrakech',
@@ -1620,7 +1212,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile Impression noir et blanc Marrakech.png',
     logoAlt: 'Scan de Documents Marrakech',
     description:
-      "Numérisation de documents, contrats, dossiers administratifs et papiers importants avec une qualité professionnelle.",
+      "Scan documents Marrakech pour numérisation de contrats, pièces administratives, dossiers professionnels et documents importants. Profitez d'un service rapide de numérisation avec récupération et livraison à domicile par Livreur Marrakech."
   },
   {
     id: 'reliure-marrakech',
@@ -1630,7 +1222,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile impression-marrakech.png',
     logoAlt: 'Reliure Marrakech',
     description:
-      "Reliure de mémoires, rapports, thèses, dossiers administratifs et documents professionnels avec livraison rapide.",
+      "Service de reliure Marrakech pour mémoires, rapports, thèses, dossiers scolaires et documents professionnels. Livreur Marrakech récupère vos documents et assure une livraison rapide après impression et finition."
   },
   {
     id: 'plastification-marrakech',
@@ -1640,7 +1232,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile papeterie-chatr.jfif',
     logoAlt: 'Plastification Marrakech',
     description:
-      "Service de plastification de cartes, certificats, documents administratifs et supports professionnels à Marrakech.",
+      "Plastification Marrakech pour cartes, certificats, documents administratifs, badges et supports professionnels. Service rapide avec livraison à domicile partout à Marrakech grâce à Livreur Marrakech."
   },
   {
     id: 'impression-a4-a3-marrakech',
@@ -1650,7 +1242,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
     logoUrl: '/logos/documents/livraison marrakech a domicile print-house.png',
     logoAlt: 'Impression A4 A3 Marrakech',
     description:
-      "Impression professionnelle en format A4 et A3 pour affiches, plans, présentations, flyers et documents administratifs.",
+      "Impression A4 et A3 Marrakech professionnelle pour flyers, affiches, plans, présentations, dossiers administratifs et documents d'entreprise. Livreur Marrakech assure la récupération et la livraison rapide de vos impressions partout dans la ville."
   },
 ],
     bgGradient: 'from-indigo-400 via-blue-500 to-cyan-600',
@@ -1705,7 +1297,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile amoud.jfif',
     logoAlt: 'Amoud brand logo',
     description:
-      "Amoud est une boulangerie et pâtisserie renommée proposant des pains artisanaux, viennoiseries, pâtisseries marocaines et françaises avec livraison rapide à Marrakech.",
+      "Livraison Amoud Marrakech à domicile pour pains frais, viennoiseries, pâtisseries marocaines, gâteaux et produits de boulangerie. Livreur Marrakech récupère vos commandes chez Amoud et assure une livraison rapide à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
   },
   {
     id: 'paul',
@@ -1715,7 +1307,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile paul.jfif',
     logoAlt: 'PAUL brand logo',
     description:
-      "PAUL est une célèbre boulangerie française proposant pains frais, croissants, sandwiches, pâtisseries et desserts livrés rapidement à Marrakech.",
+      "Livraison PAUL Marrakech à domicile pour pains artisanaux, croissants, viennoiseries françaises, sandwiches, pâtisseries et desserts. Profitez d'un service de livraison boulangerie Marrakech rapide avec Livreur Marrakech partout dans la ville."
   },
   {
     id: 'patisserie-amandine',
@@ -1725,7 +1317,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-amandine.jpg',
     logoAlt: 'Pâtisserie Amandine brand logo',
     description:
-      "Pâtisserie Amandine propose des gâteaux artisanaux, viennoiseries, pâtisseries fines et pains de qualité avec livraison à domicile à Marrakech.",
+      "Livraison Pâtisserie Amandine Marrakech pour gâteaux artisanaux, pâtisseries fines, tartes, viennoiseries et créations gourmandes. Livreur Marrakech vous apporte vos desserts et commandes pâtisserie rapidement à domicile ou sur votre lieu de travail."
   },
   {
     id: 'gontran-cherrier',
@@ -1735,7 +1327,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile gontran-cherrier.png',
     logoAlt: 'Gontran Cherrier brand logo',
     description:
-      "Gontran Cherrier est reconnu pour ses pains artisanaux, viennoiseries françaises et créations gourmandes préparées chaque jour.",
+      "Livraison Gontran Cherrier Marrakech pour pains artisanaux, baguettes, viennoiseries françaises, pâtisseries et créations gourmandes. Profitez d'une livraison boulangerie rapide à Marrakech avec récupération de vos commandes par Livreur Marrakech."
   },
   {
     id: 'patisserie-des-princes',
@@ -1745,7 +1337,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-des-princes.png',
     logoAlt: 'Pâtisserie des Princes brand logo',
     description:
-      "Pâtisserie des Princes est une référence à Marrakech pour les pâtisseries marocaines, cornes de gazelle, gâteaux et douceurs traditionnelles.",
+      "Livraison Pâtisserie des Princes Marrakech pour pâtisseries marocaines traditionnelles, cornes de gazelle, gâteaux, douceurs orientales et desserts raffinés. Livreur Marrakech assure une livraison rapide pour vos événements, cadeaux et envies gourmandes."
   },
   {
     id: 'charif',
@@ -1755,7 +1347,7 @@ vendors: [
     logoUrl: '/logos/bakery/livraison marrakech a domicile charif.jfif',
     logoAlt: 'Boulangerie Charif brand logo',
     description:
-      "Boulangerie Charif prépare chaque jour des pains frais, viennoiseries, pâtisseries et sandwiches avec livraison rapide à Marrakech.",
+      "Livraison Boulangerie Charif Marrakech à domicile pour pains frais, viennoiseries, sandwiches et pâtisseries du quotidien. Commandez facilement et recevez vos produits de boulangerie rapidement grâce au service Livreur Marrakech."
   },
 ],
     bgGradient: 'from-yellow-400 via-amber-500 to-orange-600',

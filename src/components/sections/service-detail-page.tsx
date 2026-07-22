@@ -418,7 +418,250 @@ function getServiceSEOContent(slug?: string, title?: string, locale: Locale = 'f
 
   return localizedContent;
 }
+export function getVendorSEOContent(
+  serviceSlug: string,
+  vendor: ServiceVendor,
+  locale: Locale = "fr"
+) {
+  switch (serviceSlug) {
+    case "pharmacies":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison ${vendor.brand}`,
+            content: `Vous recherchez une livraison ${vendor.brand} rapide à Marrakech ? Allo Livreur Kech assure la livraison de médicaments, produits de parapharmacie et produits de santé directement depuis ${vendor.brand} jusqu'à votre domicile.`,
+          },
+          {
+            title: "Médicaments et produits disponibles",
+            content:
+              "Nous livrons les médicaments, vitamines, produits bébé, matériel médical, produits d'hygiène, parapharmacie et bien plus encore.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison rapide, disponible 24h/24, commande par WhatsApp et service professionnel partout à Marrakech.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Médina et tous les quartiers de Marrakech.",
+          },
+        ],
+      };
 
+    case "restaurants":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison ${vendor.brand} à domicile`,
+            content: `Allo Livreur Kech récupère votre commande directement chez ${vendor.brand} et la livre rapidement à votre domicile, bureau, hôtel ou riad partout à Marrakech.`,
+          },
+          {
+            title: `Menu ${vendor.brand}`,
+            content:
+              "Nous livrons burgers, pizzas, tacos, sandwiches, salades, desserts, boissons et tous les plats proposés par le restaurant.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Commande par WhatsApp, livraison rapide 24h/24, service fiable et couverture complète de Marrakech.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, Palmeraie, Médina et tous les quartiers de Marrakech.",
+          },
+        ],
+      };
+
+    case "supermarkets":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison ${vendor.brand}`,
+            content: `Allo Livreur Kech récupère vos courses chez ${vendor.brand} et les livre rapidement partout à Marrakech.`,
+          },
+          {
+            title: "Produits disponibles",
+            content:
+              "Fruits, légumes, viandes, boissons, produits ménagers, produits laitiers, snacks, produits bébé et tous les articles disponibles en magasin.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison rapide 24h/24, commande simple via WhatsApp et service fiable.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Livraison dans tous les quartiers de Marrakech : Guéliz, Agdal, Massira, Daoudiate, Targa, Médina, Hivernage...",
+          },
+        ],
+      };
+
+    case "fleurs":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison de fleurs ${vendor.brand}`,
+            content: `Nous récupérons vos bouquets chez ${vendor.brand} et les livrons rapidement partout à Marrakech.`,
+          },
+          {
+            title: "Bouquets disponibles",
+            content:
+              "Roses, bouquets, fleurs de mariage, anniversaires, cadeaux, compositions florales et fleurs fraîches.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison express, fleurs protégées et livraison le jour même.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Tous les quartiers de Marrakech.",
+          },
+        ],
+      };
+
+    case "cosmetics":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison ${vendor.brand}`,
+            content: `Recevez rapidement vos produits ${vendor.brand} partout à Marrakech.`,
+          },
+          {
+            title: "Produits disponibles",
+            content:
+              "Soins visage, maquillage, parfums, soins cheveux, corps, beauté homme et accessoires.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison rapide, produits authentiques et commande via WhatsApp.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Service disponible dans toute la ville de Marrakech.",
+          },
+        ],
+      };
+
+    case "shopping":
+      return {
+        heading: `Livraison Shopping ${vendor.brand}`,
+        sections: [
+          {
+            title: `Shopping ${vendor.brand}`,
+            content: `Nous récupérons vos achats chez ${vendor.brand} et les livrons rapidement à Marrakech.`,
+          },
+          {
+            title: "Articles disponibles",
+            content:
+              "Mode, chaussures, électronique, beauté, maison, sport, bébé et bien plus.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison rapide, pratique et disponible 24h/24.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Livraison partout à Marrakech.",
+          },
+        ],
+      };
+
+    case "colis":
+      return {
+        heading: `Livraison de colis ${vendor.brand}`,
+        sections: [
+          {
+            title: `Expédition ${vendor.brand}`,
+            content: `Nous récupérons et livrons vos colis rapidement avec ${vendor.brand}.`,
+          },
+          {
+            title: "Types de colis",
+            content:
+              "Documents, colis standards, colis urgents, colis fragiles, cadeaux et colis professionnels.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison sécurisée, rapide et disponible 24h/24.",
+          },
+          {
+            title: "Zones desservies",
+            content:
+              "Tous les quartiers de Marrakech.",
+          },
+        ],
+      };
+
+    case "documents":
+      return {
+        heading: `Livraison Documents ${vendor.brand}`,
+        sections: [
+          {
+            title: `Livraison de documents`,
+            content: `Nous récupérons vos documents chez ${vendor.brand} et les livrons rapidement en toute confidentialité.`,
+          },
+          {
+            title: "Documents pris en charge",
+            content:
+              "Contrats, dossiers administratifs, certificats, documents bancaires, médicaux et juridiques.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison express, confidentielle et sécurisée.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Service disponible dans toute la ville de Marrakech.",
+          },
+        ],
+      };
+
+    case "boulangerie":
+      return {
+        heading: `Livraison ${vendor.brand} à Marrakech`,
+        sections: [
+          {
+            title: `Livraison ${vendor.brand}`,
+            content: `Recevez pains, viennoiseries, pâtisseries et gâteaux de ${vendor.brand} directement chez vous.`,
+          },
+          {
+            title: "Produits disponibles",
+            content:
+              "Pain, croissants, pâtisseries, sandwiches, café, petit-déjeuner, desserts et boissons.",
+          },
+          {
+            title: "Pourquoi choisir Allo Livreur Kech ?",
+            content:
+              "Livraison rapide, produits frais et service disponible toute la journée.",
+          },
+          {
+            title: "Quartiers desservis",
+            content:
+              "Livraison dans tous les quartiers de Marrakech.",
+          },
+        ],
+      };
+
+    default:
+      return null;
+  }
+}
 function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
   const copyBySlug: Record<
     string,

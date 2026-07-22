@@ -25,7 +25,7 @@ export const siteContent: Record<
     backToService: string;
     serviceLabel: string;
     estimatedDeliveryTime: string;
-    aboutLabel: string;
+    
     vendorBrand: string;
     vendorDetails: string;
     vendorInternalName: string;
@@ -84,7 +84,7 @@ export const siteContent: Record<
     backToService: 'Retour au service',
     serviceLabel: 'Service',
     estimatedDeliveryTime: 'Temps de livraison estimé',
-    aboutLabel: 'À propos',
+    
     vendorBrand: 'Marque',
     vendorDetails: 'Détails du vendeur',
     vendorInternalName: 'Nom interne',
@@ -145,7 +145,7 @@ export const siteContent: Record<
     backToService: 'Back to service',
     serviceLabel: 'Service',
     estimatedDeliveryTime: 'Estimated delivery time',
-    aboutLabel: 'About',
+    
     vendorBrand: 'Brand',
     vendorDetails: 'Vendor details',
     vendorInternalName: 'Internal name',
