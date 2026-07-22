@@ -246,7 +246,7 @@ function getServiceSEOContent(slug?: string, title?: string, locale: Locale = 'f
         relatedSearches: ['supermarket delivery marrakech', 'grocery delivery marrakech'],
       },
     },
-    flowers: {
+    fleurs: {
       fr: {
         heading: `Livraison fleurs Marrakech pour toutes les occasions`,
         intro:
@@ -499,11 +499,17 @@ function getVendorSectionCopy(slug?: string, locale: Locale = 'fr') {
   };
 
   return (
-    copyBySlug[slug ?? '']?.[locale] ?? {
-      heading: 'Services populaires',
-      description:
-        'Nous livrons vos produits préférés directement chez vous, rapidement et facilement !',
-    }
+    copyBySlug[slug ?? '']?.[locale] ??
+    (locale === 'en'
+      ? {
+          heading: 'Popular Services',
+          description: 'We deliver your favorite products straight to your home, fast and easy!',
+        }
+      : {
+          heading: 'Services populaires',
+          description:
+            'Nous livrons vos produits préférés directement chez vous, rapidement et facilement !',
+        })
   );
 }
 
