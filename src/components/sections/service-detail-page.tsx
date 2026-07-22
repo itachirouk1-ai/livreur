@@ -430,7 +430,7 @@ export function getVendorSEOContent(
         sections: [
           {
             title: `Livraison ${vendor.brand}`,
-            content: `Vous recherchez une livraison ${vendor.brand} rapide à Marrakech ? Allo Livreur Kech assure la livraison de médicaments, produits de parapharmacie et produits de santé directement depuis ${vendor.brand} jusqu'à votre domicile.`,
+            content: `Vous recherchez une livraison ${vendor.brand} rapide à Marrakech ? Livreur Marrakech assure la livraison de médicaments, produits de parapharmacie et produits de santé directement depuis ${vendor.brand} jusqu'à votre domicile.`,
           },
           {
             title: "Médicaments et produits disponibles",
@@ -438,7 +438,7 @@ export function getVendorSEOContent(
               "Nous livrons les médicaments, vitamines, produits bébé, matériel médical, produits d'hygiène, parapharmacie et bien plus encore.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison rapide, disponible 24h/24, commande par WhatsApp et service professionnel partout à Marrakech.",
           },
@@ -456,7 +456,7 @@ export function getVendorSEOContent(
         sections: [
           {
             title: `Livraison ${vendor.brand} à domicile`,
-            content: `Allo Livreur Kech récupère votre commande directement chez ${vendor.brand} et la livre rapidement à votre domicile, bureau, hôtel ou riad partout à Marrakech.`,
+            content: `Livreur Marrakech récupère votre commande directement chez ${vendor.brand} et la livre rapidement à votre domicile, bureau, hôtel ou riad partout à Marrakech.`,
           },
           {
             title: `Menu ${vendor.brand}`,
@@ -464,7 +464,7 @@ export function getVendorSEOContent(
               "Nous livrons burgers, pizzas, tacos, sandwiches, salades, desserts, boissons et tous les plats proposés par le restaurant.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Commande par WhatsApp, livraison rapide 24h/24, service fiable et couverture complète de Marrakech.",
           },
@@ -482,7 +482,7 @@ export function getVendorSEOContent(
         sections: [
           {
             title: `Livraison ${vendor.brand}`,
-            content: `Allo Livreur Kech récupère vos courses chez ${vendor.brand} et les livre rapidement partout à Marrakech.`,
+            content: `Livreur Marrakech récupère vos courses chez ${vendor.brand} et les livre rapidement partout à Marrakech.`,
           },
           {
             title: "Produits disponibles",
@@ -490,7 +490,7 @@ export function getVendorSEOContent(
               "Fruits, légumes, viandes, boissons, produits ménagers, produits laitiers, snacks, produits bébé et tous les articles disponibles en magasin.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison rapide 24h/24, commande simple via WhatsApp et service fiable.",
           },
@@ -516,7 +516,7 @@ export function getVendorSEOContent(
               "Roses, bouquets, fleurs de mariage, anniversaires, cadeaux, compositions florales et fleurs fraîches.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison express, fleurs protégées et livraison le jour même.",
           },
@@ -542,7 +542,7 @@ export function getVendorSEOContent(
               "Soins visage, maquillage, parfums, soins cheveux, corps, beauté homme et accessoires.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison rapide, produits authentiques et commande via WhatsApp.",
           },
@@ -568,7 +568,7 @@ export function getVendorSEOContent(
               "Mode, chaussures, électronique, beauté, maison, sport, bébé et bien plus.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison rapide, pratique et disponible 24h/24.",
           },
@@ -594,7 +594,7 @@ export function getVendorSEOContent(
               "Documents, colis standards, colis urgents, colis fragiles, cadeaux et colis professionnels.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison sécurisée, rapide et disponible 24h/24.",
           },
@@ -620,7 +620,7 @@ export function getVendorSEOContent(
               "Contrats, dossiers administratifs, certificats, documents bancaires, médicaux et juridiques.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison express, confidentielle et sécurisée.",
           },
@@ -646,7 +646,7 @@ export function getVendorSEOContent(
               "Pain, croissants, pâtisseries, sandwiches, café, petit-déjeuner, desserts et boissons.",
           },
           {
-            title: "Pourquoi choisir Allo Livreur Kech ?",
+            title: "Pourquoi choisir Livreur Marrakech ?",
             content:
               "Livraison rapide, produits frais et service disponible toute la journée.",
           },
