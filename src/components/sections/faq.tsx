@@ -93,12 +93,12 @@ export default function FAQSection() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <section className="relative overflow-hidden py-20 sm:py-28">
+      <section className="relative overflow-hidden py-4 sm:py-5">
       {/* Background Blur */}
       <div className="absolute left-1/2 top-0 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-500/10 blur-3xl dark:bg-orange-500/20" />
       <div className="absolute right-0 top-1/2 -z-10 h-80 w-80 rounded-full bg-red-500/5 blur-3xl" />
 
-    <div className="mx-auto max-w-5xl px-4">
+    <div className="mx-auto max-w-5xl px-1">
 
       {/* Badge */}
       <motion.div
@@ -108,34 +108,16 @@ export default function FAQSection() {
         transition={{ duration: .5 }}
         className="flex justify-center"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-2 text-sm font-semibold text-orange-600 dark:text-orange-400">
+        <div className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-600 dark:text-red-400">
           <HelpCircle className="h-4 w-4" />
           {copy.faqBadge}
         </div>
       </motion.div>
 
       {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: .1 }}
-        className="mx-auto mt-6 max-w-3xl text-center"
-      >
-        <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-          {copy.faqHeadingLine1}
-          <span className="block bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 bg-clip-text text-transparent">
-            {copy.faqHeadingLine2}
-          </span>
-        </h2>
-
-        <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-          {copy.faqDescription}
-        </p>
-      </motion.div>
 
       {/* FAQ Container */}
-<div className="mt-16 space-y-5">
+<div className="mt-3 space-y-5">
   {faqs.map((faq, index) => {
     const isOpen = openIndex === index;
 
@@ -151,24 +133,24 @@ export default function FAQSection() {
         }}
         className={`overflow-hidden rounded-3xl border backdrop-blur-xl transition-all duration-300 ${
           isOpen
-            ? "border-orange-500/40 bg-gradient-to-br from-orange-500/10 via-red-500/5 to-transparent shadow-2xl shadow-orange-500/10"
-            : "border-slate-200 bg-white hover:border-orange-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-orange-500/40"
+            ? "border-red-500/40 bg-gradient-to-br from-red-500/10 via-red-500/5 to-transparent shadow-2xl shadow-red-500/10"
+            : "border-slate-200 bg-white hover:border-red-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-red-500/40"
         }`}
       >
         <button
           onClick={() =>
             setOpenIndex(isOpen ? null : index)
           }
-          className="flex w-full items-center justify-between gap-1 p-2 text-left sm:p-1"
+          className="flex w-full items-center justify-between gap-1 p-1 text-left sm:p-1"
         >
-          <h3 className="text-lg font-bold text-slate-900 dark:text-white sm:text-xl">
+          <h2 className="font-bold text-slate-900 dark:text-white sm:text-xl">
             {faq.question}
-          </h3>
+          </h2>
 
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.25 }}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg"
+            className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-lg"
           >
             <ChevronDown className="h-5 w-5" />
           </motion.div>

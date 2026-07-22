@@ -10,7 +10,7 @@ import { DarkLightModeToggle } from './darklightmode';
 import Link from 'next/link';
 import { MobileMenu } from '@/components/ui/mobile-menu';
 import { DesktopNavigation } from '@/components/ui/desktop-navigation';
-import { getServiceBySlug, getVendorSlug, getAllServiceSlugs } from '@/lib/services-data';
+import { getLocalizedServiceContent, getLocalizedVendorContent, getServiceBySlug, getVendorSlug, getAllServiceSlugs } from '@/lib/services-data';
 
 export function Header() {
   const locale = useLocalePreference();
@@ -25,11 +25,11 @@ export function Header() {
       if (!service) return null;
 
       return {
-        label: service.title,
+        label: getLocalizedServiceContent(serviceSlug, locale).title || service.title,
         slug: serviceSlug,
         emoji: service.heroImage,
         vendors: service.vendors.map(vendor => ({
-          label: vendor.name,
+          label: getLocalizedVendorContent(serviceSlug, vendor, locale).name,
           slug: getVendorSlug(vendor),
           brand: vendor.brand,
           emoji: vendor.logo,

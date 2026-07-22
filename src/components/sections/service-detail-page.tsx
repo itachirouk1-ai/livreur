@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { CategoriesSection } from '@/components/sections/categoriesSection';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
-import { getVendorSlug } from '@/lib/services-data';
+import { getLocalizedVendorContent, getVendorSlug } from '@/lib/services-data';
 import { contactLinks, siteContent, type Locale } from '@/lib/site-content';
 import { Icon } from '@iconify/react';
 import DeliveryZonesSection from '../ui/DeliveryZonesSection';
@@ -523,14 +523,16 @@ export function ServiceDetailPageComponent({
   (service) => service.slug === slug
 )?.heroImageUrl;
   const copy = siteContent[locale];
-  const brandItems = vendors.map(vendor => ({
-    id: vendor.id,
-    name: vendor.brand,
-    logoUrl: vendor.logoUrl,
-    logoAlt: vendor.logoAlt || `${vendor.brand} brand logo`,
-    logoEmoji: vendor.logo,
-    
-  }));
+  const brandItems = vendors.map(vendor => {
+    const localizedVendor = getLocalizedVendorContent(slug ?? '', vendor, locale);
+    return {
+      id: vendor.id,
+      name: localizedVendor.brand,
+      logoUrl: vendor.logoUrl,
+      logoAlt: localizedVendor.logoAlt || `${vendor.brand} brand logo`,
+      logoEmoji: vendor.logo,
+    };
+  });
 
   const uniqueBrandItems = Array.from(new Map(brandItems.map(brand => [brand.id, brand])).values());
   const accentTextClass = getAccentTextClass(titleColor);
@@ -600,9 +602,9 @@ export function ServiceDetailPageComponent({
         accentTextClass={titleColor}
       />
 
-      <section className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="mx-auto mt-2 w-full max-w-7xl sm:px-6 lg:px-8">
         <div className="rounded-[28px] border border-slate-200/80 bg-white p-2 shadow-sm dark:border-slate-800/80 dark:bg-slate-900/70">
-          <h2 className={`${accentTextClass} text-xl sm:text-2xl font-bold mb-3`}>
+          <h2 className={`${accentTextClass} text-center text-xl sm:text-2xl font-bold mb-2`}>
             {seoContent.heading}
           </h2>
           <p className="text-sm sm:text-base leading-7 text-slate-600 dark:text-slate-300">
@@ -611,21 +613,21 @@ export function ServiceDetailPageComponent({
 
           <div className="mt-2 grid gap-4 md:grid-cols-2">
             <div>
-              <h3 className={`text-sm font-semibold uppercase tracking-[0.2em] ${accentTextClass} dark:text-slate-400`}>
+              <h3 className={`text-left text-sm font-semibold uppercase tracking-[0.2em] ${accentTextClass}`}>
                 {copy.serviceDetailWhatWeOffer}
               </h3>
               <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
                 {seoContent.bullets.map((bullet) => (
                   <li key={bullet} className="flex gap-2">
-                    <span className="mt-1 text-orange-500">•</span>
+                    <span className="mt-1 text-blach">•</span>
                     <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-           <DeliveryZonesSection accentClass={titleColor} />
           </div>
+           <DeliveryZonesSection accentClass={titleColor} />
 
          
         </div>
@@ -646,6 +648,8 @@ export function ServiceDetailPageComponent({
           <div className="space-y-6">
             {vendors.map((vendor, index) => {
               const vendorSlug = getVendorSlug(vendor);
+              const localizedVendor = getLocalizedVendorContent(slug ?? '', vendor, locale);
+              const vendorTitle = localizedVendor.name?.trim() || localizedVendor.brand?.trim() || copy.seeVendorPage;
               return (
                 <motion.div
                   key={`${vendorSlug}-${index}`}
@@ -659,7 +663,7 @@ export function ServiceDetailPageComponent({
                   <div className=" w-full h-40 w-24 sm:h-28 sm:w-28 flex-shrink-0 rounded-[20px] overflow-hidden shadow-lg bg-white relative">
                     <Image
                       src={vendor.logoUrl ?? '/logos/applogo.png'}
-                      alt={vendor.logoAlt ?? vendor.name}
+                      alt={localizedVendor.logoAlt ?? localizedVendor.name}
                       fill
                       
                       loading="eager"
@@ -669,19 +673,22 @@ export function ServiceDetailPageComponent({
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 flex flex-col justify-between">
-                    <Link href={`/${slug}/${vendorSlug}`} className="group block flex-1 p-0 transition">
-                      <div>
-                        <h3 className={`font-bold text-base sm:text-lg ${accentTextClass} dark:text-white`}>
-                          {vendor.name}
+                  <div className="flex-1 min-w-0 self-stretch">
+                    <Link
+                      href={`/${slug}/${vendorSlug}`}
+                      className="group flex h-full flex-col justify-between gap-3 rounded-xl p-2 transition-colors duration-200 sm:p-3"
+                    >
+                      <div className="space-y-2">
+                        <h3 className={`font-bold text-base leading-snug break-words sm:text-lg ${accentTextClass}`}>
+                          {vendorTitle}
                         </h3>
-                        
-                        <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-3">
-                          {vendor.description}
+
+                        <p className="text-sm leading-6 text-slate-600 line-clamp-3 dark:text-slate-700">
+                          {localizedVendor.description}
                         </p>
                       </div>
 
-                      <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition group-hover:text-primary/90">
+                      <div className="inline-flex items-center gap-2 text-sm font-semibold text-red-600 transition-colors group-hover:text-red-700 dark:text-red-400 dark:group-hover:text-red-300">
                         <span>{copy.seeVendorPage}</span>
                         <span aria-hidden="true">→</span>
                       </div>

@@ -45,7 +45,7 @@ export function Breadcrumb({
        
 
         {/* Breadcrumb Items */}
-        <div className="flex items-center gap-1">
+        <div className="flex flex-wrap justify-center items-center gap-1">
           {/* Home Link */}
            {/* Back Button */}
         {showBack && (

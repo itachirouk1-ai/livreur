@@ -134,8 +134,8 @@ export default function DeliveryZonesSection({ accentClass }: { accentClass?: st
 
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mb-2 text-center">
-          <div className={`mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-2 ${accentClasses.badge}`}>
+        <div className="mb-1 text-center">
+          <div className={`mb-2 inline-flex items-center gap-2 rounded-full border px-4 py-2 ${accentClasses.badge}`}>
             <MapPin className={`h-4 w-4 ${accentClasses.icon}`} />
             <span className={`text-sm font-semibold ${accentClasses.badgeText}`}>
               {copy.deliveryZonesBadge}

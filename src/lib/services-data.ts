@@ -43,6 +43,13 @@ export interface ServiceDetail {
 
 export type LocalizedServiceContent = Pick<ServiceDetail, 'title' | 'description' | 'deliveryTime' | 'features' | 'categories'>;
 
+export interface LocalizedVendorContent {
+  name: string;
+  brand: string;
+  description: string;
+  logoAlt?: string;
+}
+
 const localizedServiceOverrides: Record<string, Partial<Record<Locale, LocalizedServiceContent>>> = {
   restaurants: {
     en: {
@@ -237,19 +244,46 @@ const localizedServiceOverrides: Record<string, Partial<Record<Locale, Localized
   },
 };
 
+export function getVendorSlug(vendor: ServiceVendor) {
+  if (vendor.slug) return vendor.slug;
+  if (vendor.id) return vendor.id;
+  return vendor.brand
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+export function getServiceBySlug(slug: string): ServiceDetail | null {
+  return servicesData[slug] || null;
+}
+
+export function getAllServiceSlugs(): string[] {
+  return Object.keys(servicesData);
+}
+
+export function getVendorByServiceAndId(serviceSlug: string, vendorId: string) {
+  const service = getServiceBySlug(serviceSlug);
+  if (!service) return null;
+  return (
+    service.vendors.find(vendor => vendor.id === vendorId || getVendorSlug(vendor) === vendorId) ||
+    null
+  );
+}
+
+export function getAllServiceVendorParams() {
+  return Object.values(servicesData).flatMap(service => {
+    const uniqueVendors = Array.from(
+      new Map(service.vendors.map(vendor => [getVendorSlug(vendor), vendor])).values(),
+    );
+    return uniqueVendors.map(vendor => ({
+      serviceSlug: service.slug,
+      vendorId: getVendorSlug(vendor),
+    }));
+  });
+}
+
 export function getLocalizedServiceContent(slug: string, locale: Locale): LocalizedServiceContent {
   const service = servicesData[slug];
-
-  if (!service) {
-    return {
-      title: '',
-      description: '',
-      deliveryTime: '',
-      features: [],
-      categories: [],
-    };
-  }
-
   const override = localizedServiceOverrides[slug]?.[locale];
 
   return {
@@ -258,6 +292,37 @@ export function getLocalizedServiceContent(slug: string, locale: Locale): Locali
     deliveryTime: override?.deliveryTime ?? service.deliveryTime,
     features: override?.features ?? service.features,
     categories: override?.categories ?? service.categories,
+  };
+}
+
+export function getLocalizedVendorContent(serviceSlug: string, vendor: ServiceVendor, locale: Locale): LocalizedVendorContent {
+  if (locale === 'fr') {
+    return {
+      name: vendor.name,
+      brand: vendor.brand,
+      description: vendor.description,
+      logoAlt: vendor.logoAlt || `${vendor.brand} brand logo`,
+    };
+  }
+
+  const brandName = vendor.brand || vendor.name;
+  const descriptionBySlug: Record<string, string> = {
+    restaurants: `Fast and reliable ${brandName} delivery in Marrakech for your home, office, hotel or riad.`,
+    pharmacies: `Reliable ${brandName} delivery in Marrakech for medicines and everyday health essentials.`,
+    supermarkets: `Convenient ${brandName} delivery in Marrakech for groceries and daily essentials.`,
+    fleurs: `Elegant ${brandName} delivery in Marrakech with fresh flowers and bouquets for every occasion.`,
+    cosmetics: `Fast ${brandName} delivery in Marrakech for beauty products and everyday care essentials.`,
+    shopping: `Practical ${brandName} delivery in Marrakech for shopping and everyday purchases.`,
+    colis: `Reliable ${brandName} delivery in Marrakech for parcels, documents and urgent shipments.`,
+    documents: `Secure ${brandName} delivery in Marrakech for documents, papers and important files.`,
+    boulangerie: `Fresh ${brandName} delivery in Marrakech for bread, pastries and bakery treats.`,
+  };
+
+  return {
+    name: `${brandName} delivery in Marrakech`,
+    brand: vendor.brand,
+    description: descriptionBySlug[serviceSlug] ?? `Reliable ${brandName} service in Marrakech with fast home delivery.`,
+    logoAlt: vendor.logoAlt || `${brandName} brand logo`,
   };
 }
 
@@ -1230,7 +1295,7 @@ Notre service de livraison Quick Marrakech est disponible 24h/24 et 7j/7 afin de
         logoUrl: '/logos/cosmetic/livraison marrakech a domicile cerave.png',
         logoAlt: 'CeraVe brand logo',
         description:
-          'CeraVe propose des produits de soin enrichis en céramides pour restaurer et maintenir l appareil hydrolipidique de la peau.',
+          'CeraVe propose des produits de soin enrichis en céramides pour restaurer et maintenir lappareil hydrolipidique de la peau.',
       },
       {
         id: 'kiko-milano',
@@ -1697,40 +1762,3 @@ vendors: [
   },
 };
 
-export function getVendorSlug(vendor: ServiceVendor) {
-  if (vendor.slug) return vendor.slug;
-  if (vendor.id) return vendor.id;
-  return vendor.brand
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-}
-
-export function getServiceBySlug(slug: string): ServiceDetail | null {
-  return servicesData[slug] || null;
-}
-
-export function getAllServiceSlugs(): string[] {
-  return Object.keys(servicesData);
-}
-
-export function getVendorByServiceAndId(serviceSlug: string, vendorId: string) {
-  const service = getServiceBySlug(serviceSlug);
-  if (!service) return null;
-  return (
-    service.vendors.find(vendor => vendor.id === vendorId || getVendorSlug(vendor) === vendorId) ||
-    null
-  );
-}
-
-export function getAllServiceVendorParams() {
-  return Object.values(servicesData).flatMap(service => {
-    const uniqueVendors = Array.from(
-      new Map(service.vendors.map(vendor => [getVendorSlug(vendor), vendor])).values(),
-    );
-    return uniqueVendors.map(vendor => ({
-      serviceSlug: service.slug,
-      vendorId: getVendorSlug(vendor),
-    }));
-  });
-}

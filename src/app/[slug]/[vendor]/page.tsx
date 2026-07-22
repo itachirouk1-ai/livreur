@@ -6,7 +6,7 @@ import { connection } from 'next/server';
 
 import { Header } from '@/components/sections/header';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
-import { getServiceBySlug, getVendorByServiceAndId } from '@/lib/services-data';
+import { getLocalizedServiceContent, getLocalizedVendorContent, getServiceBySlug, getVendorByServiceAndId } from '@/lib/services-data';
 import { contactLinks, getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
@@ -48,6 +48,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
   const copy = siteContent[locale];
   const service = getServiceBySlug(slug);
   const vendorData = getVendorByServiceAndId(slug, vendor);
+  const localizedService = service ? getLocalizedServiceContent(service.slug, locale) : null;
 
   if (!service || !vendorData) {
     notFound();
@@ -59,11 +60,11 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
       <Breadcrumb
         items={[
           {
-            label: service.title,
+            label: localizedService?.title || service.title,
             href: `/${slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
           },
           {
-            label: vendorData.brand,
+            label: getLocalizedVendorContent(slug, vendorData, locale).brand,
             href: `/${slug}/${vendor}${locale !== 'fr' ? `?lang=${locale}` : ''}`,
           },
         ]}
@@ -76,7 +77,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                   <div className="flex items-center rounded-3xl bg-slate-50 p-2 shadow-sm dark:bg-slate-900 sm:p-2">
                 <div className='text-center w-full lg:text-center'>
                   <p className="text-lg font-semibold text-slate-900 dark:text-white">
-                  {vendorData.name}
+                  {getLocalizedVendorContent(slug, vendorData, locale).name}
                 </p>
               </div>
             </div>
@@ -90,7 +91,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                 <div className="rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-900 relative h-72">
                   <Image
                     src={vendorData.logoUrl ?? '/logos/applogo.png'}
-                    alt={vendorData.logoAlt ?? vendorData.brand}
+                    alt={getLocalizedVendorContent(slug, vendorData, locale).logoAlt ?? vendorData.brand}
                     fill
                     className="object-cover"
                     
@@ -112,7 +113,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                 <div>
                   
                   <p className="text-xl font-semibold text-slate-900 dark:text-white">
-                    {vendorData.brand}
+                    {getLocalizedVendorContent(slug, vendorData, locale).brand}
                   </p>
                 </div>
               </div>
@@ -122,7 +123,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                   {copy.aboutLabel}
                 </h2>
                 <p className="whitespace-pre-line mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                  {vendorData.description}
+                  {getLocalizedVendorContent(slug, vendorData, locale).description}
                 </p>
               </div>
             </div>

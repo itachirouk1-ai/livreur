@@ -15,7 +15,7 @@ export function ReviewsSection() {
       <div className="mx-auto max-w-7xl px-4">
         {/* Title */}
         <div className="mx-auto mb-3 max-w-3xl text-center">
-          <span className="inline-flex items-center rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
+          <span className="inline-flex items-center rounded-full border border-red-500/20 bg-red-500/10 px-4 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
             {copy.reviewsBadge}
           </span>
 
