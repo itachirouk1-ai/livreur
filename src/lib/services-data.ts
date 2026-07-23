@@ -306,18 +306,34 @@ export function getLocalizedVendorContent(serviceSlug: string, vendor: ServiceVe
   }
 
   const brandName = vendor.brand || vendor.name;
-  const descriptionBySlug: Record<string, string> = {
-    restaurants: `Fast and reliable ${brandName} delivery in Marrakech for your home, office, hotel or riad.`,
-    pharmacies: `Reliable ${brandName} delivery in Marrakech for medicines and everyday health essentials.`,
-    supermarkets: `Convenient ${brandName} delivery in Marrakech for groceries and daily essentials.`,
-    fleurs: `Elegant ${brandName} delivery in Marrakech with fresh flowers and bouquets for every occasion.`,
-    cosmetics: `Fast ${brandName} delivery in Marrakech for beauty products and everyday care essentials.`,
-    shopping: `Practical ${brandName} delivery in Marrakech for shopping and everyday purchases.`,
-    colis: `Reliable ${brandName} delivery in Marrakech for parcels, documents and urgent shipments.`,
-    documents: `Secure ${brandName} delivery in Marrakech for documents, papers and important files.`,
-    boulangerie: `Fresh ${brandName} delivery in Marrakech for bread, pastries and bakery treats.`,
-  };
+const descriptionBySlug: Record<string, string> = {
+  restaurants:
+    `Looking for restaurant delivery in Marrakech? ${brandName} offers fast food delivery from McDonald's, KFC, Burger King, Pizza Hut, Domino's, local restaurants and more. Reliable home delivery available 24/7 anywhere in Marrakech.`,
 
+  pharmacies:
+    `Need pharmacy delivery in Marrakech? ${brandName} delivers medicines, health products, prescriptions and pharmacy essentials quickly to your home, hotel or office anywhere in Marrakech.`,
+
+  supermarkets:
+    `Order groceries online with ${brandName}. Fast supermarket delivery in Marrakech for Carrefour, Marjane, BIM, Aswak Salam and local grocery stores with reliable home delivery.`,
+
+  fleurs:
+    `Flower delivery in Marrakech made easy with ${brandName}. Send fresh flowers, roses and bouquets for birthdays, weddings, anniversaries and special occasions anywhere in the city.`,
+
+  cosmetics:
+    `Beauty and cosmetics delivery in Marrakech. ${brandName} delivers makeup, skincare, perfumes and personal care products quickly to your home, hotel or office.`,
+
+  shopping:
+    `Shopping delivery in Marrakech for clothing, electronics, gifts and local stores. ${brandName} provides fast, reliable same-day home delivery across Marrakech.`,
+
+  colis:
+    `Parcel delivery in Marrakech for personal packages, business shipments and urgent deliveries. ${brandName} offers secure, fast and reliable courier service throughout Marrakech.`,
+
+  documents:
+    `Need document delivery in Marrakech? ${brandName} delivers contracts, passports, official papers and important documents safely with a trusted courier service.`,
+
+  boulangerie:
+    `Bakery delivery in Marrakech with fresh bread, pastries, croissants, cakes and baked goods delivered quickly from the best bakeries to your doorstep.`,
+};
   return {
     name: `${brandName} delivery in Marrakech`,
     brand: vendor.brand,
@@ -372,7 +388,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     vendors: [
   {
     id: 'mcdonalds',
-    name: 'livraison mcdonalds marrakech',
+    name: 'mcdonalds marrakech',
     brand: "McDonald's",
     logo: '🍟',
     logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.jfif",
@@ -383,7 +399,7 @@ export const servicesData: Record<string, ServiceDetail> = {
 
   {
     id: 'kfc',
-    name: 'Livraison KFC marrakech',
+    name: ' KFC marrakech',
     brand: 'KFC',
     logo: '🍗',
     logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.png',

@@ -190,11 +190,18 @@ export const contactLinks = {
   phone: 'tel:+212633115090',
 };
 
-export function getLocaleFromQuery(queryString?: string | null): Locale {
-  const params = new URLSearchParams(queryString ?? '');
-  return params.get('lang')?.toLowerCase() === 'en' ? 'en' : 'fr';
-}
+export function getLocaleFromQuery(value?: string | null): Locale {
+  if (!value) return "fr";
 
+  // Ila ja direct "en" wla "fr"
+  if (value === "en" || value === "fr") {
+    return value;
+  }
+
+  // Ila ja query string b7al "lang=en"
+  const params = new URLSearchParams(value);
+  return params.get("lang")?.toLowerCase() === "en" ? "en" : "fr";
+}
 export function getLocaleFromSearchParams(searchParams?: URLSearchParams | null): Locale {
   return getLocaleFromQuery(searchParams?.toString());
 }

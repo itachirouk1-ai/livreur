@@ -12,6 +12,7 @@ import { MobileMenu } from '@/components/ui/mobile-menu';
 import { DesktopNavigation } from '@/components/ui/desktop-navigation';
 import { getLocalizedServiceContent, getLocalizedVendorContent, getServiceBySlug, getVendorSlug, getAllServiceSlugs } from '@/lib/services-data';
 
+
 export function Header() {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
