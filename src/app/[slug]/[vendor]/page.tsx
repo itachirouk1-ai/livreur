@@ -75,7 +75,7 @@ return (
       showBack
     />
 
-    <main className="px-3 pb-1 pt-1 sm:px-3 lg:px-3 lg:pt-3">
+    <main className="px-2 pb-1 pt-1 sm:px-2 lg:px-2 lg:pt-2">
       <section className="grid gap-1">
         <div className="mx-auto w-full max-w-6xl space-y-8">
           <div>
@@ -111,7 +111,7 @@ return (
           </div>
 
           {/* About */}
-          <div className="space-y-4 rounded-[32px] border border-slate-200/80 bg-white p-4 shadow-lg dark:border-slate-800/80 dark:bg-slate-950/70">
+          <div className="space-y-1 rounded-[32px] border border-slate-200/80 bg-white p-2 shadow-lg dark:border-slate-800/80 dark:bg-slate-950/70">
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-100 text-3xl dark:bg-slate-900">
                 {vendorData.logo}
@@ -137,19 +137,16 @@ return (
 {vendorSeo?.sections?.map((section, index) => (
   <article
     key={section.title}
-    className="group relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-950"
+    className="group relative overflow-hidden rounded-3xl bg-white p-1 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-950"
   >
-    <span className="absolute right-6 top-5 text-6xl font-black text-slate-100 dark:text-slate-800">
-      {String(index + 1).padStart(2, "0")}
-    </span>
-
-    <div className="mb-6 h-1.5 w-16 rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 transition-all duration-500 group-hover:w-28" />
+   
 
     <h3 className="relative z-10 text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
       {section.title}
     </h3>
+    <div className=" h-1.5 w-16 rounded-full bg-gradient-to-r from-green-600 via-green-300 to-white-100 transition-all duration-500 group-hover:w-28" />
 
-    <p className="relative z-10 mt-5 whitespace-pre-line text-[15px] leading-8 text-slate-600 dark:text-slate-300">
+    <p className="relative z-10 whitespace-pre-line text-[15px] leading-8 text-slate-600 dark:text-slate-300">
       {section.content}
     </p>
   </article>

@@ -63,7 +63,7 @@ export const siteContent: Record<
   }
 > = {
   fr: {
-    brandName: 'MARRAKECH LIVREUR',
+    brandName: 'LIVREUR MARRAKECH',
     heroBadge: 'Disponible 24/7',
     heroTitleLine1: 'Livraison Rapide à Marrakech',
     heroDescription:
@@ -82,7 +82,7 @@ export const siteContent: Record<
       'Découvrez les boutiques et services les plus demandés à Marrakech, de la fleuristerie au marché local en passant par les pharmacies.',
     seeVendorPage: 'Voir la page',
     backToService: 'Retour au service',
-    serviceLabel: 'Service',
+    serviceLabel: '',
     estimatedDeliveryTime: 'Temps de livraison estimé',
     
     vendorBrand: 'Marque',
@@ -123,7 +123,7 @@ export const siteContent: Record<
     footerCopyright: '© 2026 Marrakech Livreur. Tous droits réservés.',
   },
   en: {
-    brandName: 'MARRAKECH LIVREUR',
+    brandName: 'LIVREUR MARRAKECH',
     heroBadge: 'Available 24/7',
     heroTitleLine1: 'Fast Delivery in Marrakech',
     
@@ -143,7 +143,7 @@ export const siteContent: Record<
       'Discover the most requested shops and services in Marrakech, from flower boutiques to local markets and pharmacies.',
     seeVendorPage: 'View page',
     backToService: 'Back to service',
-    serviceLabel: 'Service',
+    serviceLabel: '',
     estimatedDeliveryTime: 'Estimated delivery time',
     
     vendorBrand: 'Brand',

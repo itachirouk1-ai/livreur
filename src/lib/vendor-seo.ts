@@ -7,75 +7,73 @@ export function getVendorSEOContent(
   locale: Locale = "fr"
 ) {
   switch (serviceSlug) {
-    case "pharmacies":
-      return {
-        heading: `Livraison ${vendor.name} à Marrakech`,
-        sections: [
-          {
-            title: `Livraison ${vendor.name}`,
-            content: `Vous recherchez une livraison ${vendor.name} rapide à Marrakech ? Livreur Marrakech assure la livraison de médicaments, produits de parapharmacie et produits de santé directement depuis ${vendor.name} jusqu'à votre domicile.`,
-          },
-          {
-            title: "Médicaments et produits disponibles",
-            content: `Nous livrons les médicaments, vitamines, produits bébé, matériel médical, produits d'hygiène, parapharmacie et bien plus encore.`,
-          },
-          {
-            title: "Pourquoi choisir Livreur Marrakech ?",
-            content: `Livraison rapide, disponible 24h/24, commande par WhatsApp et service professionnel partout à Marrakech.`,
-          },
-          {
-            title: "Zones desservies",
-            content: `Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Médina et tous les quartiers de Marrakech.`,
-          },
-        ],
-      };
-
     case "restaurants":
-      return {
-        heading: `Livraison ${vendor.name} à Marrakech`,
-        sections: [
-          {
-            title: `Livraison ${vendor.name} à domicile`,
-            content: `Vous recherchez une livraison ${vendor.name} à Marrakech ? Livreur Marrakech récupère votre commande directement chez ${vendor.name} et assure une livraison rapide à domicile, au bureau, à l'hôtel ou au riad. Notre service de livraison de restaurant à Marrakech est disponible 24h/24 et couvre tous les quartiers de la ville.`,
-          },
-          {
-            title: `Menu ${vendor.name} livré partout à Marrakech`,
-            content: `Commandez facilement vos burgers, pizzas, tacos, sandwiches, salades, desserts, boissons et toutes les spécialités proposées par ${vendor.name}. Nous assurons une livraison rapide afin que vos repas arrivent chauds, frais et prêts à être dégustés.`,
-          },
-          {
-            title: "Pourquoi choisir Livreur Marrakech ?",
-            content: `Profitez d'un service de livraison restaurant Marrakech rapide, fiable et professionnel. Commande simple via WhatsApp, livraison 24h/24, suivi rapide et intervention dans toute la ville de Marrakech.`,
-          },
-          {
-            title: "Quartiers desservis",
-            content: `Nous livrons ${vendor.name} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, Palmeraie, Route de Casablanca, Route de l'Ourika, Médina, Semlalia et dans tous les quartiers de Marrakech.`,
-          },
-        ],
-      };
-
+  return {
+    heading: `🍔 Livraison ${vendor.name} à Marrakech`,
+    sections: [
+      {
+        title: `🛵 Livraison ${vendor.name} à domicile`,
+        content: `Envie d'un bon repas ? 🍽️ Livreur Marrakech récupère votre commande directement chez ${vendor.name} et assure une livraison rapide à domicile, au bureau, à l'hôtel ou au riad. Notre service de livraison de repas est disponible 24h/24 pour satisfaire toutes vos envies.`,
+      },
+      {
+        title: `Ce que nous vous livrons depuis ${vendor.name} :`,
+        content: `🍔 Burgers, pizzas, tacos et plats rapides\n🥗 Salades, plats traditionnels et spécialités\n🍰 Desserts et gourmandises\n🥤 Boissons fraîches`,
+      },
+      {
+        title: "⭐ Pourquoi choisir notre service ?",
+        content: `⚡ Livraison express pour que vos repas arrivent bien chauds\n🕒 Service disponible 24h/24 (idéal pour la nuit)\n📲 Commande simple et directe via WhatsApp\n🤝 Suivi de commande et service professionnel`,
+      },
+      {
+        title: "📍 Quartiers desservis à Marrakech",
+        content: `Nous livrons rapidement à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, la Palmeraie, Route de Casablanca, Route de l'Ourika, la Médina, Semlalia et dans tous les quartiers de la ville ocre.`,
+      },
+    ],
+  };
+case "pharmacies":
+  return {
+    heading: `💊 Livraison Pharmacie ${vendor.name} à Marrakech`,
+    sections: [
+      {
+          
+          title: `🛵 Service de livraison ${vendor.name}`,
+          content: `Besoin d'un médicament en urgence ? 🏥 Notre service assure une livraison rapide et sécurisée depuis la pharmacie ${vendor.name} directement à votre domicile. Un service idéal pour vos urgences de nuit ou vos besoins quotidiens.`,
+        },
+      {
+        title: "Ce que nous vous livrons :",
+        content: `💊 Médicaments (avec ou sans ordonnance)\n🩹 Produits de parapharmacie et soins\n👶 Lait et produits pour bébé\n🩺 Matériel de premiers secours`,
+      },
+      {
+        title: "⭐ Pourquoi nous choisir ?",
+        content: `⚡ Livraison express partout à Marrakech\n🕒 Service de garde disponible 24h/24\n📲 Commande simple et rapide via WhatsApp\n🤝 Discrétion totale et professionnalisme`,
+      },
+      {
+        title: "📍 Zones desservies à Marrakech",
+        content: `Nous livrons rapidement à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, M'Hamid, la Médina et tous les autres quartiers.`,
+      },
+    ],
+  };
     case "supermarkets":
-      return {
-        heading: `Livraison ${vendor.brand} à Marrakech`,
-        sections: [
-          {
-            title: `Livraison ${vendor.brand} à domicile`,
-            content: `Besoin d'une livraison ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos courses directement chez ${vendor.brand} et les livre rapidement à votre domicile, bureau ou hôtel partout à Marrakech.`,
-          },
-          {
-            title: `Produits disponibles chez ${vendor.brand}`,
-            content: `Nous pouvons livrer des fruits et légumes, viandes, produits laitiers, boissons, produits surgelés, produits ménagers, snacks, articles pour bébé, produits d'hygiène ainsi que tous les articles disponibles chez ${vendor.brand}.`,
-          },
-          {
-            title: "Pourquoi choisir Livreur Marrakech ?",
-            content: `Profitez d'un service de livraison rapide, disponible 24h/24 et 7j/7. Commandez facilement via WhatsApp, évitez les déplacements et recevez vos courses en toute sécurité où que vous soyez à Marrakech.`,
-          },
-          {
-            title: "Quartiers desservis à Marrakech",
-            content: `Nous assurons la livraison ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, Médina, Palmeraie et dans tous les quartiers de Marrakech.`,
-          },
-        ],
-      };
-      case "fleurs":
+  return {
+    heading: `🛒 Livraison ${vendor.brand} à Marrakech`,
+    sections: [
+      {
+        title: `🛵 Vos courses ${vendor.brand} livrées à domicile`,
+        content: `Pas le temps de faire les courses ? 🛍️ Livreur Marrakech récupère vos achats directement chez ${vendor.brand} et vous les livre rapidement à domicile, au bureau ou à l'hôtel. Évitez les files d'attente et recevez vos produits sans avoir à vous déplacer.`,
+      },
+      {
+        title: `Ce que nous vous livrons depuis ${vendor.brand} :`,
+        content: `🍎 Fruits et légumes frais\n🥩 Viandes, volailles et produits laitiers\n🥤 Boissons, snacks et produits surgelés\n🧼 Produits ménagers, d'hygiène et articles pour bébé`,
+      },
+      {
+        title: "⭐ Pourquoi choisir notre service ?",
+        content: `⚡ Livraison rapide et soignée de vos courses\n🕒 Service disponible 24h/24 et 7j/7\n📲 Commande simple avec une simple liste sur WhatsApp\n🤝 Gain de temps absolu et confort garanti`,
+      },
+      {
+        title: "📍 Quartiers desservis à Marrakech",
+        content: `Nous livrons vos achats dans un délai record à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, la Médina, la Palmeraie et dans tous les quartiers de la ville ocre.`,
+      },
+    ],
+  };case "fleurs":
   return {
     heading: `Livraison ${vendor.brand} à Marrakech`,
     sections: [
@@ -96,73 +94,72 @@ export function getVendorSEOContent(
         content: `Nous assurons la livraison ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, M'Hamid, Palmeraie, Médina, Route de Casablanca, Route de l'Ourika et dans tous les quartiers de Marrakech.`,
       },
     ],
-  };case "cosmetics":
+  };
+  case "cosmetics":
   return {
-    heading: `Livraison ${vendor.brand} à Marrakech`,
+    heading: `✨ Livraison de cosmétiques ${vendor.brand} à Marrakech`,
     sections: [
       {
-        title: `Livraison ${vendor.brand} à domicile`,
-        content: `Vous recherchez une livraison ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos produits de beauté, cosmétiques et soins directement chez ${vendor.brand} et les livre rapidement à votre domicile, bureau ou hôtel partout à Marrakech.`,
+        title: `🛵 Vos produits de beauté ${vendor.brand} à domicile`,
+        content: `Besoin de vos produits de beauté préférés rapidement ? 🌸 Livreur Marrakech récupère vos commandes directement chez ${vendor.brand} et vous les livre en un clin d'œil à domicile, au bureau ou à l'hôtel. Prenez soin de vous sans avoir à vous déplacer.`,
       },
       {
-        title: `Produits ${vendor.brand} disponibles`,
-        content: `Nous livrons les soins du visage, soins du corps, produits dermatologiques, maquillage, parfums, soins capillaires, produits d'hygiène, protections solaires, soins anti-âge et tous les articles proposés par ${vendor.brand}.`,
+        title: `Gamme de soins et produits ${vendor.brand} :`,
+        content: `✨ Maquillage, parfums et soins du visage\n🌿 Crèmes naturelles, capsules de bien-être et produits à base d'herbes\n💆‍♀️ Soins capillaires (soins leave-in, kératine et huiles)\n☀️ Protections solaires, soins dermatologiques et anti-âge`,
       },
       {
-        title: `Pourquoi choisir Livreur Marrakech ?`,
-        content: `Profitez d'une livraison rapide de cosmétiques à Marrakech, disponible 24h/24 et 7j/7. Commandez facilement par WhatsApp et recevez vos produits de beauté en toute sécurité, sans avoir à vous déplacer.`,
+        title: "⭐ Pourquoi faire appel à nos coursiers ?",
+        content: `⚡ Livraison express pour recevoir vos articles de beauté rapidement\n🕒 Service disponible 24h/24 et 7j/7\n📲 Commande simple via WhatsApp pour un gain de temps\n🤝 Transport soigné pour protéger vos produits délicats`,
       },
       {
-        title: `Livraison dans tous les quartiers de Marrakech`,
-        content: `Nous livrons ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, M'Hamid, Palmeraie, Route de Casablanca, Route de l'Ourika, Médina et dans tous les quartiers de Marrakech.`,
+        title: "📍 Tous les quartiers de Marrakech couverts",
+        content: `Nous livrons vos cosmétiques à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, M'Hamid, la Palmeraie, Route de Casablanca, Route de l'Ourika, la Médina et dans l'ensemble de la ville ocre.`,
       },
     ],
-  };
-  case "shopping":
-  return {
-    heading: `Livraison ${vendor.brand} à Marrakech`,
-    sections: [
-      {
-        title: `Livraison ${vendor.brand} à domicile`,
-        content: `Vous recherchez une livraison ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos achats directement chez ${vendor.brand} et les livre rapidement à votre domicile, bureau, hôtel ou riad partout à Marrakech.`,
-      },
-      {
-        title: `Produits disponibles chez ${vendor.brand}`,
-        content: `Nous pouvons livrer des vêtements, chaussures, sacs, accessoires de mode, produits de beauté, articles high-tech, électronique, décoration, articles pour la maison, équipements de sport, jouets, cadeaux et tous les produits disponibles chez ${vendor.brand}.`,
-      },
-      {
-        title: `Pourquoi choisir Livreur Marrakech ?`,
-        content: `Profitez d'un service de livraison shopping rapide, fiable et disponible 24h/24 à Marrakech. Commandez facilement via WhatsApp et recevez vos achats sans perdre de temps dans les déplacements ou les files d'attente.`,
-      },
-      {
-        title: `Quartiers desservis à Marrakech`,
-        content: `Nous assurons la livraison ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, M'Hamid, Palmeraie, Route de Casablanca, Route de l'Ourika, Médina et dans tous les quartiers de Marrakech.`,
-      },
-    ],
-  };
+  }; case "shopping":
+    return {
+      heading: `Livraison ${vendor.brand} à Marrakech`,
+      sections: [
+        {
+          title: `Livraison ${vendor.brand} à domicile`,
+          content: `Vous recherchez une livraison ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos achats directement chez ${vendor.brand} et les livre rapidement à votre domicile, bureau, hôtel ou riad partout à Marrakech.`,
+        },
+        {
+          title: `Produits disponibles chez ${vendor.brand}`,
+          content: `Nous pouvons livrer des vêtements, chaussures, sacs, accessoires de mode, produits de beauté, articles high-tech, électronique, décoration, articles pour la maison, équipements de sport, jouets, cadeaux et tous les produits disponibles chez ${vendor.brand}.`,
+        },
+        {
+          title: `Pourquoi choisir Livreur Marrakech ?`,
+          content: `Profitez d'un service de livraison shopping rapide, fiable et disponible 24h/24 à Marrakech. Commandez facilement via WhatsApp et recevez vos achats sans perdre de temps dans les déplacements ou les files d'attente.`,
+        },
+        {
+          title: `Quartiers desservis à Marrakech`,
+          content: `Nous assurons la livraison ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, Sidi Ghanem, M'Hamid, Palmeraie, Route de Casablanca, Route de l'Ourika, Médina et dans tous les quartiers de Marrakech.`,
+        },
+      ],
+    };
   case "colis":
   return {
-    heading: `Livraison ${vendor.brand} à Marrakech`,
+    heading: `📦 Livraison de colis et documents ${vendor.brand} à Marrakech`,
     sections: [
       {
-        title: `Livraison ${vendor.brand} de colis et documents`,
-        content: `Vous recherchez une livraison ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos colis, documents et paquets directement chez ${vendor.brand} et assure une livraison rapide à domicile, au bureau, à l'hôtel ou à toute autre adresse à Marrakech.`,
+        title: `🛵 Expédition et livraison ${vendor.brand}`,
+        content: `Besoin d'envoyer ou de recevoir un colis en urgence ? 📦 Livreur Marrakech récupère vos paquets, documents et envois directement chez ${vendor.brand} et assure une livraison rapide et sécurisée à domicile, au bureau, ou à l'adresse de votre choix à Marrakech.`,
       },
       {
-        title: `Quels types de colis livrons-nous ?`,
-        content: `Nous livrons des documents importants, petits colis, colis standards, colis fragiles, cadeaux, commandes e-commerce, pièces détachées, équipements professionnels ainsi que tout autre envoi disponible chez ${vendor.brand}.`,
+        title: `Ce que nous transportons et livrons :`,
+        content: `📄 Documents administratifs, contrats et courriers sensibles\n📦 Petits colis, paquets et commandes e-commerce\n🎁 Cadeaux et envois spéciaux pour vos proches\n⚙️ Pièces détachées et équipements professionnels`,
       },
       {
-        title: `Pourquoi choisir Livreur Marrakech ?`,
-        content: `Notre service de livraison de colis à Marrakech est rapide, fiable et disponible 24h/24 et 7j/7. Commandez facilement via WhatsApp et bénéficiez d'une livraison sécurisée dans tous les quartiers de Marrakech.`,
+        title: "⭐ Pourquoi faire confiance à nos coursiers ?",
+        content: `⚡ Rapidité d'exécution pour respecter vos délais\n🕒 Service de livraison disponible 24h/24 et 7j/7\n📲 Commande et suivi simples via WhatsApp\n🤝 Sécurité, discrétion et manipulation soignée de vos biens`,
       },
       {
-        title: `Zones de livraison à Marrakech`,
-        content: `Nous assurons la livraison ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, Route de Casablanca, Route de l'Ourika, Palmeraie, Médina, Semlalia ainsi que dans tous les quartiers de Marrakech.`,
+        title: "📍 Quartiers desservis à Marrakech",
+        content: `Nous assurons la livraison de vos colis à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, la Palmeraie, Route de Casablanca, Route de l'Ourika, la Médina, Semlalia et dans toute la ville ocre.`,
       },
     ],
-  };
-  case "documents":
+  };case "documents":
   return {
     heading: `Livraison ${vendor.brand} à Marrakech`,
     sections: [
@@ -186,27 +183,26 @@ export function getVendorSEOContent(
   };
   case "boulangerie":
   return {
-    heading: `Livraison ${vendor.brand} à Marrakech`,
+    heading: `🥐 Livraison boulangerie et pâtisserie ${vendor.brand} à Marrakech`,
     sections: [
       {
-        title: `Livraison ${vendor.brand} à domicile`,
-        content: `Envie de commander chez ${vendor.brand} à Marrakech ? Livreur Marrakech récupère vos commandes directement chez ${vendor.brand} et les livre rapidement à votre domicile, bureau, hôtel ou riad. Profitez d'une livraison de boulangerie rapide partout à Marrakech.`,
+        title: `🛵 Pain frais et viennoiseries ${vendor.brand}`,
+        content: `Envie de savourer du pain chaud ou des viennoiseries tout juste sortis du four ? 🥖 Livreur Marrakech récupère votre commande directement chez ${vendor.brand} et vous la livre rapidement à domicile, au bureau, à l'hôtel ou au riad pour commencer la journée du bon pied.`,
       },
       {
-        title: `Produits disponibles chez ${vendor.brand}`,
-        content: `Nous livrons tous les produits disponibles chez ${vendor.brand} : pains artisanaux, baguettes, croissants, viennoiseries, pâtisseries, gâteaux, tartes, macarons, sandwiches, cafés, boissons, petits-déjeuners et autres spécialités de boulangerie.`,
+        title: `Ce que nous vous livrons depuis ${vendor.brand} :`,
+        content: `🥖 Pains artisanaux, baguettes croustillantes et pains spéciaux\n🥐 Croissants, pains au chocolat et viennoiseries dorées\n🎂 Pâtisseries fines, gâteaux d'anniversaire, tartes et macarons\n☕ Sandwiches, cafés, boissons et formules petit-déjeuner`,
       },
       {
-        title: `Pourquoi choisir Livreur Marrakech ?`,
-        content: `Notre service assure une livraison rapide, fiable et professionnelle de vos produits de boulangerie partout à Marrakech. Commande simple via WhatsApp, disponibilité 24h/24 et livraison de produits frais directement chez vous.`,
+        title: "⭐ Pourquoi choisir notre service ?",
+        content: `⚡ Livraison express pour que vos produits arrivent frais et croustillants\n🕒 Service idéal pour vos petits-déjeuners et pauses gourmandes\n📲 Commande simple et rapide via WhatsApp\n🤝 Soin particulier apporté pour transporter vos pâtisseries délicates`,
       },
       {
-        title: `Zones desservies`,
-        content: `Nous livrons ${vendor.brand} à Guéliz, Hivernage, Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, Route de Casablanca, Route de l'Ourika, Médina, Semlalia, Palmeraie ainsi que dans tous les quartiers de Marrakech.`,
+        title: "📍 Quartiers desservis à Marrakech",
+        content: `Nous livrons ${vendor.brand} rapidement à : Guéliz, l'Hivernage, l'Agdal, Massira, Daoudiate, Targa, M'Hamid, Sidi Ghanem, Route de Casablanca, Route de l'Ourika, la Médina, Semlalia, la Palmeraie et dans tous les quartiers de la ville ocre.`,
       },
     ],
-  };
-    default:
+  };default:
       return null;
   }
 }
