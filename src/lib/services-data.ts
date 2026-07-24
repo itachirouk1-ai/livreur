@@ -413,7 +413,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison burger king marrakech',
     brand: 'Burger King',
     logo: '👑',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile  burger king.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-burger-king.webp',
     logoAlt: 'Burger King brand logo',
     description:
       "Livraison Burger King Marrakech à domicile avec Livreur Marrakech. Commandez vos Whoppers, burgers, frites, menus et boissons Burger King avec une livraison rapide et fiable. Votre commande est récupérée directement au restaurant puis livrée chaude à votre domicile, bureau, hôtel ou riad partout à Marrakech."
@@ -424,7 +424,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison Domino\'s Pizza marrakech',
     brand: "Domino's",
     logo: '🍕',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile  Domino\'s.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-Domino_s.webp',
     logoAlt: "Domino's brand logo",
     description:
       "Livraison Domino's Pizza Marrakech rapide à domicile avec Livreur Marrakech. Savourez vos pizzas Domino's, Chicken Wings, desserts et boissons livrés directement chez vous. Notre service de livraison restaurant Marrakech assure une commande chaude et rapide à domicile, au bureau, à l'hôtel ou au riad."
