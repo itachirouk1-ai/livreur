@@ -677,7 +677,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'Livraison Aswak Assalam Marrakech',
     brand: 'Aswak Assalam',
     logo: '🏪',
-    logoUrl: '/logos/supermarkets/livraison marrakech a domicile aswak-assalam.png',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile aswak-assalam.webp',
     logoAlt: 'Aswak Assalam brand logo',
     description:
       "Livraison Aswak Assalam Marrakech à domicile avec Livreur Marrakech. Commandez vos courses, produits alimentaires, produits frais, boissons et essentiels de la maison sans vous déplacer. Nous récupérons vos achats chez Aswak Assalam et assurons une livraison rapide partout à Marrakech, à domicile, au bureau, à l'hôtel ou au riad.",
@@ -688,7 +688,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'Livraison BIM Marrakech',
     brand: 'BIM',
     logo: '🛒',
-    logoUrl: '/logos/supermarkets/livraison marrakech a domicile bim.png',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile bim.webp',
     logoAlt: 'BIM brand logo',
     description:
       "Livraison BIM Marrakech rapide avec Livreur Marrakech. Profitez de vos courses du quotidien, produits alimentaires, boissons, produits ménagers et promotions BIM livrés directement chez vous. Notre service de livraison supermarché Marrakech vous permet de faire vos achats facilement sans déplacement.",
@@ -699,7 +699,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'Livraison Carrefour Marrakech',
     brand: 'Carrefour',
     logo: '🛍️',
-    logoUrl: '/logos/supermarkets/livraison marrakech a domicile carrefour.png',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile carrefour.webp',
     logoAlt: 'Carrefour brand logo',
     description:
       "Livraison Carrefour Marrakech à domicile avec Livreur Marrakech. Commandez vos produits alimentaires, fruits et légumes, boissons, produits d'entretien et articles du quotidien. Nous récupérons vos courses chez Carrefour et nous les livrons rapidement partout à Marrakech.",
@@ -710,7 +710,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'Livraison Label Vie Marrakech',
     brand: 'Label Vie',
     logo: '🧺',
-    logoUrl: '/logos/supermarkets/livraison marrakech a domicile label-vie.png',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile label-vie.webp',
     logoAlt: 'Label Vie brand logo',
     description:
       "Livraison Label Vie Marrakech rapide avec Livreur Marrakech. Retrouvez vos courses, produits frais, alimentation, boissons et produits essentiels livrés à domicile. Service pratique pour particuliers, familles, bureaux, hôtels et riads partout à Marrakech.",
@@ -721,7 +721,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'Livraison Marjane Marrakech',
     brand: 'Marjane',
     logo: '🏬',
-    logoUrl: '/logos/supermarkets/livraison marrakech a domicile marjane.png',
+    logoUrl: '/logos/supermarkets/livraison marrakech a domicile marjane.webp',
     logoAlt: 'Marjane brand logo',
     description:
       "Livraison Marjane Marrakech à domicile avec Livreur Marrakech. Faites vos courses facilement et recevez vos produits alimentaires, boissons, produits d'hygiène, entretien maison et articles du quotidien rapidement chez vous. Notre service assure une livraison supermarché fiable partout à Marrakech.",
@@ -1005,7 +1005,7 @@ vendors: [
     name: 'Livraison Carré Eden Shopping Center Marrakech',
     brand: 'Carré Eden Shopping Center',
     logo: '🛍️',
-    logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER .png',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile CARRE EDEN SHOPPING CENTER.webp',
     logoAlt: 'Carré Eden Shopping Center brand logo',
     description:
       "Livraison Carré Eden Marrakech à domicile avec un service rapide pour vos achats shopping, mode, beauté, accessoires, restaurants et boutiques du centre commercial. Livreur Marrakech récupère vos commandes à Carré Eden Guéliz et vous les livre rapidement chez vous, au bureau, à l'hôtel ou au riad partout à Marrakech."
@@ -1015,7 +1015,7 @@ vendors: [
     name: 'Livraison Centre Commercial Almazar Marrakech',
     brand: 'Centre Commercial Almazar',
     logo: '🏬',
-    logoUrl: '/logos/shopping/livraison marrakech a domicile Centre Commercial Almazar.png',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile Centre Commercial Almazar.webp',
     logoAlt: 'Centre Commercial Almazar brand logo',
     description:
       "Service de livraison Centre Commercial Almazar Marrakech pour vos achats shopping, vêtements, beauté, accessoires, cadeaux et produits des boutiques du mall. Avec Livreur Marrakech, profitez d'une livraison à domicile rapide depuis Almazar vers tous les quartiers de Marrakech."
@@ -1025,7 +1025,7 @@ vendors: [
     name: 'Livraison M Avenue Marrakech',
     brand: 'M Avenue',
     logo: '🛒',
-    logoUrl: '/logos/shopping/livraison marrakech a domicile M Avenue (Hivernage).png',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile M Avenue (Hivernage).webp',
     logoAlt: 'M Avenue brand logo',
     description:
       "Livraison M Avenue Marrakech à domicile pour vos achats premium dans les boutiques, restaurants, espaces beauté et commerces de l'Hivernage. Livreur Marrakech récupère vos commandes à M Avenue et assure une livraison rapide, pratique et sécurisée partout dans la ville."
@@ -1035,20 +1035,20 @@ vendors: [
     name: 'Livraison Plaza Marrakech',
     brand: 'Plaza Marrakech',
     logo: '🛍️',
-    logoUrl: '/logos/shopping/livraison marrakech a domicile Plaza Marrakech.png',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile Plaza Marrakech.webp',
     logoAlt: 'Plaza Marrakech brand logo',
     description:
       "Livraison Plaza Marrakech rapide à domicile pour vos achats shopping, mode, accessoires, produits beauté et commandes auprès des boutiques partenaires. Notre service de livraison Marrakech vous permet de recevoir vos achats facilement chez vous, au bureau ou dans votre hôtel."
   },
   {
-    id: 'manara-mall',
-    name: 'Livraison Manara Mall Marrakech',
-    brand: 'Manara Mall',
+    id: 'menara-mall',
+    name: 'Livraison Menara Mall Marrakech',
+    brand: 'Menara Mall',
     logo: '🏬',
-    logoUrl: '/logos/shopping/livraison marrakech a domicile manara-mall.png',
-    logoAlt: 'Manara Mall brand logo',
+    logoUrl: '/logos/shopping/livraison marrakech a domicile menara-mall.webp',
+    logoAlt: 'Menara Mall brand logo',
     description:
-      "Livraison Manara Mall Marrakech à domicile pour vos achats dans les boutiques, magasins, enseignes mode, beauté et loisirs. Livreur Marrakech assure la récupération de vos commandes au centre commercial Manara Mall et une livraison rapide dans tous les quartiers de Marrakech."
+      "Livraison Menara Mall Marrakech à domicile pour vos achats dans les boutiques, magasins, enseignes mode, beauté et loisirs. Livreur Marrakech assure la récupération de vos commandes au centre commercial Menara Mall et une livraison rapide dans tous les quartiers de Marrakech."
   },
 ],
     bgGradient: 'from-amber-400 via-orange-500 to-yellow-600',
