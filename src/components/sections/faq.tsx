@@ -150,7 +150,7 @@ export default function FAQSection() {
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.25 }}
-            className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-lg"
+            className="flex h-11 w-11 items-center justify-center rounded-full shadow-lg"
           >
             <ChevronDown className="h-5 w-5" />
           </motion.div>

@@ -103,15 +103,7 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
       <main className="px-2 pb-1 pt-1 sm:px-2 lg:px-2 lg:pt-2">
         <section className="grid gap-1">
           <div className="mx-auto w-full max-w-6xl space-y-8">
-            <div>
-              <div className="flex items-center rounded-3xl bg-slate-50 p-2 shadow-sm dark:bg-slate-900 sm:p-2">
-                <div className="w-full text-center lg:text-center">
-                  <h1 className="text-lg font-semibold text-slate-900 dark:text-white">
-                    {getLocalizedVendorContent(slug, vendorData, locale).name}
-                  </h1>
-                </div>
-              </div>
-            </div>
+            
 
             {/* Hero */}
             <div className="rounded-[32px] border border-slate-200/80 bg-white p-1 shadow-lg dark:border-slate-800/80 dark:bg-slate-950/70">
@@ -143,10 +135,14 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                 </div>
 
                 <div>
-                  <p className="text-xl font-semibold text-slate-900 dark:text-white">
-                    {getLocalizedVendorContent(slug, vendorData, locale).brand}
-                  </p>
+              <div className="flex items-center rounded-3xl bg-slate-50 p-2 shadow-sm dark:bg-slate-900 sm:p-2">
+                <div className="w-full text-center lg:text-center">
+                  <h1 className="text-lg font-semibold text-slate-900 dark:text-white">
+                    {getLocalizedVendorContent(slug, vendorData, locale).name}
+                  </h1>
                 </div>
+              </div>
+            </div>
               </div>
 
               <div>
