@@ -391,7 +391,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'mcdonalds marrakech',
     brand: "McDonald's",
     logo: '🍟',
-    logoUrl: "/logos/restaurant/livraison marrakech a domicile mc Donald's.jfif",
+    logoUrl: "/logos/restaurant/livraison-marrakech-a-domicile-mc-Donald_s.webp",
     logoAlt: "McDonald's brand logo",
     description:
       "Livraison McDonald's Marrakech à domicile avec Livreur Marrakech. Commandez vos burgers, menus, frites, desserts et boissons McDonald's sans vous déplacer. Notre service récupère votre commande directement au restaurant et assure une livraison rapide chez vous, au bureau, à l'hôtel ou au riad partout à Marrakech."
@@ -402,7 +402,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: ' KFC marrakech',
     brand: 'KFC',
     logo: '🍗',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.png',
+    logoUrl: '/logos/restaurant/livraison marrakech a domicile kfc.webp',
     logoAlt: 'KFC brand logo',
     description:
       "Livraison KFC Marrakech rapide à domicile avec Livreur Marrakech. Profitez de vos buckets de poulet, Hot Wings, Tenders, Zinger Burgers et menus KFC préférés livrés directement chez vous. Nous récupérons votre commande au restaurant KFC et assurons une livraison rapide partout à Marrakech : Guéliz, Hivernage, Agdal, Massira, Médina et tous les quartiers."
@@ -435,7 +435,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison papa johns marrakech',
     brand: "Papa John's",
     logo: '🍕',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile  papa johns.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-papa-johns.webp',
     logoAlt: "Papa John's brand logo",
     description:
       "Livraison Papa John's Marrakech à domicile avec Livreur Marrakech. Commandez vos pizzas Pepperoni, Four Cheese, BBQ Chicken, menus familiaux et spécialités Papa John's. Nous récupérons votre commande directement au restaurant et assurons une livraison pizza rapide partout à Marrakech."
@@ -446,7 +446,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison tacos de lyon marrakech',
     brand: 'Tacos de Lyon',
     logo: '🌮',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile  tacos de lyon.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-tacos-de-lyon.webp',
     logoAlt: 'Tacos de Lyon brand logo',
     description:
       "Livraison Tacos de Lyon Marrakech à domicile avec Livreur Marrakech. Profitez de vos French Tacos, tacos poulet, steak, mixte, frites et menus gourmands livrés rapidement partout à Marrakech. Service disponible pour livraison à domicile, bureau, hôtel et riad."
@@ -457,7 +457,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison crusty marrakech',
     brand: 'Crusty',
     logo: '🥖',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile crusty.jfif',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-crusty.webp',
     logoAlt: 'Crusty brand logo',
     description:
       "Livraison Crusty Marrakech rapide avec Livreur Marrakech. Commandez vos burgers artisanaux, sandwichs, wraps, paninis, tacos et menus Crusty sans vous déplacer. Notre service assure une livraison restaurant rapide à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
@@ -468,7 +468,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison o\'tacos marrakech',
     brand: "O'Tacos",
     logo: '🌮',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile o\'tacos.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-o_tacos.webp',
     logoAlt: "O'Tacos brand logo",
     description:
       "Livraison O'Tacos Marrakech à domicile avec Livreur Marrakech. Retrouvez vos French Tacos, tacos steak, poulet, sauce fromagère, nuggets, frites et menus O'Tacos livrés rapidement. Commandez facilement et profitez d'une livraison fast-food Marrakech partout dans la ville."
@@ -479,7 +479,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison pizza hut marrakech',
     brand: 'Pizza Hut',
     logo: '🍕',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile pizza hut.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-pizza-hut.webp',
     logoAlt: 'Pizza Hut brand logo',
     description:
       "Livraison Pizza Hut Marrakech rapide à domicile avec Livreur Marrakech. Commandez vos pizzas, Chicken Wings, desserts, boissons et menus Pizza Hut préférés. Nous assurons une livraison pizza Marrakech chaude et rapide chez vous, au bureau, à l'hôtel ou au riad."
@@ -490,7 +490,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     name: 'livraison quick marrakech',
     brand: 'Quick',
     logo: '🍔',
-    logoUrl: '/logos/restaurant/livraison marrakech a domicile quick.png',
+    logoUrl: '/logos/restaurant/livraison-marrakech-a-domicile-quick.webp',
     logoAlt: 'Quick brand logo',
     description:
       "Livraison Quick Marrakech à domicile avec Livreur Marrakech. Profitez de vos burgers Giant, Long Chicken, wraps, frites et menus Quick livrés rapidement partout à Marrakech. Notre service de livraison fast-food vous apporte votre commande chaude directement chez vous, au bureau, à l'hôtel ou au riad."
