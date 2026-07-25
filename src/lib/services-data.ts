@@ -1100,7 +1100,7 @@ vendors: [
     name: 'livraison amana marrakech',
     brand: 'Amana',
     logo: '📦',
-    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile  amana-messagerie.png',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile  amana-messagerie.webp',
     logoAlt: 'Amana brand logo',
     description:
       "Livraison Amana Marrakech à domicile pour vos colis, courriers et documents partout dans la ville. Livreur Marrakech vous accompagne pour récupérer, envoyer ou déposer vos colis avec un service rapide et fiable vers toutes les destinations au Maroc."
@@ -1120,7 +1120,7 @@ vendors: [
     name: 'livraison dhl marrakech',
     brand: 'DHL Express',
     logo: '✈️',
-    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile dhl.jfif',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile dhl.webp',
     logoAlt: 'DHL Express brand logo',
     description:
       "Livraison DHL Express Marrakech à domicile pour colis, documents et expéditions internationales. Livreur Marrakech facilite vos envois avec un service rapide, sécurisé et adapté aux particuliers comme aux entreprises."
@@ -1130,7 +1130,7 @@ vendors: [
     name: 'livraison fedex marrakech',
     brand: 'FedEx',
     logo: '📮',
-    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile fedex.png',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile fedex.webp',
     logoAlt: 'FedEx brand logo',
     description:
       "Livraison FedEx Marrakech rapide pour vos colis, documents et marchandises. Notre service de livraison à domicile Marrakech vous aide à gérer vos expéditions avec simplicité et efficacité partout dans la ville."
@@ -1140,7 +1140,7 @@ vendors: [
     name: 'livraison ups marrakech',
     brand: 'UPS',
     logo: '📫',
-    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile ups marrakech.png',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile ups marrakech.webp',
     logoAlt: 'UPS brand logo',
     description:
       "Livraison UPS Marrakech à domicile pour particuliers et professionnels. Livreur Marrakech récupère vos colis, documents et commandes afin de faciliter vos expéditions rapides au Maroc et à l'international."
@@ -1150,7 +1150,7 @@ vendors: [
     name: 'livraison aramex marrakech',
     brand: 'Aramex',
     logo: '🚛',
-    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile aramex marrakech.png',
+    logoUrl: '/logos/parcel-delivery/livraison marrakech a domicile aramex marrakech.webp',
     logoAlt: 'Aramex brand logo',
     description:
       "Livraison Aramex Marrakech express pour colis, documents et services logistiques. Avec Livreur Marrakech, bénéficiez d'une livraison rapide à domicile pour vos envois professionnels et personnels partout à Marrakech."

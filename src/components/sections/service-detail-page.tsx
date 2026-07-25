@@ -114,6 +114,7 @@ function getAccentTextClass(accentTextClass?: string) {
     return 'text-pink-600 dark:text-pink-400';
   }
 
+ 
   if (accentTextClass?.includes('purple') || accentTextClass?.includes('fuchsia')) {
     return 'text-purple-600 dark:text-purple-400';
   }
