@@ -566,7 +566,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   id: 'Pharmacie-Gueliz',
   name: 'Pharmacie Guéliz',
   brand: 'Pharmacie Guéliz',
-  logo: '⚕️',
+  logo: '🏥',
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Guéliz brand logo",
   description:
@@ -588,7 +588,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   id: 'Pharmacie-Victor-Hugo',
   name: 'Pharmacie Victor Hugo',
   brand: 'Pharmacie Victor Hugo',
-  logo: '⚕️',
+  logo: '🏥',
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Victor Hugo brand logo",
   description:
@@ -610,7 +610,7 @@ export const servicesData: Record<string, ServiceDetail> = {
   id: 'Pharmacie-Targa',
   name: 'Pharmacie Targa',
   brand: 'Pharmacie Targa',
-  logo: '⚕️',
+  logo: '🏥',
   logoUrl: "/logos/pharmacies/pharmacie livraison marrakech a domicile parapharmacie.webp",
   logoAlt: "Pharmacie Targa brand logo",
   description:
