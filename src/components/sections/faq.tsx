@@ -23,11 +23,6 @@ const frFaqs = [
       "Oui, nous pouvons répondre à des besoins de livraison 24h Marrakech selon la disponibilité et le type de commande, notamment pour les besoins urgents ou les commandes tardives.",
   },
   {
-    question: "Vous livrez aussi des repas de restaurants ?",
-    answer:
-      "Oui, nous proposons une livraison restaurant Marrakech pour les repas de restaurants, fast-food et plats à emporter, avec une prise en charge rapide et une livraison fiable à domicile.",
-  },
-  {
     question: "Pouvez-vous livrer des médicaments et produits de santé ?",
     answer:
       "Oui, nous assurons une livraison pharmacie Marrakech pour les médicaments, produits de santé et articles essentiels, avec un service rapide et discret.",
@@ -54,11 +49,6 @@ const enFaqs = [
     question: "Do you offer 24h delivery in Marrakech ?",
     answer:
       "Yes, we can support 24h delivery needs in Marrakech depending on availability and the type of order, especially for urgent or late requests.",
-  },
-  {
-    question: "Do you also deliver restaurant meals ?",
-    answer:
-      "Yes, we provide restaurant delivery in Marrakech for meals, fast food and takeaway orders, with fast pickup and reliable home delivery.",
   },
   {
     question: "Can you deliver medicines and health products ?",

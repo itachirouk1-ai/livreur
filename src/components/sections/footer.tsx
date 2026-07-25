@@ -55,7 +55,7 @@ export function Footer() {
     <footer className="relative mt-auto border-t border-slate-200 dark:border-slate-800  dark:bg-slate-950/95 transition-colors duration-500 overflow-hidden">
       
     <Image
-  src="/logos/livreurmarrakech.png"
+  src="/logos/livreurmarrakech.webp"
   alt="Footer Background"
   fill
   className="object-cover object-center opacity-80 dark:opacity-70 pointer-events-none"

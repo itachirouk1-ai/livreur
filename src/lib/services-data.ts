@@ -769,61 +769,73 @@ export const servicesData: Record<string, ServiceDetail> = {
   { name: 'Remerciement', emoji: '🙏' },
   { name: 'Cadeaux', emoji: '🎁' },
     ],
-vendors: [
-  {
-    id: 'the-bloom-room-marrakech',
-    name: 'The Bloom Room Marrakech',
-    brand: 'The Bloom Room',
-    logo: '💐',
-    description:
-      "Livraison fleurs Marrakech à domicile avec Livreur Marrakech. The Bloom Room propose des bouquets élégants, fleurs fraîches, roses et compositions florales pour anniversaires, mariages, cadeaux et toutes les occasions. Nous récupérons vos fleurs chez le fleuriste et assurons une livraison rapide partout à Marrakech.",
-  },
+    vendors: [
+      {
+        id: 'the-bloom-room-marrakech',
+        name: 'The Bloom Room Marrakech',
+        brand: 'The Bloom Room',
+        logo: '💐',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-the-bloom-room.webp',
+        logoAlt: 'The Bloom Room brand logo',
+        description:
+          "Livraison fleurs Marrakech à domicile avec Livreur Marrakech. The Bloom Room propose des bouquets élégants, fleurs fraîches, roses et compositions florales pour anniversaires, mariages, cadeaux et toutes les occasions. Nous récupérons vos fleurs chez le fleuriste et assurons une livraison rapide partout à Marrakech.",
+      },
 
-  {
-    id: 'jawhara-fleurs-marrakech',
-    name: 'Jawhara Fleurs Marrakech',
-    brand: 'Jawhara Fleurs',
-    logo: '🌺',
-    description:
-      "Livraison fleurs Marrakech avec Jawhara Fleurs et Livreur Marrakech. Découvrez des bouquets personnalisés, roses fraîches et créations florales raffinées livrées directement à domicile. Service de livraison fleurs Marrakech pour cadeaux, événements, hôtels, riads et particuliers.",
-  },
+      {
+        id: 'jawhara-fleurs-marrakech',
+        name: 'Jawhara Fleurs Marrakech',
+        brand: 'Jawhara Fleurs',
+        logo: '🌺',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-jawhara-fleurs.webp',
+        logoAlt: 'Jawhara Fleurs brand logo',
+        description:
+          "Livraison fleurs Marrakech avec Jawhara Fleurs et Livreur Marrakech. Découvrez des bouquets personnalisés, roses fraîches et créations florales raffinées livrées directement à domicile. Service de livraison fleurs Marrakech pour cadeaux, événements, hôtels, riads et particuliers.",
+      },
 
-  {
-    id: 'kech-flora-marrakech',
-    name: 'Kech Flora Marrakech',
-    brand: 'Kech Flora',
-    logo: '🌼',
-    description:
-      "Livraison fleurs Kech Flora Marrakech à domicile avec Livreur Marrakech. Profitez de fleurs fraîches, plantes décoratives et bouquets personnalisés pour toutes les occasions. Livraison rapide de fleurs à Marrakech pour particuliers, entreprises, hôtels et événements.",
-  },
+      {
+        id: 'kech-flora-marrakech',
+        name: 'Kech Flora Marrakech',
+        brand: 'Kech Flora',
+        logo: '🌼',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-kech-flora.webp',
+        logoAlt: 'Kech Flora brand logo',
+        description:
+          "Livraison fleurs Kech Flora Marrakech à domicile avec Livreur Marrakech. Profitez de fleurs fraîches, plantes décoratives et bouquets personnalisés pour toutes les occasions. Livraison rapide de fleurs à Marrakech pour particuliers, entreprises, hôtels et événements.",
+      },
 
-  {
-    id: 'florajia-fleuriste-marrakech',
-    name: 'Florajia Fleuriste Marrakech',
-    brand: 'Florajia Fleuriste',
-    logo: '🌻',
-    description:
-      "Livraison Florajia Fleuriste Marrakech avec Livreur Marrakech. Commandez des bouquets modernes, compositions florales élégantes et cadeaux fleuris livrés rapidement à domicile, bureau, hôtel ou riad. Un service professionnel de livraison fleurs Marrakech disponible tous les jours.",
-  },
+      {
+        id: 'florajia-fleuriste-marrakech',
+        name: 'Florajia Fleuriste Marrakech',
+        brand: 'Florajia Fleuriste',
+        logo: '🌻',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-florajia-fleuriste.webp',
+        logoAlt: 'Florajia Fleuriste brand logo',
+        description:
+          "Livraison Florajia Fleuriste Marrakech avec Livreur Marrakech. Commandez des bouquets modernes, compositions florales élégantes et cadeaux fleuris livrés rapidement à domicile, bureau, hôtel ou riad. Un service professionnel de livraison fleurs Marrakech disponible tous les jours.",
+      },
 
-  {
-    id: 'paradis-of-flowers-marrakech',
-    name: 'Paradis of Flowers Marrakech',
-    brand: 'Paradis of Flowers',
-    logo: '🌿',
-    description:
-      "Livraison Paradis of Flowers Marrakech à domicile avec Livreur Marrakech. Retrouvez une sélection de fleurs naturelles, bouquets de luxe et compositions florales raffinées livrées rapidement partout à Marrakech. Parfait pour cadeaux, mariages, anniversaires et événements.",
-  },
+      {
+        id: 'paradis-of-flowers-marrakech',
+        name: 'Paradis of Flowers Marrakech',
+        brand: 'Paradis of Flowers',
+        logo: '🌿',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-paradis-of-flowers.webp',
+        logoAlt: 'Paradis of Flowers brand logo',
+        description:
+          "Livraison Paradis of Flowers Marrakech à domicile avec Livreur Marrakech. Retrouvez une sélection de fleurs naturelles, bouquets de luxe et compositions florales raffinées livrées rapidement partout à Marrakech. Parfait pour cadeaux, mariages, anniversaires et événements.",
+      },
 
-  {
-    id: 'signature-flowers-marrakech',
-    name: 'Signature Flowers Marrakech',
-    brand: 'Signature Flowers',
-    logo: '🥀',
-    description:
-      "Livraison Signature Flowers Marrakech avec Livreur Marrakech. Spécialiste des bouquets haut de gamme, roses, décorations florales et créations personnalisées. Livraison fleurs Marrakech rapide à domicile, hôtel, riad, bureau ou entreprise.",
-  },
-],
+      {
+        id: 'signature-flowers-marrakech',
+        name: 'Signature Flowers Marrakech',
+        brand: 'Signature Flowers',
+        logo: '🥀',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-signature-flowers.webp',
+        logoAlt: 'Signature Flowers brand logo',
+        description:
+          "Livraison Signature Flowers Marrakech avec Livreur Marrakech. Spécialiste des bouquets haut de gamme, roses, décorations florales et créations personnalisées. Livraison fleurs Marrakech rapide à domicile, hôtel, riad, bureau ou entreprise.",
+      },
+    ],
     bgGradient: 'from-pink-400 via-rose-500 to-red-600',
   },
   cosmetics: {
@@ -1310,7 +1322,7 @@ vendors: [
     name: 'livraison amoud marrakech',
     brand: 'Amoud',
     logo: '🥖',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile amoud.jfif',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile amoud.webp',
     logoAlt: 'Amoud brand logo',
     description:
       "Livraison Amoud Marrakech à domicile pour pains frais, viennoiseries, pâtisseries marocaines, gâteaux et produits de boulangerie. Livreur Marrakech récupère vos commandes chez Amoud et assure une livraison rapide à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
@@ -1320,7 +1332,7 @@ vendors: [
     name: 'livraison paul marrakech',
     brand: 'PAUL',
     logo: '🥐 ',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile paul.jfif',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile paul.webp',
     logoAlt: 'PAUL brand logo',
     description:
       "Livraison PAUL Marrakech à domicile pour pains artisanaux, croissants, viennoiseries françaises, sandwiches, pâtisseries et desserts. Profitez d'un service de livraison boulangerie Marrakech rapide avec Livreur Marrakech partout dans la ville."
@@ -1330,7 +1342,7 @@ vendors: [
     name: 'livraison patisserie amandine marrakech',
     brand: 'Pâtisserie Amandine',
     logo: '🍰',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-amandine.jpg',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-amandine.webp',
     logoAlt: 'Pâtisserie Amandine brand logo',
     description:
       "Livraison Pâtisserie Amandine Marrakech pour gâteaux artisanaux, pâtisseries fines, tartes, viennoiseries et créations gourmandes. Livreur Marrakech vous apporte vos desserts et commandes pâtisserie rapidement à domicile ou sur votre lieu de travail."
@@ -1340,7 +1352,7 @@ vendors: [
     name: 'livraison gontran cherrier marrakech',
     brand: 'Gontran Cherrier',
     logo: '🥨',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile gontran-cherrier.png',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile gontran-cherrier.webp',
     logoAlt: 'Gontran Cherrier brand logo',
     description:
       "Livraison Gontran Cherrier Marrakech pour pains artisanaux, baguettes, viennoiseries françaises, pâtisseries et créations gourmandes. Profitez d'une livraison boulangerie rapide à Marrakech avec récupération de vos commandes par Livreur Marrakech."
@@ -1350,7 +1362,7 @@ vendors: [
     name: 'livraison patisserie des princes marrakech',
     brand: 'Pâtisserie des Princes',
     logo: '🧁',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-des-princes.png',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile patisserie-des-princes.webp',
     logoAlt: 'Pâtisserie des Princes brand logo',
     description:
       "Livraison Pâtisserie des Princes Marrakech pour pâtisseries marocaines traditionnelles, cornes de gazelle, gâteaux, douceurs orientales et desserts raffinés. Livreur Marrakech assure une livraison rapide pour vos événements, cadeaux et envies gourmandes."
@@ -1360,7 +1372,7 @@ vendors: [
     name: 'livraison boulangerie charif marrakech',
     brand: 'Boulangerie Charif',
     logo: '🍞',
-    logoUrl: '/logos/bakery/livraison marrakech a domicile charif.jfif',
+    logoUrl: '/logos/bakery/livraison marrakech a domicile charif.webp',
     logoAlt: 'Boulangerie Charif brand logo',
     description:
       "Livraison Boulangerie Charif Marrakech à domicile pour pains frais, viennoiseries, sandwiches et pâtisseries du quotidien. Commandez facilement et recevez vos produits de boulangerie rapidement grâce au service Livreur Marrakech."
