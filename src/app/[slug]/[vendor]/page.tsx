@@ -50,16 +50,16 @@ export async function generateMetadata({ params, searchParams }: VendorPageProps
   const cleanDescription = seoContent.sections[0].content.replace(/\n/g, " ");
 
   return {
-    title: `${seoContent.heading} | Allo Livreur Marrakech`,
+    title: `${seoContent.heading} | Livreur Marrakech`,
     description: cleanDescription,
     openGraph: {
-      title: `${seoContent.heading} | Allo Livreur Marrakech`,
+      title: `${seoContent.heading} | Livreur Marrakech`,
       description: cleanDescription,
       locale: locale === 'en' ? 'en_US' : 'fr_FR',
       type: 'website',
     },
     alternates: {
-      canonical: `https://allolivreurmarrakech.com/${locale}/${slug}/${vendor}`,
+      canonical: `https://marrakechlivreur.com/${locale}/${slug}/${vendor}`,
     },
   };
 }
