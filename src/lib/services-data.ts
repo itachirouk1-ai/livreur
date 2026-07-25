@@ -873,7 +873,7 @@ vendors: [
     name: 'livraison la roche-posay marrakech',
     brand: 'La Roche-Posay',
     logo: '🧴',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile la-roche-posay.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile la-roche-posay.webp',
     logoAlt: 'La Roche-Posay brand logo',
     description:
       "Livraison La Roche-Posay Marrakech à domicile avec Livreur Marrakech. Retrouvez vos soins dermatologiques, crèmes hydratantes, nettoyants visage et produits pour peaux sensibles livrés rapidement partout à Marrakech. Commandez vos produits beauté sans vous déplacer.",
@@ -884,7 +884,7 @@ vendors: [
     name: 'livraison bioderma marrakech',
     brand: 'Bioderma',
     logo: '🧴',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile bioderma.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile bioderma.webp',
     logoAlt: 'Bioderma brand logo',
     description:
       "Livraison Bioderma Marrakech rapide avec Livreur Marrakech. Commandez vos soins visage, eaux micellaires, crèmes hydratantes et produits dermatologiques Bioderma avec une livraison beauté à domicile partout à Marrakech.",
@@ -895,7 +895,7 @@ vendors: [
     name: 'livraison cerave marrakech',
     brand: 'CeraVe',
     logo: '🧴',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile cerave.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile cerave.webp',
     logoAlt: 'CeraVe brand logo',
     description:
       "Livraison CeraVe Marrakech à domicile avec Livreur Marrakech. Profitez des soins CeraVe pour visage et corps, crèmes hydratantes, nettoyants et produits enrichis en céramides livrés rapidement chez vous, au bureau, à l'hôtel ou au riad.",
@@ -906,7 +906,7 @@ vendors: [
     name: 'livraison kiko milano marrakech',
     brand: 'KIKO Milano',
     logo: '💄',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile kiko-milano.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile kiko-milano.webp',
     logoAlt: 'KIKO Milano brand logo',
     description:
       "Livraison KIKO Milano Marrakech avec Livreur Marrakech. Retrouvez vos produits de maquillage, rouges à lèvres, mascaras, fonds de teint et soins beauté KIKO livrés directement à domicile. Service de livraison cosmétique rapide partout à Marrakech.",
@@ -917,7 +917,7 @@ vendors: [
     name: 'livraison marionnaud marrakech',
     brand: 'Marionnaud',
     logo: '💋',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile marionnaud.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile marionnaud.webp',
     logoAlt: 'Marionnaud brand logo',
     description:
       "Livraison Marionnaud Marrakech à domicile avec Livreur Marrakech. Commandez vos parfums, maquillage, soins visage et produits beauté des grandes marques avec une livraison rapide partout à Marrakech.",
@@ -928,7 +928,7 @@ vendors: [
     name: 'livraison vichy marrakech',
     brand: 'Vichy',
     logo: '💧',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile vichy.jpg',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile vichy.webp',
     logoAlt: 'Vichy brand logo',
     description:
       "Livraison Vichy Marrakech rapide avec Livreur Marrakech. Découvrez les soins Vichy pour visage, corps, hydratation et protection de la peau livrés directement chez vous. Un service simple pour vos achats beauté et parapharmacie à Marrakech.",
@@ -939,7 +939,7 @@ vendors: [
     name: 'livraison yves rocher marrakech',
     brand: 'Yves Rocher',
     logo: '🌿',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile yves-rocher.png',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile yves-rocher.webp',
     logoAlt: 'Yves Rocher brand logo',
     description:
       "Livraison Yves Rocher Marrakech à domicile avec Livreur Marrakech. Commandez vos soins naturels, produits visage, corps, parfums et cosmétiques à base de plantes livrés rapidement partout à Marrakech.",
@@ -950,7 +950,7 @@ vendors: [
     name: 'livraison flomar marrakech',
     brand: 'Flomar',
     logo: '💄',
-    logoUrl: '/logos/cosmetic/livraison marrakech a domicile flomar.jpg',
+    logoUrl: '/logos/cosmetic/livraison marrakech a domicile flomar.webp',
     logoAlt: 'Flomar brand logo',
     description:
       "Livraison Flormar Marrakech avec Livreur Marrakech. Retrouvez vos produits maquillage, rouges à lèvres, fonds de teint, vernis et accessoires beauté livrés rapidement à domicile. Service de livraison cosmétique pratique partout à Marrakech.",
@@ -1205,7 +1205,7 @@ vendors: [
     name: 'impression marrakech',
     brand: 'Impression Marrakech',
     logo: '🖨️',
-    logoUrl: '/logos/documents/livraison marrakech a domicile FAV_ICON_ALPHA.png',
+    logoUrl: '/logos/documents/livraison marrakech a domicile FAV_ICON_ALPHA.webp',
     logoAlt: 'Impression Marrakech',
     description:
       "Service d'impression Marrakech rapide pour documents professionnels et personnels. Livreur Marrakech récupère vos impressions couleur ou noir et blanc, flyers, dossiers, affiches et supports administratifs puis assure une livraison à domicile, au bureau, à l'hôtel ou au riad partout à Marrakech."
@@ -1215,7 +1215,7 @@ vendors: [
     name: 'photocopie marrakech',
     brand: 'Photocopie Marrakech',
     logo: '📄',
-    logoUrl: '/logos/documents/livraison marrakech a domicile photocopie marrakech.png',
+    logoUrl: '/logos/documents/livraison marrakech a domicile photocopie marrakech.webp',
     logoAlt: 'Photocopie Marrakech',
     description:
       "Service de photocopie Marrakech pour copies A4, A3, couleur et noir et blanc avec livraison rapide à domicile. Livreur Marrakech vous permet de commander vos photocopies, dossiers administratifs et documents professionnels sans vous déplacer."
@@ -1225,7 +1225,7 @@ vendors: [
     name: 'scan de documents marrakech',
     brand: 'Scan de Documents Marrakech',
     logo: '📠',
-    logoUrl: '/logos/documents/livraison marrakech a domicile Impression noir et blanc Marrakech.png',
+    logoUrl: '/logos/documents/livraison marrakech a domicile Impression noir et blanc Marrakech.webp',
     logoAlt: 'Scan de Documents Marrakech',
     description:
       "Scan documents Marrakech pour numérisation de contrats, pièces administratives, dossiers professionnels et documents importants. Profitez d'un service rapide de numérisation avec récupération et livraison à domicile par Livreur Marrakech."
@@ -1235,7 +1235,7 @@ vendors: [
     name: 'reliure marrakech',
     brand: 'Reliure Marrakech',
     logo: '📚',
-    logoUrl: '/logos/documents/livraison marrakech a domicile impression-marrakech.png',
+    logoUrl: '/logos/documents/livraison marrakech a domicile impression-marrakech.webp',
     logoAlt: 'Reliure Marrakech',
     description:
       "Service de reliure Marrakech pour mémoires, rapports, thèses, dossiers scolaires et documents professionnels. Livreur Marrakech récupère vos documents et assure une livraison rapide après impression et finition."
@@ -1245,7 +1245,7 @@ vendors: [
     name: 'plastification marrakech',
     brand: 'Plastification Marrakech',
     logo: '🪪',
-    logoUrl: '/logos/documents/livraison marrakech a domicile papeterie-chatr.jfif',
+    logoUrl: '/logos/documents/livraison marrakech a domicile papeterie-chatr.webp',
     logoAlt: 'Plastification Marrakech',
     description:
       "Plastification Marrakech pour cartes, certificats, documents administratifs, badges et supports professionnels. Service rapide avec livraison à domicile partout à Marrakech grâce à Livreur Marrakech."
@@ -1255,7 +1255,7 @@ vendors: [
     name: 'impression a4 a3 marrakech',
     brand: 'Impression A4 / A3 Marrakech',
     logo: '📑',
-    logoUrl: '/logos/documents/livraison marrakech a domicile print-house.png',
+    logoUrl: '/logos/documents/livraison marrakech a domicile print-house.webp',
     logoAlt: 'Impression A4 A3 Marrakech',
     description:
       "Impression A4 et A3 Marrakech professionnelle pour flyers, affiches, plans, présentations, dossiers administratifs et documents d'entreprise. Livreur Marrakech assure la récupération et la livraison rapide de vos impressions partout dans la ville."
