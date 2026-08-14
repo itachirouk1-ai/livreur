@@ -791,6 +791,9 @@ export function ServiceDetailPageComponent({
   const handleWhatsApp = () => {
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
+  const handleCall = () => {
+    window.open(contactLinks.phone, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="min-h-screen">
@@ -837,8 +840,8 @@ export function ServiceDetailPageComponent({
               </div>
 
               <div className="absolute bottom-3 left-2 right-2 z-20 flex flex-col gap-2 sm:bottom-6 sm:left-3 sm:right-3 sm:flex-row sm:items-center sm:justify-between sm:gap-3 lg:bottom-6 lg:left-6 lg:right-6 lg:gap-3">
-                <AnimatedCallButton label={copy.callNow} />
-                <AnimatedJoinButton label={copy.orderOnWhatsApp} />
+                <AnimatedCallButton label={copy.callNow} onClick={handleCall}  />
+                <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
               </div>
             </motion.div>
           </div>

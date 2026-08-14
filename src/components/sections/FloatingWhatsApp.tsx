@@ -8,7 +8,7 @@ export default function FloatingWhatsApp() {
    
 
 <a
-  href="https://wa.me/212600000000"
+  href="https://wa.me/212660604871"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 z-[9999] animate-whatsapp"

@@ -4,12 +4,15 @@ import React from 'react';
 interface AnimatedJoinButtonProps {
   label?: string;
   onClick?: () => void;
+  href?: string;
 }
 
-export function AnimatedCallButton({ label = 'Appeler', onClick }: AnimatedJoinButtonProps) {
+export function AnimatedCallButton({ label = 'Appeler', onClick, href }: AnimatedJoinButtonProps) {
+  const handleClick = onClick ?? (href ? () => window.open(href, '_blank', 'noopener,noreferrer') : undefined);
+
   return (
     <div className="wrapper">
-      <button className="button" type="button" onClick={onClick}>
+      <button className="button" type="button" onClick={handleClick}>
         <div className="bg" />
         <div className="wrap">
           <div className="outline" />

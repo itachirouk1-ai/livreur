@@ -120,8 +120,8 @@ export default async function VendorPage({ params, searchParams }: VendorPagePro
                   />
 
                   <div className="absolute bottom-3 left-2 right-2 z-20 flex flex-col gap-2 sm:bottom-6 sm:left-3 sm:right-3 sm:flex-row sm:items-center sm:justify-between lg:left-6 lg:right-6">
-                    <AnimatedCallButton label={copy.callNow} />
-                    <AnimatedJoinButton label={copy.orderOnWhatsApp} />
+                    <AnimatedCallButton label={copy.callNow} href={contactLinks.phone} />
+                    <AnimatedJoinButton label={copy.orderOnWhatsApp} href={contactLinks.whatsapp} />
                   </div>
                 </div>
               </div>
