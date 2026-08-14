@@ -186,8 +186,8 @@ export const siteContent: Record<
 };
 
 export const contactLinks = {
-  whatsapp: "https://wa.me/212633115090?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
-  phone: 'tel:+212633115090',
+  whatsapp: "https://wa.me/212660604871?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
+  phone: 'tel:+212660604871',
 };
 
 export function getLocaleFromQuery(value?: string | null): Locale {

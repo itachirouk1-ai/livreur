@@ -120,7 +120,7 @@ export function Footer() {
                       {copy.footerCallUs}
                     </p>
                     <p className="mt-0.5 text-base font-bold text-slate-900 dark:text-white">
-                      +212 6 33 11 50 90
+                      +212 6 60 60 48 71
                     </p>
                   </div>
                 </div>

@@ -24,18 +24,13 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full h-[70vh] sm:h-[80vh] overflow-hidden border-b-2 border-b-orange-500 border-t-2 border-t-orange-500 w-full">
-      {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full ">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/herovid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* GIF Background */}
+      <div className="absolute inset-0 h-full w-full bg-[#111111]">
+        <img
+          src="/herovid.gif"
+          alt="Delivery motion background"
+          className="h-full w-full object-cover"
+        />
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
       </div>

@@ -4,7 +4,7 @@ import { getLocalizedServiceContent, getServiceBySlug, getVendorByServiceAndId }
 
 export const siteUrl = 'https://marrakechlivreur.com';
 export const siteName = 'Marrakech Livreur';
-export const businessPhone = '+212633115090';
+export const businessPhone = '+212660604871';
 export const cityName = 'Marrakech';
 export const businessDescription =
   'Service de livraison à domicile 24h/24 à Marrakech pour restaurants, pharmacies, fleurs, documents, colis et courses.';
