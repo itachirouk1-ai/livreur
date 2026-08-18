@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { trackContactConversion } from '@/lib/gtag';
 
 interface AnimatedJoinButtonProps {
   label?: string;
@@ -8,7 +9,19 @@ interface AnimatedJoinButtonProps {
 }
 
 export function AnimatedJoinButton({ label = 'WhatsApp', onClick, href }: AnimatedJoinButtonProps) {
-  const handleClick = onClick ?? (href ? () => window.open(href, '_blank', 'noopener,noreferrer') : undefined);
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+      return;
+    }
+
+    if (href) {
+      // Track WhatsApp conversion with callback
+      trackContactConversion('whatsapp', () => {
+        window.open(href, '_blank', 'noopener,noreferrer');
+      });
+    }
+  };
 
   return (
     <div className="wrapper">

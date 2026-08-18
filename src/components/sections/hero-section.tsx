@@ -9,20 +9,22 @@ import { Button } from '@/components/ui/button';
 import ShinyText from '@/components/ui/ShinyText';
 import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
-import { trackContactClick } from '@/lib/gtag';
+import { trackContactConversion } from '@/lib/gtag';
 
 export function HeroSection() {
   const locale = useLocalePreference();
   const copy = siteContent[locale];
 
   const handleWhatsApp = () => {
-    trackContactClick('whatsapp');
-    window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
+    trackContactConversion('whatsapp', () => {
+      window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
+    });
   };
 
   const handleCall = () => {
-    trackContactClick('phone');
-    window.location.href = contactLinks.phone;
+    trackContactConversion('phone', () => {
+      window.location.href = contactLinks.phone;
+    });
   };
 
   return (

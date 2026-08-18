@@ -2,18 +2,24 @@
 
 import { MessageCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { trackContactClick } from '@/lib/gtag';
+import { trackContactConversion } from '@/lib/gtag';
 
 export default function FloatingWhatsApp() {
-  const handleClick = () => {
-    trackContactClick('whatsapp');
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    trackContactConversion('whatsapp', () => {
+      window.open(
+        "https://wa.me/212660604871?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
   };
 
   return (
     <a
       href="https://wa.me/212660604871?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande."
-      target="_blank"
-      rel="noopener noreferrer"
       onClick={handleClick}
       className="fixed bottom-6 right-6 z-[9999] animate-whatsapp"
     >

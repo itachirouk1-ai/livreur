@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { trackContactConversion } from '@/lib/gtag';
 
 interface AnimatedJoinButtonProps {
   label?: string;
@@ -8,7 +9,23 @@ interface AnimatedJoinButtonProps {
 }
 
 export function AnimatedCallButton({ label = 'Appeler', onClick, href }: AnimatedJoinButtonProps) {
-  const handleClick = onClick ?? (href ? () => window.open(href, '_blank', 'noopener,noreferrer') : undefined);
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+      return;
+    }
+
+    if (href) {
+      // Track phone call conversion with callback
+      trackContactConversion('phone', () => {
+        if (href.startsWith('tel:')) {
+          window.location.href = href;
+        } else {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        }
+      });
+    }
+  };
 
   return (
     <div className="wrapper">
