@@ -8,14 +8,28 @@ declare global {
 const CONVERSION_ID = '18386439505';
 const CONVERSION_LABEL = 'In46CJzykuMcENGaq79E';
 
+function ensureGtag() {
+  if (typeof window === 'undefined') return undefined;
+
+  window.dataLayer = window.dataLayer || [];
+
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function (...args: unknown[]) {
+      window.dataLayer?.push(args);
+    };
+  }
+
+  return window.gtag;
+}
+
 export function trackGoogleAdsEvent(
   eventName: string,
   params?: Record<string, string | number | boolean | undefined>
 ) {
-  if (typeof window === 'undefined') return;
-  if (typeof window.gtag !== 'function') return;
+  const gtag = ensureGtag();
+  if (!gtag) return;
 
-  window.gtag('event', eventName, params ?? {});
+  gtag('event', eventName, params ?? {});
 }
 
 /**
@@ -32,11 +46,7 @@ export function trackContactConversion(
     return;
   }
 
-  if (typeof window.gtag !== 'function') {
-    onConversionSent?.();
-    return;
-  }
-
+  const gtag = ensureGtag();
   const params: Record<string, unknown> = {
     send_to: `AW-${CONVERSION_ID}/${CONVERSION_LABEL}`,
     value: 1.0,
@@ -44,15 +54,19 @@ export function trackContactConversion(
     contact_type: type,
   };
 
-  // Add event_callback if provided
   if (onConversionSent) {
     params.event_callback = onConversionSent;
   }
 
-  // Fire the Google Ads conversion event with the correct send_to format
-  window.gtag('event', 'conversion', params);
+  if (gtag) {
+    gtag('event', 'conversion', params);
+  } else {
+    window.dataLayer?.push({
+      event: 'conversion',
+      ...params,
+    });
+  }
 
-  // Fallback timeout if callback doesn't fire within 2 seconds
   if (onConversionSent) {
     setTimeout(onConversionSent, 2000);
   }
