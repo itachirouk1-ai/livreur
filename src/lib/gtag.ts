@@ -6,7 +6,29 @@ declare global {
 }
 
 const CONVERSION_ID = '18386439505';
-const CONVERSION_LABEL = 'In46CJzykuMcENGaq79E';
+const CONVERSION_LABEL = 'SiiYCKaL5-McENGaq79E';
+
+export function gtag_report_conversion(url?: string) {
+  const callback = () => {
+    if (typeof url !== 'undefined') {
+      window.location.href = url;
+    }
+  };
+
+  const gtag = ensureGtag();
+  if (gtag) {
+    gtag('event', 'conversion', {
+      send_to: `AW-${CONVERSION_ID}/${CONVERSION_LABEL}`,
+      value: 1.0,
+      currency: 'MAD',
+      event_callback: callback,
+    });
+    return false;
+  }
+
+  callback();
+  return false;
+}
 
 function ensureGtag() {
   if (typeof window === 'undefined') return undefined;
