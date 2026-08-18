@@ -6,6 +6,7 @@ import { contactLinks, siteContent } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import { Icon } from '@iconify/react';
 import { Button } from '../ui/button';
+import { trackContactClick } from '@/lib/gtag';
 import { ChevronRight, Grid2X2, House, Info, PhoneCall, PhoneCallIcon } from 'lucide-react';
 import Image from "next/image";
 
@@ -48,6 +49,7 @@ export function Footer() {
   };
 
   const handleWhatsApp = () => {
+    trackContactClick('whatsapp');
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
 

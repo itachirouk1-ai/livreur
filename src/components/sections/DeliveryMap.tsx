@@ -3,6 +3,7 @@ import { contactLinks, siteContent } from "@/lib/site-content";
 import AnimatedJoinButton from "../ui/animated-join-button";
 import AnimatedCallButton from "../ui/AnimatedCallButton";
 import { useLocalePreference } from "@/lib/use-locale";
+import { trackContactClick } from '@/lib/gtag';
 
 export default function DeliveryMap() {
 
@@ -10,10 +11,12 @@ export default function DeliveryMap() {
           const copy = siteContent[locale];
         
       const handleWhatsApp = () => {
+        trackContactClick('whatsapp');
         window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
       };
     
       const handleCall = () => {
+        trackContactClick('phone');
         window.location.href = contactLinks.phone;
       };
     

@@ -10,6 +10,7 @@ import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
 import { getLocalizedVendorContent, getVendorSlug } from '@/lib/services-data';
 import { contactLinks, siteContent, type Locale } from '@/lib/site-content';
+import { trackContactClick } from '@/lib/gtag';
 import { Icon } from '@iconify/react';
 import DeliveryZonesSection from '../ui/DeliveryZonesSection';
 // lib/service-hero-images.ts
@@ -789,9 +790,11 @@ export function ServiceDetailPageComponent({
   const vendorSectionCopy = getVendorSectionCopy(slug, locale);
   const seoContent = getServiceSEOContent(slug, title, locale);
   const handleWhatsApp = () => {
+    trackContactClick('whatsapp');
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
   const handleCall = () => {
+    trackContactClick('phone');
     window.open(contactLinks.phone, '_blank', 'noopener,noreferrer');
   };
 

@@ -8,6 +8,7 @@ import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
+import { trackContactClick } from '@/lib/gtag';
 
 interface Service {
    slug: string;
@@ -38,6 +39,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   const handleWhatsApp = () => {
+    trackContactClick('whatsapp');
     window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
   };
 
