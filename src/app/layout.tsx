@@ -1,13 +1,12 @@
 import { Suspense } from 'react';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
 import { Footer } from '@/components/sections/footer';
 import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
-import { PromoBanner } from '@/components/sections/promo-banner';
 import { buildHomeMetadata, buildStructuredDataJson } from '@/lib/seo';
 import { siteContent, type Locale } from '@/lib/site-content';
 
@@ -20,6 +19,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+const outfit = Outfit({
+  variable: '--font-outfit',
   subsets: ['latin'],
 });
 
@@ -47,7 +51,7 @@ export default function RootLayout({
       lang="fr"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
     >
       <head>
         <Script id="google-tag-manager" strategy="beforeInteractive">
@@ -61,7 +65,6 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col">
-        <PromoBanner />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PMZ8W29X"

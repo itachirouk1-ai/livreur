@@ -10,6 +10,7 @@ import ShinyText from '@/components/ui/ShinyText';
 import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import { trackContactConversion } from '@/lib/gtag';
+import { PromoBanner } from '@/components/sections/promo-banner';
 
 export function HeroSection() {
   const locale = useLocalePreference();
@@ -46,7 +47,7 @@ export function HeroSection() {
           initial={{ x: -24, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="w-full max-w-3xl flex-1 min-h-full flex flex-col justify-between py-6"
+          className="w-full max-w-3xl flex-1 min-h-full flex flex-col justify-between py-2"
         >
           <div className="flex flex-col gap-1 max-w-2xl mt-[-1rem]">
             <h1 className="text-4xl sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight text-white drop-shadow-lg">
@@ -78,6 +79,8 @@ export function HeroSection() {
 />
             </p>
           </div>
+
+          <PromoBanner />
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-between w-full max-w-xl">
             <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
             <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />

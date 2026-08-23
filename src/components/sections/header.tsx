@@ -53,7 +53,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-10 z-40 pt-1 sm:top-11 sm:px-3 lg:px-4">
+      <header className="z-40 pt-1 sm:px-3 lg:px-4">
         <motion.nav
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
