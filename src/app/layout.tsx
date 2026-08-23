@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
 import { Footer } from '@/components/sections/footer';
 import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
+import { PromoBanner } from '@/components/sections/promo-banner';
 import { buildHomeMetadata, buildStructuredDataJson } from '@/lib/seo';
 import { siteContent, type Locale } from '@/lib/site-content';
 
@@ -60,6 +61,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col">
+        <PromoBanner />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PMZ8W29X"

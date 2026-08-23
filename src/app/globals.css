@@ -148,6 +148,23 @@
   }
 }
 
+@keyframes promo-shimmer {
+  0%,
+  55% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[promo-shimmer_4s_ease-in-out_infinite\] {
+    animation: none;
+  }
+}
+
 .marquee-track {
   display: flex;
   width: max-content;

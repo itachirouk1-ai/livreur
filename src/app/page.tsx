@@ -155,7 +155,7 @@ const featuredStores = getRandomFeaturedStores();
         <ServicesSection services={services} />
         <DeliveryZonesSection />
         <RestaurantsSection restaurants={featuredStores} />
-        <ReviewsSection/>
+        
         <FAQSection/>
         <DeliveryMap/>
       </main>
