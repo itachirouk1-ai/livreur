@@ -68,9 +68,15 @@ export function Footer() {
 
       <div className="mx-auto max-w-7xl px-2 py-4 sm:px-2 sm:py-4 relative z-10">
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl text-center font-extrabold bg-clip-text bg-gradient-to-r from-red-900 to-red-600 dark:from-white dark:to-white-400 mb-2">
-              {copy.brandName}
-            </h3>
+            <motion.h3
+              initial={{ opacity: 0, y: 10, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              className="mb-2 cursor-default text-center text-xl font-extrabold text-red-600 transition-transform duration-200 hover:scale-[1.03] hover:text-rose-600 dark:text-red-400 dark:hover:text-rose-300"
+            >
+              Bibis Delivery
+            </motion.h3>
             <p className="text-sm leading-relaxed text-slate-600 dark:text-white text-center">
               {copy.heroDescription}
             </p>

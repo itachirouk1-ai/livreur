@@ -100,14 +100,19 @@ export function Header() {
                 alt="Marrakech Livreur logo"
                 width={40}
                 height={40}
-                className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"
                 priority
+                className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"
               />
               </Link>
               <div className="hidden sm:block">
-                <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">
-                  {copy.brandName}
-                </p>
+                <motion.p
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.45, delay: 0.2, ease: 'easeOut' }}
+                  className="cursor-default text-sm font-bold text-red-600 transition-transform duration-200 hover:-translate-y-0.5 hover:text-rose-600 dark:text-red-400 dark:hover:text-rose-300"
+                >
+                  Bibis Delivery
+                </motion.p>
               </div>
             </div>
           </div>
