@@ -38,7 +38,7 @@ export function HeroSection() {
           className="h-full w-full object-cover"
         />
         {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+        
       </div>
 
       {/* Text Content Overlay */}
@@ -50,13 +50,13 @@ export function HeroSection() {
           className="w-full max-w-3xl flex-1 min-h-full flex flex-col justify-between py-2"
         >
           <div className="flex flex-col gap-1 max-w-2xl mt-[-1rem]">
-            <h1 className="text-4xl sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight text-white drop-shadow-lg">
+            <h1 className="text-4xl text-bold sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight text-white drop-shadow-lg">
               <ShinyText
   text={copy.heroTitleLine1}
   speed={2}
   delay={1}
   color="#ffffff"
-  shineColor="#ff000067"
+  shineColor="#ff0000"
   spread={90}
   direction="left"
   yoyo={false}
@@ -64,13 +64,13 @@ export function HeroSection() {
   disabled={false}
 />
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl leading-normal text-gray-200 font-light tracking-wide max-w-xl">
+            <p className="text-base sm:text-xl lg:text-2xl leading-normal text-gray-200 font-light tracking-wide max-w-xl">
               <ShinyText
   text={copy.heroDescription}
   speed={2}
   delay={1}
   color="#ffffff"
-  shineColor="#ff000067"
+  shineColor="#ff0000"
   spread={90}
   direction="left"
   yoyo={false}
@@ -80,7 +80,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <PromoBanner />
+          
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-between w-full max-w-xl">
             <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
             <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
