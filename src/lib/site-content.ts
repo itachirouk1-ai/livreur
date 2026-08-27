@@ -63,7 +63,7 @@ export const siteContent: Record<
   }
 > = {
   fr: {
-    brandName: 'LIVREUR MARRAKECH',
+    brandName: 'Bibis Delivery',
     heroBadge: 'Disponible 24/7',
     heroTitleLine1: 'Livraison Rapide à Marrakech',
     heroDescription:
@@ -74,10 +74,10 @@ export const siteContent: Record<
     trustedRiders: 'Coursiers de confiance',
     fastDelivery: 'Livraison rapide',
     servicesHeadingLine2: 'Nous Livrons Tout Partout',
-    servicesSubtitle: 'Marrakech : chacun à votre domicile !',
+    servicesSubtitle: 'Marrakech : vos essentiels livrés à domicile.',
     
     orderNow: 'Commander maintenant',
-    restaurantsHeading: 'populaires Boutiques',
+    restaurantsHeading: 'Boutiques populaires',
     restaurantsDescription:
       'Découvrez les boutiques et services les plus demandés à Marrakech, de la fleuristerie au marché local en passant par les pharmacies.',
     seeVendorPage: 'Voir la page',
@@ -90,13 +90,13 @@ export const siteContent: Record<
     vendorInternalName: 'Nom interne',
     vendorBadge: 'Vendeur',
     returnToService: 'Retour au service',
-    homeMetaTitle: 'Marrakech Livreur | Livreur Marrakech 24h à domicile',
+    homeMetaTitle: 'Bibis Delivery | Livreur Marrakech 24h à domicile',
     homeMetaDescription:
       'Livraison rapide à Marrakech pour restaurants, pharmacies, supermarchés, fleurs, documents et courses. Commandez maintenant.',
-    serviceMetaTitle: 'Services de livraison Marrakech | Marrakech Livreur',
+    serviceMetaTitle: 'Bibis Delivery | Services de livraison Marrakech',
     serviceMetaDescription:
       'Découvrez nos services de livraison à Marrakech, rapides, fiables et disponibles 24/7.',
-    vendorMetaTitle: 'Vendeurs de livraison Marrakech | Marrakech Livreur',
+    vendorMetaTitle: 'Bibis Delivery | Vendeurs de livraison Marrakech',
     vendorMetaDescription: 'Consultez les vendeurs partenaires et commandez en quelques clics.',
     menuLabel: 'Ouvrir le menu principal',
     languageLabel: 'Changer la langue',
@@ -120,10 +120,10 @@ export const siteContent: Record<
     footerCallUs: 'Appelez-nous',
     footerReplyMinutes: 'Réponse en quelques minutes',
     footerAvailability: 'Disponible 24h/24 • 7j/7',
-    footerCopyright: '© 2026 Marrakech Livreur. Tous droits réservés.',
+    footerCopyright: '© 2026 Bibis Delivery. Tous droits réservés.',
   },
   en: {
-    brandName: 'LIVREUR MARRAKECH',
+    brandName: 'Bibis Delivery',
     heroBadge: 'Available 24/7',
     heroTitleLine1: 'Fast Delivery in Marrakech',
     
@@ -151,13 +151,13 @@ export const siteContent: Record<
     vendorInternalName: 'Internal name',
     vendorBadge: 'Vendor',
     returnToService: 'Back to service',
-    homeMetaTitle: 'Marrakech Livreur | Fast delivery in Marrakech',
+    homeMetaTitle: 'Bibis Delivery | Fast delivery in Marrakech',
     homeMetaDescription:
       'Fast delivery in Marrakech for restaurants, pharmacies, supermarkets, flowers, documents and groceries. Order now.',
-    serviceMetaTitle: 'Delivery services in Marrakech | Marrakech Livreur',
+    serviceMetaTitle: 'Bibis Delivery | Delivery services in Marrakech',
     serviceMetaDescription:
       'Discover our fast, reliable and 24/7 delivery services in Marrakech.',
-    vendorMetaTitle: 'Delivery vendors in Marrakech | Marrakech Livreur',
+    vendorMetaTitle: 'Bibis Delivery | Delivery vendors in Marrakech',
     vendorMetaDescription: 'Browse our partner vendors and place your order in a few clicks.',
     menuLabel: 'Open main menu',
     languageLabel: 'Change language',
@@ -181,7 +181,7 @@ export const siteContent: Record<
     footerCallUs: 'Call us',
     footerReplyMinutes: 'Reply in a few minutes',
     footerAvailability: 'Available 24/7',
-    footerCopyright: '© 2026 Marrakech Livreur. All rights reserved.',
+    footerCopyright: '© 2026 Bibis Delivery. All rights reserved.',
   },
 };
 

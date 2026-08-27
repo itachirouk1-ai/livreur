@@ -84,6 +84,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
     src={service.image}
     alt={serviceLabels[service.slug] ?? service.title}
     fill
+    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 576px"
     className="object-cover transition-transform duration-700 group-hover:scale-110"
   />
 

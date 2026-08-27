@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { servicesData } from '@/lib/services-data';
+import { getAllServiceVendorParams, servicesData } from '@/lib/services-data';
 
 const siteUrl = 'https://marrakechlivreur.com';
 
@@ -23,14 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const vendorRoutes = Object.entries(servicesData).flatMap(([slug, service]) =>
-    service.vendors.map((vendor) => ({
-      url: `${baseUrl}/${slug}/${vendor.id}`,
+  const vendorRoutes = getAllServiceVendorParams().map(({ serviceSlug, vendorId }) => ({
+      url: `${baseUrl}/${serviceSlug}/${vendorId}`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-    }))
-  );
+    }));
 
   return [...staticRoutes, ...serviceRoutes, ...vendorRoutes];
 }

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Geist, Geist_Mono, Outfit } from 'next/font/google';
+import { Geist, Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { LocaleProvider } from '@/lib/use-locale';
@@ -14,11 +14,6 @@ const googleAdsId = 'AW-18386439505';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
 });
 
@@ -36,7 +31,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   ...buildHomeMetadata(),
   metadataBase: new URL('https://marrakechlivreur.com'),
-  authors: [{ name: 'Marrakech Livreur' }],
+  authors: [{ name: 'Bibis Delivery' }],
+  icons: {
+    icon: '/logos/bibis-favicon.webp',
+    shortcut: '/logos/bibis-favicon.webp',
+    apple: '/logos/bibis-favicon.webp',
+  },
 };
 
 export default function RootLayout({
@@ -51,7 +51,7 @@ export default function RootLayout({
       lang="fr"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${outfit.variable} h-full antialiased`}
     >
       <head>
         <Script id="google-tag-manager" strategy="beforeInteractive">

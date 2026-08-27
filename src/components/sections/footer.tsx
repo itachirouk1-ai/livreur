@@ -73,9 +73,9 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.8 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="mb-2 cursor-default text-center text-xl font-extrabold text-red-600 transition-transform duration-200 hover:scale-[1.03] hover:text-rose-600 dark:text-red-400 dark:hover:text-rose-300"
+              className="mb-2 cursor-default text-center font-heading text-xl font-extrabold tracking-tight text-[var(--brand-terracotta)] transition-transform duration-200 hover:scale-[1.03] dark:text-orange-300"
             >
-              Bibis Delivery
+              {copy.brandName}
             </motion.h3>
             <p className="text-sm leading-relaxed text-slate-600 dark:text-white text-center">
               {copy.heroDescription}

@@ -97,22 +97,25 @@ export function Header() {
               <Link href="/" >
               <Image
                 src="/logos/applogo.png"
-                alt="Marrakech Livreur logo"
+                alt="Bibis Delivery logo"
                 width={40}
                 height={40}
                 priority
                 className="h-10 w-10 rounded-full object-cover shadow-lg shadow-orange-200"
               />
               </Link>
-              <div className="hidden sm:block">
+              <div className="hidden sm:block leading-tight">
                 <motion.p
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.45, delay: 0.2, ease: 'easeOut' }}
-                  className="cursor-default text-sm font-bold text-red-600 transition-transform duration-200 hover:-translate-y-0.5 hover:text-rose-600 dark:text-red-400 dark:hover:text-rose-300"
+                  className="cursor-default font-heading text-sm font-bold tracking-tight text-[var(--brand-terracotta)] transition-transform duration-200 hover:-translate-y-0.5 dark:text-orange-300"
                 >
-                  Bibis Delivery
+                  {copy.brandName}
                 </motion.p>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">
+                  Livraison locale, 24/7
+                </span>
               </div>
             </div>
           </div>

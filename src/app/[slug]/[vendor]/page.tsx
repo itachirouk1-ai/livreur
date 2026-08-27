@@ -10,7 +10,7 @@ import { getLocalizedServiceContent, getLocalizedVendorContent, getServiceBySlug
 import { contactLinks, getLocaleFromQuery, siteContent, type Locale } from '@/lib/site-content';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
-import { buildVendorPageMetadata } from '@/lib/seo';
+import { buildVendorPageMetadata, siteName } from '@/lib/seo';
 import { getVendorSEOContent } from '@/lib/vendor-seo';
 
 interface VendorPageProps {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params, searchParams }: VendorPageProps
 
   if (!service || !vendorData) {
     return {
-      title: locale === 'en' ? 'Vendor not found' : 'Vendeur non trouvé',
+      title: `${siteName} | ${locale === 'en' ? 'Vendor not found' : 'Vendeur non trouvé'}`,
       description: locale === 'en' ? 'The requested vendor page could not be found.' : 'Page de vendeur introuvable.',
     };
   }
@@ -50,16 +50,19 @@ export async function generateMetadata({ params, searchParams }: VendorPageProps
   const cleanDescription = seoContent.sections[0].content.replace(/\n/g, " ");
 
   return {
-    title: `${seoContent.heading} | Livreur Marrakech`,
+    title: `${siteName} | ${seoContent.heading} | Livreur Marrakech`,
     description: cleanDescription,
     openGraph: {
-      title: `${seoContent.heading} | Livreur Marrakech`,
+      title: `${siteName} | ${seoContent.heading} | Livreur Marrakech`,
       description: cleanDescription,
       locale: locale === 'en' ? 'en_US' : 'fr_FR',
       type: 'website',
     },
     alternates: {
-      canonical: `https://marrakechlivreur.com/${locale}/${slug}/${vendor}`,
+      canonical:
+        locale === 'fr'
+          ? `https://marrakechlivreur.com/${slug}/${vendor}`
+          : `https://marrakechlivreur.com/${slug}/${vendor}?lang=${locale}`,
     },
   };
 }

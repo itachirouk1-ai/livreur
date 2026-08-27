@@ -1,12 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, ShieldCheck, Clock3 } from 'lucide-react';
+import { Clock3 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
-import { Button } from '@/components/ui/button';
-import ShinyText from '@/components/ui/ShinyText';
 import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import { trackContactConversion } from '@/lib/gtag';
@@ -29,16 +27,22 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[65vh] sm:h-[80vh] overflow-hidden border-b-2 border-b-orange-500 border-t-2 border-t-orange-500 w-full">
+    <section className="relative h-[65vh] w-full overflow-hidden border-b-2 border-[var(--brand-terracotta)] border-t-2 border-[var(--brand-terracotta)] sm:h-[80vh]">
       {/* GIF Background */}
       <div className="absolute inset-0 h-full w-full bg-[#111111]">
-        <img
-          src="/herovid.gif"
-          alt="Delivery motion background"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/logos/livreurmarrakech.webp"
+          aria-label="Delivery motion background"
           className="h-full w-full object-cover"
-        />
-        {/* Dark Overlay for text readability */}
-        
+        >
+          <source src="/herovid.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,18,15,0.8)_0%,rgba(25,18,15,0.48)_48%,rgba(25,18,15,0.12)_100%)]" />
       </div>
 
       {/* Text Content Overlay */}
@@ -47,36 +51,18 @@ export function HeroSection() {
           initial={{ x: -24, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="w-full max-w-3xl flex-1 min-h-full flex flex-col justify-between py-2"
+          className="flex min-h-full w-full max-w-3xl flex-1 flex-col justify-between py-6 sm:py-10"
         >
-          <div className="flex flex-col gap-1 max-w-2xl mt-[-1rem]">
-            <h1 className="text-4xl text-bold sm:text-6xl lg:text-[5rem] font-bold leading-tight tracking-tight text-white drop-shadow-lg">
-              <ShinyText
-  text={copy.heroTitleLine1}
-  speed={2}
-  delay={1}
-  color="#ffffff"
-  shineColor="#ff0000"
-  spread={90}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false}
-/>
+          <div className="mt-0 flex max-w-2xl flex-col gap-3">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-orange-200">
+              <Clock3 className="h-4 w-4" />
+              {copy.heroBadge}
+            </div>
+            <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-white drop-shadow-lg sm:text-6xl lg:text-[5rem]">
+              {copy.heroTitleLine1}
             </h1>
-            <p className="text-base sm:text-xl lg:text-2xl leading-normal text-gray-200 font-light tracking-wide max-w-xl">
-              <ShinyText
-  text={copy.heroDescription}
-  speed={2}
-  delay={1}
-  color="#ffffff"
-  shineColor="#ff0000"
-  spread={90}
-  direction="left"
-  yoyo={false}
-  pauseOnHover={false}
-  disabled={false}
-/>
+            <p className="max-w-xl text-base font-light leading-normal tracking-wide text-gray-200 sm:text-xl lg:text-2xl">
+              {copy.heroDescription}
             </p>
           </div>
 

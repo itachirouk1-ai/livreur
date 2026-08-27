@@ -3,7 +3,7 @@ import { contactLinks, type Locale } from './site-content';
 import { getLocalizedServiceContent, getServiceBySlug, getVendorByServiceAndId } from './services-data';
 
 export const siteUrl = 'https://marrakechlivreur.com';
-export const siteName = 'Marrakech Livreur';
+export const siteName = 'Bibis Delivery';
 export const businessPhone = '+212660604871';
 export const cityName = 'Marrakech';
 export const businessDescription =
@@ -16,7 +16,7 @@ function buildCanonical(path: string) {
 
 export function buildHomeMetadata(): Metadata {
   return {
-    title: 'Marrakech Livreur | Livreur Marrakech 24h à domicile',
+    title: 'Bibis Delivery | Livreur Marrakech 7/7 à domicile',
     description:
       'Besoin d’un livreur Marrakech rapide ? Livraison à domicile 24h pour restaurants, pharmacies, fleurs, documents et courses. Commandez maintenant.',
     keywords: [
@@ -38,7 +38,7 @@ export function buildHomeMetadata(): Metadata {
       },
     },
     openGraph: {
-      title: 'Marrakech Livreur | Livreur Marrakech 24h à domicile',
+      title: 'Bibis Delivery | Livreur Marrakech 24h à domicile',
       description:
         'Livraison rapide à domicile à Marrakech pour restaurants, pharmacies, supermarchés, fleurs, documents et courses, disponible 24h/24.',
       url: buildCanonical('/'),
@@ -56,7 +56,7 @@ export function buildHomeMetadata(): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Marrakech Livreur | Livreur Marrakech 24h',
+      title: 'Bibis Delivery | Livreur Marrakech 24h',
       description:
         'Commandez avec un livreur Marrakech fiable pour une livraison à domicile rapide, sûre et disponible 24h/24.',
       images: [`${siteUrl}/logos/applogo.png`],
@@ -79,7 +79,7 @@ function getServiceSeoData(slug: string) {
   switch (slug) {
     case 'restaurants':
       return {
-        title: 'Livraison restaurants Marrakech | Livreur à domicile 24h',
+        title: 'Bibis Delivery | Livraison restaurants Marrakech | Livreur à domicile 24h',
         description:
           'Commande de repas à Marrakech avec un livreur à domicile rapide, fiable et disponible 24h/24. Livraison restaurant Marrakech partout dans la ville.',
         h1: 'Livraison restaurants Marrakech : livreur à domicile rapide',
@@ -97,7 +97,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'pharmacies':
       return {
-        title: 'Livraison pharmacie Marrakech | Pharmacie à domicile 24h',
+        title: 'Bibis Delivery | Livraison pharmacie Marrakech | Pharmacie à domicile 24h',
         description:
           'Livraison de médicaments et produits de santé à Marrakech avec un service rapide, discret et disponible 24h/24.',
         h1: 'Livraison pharmacie Marrakech : service rapide et discret',
@@ -105,7 +105,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'supermarkets':
       return {
-        title: 'Livraison supermarché Marrakech | Courses à domicile 24h',
+        title: 'Bibis Delivery | Livraison supermarché Marrakech | Courses à domicile 24h',
         description:
           'Faites vos courses à Marrakech sans sortir de chez vous grâce à une livraison supermarché rapide et fiable.',
         h1: 'Livraison supermarché Marrakech : courses à domicile',
@@ -113,7 +113,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'fleurs':
       return {
-        title: 'Livraison fleurs Marrakech | Fleuriste à domicile',
+        title: 'Bibis Delivery | Livraison fleurs Marrakech | Fleuriste à domicile',
         description:
           'Livraison de bouquets et fleurs à Marrakech, rapide et élégante, pour toutes vos occasions.',
         h1: 'Livraison fleurs Marrakech : fleuriste à domicile',
@@ -121,7 +121,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'cosmetics':
       return {
-        title: 'Livraison cosmétiques Marrakech | Produits beauté à domicile',
+        title: 'Bibis Delivery | Livraison cosmétiques Marrakech | Produits beauté à domicile',
         description:
           'Découvrez une livraison cosmétiques Marrakech rapide pour vos produits beauté et soins, partout dans la ville.',
         h1: 'Livraison cosmétiques Marrakech',
@@ -129,7 +129,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'shopping':
       return {
-        title: 'Livraison shopping Marrakech | Achats à domicile',
+        title: 'Bibis Delivery | Livraison shopping Marrakech | Achats à domicile',
         description:
           'Profitez d’une livraison shopping Marrakech rapide pour vos achats et produits du quotidien.',
         h1: 'Livraison shopping Marrakech',
@@ -137,7 +137,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'colis':
       return {
-        title: 'Livraison colis Marrakech | Courier rapide 24h',
+        title: 'Bibis Delivery | Livraison colis Marrakech | Courier rapide 24h',
         description:
           'Service de livraison colis Marrakech rapide pour vos envois, documents et petits paquets, disponible 24h/24.',
         h1: 'Livraison colis Marrakech : service rapide 24h',
@@ -145,7 +145,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'documents':
       return {
-        title: 'Livraison documents Marrakech | Service rapide 24h',
+        title: 'Bibis Delivery | Livraison documents Marrakech | Service rapide 24h',
         description:
           'Livraison documents Marrakech rapide et fiable pour vos papiers, dossiers et courriers sensibles.',
         h1: 'Livraison documents Marrakech',
@@ -153,7 +153,7 @@ function getServiceSeoData(slug: string) {
       };
     case 'boulangerie':
       return {
-        title: 'Livraison boulangerie Marrakech | Pain et pâtisseries',
+        title: 'Bibis Delivery | Livraison boulangerie Marrakech | Pain et pâtisseries',
         description:
           'Livraison boulangerie Marrakech rapide pour pain frais, pâtisseries et produits de boulangerie à domicile.',
         h1: 'Livraison boulangerie Marrakech',
@@ -161,7 +161,7 @@ function getServiceSeoData(slug: string) {
       };
     default:
       return {
-        title: 'Livraison à domicile Marrakech | Marrakech Livreur',
+        title: 'Bibis Delivery | Livraison à domicile Marrakech | Livreur Marrakech',
         description: businessDescription,
         h1: 'Livraison à domicile Marrakech',
         keywords: ['livraison marrakech', 'livreur marrakech'],
@@ -177,7 +177,7 @@ export function buildServicePageMetadata(slug: string, locale: Locale = 'fr'): M
 
   return {
     title: isEnglish
-      ? `${localizedService.title || seo.h1} in Marrakech | Fast home delivery`
+      ? `Bibis Delivery | ${localizedService.title || seo.h1} in Marrakech | Fast home delivery`
       : seo.title,
     description: isEnglish
       ? `${localizedService.description || seo.description} Fast, reliable and available 24/7.`
@@ -226,12 +226,12 @@ export function buildVendorPageMetadata(slug: string, vendorId: string): Metadat
 
   if (!service || !vendor) {
     return {
-      title: 'Vendeur introuvable | Marrakech Livreur',
+      title: 'Bibis Delivery | Vendeur introuvable',
       description: 'La page demandée est introuvable.',
     };
   }
 
-  const title = `${vendor.brand} livraison Marrakech | Livreur rapide 24h`;
+  const title = `Bibis Delivery | ${vendor.brand} livraison Marrakech | Livreur rapide 24h`;
   const description = `Commande ${vendor.brand} à Marrakech avec un livreur rapide, fiable et disponible 24h/24. Livraison à domicile partout dans la ville.`;
 
   return {
