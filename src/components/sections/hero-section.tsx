@@ -2,13 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Clock3 } from 'lucide-react';
-import Link from 'next/link';
 import { AnimatedCallButton } from '@/components/ui/AnimatedCallButton';
 import { AnimatedJoinButton } from '@/components/ui/animated-join-button';
-import { contactLinks, siteContent, withLocaleHref } from '@/lib/site-content';
+import { contactLinks, siteContent } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
 import { trackContactConversion } from '@/lib/gtag';
-import { PromoBanner } from '@/components/sections/promo-banner';
 
 export function HeroSection() {
   const locale = useLocalePreference();
@@ -28,20 +26,13 @@ export function HeroSection() {
 
   return (
     <section className="relative h-[65vh] w-full overflow-hidden border-b-2 border-[var(--brand-terracotta)] border-t-2 border-[var(--brand-terracotta)] sm:h-[80vh]">
-      {/* GIF Background */}
+      {/* Video background */}
       <div className="absolute inset-0 h-full w-full bg-[#111111]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/logos/livreurmarrakech.webp"
-          aria-label="Delivery motion background"
+        <img
+          src="/herovid.gif"
+          alt="Delivery motion background"
           className="h-full w-full object-cover"
-        >
-          <source src="/herovid.mp4" type="video/mp4" />
-        </video>
+        />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,18,15,0.8)_0%,rgba(25,18,15,0.48)_48%,rgba(25,18,15,0.12)_100%)]" />
       </div>
 
