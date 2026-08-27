@@ -26,7 +26,6 @@ export function HeroSection() {
 
   return (
     <section className="relative h-[65vh] w-full overflow-hidden border-b-2 border-[var(--brand-terracotta)] border-t-2 border-[var(--brand-terracotta)] sm:h-[80vh]">
-      {/* Video background */}
       <div className="absolute inset-0 h-full w-full bg-[#111111]">
         <img
           src="/herovid.gif"
@@ -36,8 +35,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,18,15,0.8)_0%,rgba(25,18,15,0.48)_48%,rgba(25,18,15,0.12)_100%)]" />
       </div>
 
-      {/* Text Content Overlay */}
-      <div className="relative z-10 flex items-stretch justify-start h-full mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl items-stretch justify-start px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ x: -24, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -57,8 +55,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          
-          <div className="flex flex-col gap-3 sm:flex-row sm:justify-between w-full max-w-xl">
+          <div className="flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:justify-between">
             <AnimatedCallButton label={copy.callNow} onClick={handleCall} />
             <AnimatedJoinButton label={copy.orderOnWhatsApp} onClick={handleWhatsApp} />
           </div>

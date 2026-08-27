@@ -56,8 +56,11 @@ export function ServiceDropdown({
   return (
     <div className={cn('relative', className)}>
       <button
+        type="button"
         ref={triggerRef}
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
         className="flex items-center justify-between gap-2 w-full px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
       >
         <div className="flex items-center gap-2">
@@ -83,12 +86,12 @@ export function ServiceDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg z-50"
+            className="mt-1 rounded-lg border border-slate-200 bg-white shadow-lg dark:border-slate-800 dark:bg-slate-900"
           >
             <div className="p-2">
               {service.vendors.length > 0 ? (
                 <div className="space-y-1">
-                  {service.vendors.map((vendor) => (
+                  {service.vendors.map(vendor => (
                     <Link
                       key={vendor.slug}
                       href={`/${service.slug}/${vendor.slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`}
