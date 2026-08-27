@@ -24,11 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const vendorRoutes = getAllServiceVendorParams().map(({ serviceSlug, vendorId }) => ({
-      url: `${baseUrl}/${serviceSlug}/${vendorId}`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }));
+    url: `${baseUrl}/${serviceSlug}/${vendorId}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
 
   return [...staticRoutes, ...serviceRoutes, ...vendorRoutes];
 }
