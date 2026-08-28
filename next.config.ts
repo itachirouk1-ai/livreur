@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://www.google.com",
+              "frame-ancestors 'none'",
             ].join('; '),
           },
         ],
