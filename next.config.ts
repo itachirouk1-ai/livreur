@@ -11,10 +11,10 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self'",
               // Script loading for Google Tag Manager and Google Ads
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://connect.facebook.net",
-              "script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://connect.facebook.net",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://*.googleadservices.com https://connect.facebook.net",
+              "script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://*.googleadservices.com https://connect.facebook.net",
               // Network requests for conversion tracking, analytics, and remarketing
-              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region1.googletagmanager.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://www.googleadservices.com",
+              "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com https://region1.google-analytics.com https://region1.googletagmanager.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://ad.doubleclick.net https://www.google.com https://*.google.com https://www.googleadservices.com https://*.googleadservices.com",
               // Image pixels for conversion tracking and analytics
               "img-src 'self' data: https: https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.facebook.com https://connect.facebook.net",
               "font-src 'self' data:",
