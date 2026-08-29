@@ -142,7 +142,7 @@ export function Header() {
             <div className="flex items-center gap-2">
               <Link href="/">
                 <Image
-                  src="/logos/applogo.png"
+                  src="/logos/applogo.webp"
                   alt="Bibis Delivery logo"
                   width={40}
                   height={40}
