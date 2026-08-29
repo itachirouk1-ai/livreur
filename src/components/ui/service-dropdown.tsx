@@ -93,12 +93,7 @@ export function ServiceDropdown({
                 <div className="space-y-1">
                   {service.vendors.map(vendor => (
                     <div
-                      key={vendor.slug}
-                      href={`/${service.slug}/${vendor.slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`}
-                      onClick={() => {
-                        setIsOpen(false);
-                        onVendorClick?.();
-                      }}
+                      
                       className="flex items-center gap-3 px-4 py-2.5 rounded-md hover:bg-orange-100 dark:hover:bg-slate-800 transition-colors group"
                     >
                       <div className="flex-shrink-0 h-10 w-10 rounded-lg overflow-hidden bg-white shadow-sm">
