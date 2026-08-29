@@ -28,7 +28,7 @@ export function HeroSection() {
     <section className="relative h-[65vh] w-full overflow-hidden border-b-2 border-[var(--brand-terracotta)] border-t-2 border-[var(--brand-terracotta)] sm:h-[80vh]">
       <div className="absolute inset-0 h-full w-full bg-[#111111]">
         <img
-          src="/herovid.gif"
+          src="/Untitled design (2).png"
           alt="Delivery motion background"
           className="h-full w-full object-cover"
         />

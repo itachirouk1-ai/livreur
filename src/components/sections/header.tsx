@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
@@ -57,36 +57,40 @@ export function Header() {
   };
 
   // Build services with vendors
-  const services = getAllServiceSlugs()
-    .map(serviceSlug => {
-      const service = getServiceBySlug(serviceSlug);
-      if (!service) return null;
+  const services = useMemo(
+    () =>
+      getAllServiceSlugs()
+        .map(serviceSlug => {
+          const service = getServiceBySlug(serviceSlug);
+          if (!service) return null;
 
-      return {
-        label: getLocalizedServiceContent(serviceSlug, locale).title || service.title,
-        slug: serviceSlug,
-        emoji: service.heroImage,
-        vendors: service.vendors.map(vendor => ({
-          label: getLocalizedVendorContent(serviceSlug, vendor, locale).name,
-          slug: getVendorSlug(vendor),
-          brand: vendor.brand,
-          emoji: vendor.logo,
-          logoUrl: vendor.logoUrl,
-        })),
-      };
-    })
-    .filter(Boolean) as Array<{
-    label: string;
-    slug: string;
-    emoji?: string;
-    vendors: Array<{
-      label: string;
-      slug: string;
-      brand: string;
-      emoji?: string;
-      logoUrl?: string;
-    }>;
-  }>;
+          return {
+            label: getLocalizedServiceContent(serviceSlug, locale).title || service.title,
+            slug: serviceSlug,
+            emoji: service.heroImage,
+            vendors: service.vendors.map(vendor => ({
+              label: getLocalizedVendorContent(serviceSlug, vendor, locale).name,
+              slug: getVendorSlug(vendor),
+              brand: vendor.brand,
+              emoji: vendor.logo,
+              logoUrl: vendor.logoUrl,
+            })),
+          };
+        })
+        .filter(Boolean) as Array<{
+          label: string;
+          slug: string;
+          emoji?: string;
+          vendors: Array<{
+            label: string;
+            slug: string;
+            brand: string;
+            emoji?: string;
+            logoUrl?: string;
+          }>;
+        }>,
+    [locale],
+  );
 
   return (
     <>

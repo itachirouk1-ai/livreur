@@ -6,10 +6,9 @@ import { RestaurantsSection } from '@/components/sections/restaurants-section';
 import { getLocaleFromQuery, type Locale } from '@/lib/site-content';
 import { getAllServiceSlugs, getLocalizedServiceContent, getLocalizedVendorContent, getServiceBySlug, getVendorSlug } from '@/lib/services-data';
 import DeliveryZonesSection from '@/components/ui/DeliveryZonesSection';
-import { ReviewsSection } from '@/components/sections/reviews-section';
-import DeliveryMap from '@/components/sections/DeliveryMap';
+import { ClientOnly } from '@/components/ui/ClientOnly';
 import FAQSection from '@/components/sections/faq';
-
+import DeliveryMap from '@/components/sections/DeliveryMap';
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
   const locale: Locale = getLocaleFromQuery((await searchParams).lang);
@@ -156,8 +155,12 @@ const featuredStores = getRandomFeaturedStores();
         <DeliveryZonesSection />
         <RestaurantsSection restaurants={featuredStores} />
         
-        <FAQSection/>
-        <DeliveryMap/>
+        <ClientOnly fallback={<div className="mx-auto max-w-5xl px-1"><div className="h-80 rounded-3xl bg-slate-200/80 animate-pulse" /></div>}>
+          <FAQSection />
+        </ClientOnly>
+        <ClientOnly fallback={<div className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4"><div className="h-[300px] rounded-3xl bg-slate-200/80 animate-pulse md:h-[500px]" /></div>}>
+          <DeliveryMap />
+        </ClientOnly>
       </main>
     </div>
   );
