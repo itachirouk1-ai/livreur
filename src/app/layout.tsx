@@ -9,6 +9,7 @@ import { Footer } from '@/components/sections/footer';
 import FloatingWhatsApp from '@/components/sections/FloatingWhatsApp';
 import { buildHomeMetadata, buildStructuredDataJson } from '@/lib/seo';
 import { siteContent, type Locale } from '@/lib/site-content';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const googleAdsId = 'AW-18386439505';
 
@@ -96,6 +97,7 @@ export default function RootLayout({
             </LocaleProvider>
           </Suspense>
         </ThemeProvider>
+        <SpeedInsights />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
