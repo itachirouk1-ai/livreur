@@ -153,7 +153,7 @@ const featuredStores = getRandomFeaturedStores();
         <HeroSection />
         <ServicesSection services={services} />
         <DeliveryZonesSection />
-        <RestaurantsSection restaurants={featuredStores} />
+        
         
         <ClientOnly fallback={<div className="mx-auto max-w-5xl px-1"><div className="h-80 rounded-3xl bg-slate-200/80 animate-pulse" /></div>}>
           <FAQSection />

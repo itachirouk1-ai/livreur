@@ -92,7 +92,7 @@ export function ServiceDropdown({
               {service.vendors.length > 0 ? (
                 <div className="space-y-1">
                   {service.vendors.map(vendor => (
-                    <Link
+                    <div
                       key={vendor.slug}
                       href={`/${service.slug}/${vendor.slug}${locale !== 'fr' ? `?lang=${locale}` : ''}`}
                       onClick={() => {
@@ -124,7 +124,7 @@ export function ServiceDropdown({
                           {vendor.brand}
                         </p>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               ) : (

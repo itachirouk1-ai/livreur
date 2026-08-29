@@ -67,7 +67,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-2 xl:gap-8">
         {services.map((service, index) => (
           <div key={service.title} className="flex flex-col gap-3">
-            <Link href={withLocaleHref(`/${service.slug}`, locale)}>
+            
               <motion.div
                 initial={{ y: 24, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -106,7 +106,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   </div>
 </motion.article>
               </motion.div>
-            </Link>
+            
 
             <Button
               onClick={handleWhatsApp}

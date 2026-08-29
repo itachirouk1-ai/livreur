@@ -95,9 +95,9 @@ export function Footer() {
             </h4>
             <div className="grid grid-cols-2 gap-3">
               {footerServices.map((service) => (
-                <Link
+                <div
                   key={service.href}
-                  href={service.href}
+                  
                   className="group flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:bg-orange-50 hover:text-orange-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-orange-500/40 dark:hover:bg-orange-500/10 dark:hover:text-orange-400 shadow-sm hover:shadow"
                 >
                   <span className="text-base transition-transform duration-300 group-hover:scale-110">
@@ -106,7 +106,7 @@ export function Footer() {
                   <span className="truncate font-medium">
                     {locale === 'fr' ? service.fr : service.en}
                   </span>
-                </Link>
+                </div>
               ))}
             </div>
           </motion.div>
