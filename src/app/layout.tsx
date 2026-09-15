@@ -64,6 +64,20 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-PMZ8W29X');
           `}
         </Script>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+          strategy="beforeInteractive"
+        />
+        <Script id="google-ads-tag" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function() {
+              window.dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', '${googleAdsId}');
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col">
         <noscript>
@@ -74,20 +88,6 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = window.gtag || function() {
-              window.dataLayer.push(arguments);
-            };
-            window.gtag('js', new Date());
-            window.gtag('config', '${googleAdsId}');
-          `}
-        </Script>
         <ThemeProvider>
           <Suspense fallback={null}>
             <LocaleProvider>
