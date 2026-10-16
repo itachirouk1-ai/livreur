@@ -11,7 +11,7 @@ import { buildHomeMetadata, buildStructuredDataJson } from '@/lib/seo';
 import { siteContent, type Locale } from '@/lib/site-content';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const googleAdsId = 'AW-18412460517';
+const googleAdsId = 'AW-18514083709';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
