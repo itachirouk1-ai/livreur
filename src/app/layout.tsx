@@ -12,6 +12,7 @@ import { siteContent, type Locale } from '@/lib/site-content';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const googleAdsId = 'AW-18513857438';
+const contactConversionAdsId = 'AW-18514083709';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -67,6 +68,7 @@ export default function RootLayout({
             };
             window.gtag('js', new Date());
             window.gtag('config', '${googleAdsId}');
+            window.gtag('config', '${contactConversionAdsId}');
           `}
         </Script>
       </head>

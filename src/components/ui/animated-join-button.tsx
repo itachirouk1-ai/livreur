@@ -16,10 +16,7 @@ export function AnimatedJoinButton({ label = 'WhatsApp', onClick, href }: Animat
     }
 
     if (href) {
-      // Track WhatsApp conversion with callback
-      trackContactConversion('whatsapp', () => {
-        window.open(href, '_blank', 'noopener,noreferrer');
-      });
+      trackContactConversion('whatsapp', href);
     }
   };
 

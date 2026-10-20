@@ -790,14 +790,10 @@ export function ServiceDetailPageComponent({
   const vendorSectionCopy = getVendorSectionCopy(slug, locale);
   const seoContent = getServiceSEOContent(slug, title, locale);
   const handleWhatsApp = () => {
-    trackContactConversion('whatsapp', () => {
-      window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-    });
+    trackContactConversion('whatsapp', contactLinks.whatsapp);
   };
   const handleCall = () => {
-    trackContactConversion('phone', () => {
-      window.open(contactLinks.phone, '_blank', 'noopener,noreferrer');
-    });
+    trackContactConversion('phone', contactLinks.phone);
   };
 
   return (

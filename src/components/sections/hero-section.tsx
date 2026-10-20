@@ -13,15 +13,11 @@ export function HeroSection() {
   const copy = siteContent[locale];
 
   const handleWhatsApp = () => {
-    trackContactConversion('whatsapp', () => {
-      window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-    });
+    trackContactConversion('whatsapp', contactLinks.whatsapp);
   };
 
   const handleCall = () => {
-    trackContactConversion('phone', () => {
-      window.location.href = contactLinks.phone;
-    });
+    trackContactConversion('phone', contactLinks.phone);
   };
 
   return (

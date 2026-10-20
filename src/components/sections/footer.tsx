@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { contactLinks, siteContent } from '@/lib/site-content';
 import { useLocalePreference } from '@/lib/use-locale';
@@ -49,9 +48,7 @@ export function Footer() {
   };
 
   const handleWhatsApp = () => {
-    trackContactConversion('whatsapp', () => {
-      window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-    });
+    trackContactConversion('whatsapp', contactLinks.whatsapp);
   };
 
   return (
@@ -116,8 +113,12 @@ export function Footer() {
   {copy.footerContactTitle}
 </h4>
             <div className="space-y-3">
-              <Link
+              <a
                 href={contactLinks.phone}
+                onClick={(event) => {
+                  event.preventDefault();
+                  trackContactConversion('phone', contactLinks.phone);
+                }}
                 className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-green-500/40"
               >
                 <div className="flex items-center gap-4">
@@ -134,10 +135,14 @@ export function Footer() {
                   </div>
                 </div>
                 <ChevronRight className="h-5 w-5 text-slate-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-green-500" />
-              </Link>
+              </a>
 
               <a
                 href={contactLinks.whatsapp}
+                onClick={(event) => {
+                  event.preventDefault();
+                  trackContactConversion('whatsapp', contactLinks.whatsapp);
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-between rounded-2xl border border-green-200 bg-green-50 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-green-900 dark:bg-green-950/20"

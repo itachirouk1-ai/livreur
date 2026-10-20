@@ -16,14 +16,7 @@ export function AnimatedCallButton({ label = 'Appeler', onClick, href }: Animate
     }
 
     if (href) {
-      // Track phone call conversion with callback
-      trackContactConversion('phone', () => {
-        if (href.startsWith('tel:')) {
-          window.location.href = href;
-        } else {
-          window.open(href, '_blank', 'noopener,noreferrer');
-        }
-      });
+      trackContactConversion('phone', href);
     }
   };
 

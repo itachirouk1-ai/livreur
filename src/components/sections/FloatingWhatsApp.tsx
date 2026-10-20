@@ -1,20 +1,15 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
 import { Fhatsapp } from "react-icons/fa";
 import { trackContactConversion } from '@/lib/gtag';
 
 export default function FloatingWhatsApp() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    
-    trackContactConversion('whatsapp', () => {
-      window.open(
-        "https://wa.me/212660604871?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
-        '_blank',
-        'noopener,noreferrer'
-      );
-    });
+    trackContactConversion(
+      'whatsapp',
+      "https://wa.me/212660604871?text=Salut%20!%20Je%20souhaite%20passer%20une%20commande.",
+    );
   };
 
   return (

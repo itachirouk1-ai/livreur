@@ -39,9 +39,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   };
 
   const handleWhatsApp = () => {
-    trackContactConversion('whatsapp', () => {
-      window.open(contactLinks.whatsapp, '_blank', 'noopener,noreferrer');
-    });
+    trackContactConversion('whatsapp', contactLinks.whatsapp);
   };
 
   return (
