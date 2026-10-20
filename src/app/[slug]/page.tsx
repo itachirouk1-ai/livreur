@@ -22,9 +22,9 @@ export function getLocaleFromSearchParams(searchParams: Promise<{ lang?: string 
 }
 
 export async function generateMetadata({ params, searchParams }: ServicePageProps) {
-  ait connection();
-  const { slug } = ait params;
-  const locale = ait getLocaleFromSearchParams(searchParams);
+  await connection();
+  const { slug } = await params;
+  const locale = await getLocaleFromSearchParams(searchParams);
   const service = getServiceBySlug(slug);
 
   if (!service) {
@@ -38,9 +38,9 @@ export async function generateMetadata({ params, searchParams }: ServicePageProp
 }
 
 export default async function ServicePage({ params, searchParams }: ServicePageProps) {
-  ait connection();
-  const { slug } = ait params;
-  const locale: Locale = ait getLocaleFromSearchParams(searchParams);
+  await connection();
+  const { slug } = await params;
+  const locale: Locale = await getLocaleFromSearchParams(searchParams);
   const service = getServiceBySlug(slug);
 
   if (!service) {
