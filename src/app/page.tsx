@@ -11,7 +11,7 @@ import FAQSection from '@/components/sections/faq';
 import DeliveryMap from '@/components/sections/DeliveryMap';
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
-  const locale: Locale = getLocaleFromQuery((await searchParams).lang);
+  const locale: Locale = getLocaleFromQuery((ait searchParams).lang);
   // Helper function to shuffle array
   const shuffle = <T,>(array: T[]): T[] => {
     const shuffled = [...array];

@@ -782,14 +782,14 @@ export const servicesData: Record<string, ServiceDetail> = {
       },
 
       {
-        id: 'jawhara-fleurs-marrakech',
-        name: 'Jawhara Fleurs Marrakech',
-        brand: 'Jawhara Fleurs',
+        id: 'jhara-fleurs-marrakech',
+        name: 'Jhara Fleurs Marrakech',
+        brand: 'Jhara Fleurs',
         logo: '🌺',
-        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-jawhara-fleurs.webp',
-        logoAlt: 'Jawhara Fleurs brand logo',
+        logoUrl: '/logos/fleurs/livraison-marrakech-a-domicile-jhara-fleurs.webp',
+        logoAlt: 'Jhara Fleurs brand logo',
         description:
-          "Livraison fleurs Marrakech avec Jawhara Fleurs et Livreur Marrakech. Découvrez des bouquets personnalisés, roses fraîches et créations florales raffinées livrées directement à domicile. Service de livraison fleurs Marrakech pour cadeaux, événements, hôtels, riads et particuliers.",
+          "Livraison fleurs Marrakech avec Jhara Fleurs et Livreur Marrakech. Découvrez des bouquets personnalisés, roses fraîches et créations florales raffinées livrées directement à domicile. Service de livraison fleurs Marrakech pour cadeaux, événements, hôtels, riads et particuliers.",
       },
 
       {
