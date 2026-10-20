@@ -63,13 +63,13 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-WDZ2QVBG');
           `}
-        </Script><!-- Event snippet for whatssap clik conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18514083709/2N2ICOTl9aAdEP3-mfxE'});
-</script>
-
-        
-        
+        </Script>
+        {/* Event snippet for WhatsApp click conversion page */}
+        <Script id="whatsapp-conversion" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-18514083709/2N2ICOTl9aAdEP3-mfxE'});
+          `}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
           strategy="beforeInteractive"
